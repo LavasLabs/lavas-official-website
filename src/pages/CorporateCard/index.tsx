@@ -6,13 +6,13 @@ const CorporateCard = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20">
+      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-12 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <h1 className="text-5xl font-bold mb-6">LAVAS LABS</h1>
-            <p className="text-xl mb-8">A corporate card designed for modern finance.<br />Save money and time. All with one corporate card.</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6">LAVAS LABS</h1>
+            <p className="text-lg md:text-xl mb-6 md:mb-8">A corporate card designed for modern finance.<br />Save money and time. All with one corporate card.</p>
             <div className="flex space-x-4">
-              <button className="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700 transition-colors">
+              <button className="w-full md:w-auto bg-red-600 text-white px-6 md:px-8 py-3 rounded-md hover:bg-red-700 transition-colors">
                 {t('common.startForFree')}
               </button>
             </div>
@@ -21,12 +21,12 @@ const CorporateCard = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Save more by preventing out-of-policy spend</h2>
-              <p className="text-gray-600 mb-8">Preset controls on corporate cards for specific vendors and categories.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div className="order-2 md:order-1">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Save more by preventing out-of-policy spend</h2>
+              <p className="text-gray-600 mb-6 md:mb-8">Preset controls on corporate cards for specific vendors and categories.</p>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <span className="text-red-600 mr-2">✓</span>
@@ -42,8 +42,8 @@ const CorporateCard = () => {
                 </li>
               </ul>
             </div>
-            <div className="relative">
-              <img src="/src/assets/card-preview.png" alt="Corporate Card Preview" className="rounded-lg shadow-xl" />
+            <div className="relative order-1 md:order-2 mb-8 md:mb-0">
+              <img src="/src/assets/card-preview.png" alt="Corporate Card Preview" className="w-full rounded-lg shadow-xl" />
             </div>
           </div>
         </div>

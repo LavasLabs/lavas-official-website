@@ -8,11 +8,17 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        lazy: () => import('../pages/Home'),
+        lazy: async () => {
+          const { default: Component } = await import('../pages/Home');
+          return { Component };
+        },
       },
       {
         path: '/corporate-card',
-        lazy: () => import('../pages/CorporateCard'),
+        lazy: async () => {
+          const { default: Component } = await import('../pages/CorporateCard');
+          return { Component };
+        },
       },
       {
         path: '/travel',
@@ -23,11 +29,17 @@ const router = createBrowserRouter([
       },
       {
         path: '/expense',
-        lazy: () => import('../pages/Expense'),
+        lazy: async () => {
+          const { default: Component } = await import('../pages/Expense');
+          return { Component };
+        },
       },
       {
         path: '/advertising',
-        lazy: () => import('../pages/Advertising'),
+        lazy: async () => {
+          const { default: Component } = await import('../pages/Advertising');
+          return { Component };
+        }
       },
     ],
   },

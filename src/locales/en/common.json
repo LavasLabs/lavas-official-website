@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "corporateCard": "Corporate Card",
+    "travel": "Travel",
+    "expense": "Expense Management",
+    "advertising": "Advertising"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "common": {
+    "startForFree": "Start for Free"
+  }
+}

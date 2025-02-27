@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "corporateCard": "企业卡",
+    "travel": "商旅服务",
+    "expense": "费用管理",
+    "advertising": "广告投放"
+  },
+  "auth": {
+    "login": "登录",
+    "signup": "注册"
+  },
+  "common": {
+    "startForFree": "免费开始"
+  }
+}

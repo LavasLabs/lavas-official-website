@@ -35,7 +35,7 @@ const Banner: React.FC = () => (
                             EN
                         </li>
                         <li>
-                            <Button className='text-[#FFFFFF] hover:text-[#FFFFFF]' type="text">Text Button</Button>
+                            <Button className='text-[#FFFFFF] hover:text-[#FFFFFF]' type="text">Sign Up</Button>
                         </li>
                         <li>
                             Login

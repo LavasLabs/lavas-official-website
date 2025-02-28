@@ -47,7 +47,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className='px-[250px] box-border w-full flex gap-[50px] items-center'>
+        <div className='px-[250px] box-border w-full flex gap-[50px]'>
           <div className='w-1/4'>
             <div className='font-[700]'>
               Save more by preventing out-of-policy spend
@@ -58,26 +58,26 @@ const Home = () => {
           </div>
           <div className='w-1/4'>
             <div className='font-[700]'>
-              Save more by preventing out-of-policy spend
+              Be free from expense reports.
             </div>
             <div className='text-[15px] opacity-60 mt-[8px]'>
-              Preset controls on corporate cards for specific vendors and categories.
+              Easily submit expenses through SMS, mobile app, and integrations.
             </div>
           </div>
           <div className='w-1/4'>
             <div className='font-[700]'>
-              Save more by preventing out-of-policy spend
+              Unlock savings in real time
             </div>
             <div className='text-[15px] opacity-60 mt-[8px]'>
-              Preset controls on corporate cards for specific vendors and categories.
+              Get insight into spend as it happens, with a platform that pays off immediately.
             </div>
           </div>
           <div className='w-1/4'>
             <div className='font-[700]'>
-              Save more by preventing out-of-policy spend
+              Grow your business with the right terms
             </div>
             <div className='text-[15px] opacity-60 mt-[8px]'>
-              Preset controls on corporate cards for specific vendors and categories.
+              Get rewards and perks, like 5% savings. There’s no personal credit checks or personal guarantee.
             </div>
           </div>
 
@@ -180,21 +180,21 @@ const Home = () => {
 
           <div className='box-border w-full flex gap-[50px] items-center mt-[100px] relative'>
             <div className='w-1/4 text-[#FFFFFF] bg-[#0A0B11] h-[200px] rounded-[12px] p-[30px] box-border flex flex-col justify-between shadow-[0px_20px_50px_0px_rgba(185,185,185,0.40)]'>
-              <i className='iconfont icon-shop text-[32px]'></i>
+              <i className='iconfont icon-U text-[32px]'></i>
               <div className='font-[500]'>
-                Save more by preventing out-of-policy spend
+                Statement credit
+              </div>
+            </div>
+            <div className='w-1/4 text-[#0A0B11] bg-[#FFF] h-[200px] rounded-[12px] p-[30px] box-border flex flex-col justify-between shadow-[0px_20px_50px_0px_rgba(185,185,185,0.40)]'>
+              <i className='iconfont icon-flexible text-[32px]'></i>
+              <div className='font-[500]'>
+                Gift cards & loyalty program points
               </div>
             </div>
             <div className='w-1/4 text-[#0A0B11] bg-[#FFF] h-[200px] rounded-[12px] p-[30px] box-border flex flex-col justify-between shadow-[0px_20px_50px_0px_rgba(185,185,185,0.40)]'>
               <i className='iconfont icon-shop text-[32px]'></i>
               <div className='font-[500]'>
-                Save more by preventing out-of-policy spend
-              </div>
-            </div>
-            <div className='w-1/4 text-[#0A0B11] bg-[#FFF] h-[200px] rounded-[12px] p-[30px] box-border flex flex-col justify-between shadow-[0px_20px_50px_0px_rgba(185,185,185,0.40)]'>
-              <i className='iconfont icon-shop text-[32px]'></i>
-              <div className='font-[500]'>
-                Save more by preventing out-of-policy spend
+                Ramp fees
               </div>
             </div>
 
@@ -217,11 +217,11 @@ const Home = () => {
         </div>
 
 
-        <div className='w-full flex gap-[50px] items-center mt-[20px]'>
+        <div className='w-full flex gap-[50px] mt-[20px]'>
           <div className='w-1/3'>
             <div className='text-[30px] font-[500] opacity-10'>01</div>
             <Divider className='m-[0px] mb-[20px]'></Divider>
-            <div className='text-[30px] font-[500]'>
+            <div className='text-[28px] font-[500] whitespace-nowrap'>
               No personal credit checks
             </div>
             <div className='text-[16px] opacity-60 mt-[8px]'>
@@ -231,31 +231,31 @@ const Home = () => {
             </div>
           </div>
           <div className='w-1/3'>
-            <div className='text-[30px] font-[500] opacity-10'>01</div>
+            <div className='text-[28px] font-[500] opacity-10'>02</div>
             <Divider className='m-[0px] mb-[20px]'></Divider>
-            <div className='text-[30px] font-[500]'>
-              No personal credit checks
+            <div className='text-[30px] font-[500] whitespace-nowrap'>
+              Easy, secure payment
             </div>
             <div className='text-[16px] opacity-60 mt-[8px]'>
-              No impact to your personal credit score.
-              Credit limit based on financial factors such as revenue or dollars raised.
-              Corporate charge card with 30-day payback.
-            </div>
-          </div>
-
-          <div className='w-1/3'>
-            <div className='text-[30px] font-[500] opacity-10'>01</div>
-            <Divider className='m-[0px] mb-[20px]'></Divider>
-            <div className='text-[30px] font-[500]'>
-              No personal credit checks
-            </div>
-            <div className='text-[16px] opacity-60 mt-[8px]'>
-              No impact to your personal credit score.
-              Credit limit based on financial factors such as revenue or dollars raised.
-              Corporate charge card with 30-day payback.
+              Unlimited physical and virtual cards.
+              Runs on the Visa network.
+              Apple and Google Pay compatible.
+              Enhanced security with 3DS enrollment, SSO logins, and others.
             </div>
           </div>
 
+          <div className='w-1/3'>
+            <div className='text-[28px] font-[500] opacity-10'>03</div>
+            <Divider className='m-[0px] mb-[20px]'></Divider>
+            <div className='text-[30px] font-[500] whitespace-nowrap'>
+              Works wherever you go
+            </div>
+            <div className='text-[16px] opacity-60 mt-[8px]'>
+              Acceptance in 200+ countries through the Visa global network.
+              Local issuing and debiting in 33 countries.
+              Reimburse in 70 countries and 40 currencies.
+            </div>
+          </div>
 
 
 

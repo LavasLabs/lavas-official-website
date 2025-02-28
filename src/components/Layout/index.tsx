@@ -4,7 +4,7 @@ import Footer from '../Footer';
 
 const Layout = () => {
   return (
-    <div className="px-[250px] bg-[#0A0B11] h-full min-h-screen">
+    <div className="bg-[#0A0B11] h-full min-h-screen relative">
       <Banner />
       <Outlet />
       <Footer />

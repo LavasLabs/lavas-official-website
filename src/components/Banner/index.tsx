@@ -7,7 +7,7 @@ const Banner: React.FC = () => (
         <div className="container mx-auto flex items-center w-full">
             {/* Logo */}
             <Link to="/" className="flex items-center w-[20%]">
-                <img src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" alt="Lavas" className="w-[56px] h-[56px]" />
+                <img src="/src/assets/logos/lavas-logo.png" alt="Lavas" className="w-auto h-[52px]" />
             </Link>
 
             {/* Navigation Links */}

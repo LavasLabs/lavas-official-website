@@ -19,16 +19,16 @@ const Home = () => {
 
   return (
     <>
-      <div className='w-[653px] h-[653px] absolute top-[-240px] right-[200px] rounded-[753px] opacity-50 bg-gradient-to-b from-[#C31111] to-[#1A1C1F] blur-[2px] z-[50]'>
+      <div className='w-[653px] h-[653px] absolute top-[-240px] right-[200px] rounded-[753px] opacity-50 bg-gradient-to-b from-[#C31111] to-[#1A1C1F] blur-[2px] z-[10]'>
       </div>
       {/* 第一页 */}
       <section className='text-[#FFFFFF] w-full h-[calc(100vh-100px)] box-border relative overflow-hidden'>
         <div className='w-[367px] h-[367px] absolute top-[30%] right-[-200px] rounded-[753px] opacity-50 bg-gradient-to-b from-[#525252] to-[#1A1C1F] blur-[2px]'>
         </div>
         <div className='px-[250px] w-full box-border'>
-          <div className='flex'>
+          <div className='flex' >
             <div>
-              <div className='font-sora text-[110px] font-bold uppercase inline-block bg-gradient-to-r from-[#D51029] via-[#D51029] via-[#A3001A] to-[#7E0010] bg-clip-text text-transparent whitespace-nowrap'>
+              <div className='font-sora text-[110px] font-bold uppercase inline-block bg-gradient-to-r from-[#FFFFFF] to-[#CA2A0F] bg-clip-text text-transparent whitespace-nowrap z-[9999999]'>
                 Lavas Labs
               </div>
               <div>

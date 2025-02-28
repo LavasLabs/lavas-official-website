@@ -1,14 +1,27 @@
 import { useTranslation } from 'react-i18next';
-import { Button, Tooltip } from 'antd';
+import { Button, Divider, Tooltip } from 'antd';
 
 const Home = () => {
   const { t } = useTranslation();
 
+  const logoUrlList = [
+    '/src/assets/logos/card-logo1.svg',
+    '/src/assets/logos/card-logo2.svg',
+    '/src/assets/logos/card-logo3.svg',
+    '/src/assets/logos/card-logo4.svg',
+    '/src/assets/logos/card-logo5.svg',
+    '/src/assets/logos/card-logo6.svg',
+    '/src/assets/logos/card-logo7.svg',
+    '/src/assets/logos/card-logo8.svg',
+    '/src/assets/logos/card-logo9.svg',
+    '/src/assets/logos/card-logo10.svg',
+  ];
+
   return (
     <>
-      {/* 第一页 */}
       <div className='w-[653px] h-[653px] absolute top-[-240px] right-[200px] rounded-[753px] opacity-50 bg-gradient-to-b from-[#C31111] to-[#1A1C1F] blur-[2px] z-[50]'>
       </div>
+      {/* 第一页 */}
       <section className='text-[#FFFFFF] w-full h-[calc(100vh-100px)] box-border relative overflow-hidden'>
         <div className='w-[367px] h-[367px] absolute top-[30%] right-[-200px] rounded-[753px] opacity-50 bg-gradient-to-b from-[#525252] to-[#1A1C1F] blur-[2px]'>
         </div>
@@ -70,55 +83,183 @@ const Home = () => {
 
 
         </div>
-
-        {/* 第二页 */}
       </section>
+      {/* 第二页 */}
       <section className='text-[##0A0B11] w-full h-screen box-border bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center gap-[20px]'>
-          <div className='text-[50px] text-center font-bold space-y-[10px] leading-[1]'>Build control into the card, before spend even happens.</div>
+          <div className='text-[42px] font-[700px] text-center space-y-[10px] leading-[1]'>Build control into the card, before spend even happens.</div>
           <div className='text-[20px]'>Don't compromise on growth or control</div>
         </div>
 
         <div className='w-full flex gap-[50px] flex-nowrap mt-[150px] h-[360px] justify-center'>
           <div className='w-[420px] h-[365px] rounded-[16px] shadow-[0px_20px_50px_0px_rgba(100,74,74,0.10)] p-[30px] pt-[140px] box-border relative'>
             <div>
-              <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px]' src="/src/assets/images/Marketing-virtual-card.png" alt="Lavas" />
+              <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px] w-[250px] object-cover' src="/src/assets/images/Marketing.png" alt="Lavas" />
             </div>
-            <div className='font-bold text-[28px]'>
+            <div className='font-bold font-[700] text-[24px]'>
               Marketing virtual cards
             </div>
-            <div className='text-[18px] mt-[26px]'>
+            <div className='text-[18px] mt-[20px]'>
               Get unlimited virtual cards for yourself or the employees, we make your money more safe.
             </div>
           </div>
           <div className='w-[420px] h-[365px] rounded-[16px] shadow-[0px_20px_50px_0px_rgba(100,74,74,0.10)] p-[30px] pt-[140px] box-border relative'>
             <div>
-              <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px]' src="/src/assets/images/Marketing-virtual-card.png" alt="Lavas" />
+              <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px] w-[250px] object-cover' src="/src/assets/images/Travel.png" alt="Lavas" />
             </div>
-            <div className='font-bold text-[28px]'>
-              Marketing virtual cards
+            <div className='font-bold font-[700] text-[24px]'>
+              Travel and expenses virtual card
             </div>
-            <div className='text-[18px] mt-[26px]'>
-              Get unlimited virtual cards for yourself or the employees, we make your money more safe.
+            <div className='text-[18px] mt-[20px]'>
+              Create custom virtual cards and set permissions for everything from ad marketplace spend to remote work stipends, for individual teams or your whole company.
             </div>
           </div>
           <div className='w-[420px] h-[365px] rounded-[16px] shadow-[0px_20px_50px_0px_rgba(100,74,74,0.10)] p-[30px] pt-[140px] box-border relative'>
             <div>
-              <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px]' src="/src/assets/images/Marketing-virtual-card.png" alt="Lavas" />
+              <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px] w-[250px] object-cover' src="/src/assets/images/Conference.png" alt="Lavas" />
             </div>
-            <div className='font-bold text-[28px]'>
-              Marketing virtual cards
+            <div className='font-bold font-[700] text-[24px]'>
+              Conference virtual card
             </div>
-            <div className='text-[18px] mt-[26px]'>
-              Get unlimited virtual cards for yourself or the employees, we make your money more safe.
+            <div className='text-[18px] mt-[20px]'>
+              Set spend limits or cancel cards any time you want.
             </div>
           </div>
-
+        </div>
+      </section>
+      {/* 第三页 */}
+      <section className='text-[#FFFFFF] w-full h-screen box-border relative overflow-hidden'>
+        <img className='absolute top-[0px] left-[0px] w-[30%] object-cover' src="/src/assets/images/third-logo.png" />
+        <div className='px-[250px] w-full box-border pt-[100px]'>
+          <div className='text-[40px] font-[700]'>More visibility, more time back</div>
+          <div className='whitespace-pre opacity-60'>
+            <div>Focus on your work, not follow ups.</div>
+            <div>Let Lavas Labs send reminders for missing items or request repayments for you. Spend less time chasing</div>
+            <div>down receipts and more time closing your books.</div>
+          </div>
+          <div className='text-[24px] mt-[60px]'>Simplify approvals and share accountability</div>
+          <div className='whitespace-pre opacity-60'>
+            <div>Focus on your work, not follow ups.</div>
+            <div>Let Lavas Labs send reminders for missing items or request repayments for you. Spend less time chasing</div>
+            <div>down receipts and more time closing your books.</div>
+          </div>
+          <img className='absolute bottom-[0px] left-[20%] w-[200px] object-cover z-[999]' src="/src/assets/images/card-person.png" />
+          <img className='absolute bottom-[0px] left-[46%] w-[220px] object-cover z-[999]' src="/src/assets/images/card-media.png" />
+          <img className='absolute bottom-[100px] left-[70%] w-[220px] object-cover z-[999]' src="/src/assets/images/card-detail.png" />
         </div>
 
 
 
+        <div className='w-full absolute bottom-[0px] right-[0px] h-[240px] bg-gradient-to-r from-[#0A0B11] to-[#D11616] blur-[142px] z-[1]'>
+        </div>
+      </section >
+      {/* 第四页 */}
+      <section className='text-[##0A0B11] px-[250px] py-[120px] w-full box-border bg-[#FFF] flex justify-center items-center flex-col'>
+        <div className='flex flex-col justify-center items-center gap-[20px] '>
+          <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Effortless expenses for employees (and managers)</div>
+          <div className='text-[20px]'>Centralize your spend on one intuitive platform</div>
+        </div>
 
+        <div className='w-full mt-[50px] flex justify-center'>
+          <img className='max-w-full object-cover' src="/src/assets/images/Effortless.png" alt="Lavas" />
+        </div>
+      </section>
+      {/* 第五页 */}
+      <section className='text-[#0A0B11] w-full h-screen box-border relative overflow-hidden bg-[#FFF]'>
+        <img className='absolute right-[0px] top-[0px] h-full object-cover w-[50%]' src="/src/assets/images/card-bg-black.png" alt="Lavas" />
+        <div className='px-[250px] w-full box-border'>
+          <div className=' box-border pt-[100px] w-[50%] leading-[1.2]'>
+            <div className='text-[40px] font-[700]'>Automation, control, and
+              rewards.The corporate card
+              you've been looking for</div>
+            <div className='text-[20px] mt-[20px]'>
+              Spend to get cashback
+              Lavas Labs's corporate card puts money back in your pocket so you can invest even more in growth. Or, bring your cash back right into the platform
+            </div>
+          </div>
+
+          <div className='box-border w-full flex gap-[50px] items-center mt-[100px] relative'>
+            <div className='w-1/4 text-[#FFFFFF] bg-[#0A0B11] h-[200px] rounded-[12px] p-[30px] box-border flex flex-col justify-between shadow-[0px_20px_50px_0px_rgba(185,185,185,0.40)]'>
+              <i className='iconfont icon-shop text-[32px]'></i>
+              <div className='font-[500]'>
+                Save more by preventing out-of-policy spend
+              </div>
+            </div>
+            <div className='w-1/4 text-[#0A0B11] bg-[#FFF] h-[200px] rounded-[12px] p-[30px] box-border flex flex-col justify-between shadow-[0px_20px_50px_0px_rgba(185,185,185,0.40)]'>
+              <i className='iconfont icon-shop text-[32px]'></i>
+              <div className='font-[500]'>
+                Save more by preventing out-of-policy spend
+              </div>
+            </div>
+            <div className='w-1/4 text-[#0A0B11] bg-[#FFF] h-[200px] rounded-[12px] p-[30px] box-border flex flex-col justify-between shadow-[0px_20px_50px_0px_rgba(185,185,185,0.40)]'>
+              <i className='iconfont icon-shop text-[32px]'></i>
+              <div className='font-[500]'>
+                Save more by preventing out-of-policy spend
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </section >
+      {/* 第六页 */}
+      <section className='text-[##0A0B11] px-[250px] w-full h-screen box-border bg-[#FFF] flex justify-center items-center flex-col'>
+        <div className='flex flex-col justify-center items-center gap-[20px] '>
+          <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Access over $350k in offers from our partners</div>
+        </div>
+
+        <div className='w-full grid grid-cols-5 place-items-center gap-y-[26px] mt-[40px]'>{
+          logoUrlList.map(item => {
+            return <img className='w-[80px] h-[80px] object-cover' src={item} alt="Lavas" />
+          })
+        }
+        </div>
+
+
+        <div className='w-full flex gap-[50px] items-center mt-[20px]'>
+          <div className='w-1/3'>
+            <div className='text-[30px] font-[500] opacity-10'>01</div>
+            <Divider className='m-[0px] mb-[20px]'></Divider>
+            <div className='text-[30px] font-[500]'>
+              No personal credit checks
+            </div>
+            <div className='text-[16px] opacity-60 mt-[8px]'>
+              No impact to your personal credit score.
+              Credit limit based on financial factors such as revenue or dollars raised.
+              Corporate charge card with 30-day payback.
+            </div>
+          </div>
+          <div className='w-1/3'>
+            <div className='text-[30px] font-[500] opacity-10'>01</div>
+            <Divider className='m-[0px] mb-[20px]'></Divider>
+            <div className='text-[30px] font-[500]'>
+              No personal credit checks
+            </div>
+            <div className='text-[16px] opacity-60 mt-[8px]'>
+              No impact to your personal credit score.
+              Credit limit based on financial factors such as revenue or dollars raised.
+              Corporate charge card with 30-day payback.
+            </div>
+          </div>
+
+          <div className='w-1/3'>
+            <div className='text-[30px] font-[500] opacity-10'>01</div>
+            <Divider className='m-[0px] mb-[20px]'></Divider>
+            <div className='text-[30px] font-[500]'>
+              No personal credit checks
+            </div>
+            <div className='text-[16px] opacity-60 mt-[8px]'>
+              No impact to your personal credit score.
+              Credit limit based on financial factors such as revenue or dollars raised.
+              Corporate charge card with 30-day payback.
+            </div>
+          </div>
+
+
+
+
+        </div>
 
       </section>
     </>

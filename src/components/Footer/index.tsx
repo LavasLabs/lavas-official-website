@@ -34,7 +34,7 @@ const Footer: React.FC = () => (
               EN
             </li>
             <li>
-              support@idefpay.com
+              support@lavaslabs.com
             </li>
             <li>
             defpay skype support
@@ -45,7 +45,7 @@ const Footer: React.FC = () => (
     </div>
     <div className="w-full container mx-auto flex w-full justify-between">
         <div>
-        Copyright ©2021 DEFSOLUTION LLC. All Rights Reserved
+        Copyright ©2025 Lavas Labs Limited. All Rights Reserved
         </div>
         <div className='flex gap-[20px]'>
           <i className='iconfont icon-facebook text-[20px]'></i>

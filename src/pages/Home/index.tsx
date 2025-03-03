@@ -25,7 +25,7 @@ const Home = () => {
       <section className='text-[#FFFFFF] w-full h-[calc(100vh-100px)] box-border relative overflow-hidden'>
         <div className='w-[367px] h-[367px] absolute top-[30%] right-[-200px] rounded-[753px] opacity-50 bg-gradient-to-b from-[#525252] to-[#1A1C1F] blur-[2px]'>
         </div>
-        <div className='px-[250px] w-full box-border'>
+        <div className='px-[12%] w-full box-border'>
           <div className='flex' >
             <div>
               <div className='font-sora text-[110px] font-bold uppercase inline-block bg-gradient-to-r from-[#FFFFFF] to-[#CA2A0F] bg-clip-text text-transparent whitespace-nowrap z-[9999999]'>
@@ -43,11 +43,11 @@ const Home = () => {
                 </Button>
               </div>
             </div>
-            <img className='z-[999] w-[400px] h-auto object-contain ml-[40px]' src="/src/assets/images/card.png" alt="Lavas" />
+            <img className='z-[999] w-[40%] h-auto object-contain ml-[40px]' src="/src/assets/images/card.png" alt="Lavas" />
           </div>
         </div>
 
-        <div className='px-[250px] box-border w-full flex gap-[50px]'>
+        <div className='px-[12%] box-border w-full flex gap-[50px]'>
           <div className='w-1/4'>
             <div className='font-[700]'>
               Save more by preventing out-of-policy spend
@@ -85,16 +85,17 @@ const Home = () => {
         </div>
       </section>
       {/* 第二页 */}
-      <section className='text-[##0A0B11] w-full h-screen box-border bg-[#FFF] flex justify-center items-center flex-col'>
-        <div className='flex flex-col justify-center items-center gap-[20px]'>
+      <section className='text-[#0A0B11] w-full h-screen box-border bg-[#FFF] flex justify-center items-center flex-col'>
+        <div className='flex flex-col justify-center items-center pt-[60px] relative'>
+          <img className='w-[52px] h-auto object-contain absolute right-[-50px] top-[10px]' src="/src/assets/images/black-red-icon.png" alt="Lavas" />
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Build control into the card, before spend even happens.</div>
-          <div className='text-[20px]'>Don't compromise on growth or control</div>
+          <div className='text-[20px] mt-[10px]'>Don't compromise on growth or control</div>
         </div>
 
         <div className='w-full flex gap-[50px] flex-nowrap mt-[150px] h-[360px] justify-center'>
           <div className='w-[420px] h-[365px] rounded-[16px] shadow-[0px_20px_50px_0px_rgba(100,74,74,0.10)] p-[30px] pt-[140px] box-border relative'>
             <div>
-              <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px] w-[250px] object-cover' src="/src/assets/images/Marketing.png" alt="Lavas" />
+              <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px] w-[66%] object-cover' src="/src/assets/images/Marketing.png" alt="Lavas" />
             </div>
             <div className='font-bold font-[700] text-[24px]'>
               Marketing virtual cards
@@ -105,7 +106,7 @@ const Home = () => {
           </div>
           <div className='w-[420px] h-[365px] rounded-[16px] shadow-[0px_20px_50px_0px_rgba(100,74,74,0.10)] p-[30px] pt-[140px] box-border relative'>
             <div>
-              <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px] w-[250px] object-cover' src="/src/assets/images/Travel.png" alt="Lavas" />
+              <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px] w-[66%]  object-cover' src="/src/assets/images/Travel.png" alt="Lavas" />
             </div>
             <div className='font-bold font-[700] text-[24px]'>
               Travel and expenses virtual card
@@ -116,7 +117,7 @@ const Home = () => {
           </div>
           <div className='w-[420px] h-[365px] rounded-[16px] shadow-[0px_20px_50px_0px_rgba(100,74,74,0.10)] p-[30px] pt-[140px] box-border relative'>
             <div>
-              <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px] w-[250px] object-cover' src="/src/assets/images/Conference.png" alt="Lavas" />
+              <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px] w-[66%] object-cover' src="/src/assets/images/Conference.png" alt="Lavas" />
             </div>
             <div className='font-bold font-[700] text-[24px]'>
               Conference virtual card
@@ -130,22 +131,26 @@ const Home = () => {
       {/* 第三页 */}
       <section className='text-[#FFFFFF] w-full h-screen box-border relative overflow-hidden'>
         <img className='absolute top-[0px] left-[0px] w-[30%] object-cover' src="/src/assets/images/third-logo.png" />
-        <div className='px-[250px] w-full box-border pt-[100px]'>
-          <div className='text-[40px] font-[700]'>More visibility, more time back</div>
-          <div className='whitespace-pre opacity-60'>
-            <div>Focus on your work, not follow ups.</div>
-            <div>Let Lavas Labs send reminders for missing items or request repayments for you. Spend less time chasing</div>
-            <div>down receipts and more time closing your books.</div>
+        <div className='px-[12%] w-[70%] box-border pt-[100px]'>
+          <div className='text-[40px] font-[700] relative'>
+            <img className='w-[52px] h-auto object-contain absolute right-[50px] top-[-10px]' src="/src/assets/images/white-red-icon.png" alt="" />
+            <span>More visibility, more time back</span>
           </div>
-          <div className='text-[24px] mt-[60px]'>Simplify approvals and share accountability</div>
-          <div className='whitespace-pre opacity-60'>
+          <div className='opacity-60'>
             <div>Focus on your work, not follow ups.</div>
-            <div>Let Lavas Labs send reminders for missing items or request repayments for you. Spend less time chasing</div>
-            <div>down receipts and more time closing your books.</div>
+            <div>Let Lavas Labs send reminders for missing items or request repayments for you. Spend less time chasing down receipts and more time closing your books.</div>
           </div>
-          <img className='absolute bottom-[0px] left-[20%] w-[200px] object-cover z-[999]' src="/src/assets/images/card-person.png" />
-          <img className='absolute bottom-[0px] left-[46%] w-[220px] object-cover z-[999]' src="/src/assets/images/card-media.png" />
-          <img className='absolute bottom-[100px] left-[70%] w-[220px] object-cover z-[999]' src="/src/assets/images/card-detail.png" />
+          <div className='text-[24px] mt-[60px] relative'>
+            <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[6px]' src="/src/assets/images/text-front-icon.png" alt="" />
+            <span className='z-[999999] relative'>Simplify approvals and share accountability</span>
+          </div>
+          <div className='opacity-60'>
+            <div>Focus on your work, not follow ups.</div>
+            <div>Let Lavas Labs send reminders for missing items or request repayments for you. Spend less time chasing down receipts and more time closing your books.</div>
+          </div>
+          <img className='absolute bottom-[0px] left-[20%] w-[14%] object-cover z-[999]' src="/src/assets/images/card-person.png" />
+          <img className='absolute bottom-[0px] left-[46%] w-[16%] object-cover z-[999]' src="/src/assets/images/card-media.png" />
+          <img className='absolute bottom-[100px] left-[70%] w-[16%] object-cover z-[999]' src="/src/assets/images/card-detail.png" />
         </div>
 
 
@@ -154,10 +159,11 @@ const Home = () => {
         </div>
       </section >
       {/* 第四页 */}
-      <section className='text-[##0A0B11] px-[250px] py-[120px] w-full box-border bg-[#FFF] flex justify-center items-center flex-col'>
-        <div className='flex flex-col justify-center items-center gap-[20px] '>
+      <section className='text-[##0A0B11] px-[12%] py-[120px] w-full box-border bg-[#FFF] flex justify-center items-center flex-col'>
+        <div className='flex flex-col justify-center items-center pt-[60px] relative'>
+          <img className='w-[52px] h-auto object-contain absolute right-[-50px] top-[10px]' src="/src/assets/images/black-red-icon.png" alt="" />
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Effortless expenses for employees (and managers)</div>
-          <div className='text-[20px]'>Centralize your spend on one intuitive platform</div>
+          <div className='text-[20px] mt-[10px]'>Centralize your spend on one intuitive platform</div>
         </div>
 
         <div className='w-full mt-[50px] flex justify-center'>
@@ -166,12 +172,15 @@ const Home = () => {
       </section>
       {/* 第五页 */}
       <section className='text-[#0A0B11] w-full h-screen box-border relative overflow-hidden bg-[#FFF]'>
-        <img className='absolute right-[0px] top-[0px] h-full object-cover w-[50%]' src="/src/assets/images/card-bg-black.png" alt="Lavas" />
-        <div className='px-[250px] w-full box-border'>
+        <img className='absolute right-[0px] top-[0px] h-full object-cover w-[45%]' src="/src/assets/images/card-bg-black.png" alt="Lavas" />
+        <div className='px-[12%] w-full box-border'>
           <div className=' box-border pt-[100px] w-[50%] leading-[1.2]'>
-            <div className='text-[40px] font-[700]'>Automation, control, and
-              rewards.The corporate card
-              you've been looking for</div>
+            <div className='text-[40px] font-[700] relative'>
+              <img className='w-[52px] h-auto object-contain absolute right-[0px] top-[-10px]' src="/src/assets/images/black-red-icon.png" alt="" />
+              <span>Automation, control, and
+                rewards.The corporate card
+                you've been looking for</span>
+            </div>
             <div className='text-[20px] mt-[20px]'>
               Spend to get cashback
               Lavas Labs's corporate card puts money back in your pocket so you can invest even more in growth. Or, bring your cash back right into the platform
@@ -192,7 +201,7 @@ const Home = () => {
               </div>
             </div>
             <div className='w-1/4 text-[#0A0B11] bg-[#FFF] h-[200px] rounded-[12px] p-[30px] box-border flex flex-col justify-between shadow-[0px_20px_50px_0px_rgba(185,185,185,0.40)]'>
-              <i className='iconfont icon-shop text-[32px]'></i>
+              <i className='iconfont icon-Return text-[32px]'></i>
               <div className='font-[500]'>
                 Ramp fees
               </div>
@@ -204,8 +213,9 @@ const Home = () => {
 
       </section >
       {/* 第六页 */}
-      <section className='text-[##0A0B11] px-[250px] w-full h-screen box-border bg-[#FFF] flex justify-center items-center flex-col'>
-        <div className='flex flex-col justify-center items-center gap-[20px] '>
+      <section className='text-[##0A0B11] px-[12%] w-full h-screen box-border bg-[#FFF] flex justify-center items-center flex-col'>
+        <div className='flex flex-col justify-center items-center w-[64%] gap-[20px] relative'>
+          <img className='w-[52px] h-auto object-contain absolute right-[-62px] top-[-40px]' src="/src/assets/images/black-red-icon.png" alt="" />
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Access over $350k in offers from our partners</div>
         </div>
 
@@ -219,7 +229,10 @@ const Home = () => {
 
         <div className='w-full flex gap-[50px] mt-[20px]'>
           <div className='w-1/3'>
-            <div className='text-[30px] font-[500] opacity-10'>01</div>
+            <div className='text-[30px] font-[500] relative'>
+              <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[-2px] top-[10px]' src="/src/assets/images/text-front-icon.png" alt="" />
+              <span className='opacity-10 relative z-[999]'>01</span>
+            </div>
             <Divider className='m-[0px] mb-[20px]'></Divider>
             <div className='text-[28px] font-[500] whitespace-nowrap'>
               No personal credit checks
@@ -231,7 +244,10 @@ const Home = () => {
             </div>
           </div>
           <div className='w-1/3'>
-            <div className='text-[28px] font-[500] opacity-10'>02</div>
+            <div className='text-[30px] font-[500] relative'>
+              <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[-2px] top-[10px]' src="/src/assets/images/text-front-icon.png" alt="" />
+              <span className='opacity-10 relative z-[999]'>02</span>
+            </div>
             <Divider className='m-[0px] mb-[20px]'></Divider>
             <div className='text-[30px] font-[500] whitespace-nowrap'>
               Easy, secure payment
@@ -245,7 +261,10 @@ const Home = () => {
           </div>
 
           <div className='w-1/3'>
-            <div className='text-[28px] font-[500] opacity-10'>03</div>
+            <div className='text-[30px] font-[500] relative'>
+              <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[-2px] top-[10px]' src="/src/assets/images/text-front-icon.png" alt="" />
+              <span className='opacity-10 relative z-[999]'>03</span>
+            </div>
             <Divider className='m-[0px] mb-[20px]'></Divider>
             <div className='text-[30px] font-[500] whitespace-nowrap'>
               Works wherever you go

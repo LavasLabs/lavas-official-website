@@ -21,48 +21,60 @@ const Home = () => {
     <>
       {/* 第一页 */}
       <section className='text-[#0A0B11] w-full h-[calc(100vh-100px)] box-border relative overflow-hidden bg-[#FFF]'>
-        <img className='w-[600px] h-auto object-contain absolute right-[20px] bottom-[0px]' src="/src/assets/images/travel-air.png" alt="Lavas" />
-        <div className='px-[250px] pt-[40px] w-full box-border'>
-          <div className='flex' >
-            <div>
-              <div className='font-sora text-[40px] font-bold uppercase inline-block w-[600px] z-[9999999]'>
-                Smarter business travel, from booking to book close
-              </div>
-              <div className='w-[600px] mt-[10px]'>
-                Book flights and hotels at the lowest rates, automatically enforce customizable travel policies, and automate expenses throughout a trip—all from one platform.
-              </div>
-              <div className='mt-[130px]'>
-                <Button className='font-bold' color="danger" variant="solid" shape="round" size='large'>
-                  Start for Free
-                </Button>
-              </div>
+        <img className='w-[45%] h-auto object-contain absolute right-[20px] bottom-[0px]' src="/src/assets/images/travel-air.png" alt="Lavas" />
+        <div className='px-[12%] pt-[40px] w-full box-border flex'>
+          <div className='w-[50%]'>
+            <div className='font-sora font-[700] text-[40px] font-bold uppercase inline-block w-[600px] z-[9999999]'>
+              Smarter business travel, from booking to book close
             </div>
-
+            <div className='w-[600px] mt-[10px]'>
+              Book flights and hotels at the lowest rates, automatically enforce customizable travel policies, and automate expenses throughout a trip—all from one platform.
+            </div>
+            <div className='mt-[130px]'>
+              <Button className='font-bold' color="danger" variant="solid" shape="round" size='large'>
+                <span className='font-[700]'>Start for Free</span>
+              </Button>
+            </div>
           </div>
         </div>
+
       </section>
       {/* 第二页 */}
-      <section className='text-[#0A0B11] w-full h-screen box-border bg-[#FFF] flex justify-center items-center flex-col'>
-        <div className='flex flex-col justify-center items-center pt-[60px]'>
+      <section className='text-[#0A0B11] w-full min-h-screen box-border pt-[100px] bg-[#FFF] flex justify-center items-center flex-col'>
+        <div className='flex flex-col justify-center items-center pt-[60px] relative'>
+          <img className='w-[52px] h-auto object-contain absolute right-[-50px] top-[10px]' src="/src/assets/images/black-red-icon.png" alt="Lavas" />
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Custom travel policies, built right in</div>
-          <div className='text-[20px]'>Keep expenses in check as your business expands</div>
+          <div className='text-[20px] mt-[10px]'>Keep expenses in check as your business expands</div>
         </div>
 
-        <div className='w-full h-[70%] mt-[30px] px-[250px] box-border text-[#FFF]'>
-          <div className='w-full h-[50%] px-[80px] py-[30px] flex justify-between bg-[url("/src/assets/images/travel-pricing-bg.png")] bg-cover bg-no-repeat bg-center box-border'>
-            <div className='text-[50px]'>Flight Policy</div>
-            <div className='h-full flex flex-col justify-between text-[22px]'>
-              <div className='p-[20px] box-border bg-[#16D165] w-[303px] rounded-[6px] flex items-center justify-center'>Travel expense control</div>
-              <div className='flex items-center gap-[10px] '>
-                <div className='p-[18px] box-border bg-[#16D165] w-[303px] rounded-[6px] flex items-center justify-center'>Travel expense control</div>
-                <div className='p-[18px] box-border bg-[#16D165] w-[60px] rounded-[6px] flex items-center justify-center'>123</div>
+        <div className='w-full h-[700px] mt-[30px] px-[12%] box-border text-[#FFF]'>
+          <div className='w-full h-[50%] px-[80px] py-[30px] flex justify-between bg-[url("/src/assets/images/travel-pricing-bg.png")] bg-cover bg-no-repeat  box-border'>
+            <div className='text-[50px] whitespace-nowrap'>
+              <img className='w-[52px] h-[52px]' src="/src/assets/images/white-red-icon.png" alt="Lavas" />
+              <div>Flight Policy</div>
+            </div>
+            <div className='h-full w-full items-end flex flex-col justify-between text-[20px]'>
+              <div className='p-[16px] mt-[82px] w-[40%] box-border bg-[#16D165] w-[303px] rounded-[6px] flex items-center justify-center'>Travel expense control</div>
+              <div className='w-[80%] flex justify-end gap-[10px] text-[#0A0B11] whitespace-nowrap'>
+                <div className='px-[22px] py-[12px] gap-[12px] box-border rounded-[6px] flex items-center justify-center bg-[#FFF]'>
+                  <div>
+                    Book up to
+                  </div>
+                  <div className='p-[8px] flex items-center justify-center bg-[rgba(94,37,37,0.2)] rounded-[9px]'>
+                    25% above
+                  </div>
+                  <div>
+                    avg.price
+                  </div>
+                </div>
+                <div className='p-[18px] box-border rounded-[6px] flex items-center justify-center  bg-[#FFF]'>
+                  <i className='iconfont icon-coupon text-[20px] mr-[8px]'></i>Economy only
+                </div>
               </div>
             </div>
           </div>
-          <div className='w-full h-[50%] px-[80px] py-[30px] flex justify-between box-border relative'>
-            <img className='absolute bottom-[0px] left-[80px] w-[280px] object-cover z-[999]' src="/src/assets/images/travel-view.png" />
-
-
+          <div className='w-full h-auto px-[80px] pt-[6%] flex justify-between box-border relative'>
+            <img className='absolute top-[-120px] left-[80px] w-[26%] object-cover z-[999]' src="/src/assets/images/travel-view.png" />
             <div className='text-[#0A0B11] ml-auto w-[55%]'>
               <div className='text-[26px] font-[700]'>Set precise controls before takeoff</div>
               <div className='mt-[12px] opacity-60'>Customize guardrails to prevent out-of-policy spend, from per-diems to hotel rates. Lavas Labs can also create flexible controls based on market rate</div>
@@ -92,10 +104,11 @@ const Home = () => {
         </div>
       </section>
       {/* 第四页 */}
-      <section className='text-[#0A0B11] px-[250px] h-screen py-[120px] w-full box-border bg-[#FFF] flex justify-center items-center flex-col'>
-        <div className='flex flex-col justify-center items-center gap-[20px] '>
+      <section className='text-[#0A0B11] px-[12%] h-screen py-[120px] w-full box-border bg-[#FFF] flex justify-center items-center flex-col'>
+        <div className='flex flex-col justify-center items-center pt-[60px] relative'>
+          <img className='w-[52px] h-auto object-contain absolute right-[-50px] top-[10px]' src="/src/assets/images/black-red-icon.png" alt="Lavas" />
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Effortless business travel that’s always in policy</div>
-          <div className='text-[20px]'>Designed to make saving easier.</div>
+          <div className='text-[20px] mt-[10px]'>Designed to make saving easier.</div>
         </div>
 
         <div className='w-full mt-[50px] flex justify-center'>
@@ -103,7 +116,7 @@ const Home = () => {
         </div>
       </section>
       {/* 第五页 */}
-      <section className='text-[#FFF] px-[10%] h-screen w-full box-border bg-[#FFF] flex items-center flex-col relative'>
+      <section className='text-[#FFF] px-[12%] h-screen w-full box-border bg-[#FFF] flex items-center flex-col relative'>
         <div className='absolute top-0 left-0 w-full h-[70%] bg-[#000]'></div>
         <div className='flex w-full h-[70%] py-[40px] box-border z-[9999] justify-between'>
           <div className='w-[50%] h-full flex flex-col justify-between'>

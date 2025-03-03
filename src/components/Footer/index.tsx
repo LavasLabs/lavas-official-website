@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button, Tooltip } from 'antd';
 
 const Footer: React.FC = () => (
-  <footer className="bg-black text-[#FFFFFF] py-[20px] box-border px-[250px] z-[999999]">
+  <footer className="bg-[#0A0B11]  text-[#FFFFFF] py-[20px] box-border px-[12%] z-[999999]">
     <div className="w-full container mx-auto flex w-full justify-between">
       {/* Logo */}
       <Link to="/" className="flex w-[20%] my-[1em]">

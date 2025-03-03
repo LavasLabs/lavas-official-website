@@ -7,7 +7,7 @@ const Banner: React.FC = () => {
     const navigate = useNavigate();
 
     return (
-    <nav className="bg-black text-[#FFFFFF] py-[20px] box-border px-[250px] z-[999999]">
+    <nav className="bg-[#0A0B11] text-[#FFFFFF] py-[20px] box-border px-[12%] z-[999999]">
         <div className="container mx-auto flex items-center w-full">
             {/* Logo */}
             <Link to="/" className="flex items-center w-[20%]">

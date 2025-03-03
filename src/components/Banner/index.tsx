@@ -1,8 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Button, Tooltip } from 'antd';
 
-const Banner: React.FC = () => (
+const Banner: React.FC = () => {
+    const navigate = useNavigate();
+
+    return (
     <nav className="bg-black text-[#FFFFFF] py-[20px] box-border px-[250px] z-[999999]">
         <div className="container mx-auto flex items-center w-full">
             {/* Logo */}
@@ -14,7 +18,7 @@ const Banner: React.FC = () => (
             <div className="flex items-center justify-between w-full z-[999999]">
                 <div>
                     <ul className="flex items-center list-none gap-[50px]">
-                        <li>
+                        <li className='cursor-pointer' onClick={() => navigate('/travel')}>
                             Products
                         </li>
                         <li>
@@ -45,6 +49,8 @@ const Banner: React.FC = () => (
             </div>
         </div>
     </nav>
-);
+    )
+};
+
 
 export default Banner;

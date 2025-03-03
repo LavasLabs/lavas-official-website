@@ -87,7 +87,7 @@ const Home = () => {
       {/* 第二页 */}
       <section className='text-[##0A0B11] w-full h-screen box-border bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center gap-[20px]'>
-          <div className='text-[42px] font-[700px] text-center space-y-[10px] leading-[1]'>Build control into the card, before spend even happens.</div>
+          <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Build control into the card, before spend even happens.</div>
           <div className='text-[20px]'>Don't compromise on growth or control</div>
         </div>
 

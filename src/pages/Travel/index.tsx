@@ -1,21 +1,8 @@
-import { useTranslation } from 'react-i18next';
-import { Button, Divider, Tooltip } from 'antd';
+// import { useTranslation } from 'react-i18next';
+import { Button } from 'antd';
 
 const Home = () => {
   // const { t } = useTranslation();
-
-  const logoUrlList = [
-    '/src/assets/logos/card-logo1.svg',
-    '/src/assets/logos/card-logo2.svg',
-    '/src/assets/logos/card-logo3.svg',
-    '/src/assets/logos/card-logo4.svg',
-    '/src/assets/logos/card-logo5.svg',
-    '/src/assets/logos/card-logo6.svg',
-    '/src/assets/logos/card-logo7.svg',
-    '/src/assets/logos/card-logo8.svg',
-    '/src/assets/logos/card-logo9.svg',
-    '/src/assets/logos/card-logo10.svg',
-  ];
 
   return (
     <>
@@ -142,7 +129,7 @@ const Home = () => {
 
       </section>
       {/* 第六页 */}
-      <section className='text-[##0A0B11] w-full box-border bg-[#FFF] flex items-center flex-col'>
+      <section className='text-[#0A0B11] w-full box-border bg-[#FFF] flex items-center flex-col'>
         <div className='flex flex-col justify-center items-center gap-[20px] '>
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Effortless business travel that’s always in policy</div>
           <div className='text-[20px]'>Designed to make saving easier.</div>

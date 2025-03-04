@@ -1,22 +1,22 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { DownOutlined, SmileOutlined } from '@ant-design/icons';
+import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
-import { Button, Tooltip, Dropdown, Space, Popover } from 'antd';
+import { Button, Dropdown, Space, Popover } from 'antd';
 
 
 
 
 const items: MenuProps['items'] = [
-    {
-        key: '1',
-        label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-                items
-            </a>
-        ),
-    },
+    // {
+    //     key: '1',
+    //     label: (
+    //         <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+    //             items
+    //         </a>
+    //     ),
+    // },
 ];
 
 const content = (() => {
@@ -34,7 +34,7 @@ const content = (() => {
                 <i className='iconfont icon-Travel text-[24px]'></i>
                 <span>Travel</span>
             </Space>
-            <Space className='cursor-pointer' onClick={() => goRouter('travel')}>
+            <Space className='cursor-pointer' onClick={() => goRouter('expense')}>
                 <i className='iconfont icon-money text-[24px]'></i>
                 <span>Expense Management</span>
             </Space>
@@ -49,9 +49,9 @@ const content = (() => {
 
 
 const Banner: React.FC = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const location = window.location.pathname;
-    const urlList = ['travel'];
+    const urlList = ['travel','term'];
     const isUrl = urlList.some(u => location.includes(u));
 
     return (
@@ -73,10 +73,10 @@ const Banner: React.FC = () => {
                         </Popover>
 
 
-                        <li className='cursor-pointer' onClick={() => navigate('/travel')}>
+                        <li className='cursor-pointer'>
                             Pricing
                         </li>
-                        <li>
+                        <li className='cursor-pointer'>
                             <Dropdown menu={{ items }}>
                                 <Space>
                                     Solutions
@@ -84,7 +84,7 @@ const Banner: React.FC = () => {
                                 </Space>
                             </Dropdown>
                         </li>
-                        <li>
+                        <li className='cursor-pointer'>
                             <Dropdown menu={{ items }}>
                                 <Space>
                                     Resource
@@ -92,7 +92,9 @@ const Banner: React.FC = () => {
                                 </Space>
                             </Dropdown>
                         </li>
-                        <li>
+                        <li className='cursor-pointer' onClick={() => {
+                            window.location.href = '/term';
+                        }}>
                             Terms & Conditions
                         </li>
                     </ul>

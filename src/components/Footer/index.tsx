@@ -1,29 +1,95 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Tooltip } from 'antd';
+// import { useNavigate } from 'react-router-dom';
+import { DownOutlined } from '@ant-design/icons';
+import type { MenuProps } from 'antd';
+import { Dropdown, Space, Popover } from 'antd';
 
-const Footer: React.FC = () => (
-  <footer className="bg-[#0A0B11]  text-[#FFFFFF] py-[20px] box-border px-[12%] z-[999999]">
-    <div className="w-full container mx-auto flex w-full justify-between">
-      {/* Logo */}
-      <Link to="/" className="flex w-[20%] my-[1em]">
-        <img src="/src/assets/logos/lavas-logo.png" alt="Lavas" className="w-auto h-[52px]" />
-      </Link>
+const items: MenuProps['items'] = [
+  // {
+  //     key: '1',
+  //     label: (
+  //         <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+  //             items
+  //         </a>
+  //     ),
+  // },
+];
 
-      <div className="flex gap-[120px]">
+const content = (() => {
+  const goRouter = (url: string) => {
+    window.location.href = `/${url}`;
+  }
+
+  return (
+    <div className='w-[420px] flex flex-wrap gap-[15px] gap-y-[10px] '>
+      <Space className='cursor-pointer' onClick={() => goRouter('')}>
+        <i className='iconfont icon-a-CorporateCard text-[24px]'></i>
+        <span>Corporate Card</span>
+      </Space>
+      <Space className='cursor-pointer' onClick={() => goRouter('travel')}>
+        <i className='iconfont icon-Travel text-[24px]'></i>
+        <span>Travel</span>
+      </Space>
+      <Space className='cursor-pointer' onClick={() => goRouter('expense')}>
+        <i className='iconfont icon-money text-[24px]'></i>
+        <span>Expense Management</span>
+      </Space>
+      <Space className='cursor-pointer' onClick={() => goRouter('travel')}>
+        <i className='iconfont icon-Advertising text-[24px]'></i>
+        <span>Advertising</span>
+      </Space>
+    </div>
+  )
+}
+);
+
+
+const Footer: React.FC = () => {
+  // const navigate = useNavigate();
+  // const location = window.location.pathname;
+  return (
+    <footer className="bg-[#0A0B11]  text-[#FFFFFF] py-[20px] box-border px-[12%] z-[999999]">
+      <div className="w-full container mx-auto flex w-full justify-between">
+        {/* Logo */}
+        <Link to="/" className="flex w-[20%] my-[1em]">
+          <img src="/src/assets/logos/lavas-logo.png" alt="Lavas" className="w-auto h-[52px]" />
+        </Link>
+
+        <div className="flex gap-[120px]">
 
           <ul className="list-none flex flex-col gap-[20px]">
-            <li>
-              Products
-            </li>
-            <li>
+            <Popover content={content}>
+              <Space>
+                Products
+                <DownOutlined />
+              </Space>
+            </Popover>
+
+
+            <li className='cursor-pointer'>
               Pricing
             </li>
-            <li>
-              Solutions
+            <li className='cursor-pointer'>
+              <Dropdown menu={{ items }}>
+                <Space>
+                  Solutions
+                  <DownOutlined />
+                </Space>
+              </Dropdown>
             </li>
-            <li>
-              Resource
+            <li className='cursor-pointer'>
+              <Dropdown menu={{ items }}>
+                <Space>
+                  Resource
+                  <DownOutlined />
+                </Space>
+              </Dropdown>
+            </li>
+            <li className='cursor-pointer' onClick={() => {
+              window.location.href = '/term';
+            }}>
+              Terms & Conditions
             </li>
           </ul>
 
@@ -37,15 +103,15 @@ const Footer: React.FC = () => (
               support@lavaslabs.com
             </li>
             <li>
-            defpay skype support
+              defpay skype support
             </li>
           </ul>
 
+        </div>
       </div>
-    </div>
-    <div className="w-full container mx-auto flex w-full justify-between">
+      <div className="w-full container mx-auto flex w-full justify-between">
         <div>
-        Copyright ©2025 Lavas Labs Limited. All Rights Reserved
+          Copyright ©2025 Lavas Labs Limited. All Rights Reserved
         </div>
         <div className='flex gap-[20px]'>
           <i className='iconfont icon-facebook text-[20px]'></i>
@@ -53,8 +119,9 @@ const Footer: React.FC = () => (
           <i className='iconfont icon-instagram text-[20px]'></i>
           <i className='iconfont icon-ins text-[20px]'></i>
         </div>
-    </div>
-  </footer>
-);
+      </div>
+    </footer>
+  )
+};
 
 export default Footer;

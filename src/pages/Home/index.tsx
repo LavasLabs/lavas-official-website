@@ -1,8 +1,8 @@
-import { useTranslation } from 'react-i18next';
-import { Button, Divider, Tooltip } from 'antd';
+// import { useTranslation } from 'react-i18next';
+import { Button, Divider } from 'antd';
 
 const Home = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   const logoUrlList = [
     '/src/assets/logos/card-logo1.svg',
@@ -95,7 +95,7 @@ const Home = () => {
         </div>
 
         <div className='w-full flex gap-[50px] flex-nowrap mt-[150px] h-[360px] justify-center'>
-          <div className='w-[420px] h-[365px] rounded-[16px] shadow-[0px_20px_50px_0px_rgba(100,74,74,0.10)] p-[30px] pt-[140px] box-border relative'>
+          <div className='w-[calc(100%/3-100px)] h-[365px] rounded-[16px] shadow-[0px_20px_50px_0px_rgba(100,74,74,0.10)] p-[30px] pt-[140px] box-border relative'>
             <div>
               <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px] w-[66%] object-cover' src="/src/assets/images/Marketing.png" alt="Lavas" />
             </div>
@@ -106,7 +106,7 @@ const Home = () => {
               Get unlimited virtual cards for yourself or the employees, we make your money more safe.
             </div>
           </div>
-          <div className='w-[420px] h-[365px] rounded-[16px] shadow-[0px_20px_50px_0px_rgba(100,74,74,0.10)] p-[30px] pt-[140px] box-border relative'>
+          <div className='w-[calc(100%/3-100px)] h-[365px] rounded-[16px] shadow-[0px_20px_50px_0px_rgba(100,74,74,0.10)] p-[30px] pt-[140px] box-border relative'>
             <div>
               <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px] w-[66%]  object-cover' src="/src/assets/images/Travel.png" alt="Lavas" />
             </div>
@@ -117,7 +117,7 @@ const Home = () => {
               Create custom virtual cards and set permissions for everything from ad marketplace spend to remote work stipends, for individual teams or your whole company.
             </div>
           </div>
-          <div className='w-[420px] h-[365px] rounded-[16px] shadow-[0px_20px_50px_0px_rgba(100,74,74,0.10)] p-[30px] pt-[140px] box-border relative'>
+          <div className='w-[calc(100%/3-100px)] h-[365px] rounded-[16px] shadow-[0px_20px_50px_0px_rgba(100,74,74,0.10)] p-[30px] pt-[140px] box-border relative'>
             <div>
               <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px] w-[66%] object-cover' src="/src/assets/images/Conference.png" alt="Lavas" />
             </div>
@@ -161,7 +161,7 @@ const Home = () => {
         </div>
       </section >
       {/* 第四页 */}
-      <section className='text-[##0A0B11] px-[12%] py-[120px] w-full box-border bg-[#FFF] flex justify-center items-center flex-col'>
+      <section className='text-[#0A0B11] px-[12%] py-[120px] w-full box-border bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center pt-[60px] relative'>
           <img className='w-[52px] h-auto object-contain absolute right-[-60px] top-[10px]' src="/src/assets/images/black-red-icon.png" alt="" />
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Effortless expenses for employees (and managers)</div>
@@ -215,7 +215,7 @@ const Home = () => {
 
       </section >
       {/* 第六页 */}
-      <section className='text-[##0A0B11] px-[12%] w-full h-screen box-border bg-[#FFF] flex justify-center items-center flex-col'>
+      <section className='text-[#0A0B11] px-[12%] w-full h-screen box-border bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center w-[64%] gap-[20px] relative'>
           <img className='w-[52px] h-auto object-contain absolute right-[-62px] top-[-40px]' src="/src/assets/images/black-red-icon.png" alt="" />
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Access over $350k in offers from our partners</div>

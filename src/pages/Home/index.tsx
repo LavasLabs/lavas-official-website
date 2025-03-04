@@ -38,7 +38,7 @@ const Home = () => {
                 Save money and time. All with one corporate card.
               </div>
               <div className='mt-[130px]'>
-                <Button className='font-bold' color="danger" variant="solid" shape="round" size='large'>
+                <Button className='font-[700]' color="danger" variant="solid" shape="round" size='large'>
                   Start for Free
                 </Button>
               </div>
@@ -49,39 +49,41 @@ const Home = () => {
 
         <div className='px-[12%] box-border w-full flex gap-[50px]'>
           <div className='w-1/4'>
-            <div className='font-[700]'>
-              Save more by preventing out-of-policy spend
+            <div className='font-[700] relative'>
+              <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[0px]' src="/src/assets/images/text-front-icon.png" alt="" />
+              <span className='z-[999999] relative'>Save more by preventing out-of-policy spend</span>
             </div>
             <div className='text-[15px] opacity-60 mt-[8px]'>
               Preset controls on corporate cards for specific vendors and categories.
             </div>
           </div>
           <div className='w-1/4'>
-            <div className='font-[700]'>
-              Be free from expense reports.
+            <div className='font-[700] relative'>
+              <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[0px]' src="/src/assets/images/text-front-icon.png" alt="" />
+              <span className='z-[999999] relative'>Be free from expense reports.</span>
             </div>
             <div className='text-[15px] opacity-60 mt-[8px]'>
               Easily submit expenses through SMS, mobile app, and integrations.
             </div>
           </div>
           <div className='w-1/4'>
-            <div className='font-[700]'>
-              Unlock savings in real time
+            <div className='font-[700] relative'>
+              <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[0px]' src="/src/assets/images/text-front-icon.png" alt="" />
+              <span className='z-[999999] relative'>Unlock savings in real time</span>
             </div>
             <div className='text-[15px] opacity-60 mt-[8px]'>
               Get insight into spend as it happens, with a platform that pays off immediately.
             </div>
           </div>
           <div className='w-1/4'>
-            <div className='font-[700]'>
-              Grow your business with the right terms
+          <div className='font-[700] relative'>
+              <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[0px]' src="/src/assets/images/text-front-icon.png" alt="" />
+              <span className='z-[999999] relative'>Grow your business with the right terms</span>
             </div>
             <div className='text-[15px] opacity-60 mt-[8px]'>
               Get rewards and perks, like 5% savings. There’s no personal credit checks or personal guarantee.
             </div>
           </div>
-
-
         </div>
       </section>
       {/* 第二页 */}
@@ -97,10 +99,10 @@ const Home = () => {
             <div>
               <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px] w-[66%] object-cover' src="/src/assets/images/Marketing.png" alt="Lavas" />
             </div>
-            <div className='font-bold font-[700] text-[24px]'>
+            <div className='font-[700] text-[24px]'>
               Marketing virtual cards
             </div>
-            <div className='text-[18px] mt-[20px]'>
+            <div className='text-[16px] mt-[12px] text-[#626262]'>
               Get unlimited virtual cards for yourself or the employees, we make your money more safe.
             </div>
           </div>
@@ -108,10 +110,10 @@ const Home = () => {
             <div>
               <img className='absolute top-1/2 left-1/2 transform -translate-x-1/2 top-[-100px] w-[66%]  object-cover' src="/src/assets/images/Travel.png" alt="Lavas" />
             </div>
-            <div className='font-bold font-[700] text-[24px]'>
+            <div className='font-[700] text-[24px]'>
               Travel and expenses virtual card
             </div>
-            <div className='text-[18px] mt-[20px]'>
+            <div className='text-[16px] mt-[12px] text-[#626262]'>
               Create custom virtual cards and set permissions for everything from ad marketplace spend to remote work stipends, for individual teams or your whole company.
             </div>
           </div>
@@ -122,7 +124,7 @@ const Home = () => {
             <div className='font-bold font-[700] text-[24px]'>
               Conference virtual card
             </div>
-            <div className='text-[18px] mt-[20px]'>
+            <div className='text-[16px] mt-[12px] text-[#626262]'>
               Set spend limits or cancel cards any time you want.
             </div>
           </div>
@@ -133,7 +135,7 @@ const Home = () => {
         <img className='absolute top-[0px] left-[0px] w-[30%] object-cover' src="/src/assets/images/third-logo.png" />
         <div className='px-[12%] w-[70%] box-border pt-[100px]'>
           <div className='text-[40px] font-[700] relative'>
-            <img className='w-[52px] h-auto object-contain absolute right-[50px] top-[-10px]' src="/src/assets/images/white-red-icon.png" alt="" />
+            <img className='w-[52px] h-auto object-contain absolute right-[30px] top-[-20px]' src="/src/assets/images/white-red-icon.png" alt="" />
             <span>More visibility, more time back</span>
           </div>
           <div className='opacity-60'>
@@ -161,7 +163,7 @@ const Home = () => {
       {/* 第四页 */}
       <section className='text-[##0A0B11] px-[12%] py-[120px] w-full box-border bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center pt-[60px] relative'>
-          <img className='w-[52px] h-auto object-contain absolute right-[-50px] top-[10px]' src="/src/assets/images/black-red-icon.png" alt="" />
+          <img className='w-[52px] h-auto object-contain absolute right-[-60px] top-[10px]' src="/src/assets/images/black-red-icon.png" alt="" />
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Effortless expenses for employees (and managers)</div>
           <div className='text-[20px] mt-[10px]'>Centralize your spend on one intuitive platform</div>
         </div>

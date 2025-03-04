@@ -1,54 +1,123 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { Button, Tooltip } from 'antd';
+import { DownOutlined, SmileOutlined } from '@ant-design/icons';
+import type { MenuProps } from 'antd';
+import { Button, Tooltip, Dropdown, Space, Popover } from 'antd';
+
+
+
+
+const items: MenuProps['items'] = [
+    {
+        key: '1',
+        label: (
+            <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+                items
+            </a>
+        ),
+    },
+];
+
+const content = (() => {
+    const goRouter = (url: string) => {
+        window.location.href = `/${url}`;
+    }
+
+    return (
+        <div className='w-[420px] flex flex-wrap gap-[15px] gap-y-[10px] '>
+            <Space className='cursor-pointer' onClick={() => goRouter('')}>
+                <i className='iconfont icon-a-CorporateCard text-[24px]'></i>
+                <span>Corporate Card</span>
+            </Space>
+            <Space className='cursor-pointer' onClick={() => goRouter('travel')}>
+                <i className='iconfont icon-Travel text-[24px]'></i>
+                <span>Travel</span>
+            </Space>
+            <Space className='cursor-pointer' onClick={() => goRouter('travel')}>
+                <i className='iconfont icon-money text-[24px]'></i>
+                <span>Expense Management</span>
+            </Space>
+            <Space className='cursor-pointer' onClick={() => goRouter('travel')}>
+                <i className='iconfont icon-Advertising text-[24px]'></i>
+                <span>Advertising</span>
+            </Space>
+        </div>
+    )
+}
+);
+
 
 const Banner: React.FC = () => {
     const navigate = useNavigate();
+    const location = window.location.pathname;
+    const urlList = ['travel'];
+    const isUrl = urlList.some(u => location.includes(u));
 
     return (
-    <nav className="bg-[#0A0B11] text-[#FFFFFF] py-[20px] box-border px-[12%] z-[999999]">
-        <div className="container mx-auto flex items-center w-full">
-            {/* Logo */}
-            <Link to="/" className="flex items-center w-[20%]">
-                <img src="/src/assets/logos/lavas-logo.png" alt="Lavas" className="w-auto h-[52px]" />
-            </Link>
+        <nav className={`${isUrl ? 'text-[#0A0B11] bg-[#FFFFFF]' : 'text-[#FFFFFF] bg-[#0A0B11]'} py-[20px] box-border px-[12%] z-[999999] text-[14px]`}>
+            <div className="container mx-auto flex items-center w-full">
+                {/* Logo */}
+                <Link to="/" className="flex items-center w-[16%]">
+                    <img src={isUrl ? '/src/assets/logos/lavas-logo-black.png' : '/src/assets/logos/lavas-logo.png'} alt="Lavas" className="w-auto h-[52px]" />
+                </Link>
 
-            {/* Navigation Links */}
-            <div className="flex items-center justify-between w-full z-[999999]">
-                <div>
-                    <ul className="flex items-center list-none gap-[50px]">
+
+                <div className="flex items-center justify-between w-full z-[999999]">
+                    <ul className="flex items-center list-none gap-[36px] whitespace-nowrap">
+                        <Popover content={content}>
+                            <Space>
+                                Products
+                                <DownOutlined />
+                            </Space>
+                        </Popover>
+
+
                         <li className='cursor-pointer' onClick={() => navigate('/travel')}>
-                            Products
-                        </li>
-                        <li>
                             Pricing
                         </li>
                         <li>
-                            Solutions
+                            <Dropdown menu={{ items }}>
+                                <Space>
+                                    Solutions
+                                    <DownOutlined />
+                                </Space>
+                            </Dropdown>
                         </li>
                         <li>
-                            Resource
+                            <Dropdown menu={{ items }}>
+                                <Space>
+                                    Resource
+                                    <DownOutlined />
+                                </Space>
+                            </Dropdown>
+                        </li>
+                        <li>
+                            Terms & Conditions
+                        </li>
+                    </ul>
+
+
+                    <ul className="flex items-center list-none gap-[34px]">
+                        <li>
+                            <Dropdown menu={{ items }}>
+                                <Space>
+                                    EN
+                                    <DownOutlined />
+                                </Space>
+                            </Dropdown>
+                        </li>
+                        <li>
+                            <Button className={`${isUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} border border-[#FFFFFF]`} type="text">Sign Up</Button>
+                        </li>
+                        <li>
+                            <Button className={`${isUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'}`}  type="text">Login</Button>
                         </li>
                     </ul>
                 </div>
 
-                <div>
-                    <ul className="flex items-center list-none gap-[50px]">
-                        <li>
-                            EN
-                        </li>
-                        <li>
-                            <Button className='text-[#FFFFFF] hover:text-[#FFFFFF]' type="text">Sign Up</Button>
-                        </li>
-                        <li>
-                            Login
-                        </li>
-                    </ul>
-                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     )
 };
 

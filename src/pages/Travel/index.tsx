@@ -121,7 +121,10 @@ const Home = () => {
         <div className='flex w-full h-[70%] py-[40px] box-border z-[9999] justify-between'>
           <div className='w-[50%] h-full flex flex-col justify-between'>
             <div className='w-full'>
-              <div className='text-[42px] font-[700] space-y-[10px] leading-[1]'>Effortless business travel that’s always in policy</div>
+              <div className='text-[42px] font-[700] space-y-[10px] leading-[1] relative'>
+              <img className='w-[52px] h-auto object-contain absolute right-[0px] top-[-20px]' src="/src/assets/images/white-red-icon.png" alt="" />
+                Effortless business travel that’s always in policy
+                </div>
               <div className='text-[18px] mt-[16px]'>Lavas Labs collects and matches receipts across all transactions, and routes to the right budget and category. It instantly generates receipts for certain purchases, and saves recurring memos.</div>
             </div>
 

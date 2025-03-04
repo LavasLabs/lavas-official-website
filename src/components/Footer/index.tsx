@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
               </Dropdown>
             </li>
             <li className='cursor-pointer' onClick={() => {
-              window.location.href = '/term';
+              window.location.href = '/services-terms';
             }}>
               Terms & Conditions
             </li>

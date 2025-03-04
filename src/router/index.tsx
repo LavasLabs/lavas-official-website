@@ -42,7 +42,7 @@ const router = createBrowserRouter([
         }
       },
       {
-        path: '/term',
+        path: '/services-terms',
         lazy: async () => {
           const { default: Component } = await import('../pages/Term');
           return { Component };

@@ -50,7 +50,7 @@ const content = (() => {
 const Banner: React.FC = () => {
     // const navigate = useNavigate();
     const location = window.location.pathname;
-    const urlList = ['travel', 'term'];
+    const urlList = ['travel', 'services-terms'];
     const isUrl = urlList.some(u => location.includes(u));
 
     const goRouter = (url: string) => {
@@ -95,7 +95,7 @@ const Banner: React.FC = () => {
                                 </Space>
                             </Dropdown>
                         </li>
-                        <li className='cursor-pointer' onClick={() => { window.location.href = '/term' }}>
+                        <li className='cursor-pointer' onClick={() => { window.location.href = '/services-terms' }}>
                             Terms & Conditions
                         </li>
                     </ul>

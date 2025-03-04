@@ -1,6 +1,5 @@
 import React from 'react';
 // import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Button, Dropdown, Space, Popover } from 'antd';
@@ -51,16 +50,20 @@ const content = (() => {
 const Banner: React.FC = () => {
     // const navigate = useNavigate();
     const location = window.location.pathname;
-    const urlList = ['travel','term'];
+    const urlList = ['travel', 'term'];
     const isUrl = urlList.some(u => location.includes(u));
 
+    const goRouter = (url: string) => {
+        window.location.href = url;
+    }
+
     return (
-        <nav className={`${isUrl ? 'text-[#0A0B11] bg-[#FFFFFF]' : 'text-[#FFFFFF] bg-[#0A0B11]'} py-[20px] box-border px-[12%] z-[999999] text-[14px]`}>
+        <nav className={`bg-[#0A0B11] ${isUrl ? 'text-[#0A0B11] bg-[#FFFFFF]' : 'text-[#FFFFFF] bg-[#0A0B11]'} py-[20px] box-border px-[12%] z-[999999] text-[14px]`}>
             <div className="container mx-auto flex items-center w-full">
                 {/* Logo */}
-                <Link to="/" className="flex items-center w-[16%]">
+                <div onClick={() => goRouter('/')} className="flex items-center w-[16%] cursor-pointer">
                     <img src={isUrl ? '/logos/lavas-logo-black.png' : '/logos/lavas-logo.png'} alt="Lavas" className="w-auto h-[52px]" />
-                </Link>
+                </div>
 
 
                 <div className="flex items-center justify-between w-full z-[999999]">
@@ -92,9 +95,7 @@ const Banner: React.FC = () => {
                                 </Space>
                             </Dropdown>
                         </li>
-                        <li className='cursor-pointer' onClick={() => {
-                            window.location.href = '/term';
-                        }}>
+                        <li className='cursor-pointer' onClick={() => { window.location.href = '/term' }}>
                             Terms & Conditions
                         </li>
                     </ul>
@@ -113,7 +114,7 @@ const Banner: React.FC = () => {
                             <Button className={`${isUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} border border-[#FFFFFF]`} type="text">Sign Up</Button>
                         </li>
                         <li>
-                            <Button className={`${isUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'}`}  type="text">Login</Button>
+                            <Button className={`${isUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'}`} type="text">Login</Button>
                         </li>
                     </ul>
                 </div>

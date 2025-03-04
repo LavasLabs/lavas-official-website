@@ -119,12 +119,36 @@ const Home = () => {
               <div className='text-[24px]'>Get ahead of overspend</div>
               <div className='opacity-60'>Stop making business decisions on stale data. Get real-time insights to make timely adjustments before your teams exceed their budget</div>
             </div>
-
-            <div className='text-[24px] font-[700] mt-[20px]'>Get ahead of overspend</div>
+            <div className='text-[24px] font-[700] mt-[20px]'>
+              <Space>
+                <span className='text-[18px]'>commercial affairs</span>
+                <span className='text-[14px] rounded-[8px] p-[8px] box-border bg-[#E6E7E7]'>
+                  <span className='opacity-50 text-[#0A0B11]'>Year to date 2024</span>
+                </span>
+              </Space>
+            </div>
             <Divider></Divider>
             <img className='w-full' src="/images/expense-shape-t.png" alt="Lavas" />
           </div>
-
+          <div className='p-[24px] box-border w-[calc(100%/3-14px)] rounded-[22px] bg-[#FFF] shadow-[0px_30px_70px_0px_rgba(0,0,0,0.10)]'>
+            <div className='flex flex-col gap-[20px] justify-between'>
+              <div className='text-[24px]'>Maximize visibility with centralized data</div>
+              <div className='opacity-60'>Lavas Labs’s AI-powered assistance surfaces detailed financial answers with faster analysis across every business expense</div>
+            </div>
+            <Divider></Divider>
+            <img className='w-full' src="/images/expense-statistics.png" alt="Lavas" />
+          </div>
+          <div className='p-[24px] box-border w-[calc(100%/3-14px)] rounded-[22px] bg-[#FFF] shadow-[0px_30px_70px_0px_rgba(0,0,0,0.10)] flex flex-col justify-between'>
+            <div className='flex flex-col gap-[20px] justify-between'>
+              <div className='text-[24px]'>Uncover true costs</div>
+              <div className='opacity-60'>Lavas Labs continuously surfaces savings insights like duplicate subscriptions and unused solutions.</div>
+              <Divider></Divider>
+            </div>
+            <Space direction='vertical'>
+              <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="/images/expense-coffee.png" alt="Lavas" />
+              <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="/images/expense-perk.png" alt="Lavas" />
+            </Space>
+          </div>
         </div>
       </section>
     </>

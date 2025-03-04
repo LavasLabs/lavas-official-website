@@ -2,16 +2,25 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { resolve } from 'path'
+import path from 'path';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(),tailwindcss(),],
+  plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, './src'),
       '@components': resolve(__dirname, 'src/components'),
       '@pages': resolve(__dirname, 'src/pages'),
       '@locales': resolve(__dirname, 'src/locales')
+    }
+  },
+  base: './',
+  build: {
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name].[hash][extname]'
+      }
     }
   }
 })

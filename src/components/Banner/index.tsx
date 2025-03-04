@@ -59,7 +59,7 @@ const Banner: React.FC = () => {
             <div className="container mx-auto flex items-center w-full">
                 {/* Logo */}
                 <Link to="/" className="flex items-center w-[16%]">
-                    <img src={isUrl ? '/src/assets/logos/lavas-logo-black.png' : '/src/assets/logos/lavas-logo.png'} alt="Lavas" className="w-auto h-[52px]" />
+                    <img src={isUrl ? '/logos/lavas-logo-black.png' : '/logos/lavas-logo.png'} alt="Lavas" className="w-auto h-[52px]" />
                 </Link>
 
 

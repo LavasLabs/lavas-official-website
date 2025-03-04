@@ -43,7 +43,7 @@ const CorporateCard = () => {
               </ul>
             </div>
             <div className="relative order-1 md:order-2 mb-8 md:mb-0">
-              <img src="/src/assets/card-preview.png" alt="Corporate Card Preview" className="w-full rounded-lg shadow-xl" />
+              <img src="/card-preview.png" alt="Corporate Card Preview" className="w-full rounded-lg shadow-xl" />
             </div>
           </div>
         </div>

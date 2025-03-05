@@ -62,7 +62,7 @@ const Banner: React.FC = () => {
             <div className="container mx-auto flex items-center w-full">
                 {/* Logo */}
                 <div onClick={() => goRouter('/')} className="flex items-center w-[16%] cursor-pointer">
-                    <img src={isUrl ? './logos/lavas-logo-black.png' : './logos/lavas-logo.png'} alt="Lavas" className="w-auto h-[52px]" />
+                    <img src={isUrl ? '/logos/lavas-logo-black.png' : '/logos/lavas-logo.png'} alt="Lavas" className="w-auto h-[52px]" />
                 </div>
 
 

@@ -5,18 +5,18 @@ const Expense = () => {
   // const { t } = useTranslation();
 
   const logoUrlList = [
-    '/logos/expense-logo1.svg',
-    '/logos/expense-logo2.svg',
-    '/logos/expense-logo3.svg',
-    '/logos/expense-logo4.svg',
-    '/logos/expense-logo5.svg',
-    '/logos/expense-logo6.svg',
-    '/logos/expense-logo7.svg',
-    '/logos/expense-logo8.svg',
-    '/logos/expense-logo9.svg',
-    '/logos/expense-logo10.svg',
-    '/logos/expense-logo11.svg',
-    '/logos/expense-logo12.svg',
+    './logos/expense-logo1.svg',
+    './logos/expense-logo2.svg',
+    './logos/expense-logo3.svg',
+    './logos/expense-logo4.svg',
+    './logos/expense-logo5.svg',
+    './logos/expense-logo6.svg',
+    './logos/expense-logo7.svg',
+    './logos/expense-logo8.svg',
+    './logos/expense-logo9.svg',
+    './logos/expense-logo10.svg',
+    './logos/expense-logo11.svg',
+    './logos/expense-logo12.svg',
   ];
 
   return (
@@ -33,14 +33,14 @@ const Expense = () => {
           </Button>
           <div className='w-full flex justify-between items-center mt-[60px]'>
             <div className='flex-1 h-full relative'>
-              <img className='absolute w-full h-auto top-[-40%] left-[-20%]' src="/images/expense-c-f.png" alt="" />
-              <img className='absolute w-full h-auto bottom-[8%]' src="/images/expense-c-s.png" alt="" />
+              <img className='absolute w-full h-auto top-[-40%] left-[-20%]' src="./images/expense-c-f.png" alt="" />
+              <img className='absolute w-full h-auto bottom-[8%]' src="./images/expense-c-s.png" alt="" />
             </div>
             <div className='w-[40%] mx-[40px] flex items-end'>
-              <img className='w-full' src="/images/expense-card.png" alt="" />
+              <img className='w-full' src="./images/expense-card.png" alt="" />
             </div>
             <div className='flex-1 h-full relative'>
-              <img className='absolute w-full h-auto bottom-[40%] left-[4%]' src="/images/expense-shape.png" alt="" />
+              <img className='absolute w-full h-auto bottom-[40%] left-[4%]' src="./images/expense-shape.png" alt="" />
             </div>
           </div>
         </div>
@@ -51,14 +51,14 @@ const Expense = () => {
       <section className='text-[#0A0B11] w-full min-h-screen box-border py-[80px] bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center relative'>
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1] relative'>
-            <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-80%]' src="/images/black-red-icon.png" alt="Lavas" />
+            <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-80%]' src="./images/black-red-icon.png" alt="Lavas" />
             Control spend before it happens</div>
           <div className='text-[20px] mt-[10px]'>Give employees cards with policies built in, so you can prevent unapproved spend</div>
         </div>
 
         <div className='w-full flex flex-1 h-full mt-[30px] px-[12%] box-border'>
           <div className='w-[72%] h-full relative'>
-            <img className='w-full' src="/images/expense-second.png" alt="" />
+            <img className='w-full' src="./images/expense-second.png" alt="" />
           </div>
           <div className='w-[28%] relative'>
             <div className='absolute left-[-20px] top-[50%] translate-y-[-50%]'>
@@ -77,23 +77,23 @@ const Expense = () => {
       {/* 第三页 */}
       <section className='text-[#FFF] w-full h-screen box-border pt-[80px] bg-[#0A0B11] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center relative'>
-          <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-22%]' src="/images/white-red-icon.png" alt="Lavas" />
+          <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-22%]' src="./images/white-red-icon.png" alt="Lavas" />
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Eliminate manual expense reporting</div>
           <div className='text-[18px] mt-[10px] opacity-60'>Free employees to do their job without expenses getting in their way.</div>
         </div>
 
         <div className='w-full flex flex-1 h-full mt-[30px] px-[12%] box-border relative'>
           <div className='w-[40%] pt-[4%] box-border h-full relative'>
-            <img className='w-full' src="/images/expense-t-f.png" alt="" />
+            <img className='w-full' src="./images/expense-t-f.png" alt="" />
           </div>
-          <img className='w-[50%] absolute bottom-[0px] right-[0px]' src="/images/expense-meteorite.png" alt="" />
+          <img className='w-[50%] absolute bottom-[0px] right-[0px]' src="./images/expense-meteorite.png" alt="" />
         </div>
       </section>
       {/* 第四页 */}
       <section className='text-[#0A0B11] w-full min-h-screen box-border py-[80px] bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center relative'>
           <div className='w-[70%] text-[42px] font-[700] text-center space-y-[10px] leading-[1] relative'>
-            <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-22%]' src="/images/black-red-icon.png" alt="Lavas" />
+            <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-22%]' src="./images/black-red-icon.png" alt="Lavas" />
             Free your team from manual expense management
           </div>
           <div className='text-[20px] mt-[10px]'>Expenses that submit themselves.</div>
@@ -102,18 +102,18 @@ const Expense = () => {
         <div className='w-full flex flex-1 h-full mt-[30px] pl-[12%] box-border'>
           <div className='w-[40%] relative'>
             <div className='font-[700] relative'>
-              <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[0px]' src="/images/text-front-icon.png" alt="" />
+              <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[0px]' src="./images/text-front-icon.png" alt="" />
               <span className='z-[999999] text-[20px] relative'>The old way</span>
             </div>
-            <img className='w-full absolute right-[0px] top-[0px]' src="/images/expense-oldway.png" alt="" />
+            <img className='w-full absolute right-[0px] top-[0px]' src="./images/expense-oldway.png" alt="" />
           </div>
           <div className='w-[60%] relative pl-[10%] pt-[10%] box-border'>
 
             <div className='z-[999999] font-[700] text-[#FFF] flex flex-col gap-[20px] justify-center relative'>
               <div className='w-[30%] flex justify-center relative'>The old way</div>
-              <img className='w-[30%] rounded-[20px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]' src="/images/expense-chat.png" alt="" />
+              <img className='w-[30%] rounded-[20px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]' src="./images/expense-chat.png" alt="" />
             </div>
-            <img className='w-full absolute right-[0px] top-[0px]' src="/images/expense-people.png" alt="" />
+            <img className='w-full absolute right-[0px] top-[0px]' src="./images/expense-people.png" alt="" />
           </div>
         </div>
       </section>
@@ -121,7 +121,7 @@ const Expense = () => {
       <section className='text-[#0A0B11] w-full h-screen box-border py-[80px] bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center relative'>
           <div className='w-[70%] text-[42px] font-[700] text-center space-y-[10px] leading-[1] relative'>
-            <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-22%]' src="/images/black-red-icon.png" alt="Lavas" />
+            <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-22%]' src="./images/black-red-icon.png" alt="Lavas" />
             Make strategic decisions with real-time expense reporting
           </div>
           <div className='text-[20px] mt-[10px]'>Instantly access spend data and insight to save money for your business</div>
@@ -142,7 +142,7 @@ const Expense = () => {
               </Space>
             </div>
             <Divider></Divider>
-            <img className='w-full' src="/images/expense-shape-t.png" alt="Lavas" />
+            <img className='w-full' src="./images/expense-shape-t.png" alt="Lavas" />
           </div>
           <div className='p-[24px] box-border w-[calc(100%/3-14px)] rounded-[22px] bg-[#FFF] shadow-[0px_30px_70px_0px_rgba(0,0,0,0.10)]'>
             <div className='flex flex-col gap-[20px] justify-between'>
@@ -150,7 +150,7 @@ const Expense = () => {
               <div className='opacity-60'>Lavas Labs’s AI-powered assistance surfaces detailed financial answers with faster analysis across every business expense</div>
             </div>
             <Divider></Divider>
-            <img className='w-full' src="/images/expense-statistics.png" alt="Lavas" />
+            <img className='w-full' src="./images/expense-statistics.png" alt="Lavas" />
           </div>
           <div className='p-[24px] box-border w-[calc(100%/3-14px)] rounded-[22px] bg-[#FFF] shadow-[0px_30px_70px_0px_rgba(0,0,0,0.10)] flex flex-col justify-between'>
             <div className='flex flex-col gap-[20px] justify-between'>
@@ -159,8 +159,8 @@ const Expense = () => {
               <Divider></Divider>
             </div>
             <Space direction='vertical'>
-              <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="/images/expense-coffee.png" alt="Lavas" />
-              <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="/images/expense-perk.png" alt="Lavas" />
+              <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="./images/expense-coffee.png" alt="Lavas" />
+              <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="./images/expense-perk.png" alt="Lavas" />
             </Space>
           </div>
         </div>
@@ -168,7 +168,7 @@ const Expense = () => {
       {/* 第六页 */}
       <section className='text-[#0A0B11] px-[12%] w-full h-screen box-border bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center w-[64%] gap-[20px] relative'>
-          <img className='w-[52px] h-auto object-contain absolute right-[-62px] top-[-40px]' src="/images/black-red-icon.png" alt="" />
+          <img className='w-[52px] h-auto object-contain absolute right-[-62px] top-[-40px]' src="./images/black-red-icon.png" alt="" />
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Access over $350k in offers from our partners</div>
         </div>
 

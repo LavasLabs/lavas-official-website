@@ -2,10 +2,10 @@ const Advertising = () => {
 
 
   const logoUrlList = [
-    { url: '/logos/adver-logo1.svg', name: 'Facebook', desc: 'Familiar with Facebook advertising rules' },
-    { url: '/logos/adver-logo2.svg', name: 'Youtube', desc: 'Familiar with YouTube advertising rules and unique operational techniques' },
-    { url: '/logos/adver-logo3.svg', name: 'Twitter', desc: 'Independently operate Twitter Visa card agent' },
-    { url: '/logos/adver-logo4.svg', name: 'Google', desc: 'Professional Google advertising placement method' },
+    { url: './logos/adver-logo1.svg', name: 'Facebook', desc: 'Familiar with Facebook advertising rules' },
+    { url: './logos/adver-logo2.svg', name: 'Youtube', desc: 'Familiar with YouTube advertising rules and unique operational techniques' },
+    { url: './logos/adver-logo3.svg', name: 'Twitter', desc: 'Independently operate Twitter Visa card agent' },
+    { url: './logos/adver-logo4.svg', name: 'Google', desc: 'Professional Google advertising placement method' },
   ];
 
   return (
@@ -22,11 +22,11 @@ const Advertising = () => {
             </div>
           </div>
         </div>
-        <img className='w-full object-contain' src="/images/adver-banner.png" alt="" />
+        <img className='w-full object-contain' src="./images/adver-banner.png" alt="" />
 
         <div className='flex flex-col mt-[6%] justify-center items-center relative'>
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1] relative'>
-            <img className='w-[52px] h-auto object-contain absolute right-[-20%] top-[-80%]' src="/images/black-red-icon.png" alt="Lavas" />
+            <img className='w-[52px] h-auto object-contain absolute right-[-20%] top-[-80%]' src="./images/black-red-icon.png" alt="Lavas" />
             Business Scenario
           </div>
         </div>

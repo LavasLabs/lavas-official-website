@@ -10,7 +10,7 @@ const Term = () => {
             <section className='text-[#0A0B11] w-full min-h-screen box-border py-[80px] bg-[#FFF] flex justify-center items-center flex-col'>
                 <div className='flex flex-col justify-center items-center relative'>
                     <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1] relative'>
-                        <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-80%]' src="/images/black-red-icon.png" alt="Lavas" />
+                        <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-80%]' src="./images/black-red-icon.png" alt="Lavas" />
                         SERVICES TERMS & CONDITIONS</div>
                 </div>
 

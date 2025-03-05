@@ -51,7 +51,7 @@ const Expense = () => {
       <section className='text-[#0A0B11] w-full min-h-screen box-border py-[80px] bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center relative'>
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1] relative'>
-            <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-80%]' src="/images/black-red-icon.png" alt="Lavas" />
+            <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-80%]' src="/images/black-red-icon.png" alt="" />
             Control spend before it happens</div>
           <div className='text-[20px] mt-[10px]'>Give employees cards with policies built in, so you can prevent unapproved spend</div>
         </div>
@@ -77,7 +77,7 @@ const Expense = () => {
       {/* 第三页 */}
       <section className='text-[#FFF] w-full h-screen box-border pt-[80px] bg-[#0A0B11] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center relative'>
-          <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-22%]' src="/images/white-red-icon.png" alt="Lavas" />
+          <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-22%]' src="/images/white-red-icon.png" alt="" />
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Eliminate manual expense reporting</div>
           <div className='text-[18px] mt-[10px] opacity-60'>Free employees to do their job without expenses getting in their way.</div>
         </div>
@@ -93,7 +93,7 @@ const Expense = () => {
       <section className='text-[#0A0B11] w-full min-h-screen box-border py-[80px] bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center relative'>
           <div className='w-[70%] text-[42px] font-[700] text-center space-y-[10px] leading-[1] relative'>
-            <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-22%]' src="/images/black-red-icon.png" alt="Lavas" />
+            <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-22%]' src="/images/black-red-icon.png" alt="" />
             Free your team from manual expense management
           </div>
           <div className='text-[20px] mt-[10px]'>Expenses that submit themselves.</div>
@@ -121,7 +121,7 @@ const Expense = () => {
       <section className='text-[#0A0B11] w-full h-screen box-border py-[80px] bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center relative'>
           <div className='w-[70%] text-[42px] font-[700] text-center space-y-[10px] leading-[1] relative'>
-            <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-22%]' src="/images/black-red-icon.png" alt="Lavas" />
+            <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-22%]' src="/images/black-red-icon.png" alt="" />
             Make strategic decisions with real-time expense reporting
           </div>
           <div className='text-[20px] mt-[10px]'>Instantly access spend data and insight to save money for your business</div>
@@ -142,7 +142,7 @@ const Expense = () => {
               </Space>
             </div>
             <Divider></Divider>
-            <img className='w-full' src="/images/expense-shape-t.png" alt="Lavas" />
+            <img className='w-full' src="/images/expense-shape-t.png" alt="" />
           </div>
           <div className='p-[24px] box-border w-[calc(100%/3-14px)] rounded-[22px] bg-[#FFF] shadow-[0px_30px_70px_0px_rgba(0,0,0,0.10)]'>
             <div className='flex flex-col gap-[20px] justify-between'>
@@ -150,7 +150,7 @@ const Expense = () => {
               <div className='opacity-60'>Lavas Labs’s AI-powered assistance surfaces detailed financial answers with faster analysis across every business expense</div>
             </div>
             <Divider></Divider>
-            <img className='w-full' src="/images/expense-statistics.png" alt="Lavas" />
+            <img className='w-full' src="/images/expense-statistics.png" alt="" />
           </div>
           <div className='p-[24px] box-border w-[calc(100%/3-14px)] rounded-[22px] bg-[#FFF] shadow-[0px_30px_70px_0px_rgba(0,0,0,0.10)] flex flex-col justify-between'>
             <div className='flex flex-col gap-[20px] justify-between'>
@@ -159,8 +159,8 @@ const Expense = () => {
               <Divider></Divider>
             </div>
             <Space direction='vertical'>
-              <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="/images/expense-coffee.png" alt="Lavas" />
-              <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="/images/expense-perk.png" alt="Lavas" />
+              <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="/images/expense-coffee.png" alt="" />
+              <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="/images/expense-perk.png" alt="" />
             </Space>
           </div>
         </div>
@@ -176,7 +176,7 @@ const Expense = () => {
           logoUrlList.map(item => {
             return (
               <div className='px-[24px] py-[12px]  box-border bg-[#F7F7F7] rounded-[12px] flex items-center justify-center'>
-                <img className='w-[80px] h-[80px] object-cover' src={item} alt="Lavas" />
+                <img className='w-[80px] h-[80px] object-cover' src={item} alt="" />
               </div>
 
             )

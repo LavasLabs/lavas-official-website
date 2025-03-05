@@ -8,7 +8,7 @@ const Travel = () => {
     <>
       {/* 第一页 */}
       <section className='text-[#0A0B11] w-full h-[calc(100vh-100px)] box-border relative overflow-hidden bg-[#FFF]'>
-        <img className='w-[45%] h-auto object-contain absolute right-[20px] bottom-[0px]' src="/images/travel-air.png" alt="Lavas" />
+        <img className='w-[45%] h-auto object-contain absolute right-[20px] bottom-[0px]' src="/images/travel-air.png" alt="" />
         <div className='px-[12%] pt-[40px] w-full box-border flex'>
           <div className='w-[50%]'>
             <div className='font-sora font-[700] text-[40px] font-bold uppercase inline-block w-[600px] z-[9999999]'>
@@ -29,7 +29,7 @@ const Travel = () => {
       {/* 第二页 */}
       <section className='text-[#0A0B11] w-full min-h-screen box-border pt-[100px] bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center pt-[60px] relative'>
-          <img className='w-[52px] h-auto object-contain absolute right-[-50px] top-[10px]' src="/images/black-red-icon.png" alt="Lavas" />
+          <img className='w-[52px] h-auto object-contain absolute right-[-50px] top-[10px]' src="/images/black-red-icon.png" alt="" />
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Custom travel policies, built right in</div>
           <div className='text-[20px] mt-[10px]'>Keep expenses in check as your business expands</div>
         </div>
@@ -37,7 +37,7 @@ const Travel = () => {
         <div className='w-full h-[700px] mt-[30px] px-[12%] box-border text-[#FFF]'>
           <div className='w-full h-[50%] px-[80px] py-[30px] flex justify-between bg-[url("/images/travel-pricing-bg.png")] bg-cover bg-no-repeat  box-border'>
             <div className='text-[50px] whitespace-nowrap'>
-              <img className='w-[52px] h-[52px]' src="/images/white-red-icon.png" alt="Lavas" />
+              <img className='w-[52px] h-[52px]' src="/images/white-red-icon.png" alt="" />
               <div>Flight Policy</div>
             </div>
             <div className='h-full w-full items-end flex flex-col justify-between text-[20px]'>
@@ -74,7 +74,7 @@ const Travel = () => {
         <div className='absolute top-0 left-0 w-full h-[50%] bg-[#F3F3F3]'></div>
         <div className='w-full h-full pl-[8%] pr-[10%] box-border flex gap-[40px] justify-center items-center'>
           <div className='w-[50%] z-[999]'>
-            <img className='w-full h-auto object-contain' src="/images/travel-view-phone.png" alt="Lavas" />
+            <img className='w-full h-auto object-contain' src="/images/travel-view-phone.png" alt="" />
           </div>
           <div className='w-[50%] z-[999]'>
             <div className='text-[26px] font-[700]'>Set precise controls before takeoff</div>
@@ -83,8 +83,8 @@ const Travel = () => {
             <div className='mt-[8px] opacity-60'>Opt to split savings with employees that book more cost-effective options.</div>
 
             <div className='w-full flex flex-col gap-[20px] mt-[100px]'>
-              <img className='w-[400px] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src="/images/travel-view-phone-first.png" alt="Lavas" />
-              <img className='w-[400px] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src="/images/travel-view-phone-second.png" alt="Lavas" />
+              <img className='w-[400px] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src="/images/travel-view-phone-first.png" alt="" />
+              <img className='w-[400px] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src="/images/travel-view-phone-second.png" alt="" />
             </div>
 
           </div>
@@ -93,13 +93,13 @@ const Travel = () => {
       {/* 第四页 */}
       <section className='text-[#0A0B11] px-[12%] h-screen py-[120px] w-full box-border bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='flex flex-col justify-center items-center pt-[60px] relative'>
-          <img className='w-[52px] h-auto object-contain absolute right-[-50px] top-[10px]' src="/images/black-red-icon.png" alt="Lavas" />
+          <img className='w-[52px] h-auto object-contain absolute right-[-50px] top-[10px]' src="/images/black-red-icon.png" alt="" />
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Effortless business travel that’s always in policy</div>
           <div className='text-[20px] mt-[10px]'>Designed to make saving easier.</div>
         </div>
 
         <div className='w-full mt-[50px] flex justify-center'>
-          <img className='max-w-full object-cover' src="/images/travel-map.png" alt="Lavas" />
+          <img className='max-w-full object-cover' src="/images/travel-map.png" alt="" />
         </div>
       </section>
       {/* 第五页 */}
@@ -123,7 +123,7 @@ const Travel = () => {
 
           </div>
           <div className='w-[36%]'>
-            <img className='w-full h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[30px]' src="/images/travel-reports.png" alt="Lavas" />
+            <img className='w-full h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[30px]' src="/images/travel-reports.png" alt="" />
           </div>
         </div>
 
@@ -136,13 +136,13 @@ const Travel = () => {
         </div>
         <div className='mt-[40px] pt-[5%] pb-[10%] pl-[10%] pr-[2%] w-full h-[800px] bg-[url("/images/travel-oversee-bg.png")] bg-cover bg-no-repeat bg-center flex box-border'>
           <div className='w-[50%] flex flex-col justify-between'>
-            <img className='w-[70%] bg-[rgba(255,255,255,0.60)] shadow-[0px_40px_88px_0px_rgba(0,0,0,0.15)]  backdrop-blur-[7.5px] rounded-[20px]' src="/images/travel-happen-th.png" alt="Lavas" />
-            <img className='w-[50%] rounded-[22px]' src="/images/travel-happen-fo.png" alt="Lavas" />
+            <img className='w-[70%] bg-[rgba(255,255,255,0.60)] shadow-[0px_40px_88px_0px_rgba(0,0,0,0.15)]  backdrop-blur-[7.5px] rounded-[20px]' src="/images/travel-happen-th.png" alt="" />
+            <img className='w-[50%] rounded-[22px]' src="/images/travel-happen-fo.png" alt="" />
           </div>
 
           <div className='w-[50%] flex flex-col justify-between'>
-            <img className='w-[70%] bg-[rgba(255,255,255,0.60)] ml-[20%] shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)]  backdrop-blur-[7.5px]  rounded-[20px]' src="/images/travel-happen-fir.png" alt="Lavas" />
-            <img className='w-[60%] shadow-[0px_2px_87.5px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src="/images/travel-happen-sec.png" alt="Lavas" />
+            <img className='w-[70%] bg-[rgba(255,255,255,0.60)] ml-[20%] shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)]  backdrop-blur-[7.5px]  rounded-[20px]' src="/images/travel-happen-fir.png" alt="" />
+            <img className='w-[60%] shadow-[0px_2px_87.5px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src="/images/travel-happen-sec.png" alt="" />
           </div>
         </div>
       </section>

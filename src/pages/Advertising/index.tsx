@@ -26,7 +26,7 @@ const Advertising = () => {
 
         <div className='flex flex-col mt-[6%] justify-center items-center relative'>
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1] relative'>
-            <img className='w-[52px] h-auto object-contain absolute right-[-20%] top-[-80%]' src="/images/black-red-icon.png" alt="Lavas" />
+            <img className='w-[52px] h-auto object-contain absolute right-[-20%] top-[-80%]' src="/images/black-red-icon.png" alt="" />
             Business Scenario
           </div>
         </div>
@@ -35,7 +35,7 @@ const Advertising = () => {
             return (
               <div className='pt-[32px] pb-[10px] px-[20px] box-border bg-[#FFF] rounded-[12px] border border-[#F5F7F9] flex justify-center shadow-[0px_10px_30px_0px_rgba(24,24,26,0.10)]'>
                 <div className='w-full flex flex-col gap-y-[16px] items-center'>
-                  <img className='w-[80px] h-[80px] object-cover' src={item.url} alt="Lavas" />
+                  <img className='w-[80px] h-[80px] object-cover' src={item.url} alt="" />
                   <div className='font-[700]'>{item.name}</div>
                   <div className='w-[200px] text-center opacity-50'>{item.desc}</div>
                 </div>

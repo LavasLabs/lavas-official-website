@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
       <div className="w-full container mx-auto flex w-full justify-between">
         {/* Logo */}
         <Link to="/" className="flex w-[20%] my-[1em]">
-          <img src="/logos/lavas-logo.png" alt="Lavas" className="w-auto h-[52px]" />
+          <img src="/logos/lavas-logo.png" alt="" className="w-auto h-[52px]" />
         </Link>
 
         <div className="flex gap-[120px]">

@@ -1,8 +1,8 @@
-// import { useTranslation } from 'react-i18next';
 
 
-const Home = () => {
-    // const { t } = useTranslation();
+
+const Term = () => {
+    
 
 
     return (
@@ -787,4 +787,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Term;

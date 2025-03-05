@@ -1,9 +1,23 @@
 // import { useTranslation } from 'react-i18next';
 import { Button, Divider, Space } from 'antd';
 
-const Home = () => {
+const Expense = () => {
   // const { t } = useTranslation();
 
+  const logoUrlList = [
+    '/logos/expense-logo1.svg',
+    '/logos/expense-logo2.svg',
+    '/logos/expense-logo3.svg',
+    '/logos/expense-logo4.svg',
+    '/logos/expense-logo5.svg',
+    '/logos/expense-logo6.svg',
+    '/logos/expense-logo7.svg',
+    '/logos/expense-logo8.svg',
+    '/logos/expense-logo9.svg',
+    '/logos/expense-logo10.svg',
+    '/logos/expense-logo11.svg',
+    '/logos/expense-logo12.svg',
+  ];
 
   return (
     <>
@@ -151,10 +165,29 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* 第六页 */}
+      <section className='text-[#0A0B11] px-[12%] w-full h-screen box-border bg-[#FFF] flex justify-center items-center flex-col'>
+        <div className='flex flex-col justify-center items-center w-[64%] gap-[20px] relative'>
+          <img className='w-[52px] h-auto object-contain absolute right-[-62px] top-[-40px]' src="/images/black-red-icon.png" alt="" />
+          <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1]'>Access over $350k in offers from our partners</div>
+        </div>
+
+        <div className='w-[72%] mt-[50px] flex flex-wrap justify-between gap-y-[12px] gap-x-[4px] mt-[40px]'>{
+          logoUrlList.map(item => {
+            return (
+              <div className='px-[24px] py-[12px]  box-border bg-[#F7F7F7] rounded-[12px] flex items-center justify-center'>
+                <img className='w-[80px] h-[80px] object-cover' src={item} alt="Lavas" />
+              </div>
+
+            )
+          })
+        }
+        </div>
+      </section>
     </>
 
 
   );
 };
 
-export default Home;
+export default Expense;

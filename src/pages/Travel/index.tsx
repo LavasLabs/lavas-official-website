@@ -1,7 +1,7 @@
 // import { useTranslation } from 'react-i18next';
 import { Button } from 'antd';
 
-const Home = () => {
+const Travel = () => {
   // const { t } = useTranslation();
 
   return (
@@ -152,4 +152,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Travel;

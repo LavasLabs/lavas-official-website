@@ -13,16 +13,15 @@ export default defineConfig({
       '@locales': resolve(__dirname, 'src/locales')
     }
   },
-  base: './',  // 修改为相对路径
+  // base: './',
   // build: {
   //   assetsDir: 'assets',
   //   rollupOptions: {
   //     output: {
-  //       assetFileNames: 'assets/[name].[hash][extname]',
-  //       chunkFileNames: 'assets/[name].[hash].js',
-  //       entryFileNames: 'assets/[name].[hash].js'
+  //       assetFileNames: 'assets/[name].[hash][extname]'
   //     }
   //   },
-  //   // 添加字体文件处理
-  // }
+  //   copyPublicDir: true  // 确保复制 public 目录
+  // },
+  // publicDir: 'public'  // 指定 public 目录
 })

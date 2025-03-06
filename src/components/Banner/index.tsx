@@ -50,7 +50,7 @@ const content = (() => {
 const Banner: React.FC = () => {
     // const navigate = useNavigate();
     const location = window.location.pathname;
-    const urlList = ['travel', 'services-terms','advertising'];
+    const urlList = ['travel', 'services-terms','advertising','blog'];
     const isUrl = urlList.some(u => location.includes(u));
 
     const goRouter = (url: string) => {

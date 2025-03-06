@@ -35,7 +35,7 @@ const content = (() => {
         <i className='iconfont icon-money text-[24px]'></i>
         <span>Expense Management</span>
       </Space>
-      <Space className='cursor-pointer' onClick={() => goRouter('travel')}>
+      <Space className='cursor-pointer' onClick={() => goRouter('advertising')}>
         <i className='iconfont icon-Advertising text-[24px]'></i>
         <span>Advertising</span>
       </Space>

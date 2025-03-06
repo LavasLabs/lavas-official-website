@@ -22,7 +22,7 @@ const Expense = () => {
   return (
     <>
       {/* 第一页 */}
-      <section className='text-[#FFFFFF] px-[12%] w-full h-[calc(100vh-100px)] box-border flex items-center flex-col relative overflow-hidden'>
+      <section className='bg-[#0A0B11] text-[#FFFFFF] px-[12%] w-full h-[calc(100vh-100px)] box-border flex items-center flex-col relative overflow-hidden'>
         <div className='z-[999] h-full relative w-full flex flex-col justify-between items-center pt-[60px] box-border'>
           <div className='w-full flex flex-col justify-center items-center'>
             <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1] w-[80%]'>Expense management software designed to close your books faster</div>

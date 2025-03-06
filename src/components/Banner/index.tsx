@@ -50,77 +50,94 @@ const content = (() => {
 const Banner: React.FC = () => {
     // const navigate = useNavigate();
     const location = window.location.pathname;
-    const urlList = ['travel', 'services-terms','advertising','blog'];
-    const isUrl = urlList.some(u => location.includes(u));
+    const whiteUrlList = ['travel', 'services-terms', 'advertising', 'blog', 'contact', 'partner'];
+    const isWhiteBgUrl = whiteUrlList.some(u => location.includes(u));
+    const tUrlList = ['partner'];
+    const isTUrl = tUrlList.some(u => location.includes(u));
 
     const goRouter = (url: string) => {
         window.location.href = url;
     }
 
     return (
-        <nav className={`bg-[#0A0B11] ${isUrl ? 'text-[#0A0B11] bg-[#FFFFFF]' : 'text-[#FFFFFF] bg-[#0A0B11]'} py-[20px] box-border px-[12%] z-[999999] text-[14px]`}>
-            <div className="container mx-auto flex items-center w-full">
-                {/* Logo */}
-                <div onClick={() => goRouter('/')} className="flex items-center w-[16%] cursor-pointer">
-                    <img src={isUrl ? '/logos/lavas-logo-black.png' : '/logos/lavas-logo.png'} alt="" className="w-auto h-[52px]" />
+        <>
+            {/* 导航栏 */}
+            <nav className={`w-full absolute top-0 left-0 right-0 ${isWhiteBgUrl
+                ? 'text-[#0A0B11]'
+                : 'text-[#FFFFFF]'
+                }  ${isTUrl ? 'bg-[#FFFFFF]/20 backdrop-blur-sm' : ''} py-[20px] box-border px-[12%] z-[100] text-[14px]`}>
+
+                <div className="container mx-auto flex items-center w-full relative">
+                    {/* Logo */}
+                    <div onClick={() => goRouter('/')} className="flex items-center w-[16%] cursor-pointer relative z-[102]">
+                        <img src={isWhiteBgUrl ? '/logos/lavas-logo-black.png' : '/logos/lavas-logo.png'} alt="" className="w-auto h-[52px]" />
+                    </div>
+
+                    <div className="flex items-center justify-between w-full relative z-[102]">
+                        <ul className="flex items-center list-none gap-[36px] whitespace-nowrap relative">
+                            <Popover content={content}>
+                                <Space className="relative z-[102]">
+                                    Products
+                                    <DownOutlined />
+                                </Space>
+                            </Popover>
+
+
+                            <li className='cursor-pointer'>
+                                Pricing
+                            </li>
+                            <li className='cursor-pointer'>
+                                <Dropdown menu={{ items }}>
+                                    <Space>
+                                        Solutions
+                                        <DownOutlined />
+                                    </Space>
+                                </Dropdown>
+                            </li>
+                            <li className='cursor-pointer'>
+                                <Dropdown menu={{ items }}>
+                                    <Space>
+                                        Resource
+                                        <DownOutlined />
+                                    </Space>
+                                </Dropdown>
+                            </li>
+                            <li className='cursor-pointer' onClick={() => { window.location.href = '/services-terms' }}>
+                                Terms & Conditions
+                            </li>
+                        </ul>
+
+
+                        <ul className="flex items-center list-none gap-[34px]">
+                            <li>
+                                <Dropdown menu={{ items }}>
+                                    <Space>
+                                        EN
+                                        <DownOutlined />
+                                    </Space>
+                                </Dropdown>
+                            </li>
+                            <li>
+                                <Button className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} border border-[#FFFFFF]`} type="text">Sign Up</Button>
+                            </li>
+                            <li>
+                                <Button className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'}`} type="text">Login</Button>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
+            </nav>
 
-
-                <div className="flex items-center justify-between w-full z-[999999]">
-                    <ul className="flex items-center list-none gap-[36px] whitespace-nowrap">
-                        <Popover content={content}>
-                            <Space>
-                                Products
-                                <DownOutlined />
-                            </Space>
-                        </Popover>
-
-
-                        <li className='cursor-pointer'>
-                            Pricing
-                        </li>
-                        <li className='cursor-pointer'>
-                            <Dropdown menu={{ items }}>
-                                <Space>
-                                    Solutions
-                                    <DownOutlined />
-                                </Space>
-                            </Dropdown>
-                        </li>
-                        <li className='cursor-pointer'>
-                            <Dropdown menu={{ items }}>
-                                <Space>
-                                    Resource
-                                    <DownOutlined />
-                                </Space>
-                            </Dropdown>
-                        </li>
-                        <li className='cursor-pointer' onClick={() => { window.location.href = '/services-terms' }}>
-                            Terms & Conditions
-                        </li>
-                    </ul>
-
-
-                    <ul className="flex items-center list-none gap-[34px]">
-                        <li>
-                            <Dropdown menu={{ items }}>
-                                <Space>
-                                    EN
-                                    <DownOutlined />
-                                </Space>
-                            </Dropdown>
-                        </li>
-                        <li>
-                            <Button className={`${isUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} border border-[#FFFFFF]`} type="text">Sign Up</Button>
-                        </li>
-                        <li>
-                            <Button className={`${isUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'}`} type="text">Login</Button>
-                        </li>
-                    </ul>
+            {!isTUrl && (
+                <div className={`h-[100px] w-full relative ${isWhiteBgUrl
+                    ? 'bg-[#FFFFFF]'
+                    : 'bg-[#0A0B11]'
+                    }`}>
                 </div>
+            )}
 
-            </div>
-        </nav>
+        </>
     )
 };
 

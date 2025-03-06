@@ -55,6 +55,20 @@ const router = createBrowserRouter([
           return { Component };
         }
       },
+      {
+        path: '/contact',
+        lazy: async () => {
+          const { default: Component } = await import('../pages/Contact');
+          return { Component };
+        }
+      },
+      {
+        path: '/partner',
+        lazy: async () => {
+          const { default: Component } = await import('../pages/Partner');
+          return { Component };
+        }
+      },
     ],
   },
 ]);

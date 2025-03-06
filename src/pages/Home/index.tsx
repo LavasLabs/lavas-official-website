@@ -19,16 +19,18 @@ const Home = () => {
 
   return (
     <>
-      <div className='w-[653px] h-[653px] absolute top-[-240px] right-[200px] rounded-[753px] opacity-50 bg-gradient-to-b from-[#C31111] to-[#1A1C1F] blur-[2px] z-[10]'>
+      <div className='w-[40vw] h-[40vw] absolute top-[-15vw] right-[12vw] rounded-full opacity-50 bg-gradient-to-b from-[#C31111] to-[#1A1C1F] blur-[2px] z-[10]'>
       </div>
       {/* 第一页 */}
-      <section className='text-[#FFFFFF] w-full h-[calc(100vh-100px)] box-border relative overflow-hidden'>
-        <div className='w-[367px] h-[367px] absolute top-[30%] right-[-200px] rounded-[753px] opacity-50 bg-gradient-to-b from-[#525252] to-[#1A1C1F] blur-[2px]'>
+      <section className='bg-[#0A0B11] text-[#FFFFFF] w-full h-[calc(100vh-100px)] box-border relative overflow-hidden'>
+        {/* <div className='w-[367px] h-[367px] absolute top-[30%] right-[-200px] rounded-[753px] opacity-50 bg-gradient-to-b from-[#525252] to-[#1A1C1F] blur-[2px]'>
+        </div> */}
+        <div className='w-[25vw] h-[25vw] absolute top-[30%] right-[-14vw] rounded-full opacity-50 bg-gradient-to-b from-[#525252] to-[#1A1C1F] blur-[2px]'>
         </div>
         <div className='px-[12%] w-full box-border'>
           <div className='flex' >
             <div>
-              <div className='font-sora text-[110px] font-bold uppercase inline-block bg-gradient-to-r from-[#FFFFFF] to-[#CA2A0F] bg-clip-text text-transparent whitespace-nowrap z-[9999999]'>
+              <div className='font-sora text-[110px] font-bold uppercase inline-block bg-gradient-to-r from-[#FFFFFF] to-[#CA2A0F] bg-clip-text text-transparent whitespace-nowrap z-[102] relative'>
                 Lavas Labs
               </div>
               <div>
@@ -76,7 +78,7 @@ const Home = () => {
             </div>
           </div>
           <div className='w-1/4'>
-          <div className='font-[700] relative'>
+            <div className='font-[700] relative'>
               <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[0px]' src="/images/text-front-icon.png" alt="" />
               <span className='z-[999999] relative'>Grow your business with the right terms</span>
             </div>
@@ -131,7 +133,7 @@ const Home = () => {
         </div>
       </section>
       {/* 第三页 */}
-      <section className='text-[#FFFFFF] w-full h-screen box-border relative overflow-hidden'>
+      <section className='bg-[#0A0B11] text-[#FFFFFF] w-full h-screen box-border relative overflow-hidden'>
         <img className='absolute top-[0px] left-[0px] w-[30%] object-cover' src="/images/third-logo.png" />
         <div className='px-[12%] w-[70%] box-border pt-[100px]'>
           <div className='text-[40px] font-[700] relative'>

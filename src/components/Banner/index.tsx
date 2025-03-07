@@ -46,6 +46,29 @@ const content = (() => {
 }
 );
 
+const resourceContent = (() => {
+    const goRouter = (url: string) => {
+        window.location.href = `/${url}`;
+    }
+
+    return (
+        <div className='w-[420px] flex flex-wrap gap-[20px] gap-y-[10px] '>
+            <Space className='cursor-pointer' onClick={() => goRouter('blog')}>
+                <i className='iconfont icon-blog text-[24px]'></i>
+                <span>Blog</span>
+            </Space>
+            <Space className='cursor-pointer' onClick={() => goRouter('contact')}>
+                <i className='iconfont icon-sales text-[24px]'></i>
+                <span>Contact Sales</span>
+            </Space>
+            <Space className='cursor-pointer' onClick={() => goRouter('partner')}>
+                <i className='iconfont icon-Partner text-[24px]'></i>
+                <span>Become a Partner</span>
+            </Space>
+        </div>
+    )
+})
+
 
 const Banner: React.FC = () => {
     // const navigate = useNavigate();
@@ -65,7 +88,7 @@ const Banner: React.FC = () => {
             <nav className={`w-full absolute top-0 left-0 right-0 ${isWhiteBgUrl
                 ? 'text-[#0A0B11]'
                 : 'text-[#FFFFFF]'
-                }  ${isTUrl ? 'bg-[#FFFFFF]/20 backdrop-blur-sm' : ''} py-[20px] box-border px-[12%] z-[100] text-[14px]`}>
+                }  ${isTUrl ? 'bg-[#FFFFFF]/40 backdrop-blur-sm' : ''} py-[20px] box-border px-[12%] z-[100] text-[14px]`}>
 
                 <div className="container mx-auto flex items-center w-full relative">
                     {/* Logo */}
@@ -95,12 +118,12 @@ const Banner: React.FC = () => {
                                 </Dropdown>
                             </li>
                             <li className='cursor-pointer'>
-                                <Dropdown menu={{ items }}>
-                                    <Space>
+                                <Popover content={resourceContent}>
+                                    <Space className="relative z-[102]">
                                         Resource
                                         <DownOutlined />
                                     </Space>
-                                </Dropdown>
+                                </Popover>
                             </li>
                             <li className='cursor-pointer' onClick={() => { window.location.href = '/services-terms' }}>
                                 Terms & Conditions

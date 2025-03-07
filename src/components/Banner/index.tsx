@@ -3,6 +3,8 @@ import React from 'react';
 import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Button, Dropdown, Space, Popover } from 'antd';
+import { useState } from 'react';
+import PricingModal from '../PricingModal';
 
 
 
@@ -77,6 +79,7 @@ const Banner: React.FC = () => {
     const isWhiteBgUrl = whiteUrlList.some(u => location.includes(u));
     const tUrlList = ['partner'];
     const isTUrl = tUrlList.some(u => location.includes(u));
+    const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
 
     const goRouter = (url: string) => {
         window.location.href = url;
@@ -98,15 +101,16 @@ const Banner: React.FC = () => {
 
                     <div className="flex items-center justify-between w-full relative z-[102]">
                         <ul className="flex items-center list-none gap-[36px] whitespace-nowrap relative">
-                            <Popover content={content}>
-                                <Space className="relative z-[102]">
-                                    Products
-                                    <DownOutlined />
-                                </Space>
-                            </Popover>
-
-
                             <li className='cursor-pointer'>
+                                <Popover content={content}>
+                                    <Space className="relative z-[102]">
+                                        Products
+                                        <DownOutlined />
+                                    </Space>
+                                </Popover>
+                            </li>
+
+                            <li className='cursor-pointer' onClick={() => setIsPricingModalOpen(true)}>
                                 Pricing
                             </li>
                             <li className='cursor-pointer'>
@@ -159,6 +163,11 @@ const Banner: React.FC = () => {
                     }`}>
                 </div>
             )}
+
+            <PricingModal
+                open={isPricingModalOpen}
+                onClose={() => setIsPricingModalOpen(false)}
+            />
 
         </>
     )

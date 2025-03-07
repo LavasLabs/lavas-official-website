@@ -62,7 +62,7 @@ const Home = () => {
           <div className='w-1/4'>
             <div className='font-[700] relative'>
               <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[0px]' src="/images/text-front-icon.png" alt="" />
-              <span className='z-[999999] relative'>Be free from expense reports.</span>
+              <span className='z-[100] relative'>Be free from expense reports.</span>
             </div>
             <div className='text-[15px] opacity-60 mt-[8px]'>
               Easily submit expenses through SMS, mobile app, and integrations.
@@ -71,7 +71,7 @@ const Home = () => {
           <div className='w-1/4'>
             <div className='font-[700] relative'>
               <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[0px]' src="/images/text-front-icon.png" alt="" />
-              <span className='z-[999999] relative'>Unlock savings in real time</span>
+              <span className='z-[100] relative'>Unlock savings in real time</span>
             </div>
             <div className='text-[15px] opacity-60 mt-[8px]'>
               Get insight into spend as it happens, with a platform that pays off immediately.
@@ -80,7 +80,7 @@ const Home = () => {
           <div className='w-1/4'>
             <div className='font-[700] relative'>
               <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[0px]' src="/images/text-front-icon.png" alt="" />
-              <span className='z-[999999] relative'>Grow your business with the right terms</span>
+              <span className='z-[100] relative'>Grow your business with the right terms</span>
             </div>
             <div className='text-[15px] opacity-60 mt-[8px]'>
               Get rewards and perks, like 5% savings. There’s no personal credit checks or personal guarantee.

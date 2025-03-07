@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Dropdown, Space, Popover } from 'antd';
+import { useState } from 'react';
+import PricingModal from '../PricingModal';
 
 const items: MenuProps['items'] = [
   // {
@@ -71,6 +73,10 @@ const resourceContent = (() => {
 const Footer: React.FC = () => {
   // const navigate = useNavigate();
   // const location = window.location.pathname;
+
+  const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
+
+
   return (
     <footer className="bg-[#0A0B11]  text-[#FFFFFF] py-[20px] box-border px-[12%] z-[999999]">
       <div className="w-full container mx-auto flex w-full justify-between">
@@ -82,15 +88,18 @@ const Footer: React.FC = () => {
         <div className="flex gap-[120px]">
 
           <ul className="list-none flex flex-col gap-[20px]">
-            <Popover content={content}>
+            <li className='cursor-pointer'>         
+              <Popover content={content}>
               <Space>
                 Products
                 <DownOutlined />
               </Space>
             </Popover>
+            </li>
 
 
-            <li className='cursor-pointer'>
+
+            <li className='cursor-pointer' onClick={() => setIsPricingModalOpen(true)}>
               Pricing
             </li>
             <li className='cursor-pointer'>
@@ -143,7 +152,14 @@ const Footer: React.FC = () => {
           <i className='iconfont icon-ins text-[20px]'></i>
         </div>
       </div>
+
+
+      <PricingModal
+        open={isPricingModalOpen}
+        onClose={() => setIsPricingModalOpen(false)}
+      />
     </footer>
+
   )
 };
 

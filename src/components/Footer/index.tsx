@@ -78,24 +78,24 @@ const Footer: React.FC = () => {
 
 
   return (
-    <footer className="bg-[#0A0B11]  text-[#FFFFFF] py-[20px] box-border px-[12%] z-[999999]">
-      <div className="w-full container mx-auto flex w-full justify-between">
-        {/* Logo */}
-        <Link to="/" className="flex w-[20%] my-[1em]">
-          <img src="/logos/lavas-logo.png" alt="" className="w-auto h-[52px]" />
-        </Link>
+    <footer className="bg-[#0A0B11] text-[#FFFFFF] py-[20px] box-border px-[max(40px,min(11%,210px))]">
+      <div className="w-full max-w-[1920px] mx-auto flex flex-col gap-[10px]">
+        <div className="flex justify-between flex-wrap gap-[20px]">
+          {/* Logo */}
+          <Link to="/" className="flex">
+            <img src="/logos/lavas-logo.png" alt="" className="w-auto h-[52px]" />
+          </Link>
 
-        <div className="flex gap-[120px]">
-
-          <ul className="list-none flex flex-col gap-[20px]">
-            <li className='cursor-pointer'>         
-              <Popover content={content}>
-              <Space>
-                Products
-                <DownOutlined />
-              </Space>
-            </Popover>
-            </li>
+          <div className="flex gap-[clamp(40px,5vw,120px)] flex-wrap">
+            <ul className="list-none flex flex-col gap-[20px] min-w-[160px]">
+              <li className='cursor-pointer'>         
+                <Popover content={content}>
+                  <Space>
+                    Products
+                    <DownOutlined />
+                  </Space>
+                </Popover>
+              </li>
 
 
 
@@ -127,32 +127,26 @@ const Footer: React.FC = () => {
 
 
 
-          <ul className="list-none flex flex-col gap-[20px]">
-            <li>
-              EN
-            </li>
-            <li>
-              support@lavaslabs.com
-            </li>
-            <li>
-              defpay skype support
-            </li>
+          <ul className="list-none flex flex-col gap-[20px] min-w-[200px]">
+            <li>EN</li>
+            <li>support@lavaslabs.com</li>
+            <li>defpay skype support</li>
           </ul>
-
-        </div>
-      </div>
-      <div className="w-full container mx-auto flex w-full justify-between">
-        <div>
-          Copyright ©2025 Lavas Labs Limited. All Rights Reserved
-        </div>
-        <div className='flex gap-[20px]'>
-          <i className='iconfont icon-facebook text-[20px]'></i>
-          <i className='iconfont icon-twitter text-[20px]'></i>
-          <i className='iconfont icon-instagram text-[20px]'></i>
-          <i className='iconfont icon-ins text-[20px]'></i>
         </div>
       </div>
 
+        <div className="flex justify-between box-border flex-wrap gap-[20px] py-[20px]">
+          <div className="text-[14px] opacity-80">
+            Copyright ©2025 Lavas Labs Limited. All Rights Reserved
+          </div>
+          <div className='flex gap-[20px] mr-[56px]'>
+            <i className='iconfont icon-facebook text-[20px] cursor-pointer hover:opacity-80'></i>
+            <i className='iconfont icon-twitter text-[20px] cursor-pointer hover:opacity-80'></i>
+            <i className='iconfont icon-instagram text-[20px] cursor-pointer hover:opacity-80'></i>
+            <i className='iconfont icon-ins text-[20px] cursor-pointer hover:opacity-80'></i>
+          </div>
+        </div>
+      </div>
 
       <PricingModal
         open={isPricingModalOpen}

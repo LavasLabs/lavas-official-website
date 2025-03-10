@@ -91,16 +91,16 @@ const Banner: React.FC = () => {
             <nav className={`w-full absolute top-0 left-0 right-0 ${isWhiteBgUrl
                 ? 'text-[#0A0B11]'
                 : 'text-[#FFFFFF]'
-                }  ${isTUrl ? 'bg-[#FFFFFF]/40 backdrop-blur-sm' : ''} py-[20px] box-border px-[12%] z-[100] text-[14px]`}>
+                }  ${isTUrl ? 'bg-[#FFFFFF]/40 backdrop-blur-sm' : ''} py-[20px] box-border px-[max(40px,min(11%,210px))] z-[100] text-[14px]`}>
 
-                <div className="container mx-auto flex items-center w-full relative">
+                <div className="max-w-[1920px] mx-auto flex items-center w-full relative">
                     {/* Logo */}
-                    <div onClick={() => goRouter('/')} className="flex items-center w-[16%] cursor-pointer relative z-[102]">
-                        <img src={isWhiteBgUrl ? '/logos/lavas-logo-black.png' : '/logos/lavas-logo.png'} alt="" className="w-auto h-[52px]" />
+                    <div onClick={() => goRouter('/')} className="flex items-center min-w-[120px] max-w-[180px] cursor-pointer relative z-[102]">
+                        <img src={isWhiteBgUrl ? '/logos/lavas-logo-black.png' : '/logos/lavas-logo.png'} alt="" className="w-full h-auto" />
                     </div>
 
-                    <div className="flex items-center justify-between w-full relative z-[102]">
-                        <ul className="flex items-center list-none gap-[36px] whitespace-nowrap relative">
+                    <div className="flex items-center justify-between w-full relative z-[102] pl-[40px]">
+                        <ul className="flex items-center list-none gap-[clamp(20px,2vw,36px)] whitespace-nowrap relative">
                             <li className='cursor-pointer'>
                                 <Popover content={content}>
                                     <Space className="relative z-[102]">

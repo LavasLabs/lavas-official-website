@@ -24,11 +24,18 @@ const Expense = () => {
       {/* 第一页 */}
       <section className='bg-[#0A0B11] text-[#FFFFFF] px-[clamp(40px,13%,250px)]  w-full h-[calc(100vh-100px)] box-border flex items-center flex-col relative overflow-hidden'>
         <div className='z-[999] h-full relative w-full flex flex-col justify-between items-center pt-[60px] box-border'>
-        <div className='w-full flex flex-col justify-center items-center max-w-[800px]'>
-        <div className='text-[clamp(32px,3.5vw,46px)] font-[700] text-center space-y-[10px]  leading-[1]'>Expense management software designed to close your books faster</div>
+          <div className='w-full flex flex-col justify-center items-center max-w-[800px]'>
+            <div className='text-[clamp(32px,3.5vw,46px)] font-[700] text-center space-y-[10px]  leading-[1]'>Expense management software designed to close your books faster</div>
             <div className='text-[20px] mt-[10px]'>Automated expense software built into your corporate card, reimbursements, and more</div>
           </div>
-          <Button className='font-[700] px-[clamp(25px,2vw,35px)] py-[clamp(24px,2vw,32px)] h-[clamp(46px,4vw,60px)] w-[clamp(140px,12vw,200px)] text-[clamp(16px,1.2vw,20px)]' color="danger" variant="solid" shape="round" size='large'>
+          <Button
+            className='font-[700] px-[25px] py-[17px] h-[46px] w-[160px]'
+            color="danger"
+            variant="solid"
+            shape="round"
+            size='large'
+            onClick={() => window.location.href = '/contact'}
+          >
             Start for Free
           </Button>
           <div className='w-full flex justify-between items-center'>
@@ -121,7 +128,7 @@ const Expense = () => {
       </section>
       {/* 第五页 */}
       <section className='text-[#0A0B11] w-full min-h-screen box-border py-[170px] bg-[#FFF] flex justify-center items-center flex-col'>
-  
+
         <div className='box-border w-full max-w-[1920px] mx-auto flex flex-col items-center relative'>
           <div className='text-[clamp(32px,3.5vw,42px)] font-[700] text-center max-w-[800px] leading-[1.2] relative'>
             <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-40%]' src="/images/black-red-icon.png" alt="" />
@@ -148,28 +155,28 @@ const Expense = () => {
             <img className='w-full' src="/images/expense-shape-t.png" alt="" />
           </div>
           <div className='w-[calc(100%/3-14px)] p-[clamp(16px,2vw,24px)] box-border rounded-[22px] bg-[#FFF] shadow-[0px_30px_70px_0px_rgba(0,0,0,0.10)] flex flex-col justify-between'>
-          <div className='flex flex-col gap-[20px] justify-between'>
-            <div className='text-[clamp(20px,2.5vw,24px)]'>Maximize visibility with centralized data</div>
-            <div className='opacity-60 text-[clamp(14px,1.5vw,16px)]'>Lavas Labs's AI-powered assistance surfaces detailed financial answers with faster analysis across every business expense</div>
-          </div>
-          <Divider className='my-[clamp(16px,2vw,24px)]'></Divider>
-          <img className='w-full' src="/images/expense-statistics.png" alt="" />
-        </div>
-
-        <div className='w-[calc(100%/3-14px)] p-[clamp(16px,2vw,24px)] box-border rounded-[22px] bg-[#FFF] shadow-[0px_30px_70px_0px_rgba(0,0,0,0.10)] flex flex-col justify-between'>
-          <div className='flex flex-col gap-[20px] justify-between'>
-            <div className='text-[clamp(20px,2.5vw,24px)]'>Uncover true costs</div>
-            <div className='opacity-60 text-[clamp(14px,1.5vw,16px)]'>Lavas Labs continuously surfaces savings insights like duplicate subscriptions and unused solutions.</div>
+            <div className='flex flex-col gap-[20px] justify-between'>
+              <div className='text-[clamp(20px,2.5vw,24px)]'>Maximize visibility with centralized data</div>
+              <div className='opacity-60 text-[clamp(14px,1.5vw,16px)]'>Lavas Labs's AI-powered assistance surfaces detailed financial answers with faster analysis across every business expense</div>
+            </div>
             <Divider className='my-[clamp(16px,2vw,24px)]'></Divider>
+            <img className='w-full' src="/images/expense-statistics.png" alt="" />
           </div>
-          <Space direction='vertical' className='w-full'>
-            <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="/images/expense-coffee.png" alt="" />
-            <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="/images/expense-perk.png" alt="" />
-          </Space>
-        </div>
+
+          <div className='w-[calc(100%/3-14px)] p-[clamp(16px,2vw,24px)] box-border rounded-[22px] bg-[#FFF] shadow-[0px_30px_70px_0px_rgba(0,0,0,0.10)] flex flex-col justify-between'>
+            <div className='flex flex-col gap-[20px] justify-between'>
+              <div className='text-[clamp(20px,2.5vw,24px)]'>Uncover true costs</div>
+              <div className='opacity-60 text-[clamp(14px,1.5vw,16px)]'>Lavas Labs continuously surfaces savings insights like duplicate subscriptions and unused solutions.</div>
+              <Divider className='my-[clamp(16px,2vw,24px)]'></Divider>
+            </div>
+            <Space direction='vertical' className='w-full'>
+              <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="/images/expense-coffee.png" alt="" />
+              <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="/images/expense-perk.png" alt="" />
+            </Space>
+          </div>
         </div>
 
-      
+
       </section>
       {/* 第六页 */}
       <section className='text-[#0A0B11] px-[clamp(40px,16%,310px)] w-full min-h-screen box-border  py-[170px] bg-[#FFF] flex justify-center items-center flex-col' >

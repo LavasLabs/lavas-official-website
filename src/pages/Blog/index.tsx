@@ -45,8 +45,8 @@ const Blog = () => {
 
     return (
         <>
-            <section className='text-[#0A0B11] w-full min-h-screen box-border relative overflow-hidden bg-[#FFF]'>
-                <div className='px-[12%] py-[60px] w-full box-border'>
+            <section className='text-[#0A0B11] w-full max-w-[1920px] mx-auto min-h-screen box-border relative overflow-hidden bg-[#FFF]'>
+                <div className='px-[clamp(40px,13%,250px)] py-[60px] w-full box-border'>
                     <div className="w-full flex">
                         <div className='w-[40%]'>
                             <div className='font-sora font-[700] text-[40px] uppercase inline-block z-[9999999]'>
@@ -60,7 +60,9 @@ const Blog = () => {
                             <img className='w-full' src={blogData.bannerImage} alt="Blog Banner" />
                         </div>
                     </div>
+                </div>
 
+                <div className='px-[clamp(40px,16%,310px)] w-full box-border'>
                     <div className="w-full mt-[100px]">
                         <div className="flex gap-[30px]">
                             {blogTags.map((tag) => (
@@ -110,19 +112,16 @@ const Blog = () => {
                         </div>
                     </div>
 
-
-                    <div className='flex flex-col my-[6%] justify-center items-center relative gap-y-[60px]'>
+                    <div className='flex flex-col my-[170px] justify-center items-center relative gap-y-[60px]'>
                         <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1] relative'>
                             <img className='w-[52px] h-auto object-contain absolute right-[-20%] top-[-80%]' src="/images/black-red-icon.png" alt="" />
                             Business Scenario
                         </div>
-                        <Button className='font-[700]' color="danger" variant="solid" shape="round" size='large'>
-                            Start for Free
+                        <Button className='font-[700] px-[25px] py-[17px] h-[46px] w-[160px]' color="danger" variant="solid" shape="round" size='large'>
+                            Try now
                         </Button>
                     </div>
                 </div>
-
-
             </section>
 
         </>

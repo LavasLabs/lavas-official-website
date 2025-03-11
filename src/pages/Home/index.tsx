@@ -26,7 +26,7 @@ const Home = () => {
       <section className='bg-[#0A0B11] text-[#FFFFFF] w-full min-h-[calc(100vh-100px)] pb-[170px] box-border relative overflow-hidden'>
         <div className='w-[25vw] h-[25vw] absolute top-[30%] right-[-14vw] rounded-full opacity-50 bg-gradient-to-b from-[#525252] to-[#1A1C1F] blur-[2px]'>
         </div>
-        <div className='px-[clamp(40px,13%,250px)] w-full box-border py-[60px]'>
+        <div className='px-[clamp(40px,13%,250px)] w-full box-border'>
           <div className='flex items-center max-w-[1600px] mx-auto justify-between' >
             <div className='max-w-[60%]'>
               <div className='font-sora font-[700] text-[clamp(60px,8vw,110px)] font-bold uppercase inline-block bg-gradient-to-r from-[#FFFFFF] to-[#CA2A0F] bg-clip-text text-transparent whitespace-nowrap z-[102] relative'>
@@ -39,7 +39,14 @@ const Home = () => {
                 Save money and time. All with one corporate card.
               </div>
               <div className='mt-[clamp(60px,10vh,130px)]'>
-                <Button className='font-[700] px-[25px] py-[17px] h-[46px] w-[160px]' color="danger" variant="solid" shape="round" size='large'>
+                <Button 
+                  className='font-[700] px-[25px] py-[17px] h-[46px] w-[160px]' 
+                  color="danger" 
+                  variant="solid" 
+                  shape="round" 
+                  size='large'
+                  onClick={() => window.location.href = '/contact'}
+                >
                   Start for Free
                 </Button>
               </div>

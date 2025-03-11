@@ -18,7 +18,14 @@ const Travel = () => {
               Book flights and hotels at the lowest rates, automatically enforce customizable travel policies, and automate expenses throughout a trip—all from one platform.
             </div>
             <div className='mt-[clamp(60px,13vh,130px)]'>
-              <Button className='font-[700] px-[25px] py-[17px] h-[46px] w-[160px]' color="danger" variant="solid" shape="round" size='large'>
+              <Button
+                className='font-[700] px-[25px] py-[17px] h-[46px] w-[160px]'
+                color="danger"
+                variant="solid"
+                shape="round"
+                size='large'
+                onClick={() => window.location.href = '/contact'}
+              >
                 Start for Free
               </Button>
             </div>

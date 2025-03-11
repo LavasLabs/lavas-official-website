@@ -1,26 +1,29 @@
 import { useEffect, useState } from 'react';
-import { Button, Form, Input, Select, Space } from 'antd';
+import { Button, Form, Input, Select, Space, message } from 'antd';
 
 const Partner = () => {
     const [loading, setLoading] = useState(false);
     const [form] = Form.useForm();
+    const [messageApi, contextHolder] = message.useMessage();
+
 
     const onFinish = (values: any) => {
         setLoading(true);
-        console.log('Form values:', values);
-        // TODO: 处理表单提交
-        setTimeout(() => setLoading(false), 1500);
+        setTimeout(() => {
+            messageApi.info('This function is not enabled. Please contact the administrator');
+            setLoading(false);
+        }, 500);
     };
 
     return (
         <section className='w-full relative'>
             <div className='relative w-full h-auto pt-[100px] bg-[url("/images/partner-banner.png")] bg-contain bg-no-repeat'>
-                <div className='pt-[6%] pb-[10%] pr-[5%] text-right text-white'>
+                <div className='max-w-[1920px] mx-auto pt-[6%] pb-[10%] pr-[clamp(40px,13%,250px)] text-right text-white'>
                     <div className='text-[clamp(32px,5vw,60px)] text-[#FFF] font-bold font-roboto leading-[90%] uppercase text-right [text-shadow:0px_4px_10px_rgba(0,0,0,0.25)]'>Collaborate with Lavas</div>
                     <div className='text-[clamp(32px,5vw,60px)] text-[#FFF] font-bold font-roboto leading-[90%] uppercase text-right [text-shadow:0px_4px_10px_rgba(0,0,0,0.25)]'>Labs to accelerate growth</div>
                 </div>
 
-                <div className='w-full px-[16%] flex flex-col justify-center box-border gap-y-[160px]'>
+                <div className='max-w-[1920px] mx-auto w-full px-[clamp(40px,16%,310px)] flex flex-col justify-center box-border gap-y-[170px]'>
                     {/* 表单区域 */}
                     <div className='w-full mx-auto bg-[#FFF] rounded-[24px] bg-white shadow-[0px_10px_80px_0px_rgba(0,0,0,0.10)] p-[40px] box-border'>
                         <h2 className='text-[32px] font-bold text-center mb-4'>Our Partners</h2>
@@ -164,14 +167,14 @@ const Partner = () => {
 
                 </div>
 
-                <div className='w-full py-[160px] flex flex-col justify-center box-border relative'>
-                    <div className='relative w-full pr-[16%] box-border'>
+                <div className='max-w-[1920px] mx-auto w-full py-[170px] flex flex-col justify-center box-border relative'>
+                    <div className='relative w-full pr-[clamp(40px,16%,310px)] box-border'>
                         <div className='border-t-[3px] border-[#0A0B11] w-[40%] absolute top-[30px] left-[0px] relative'>
                             <img className='w-[16px] h-[48px] h-auto object-contain absolute right-[-2px] top-[-10px]' src="/images/text-front-icon.png" alt="" />
                         </div>
                         <div className='font-[700] text-[clamp(32px,4vw,50px)] ml-[32px] text-right'>Compliance & Security</div>
                     </div>
-                    <div className='w-full px-[16%] box-border flex flex-col text-[#0A0B11]'>
+                    <div className='w-full px-[clamp(40px,16%,310px)] box-border flex flex-col text-[#0A0B11]'>
                         <div className='text-[clamp(24px,3vw,40px)] text-right font-[700] mt-[12px] mb-[60px]'>
                             We are dedicated to upholding the highest compliance standards
                         </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Button, Form, Input, Select } from 'antd';
+import { Button, Form, Input, Select, message } from 'antd';
 
 const { TextArea } = Input;
 
@@ -14,17 +14,20 @@ interface ContactFormValues {
 const Contact = () => {
     const [loading, setLoading] = useState(false);
     const [form] = Form.useForm();
+    const [messageApi, contextHolder] = message.useMessage();
 
     const onFinish = (values: ContactFormValues) => {
         setLoading(true);
-        console.log('Form values:', values);
-        // 这里添加表单提交逻辑
-        setLoading(false);
+        setTimeout(() => {
+            messageApi.info('This function is not enabled. Please contact the administrator');
+            setLoading(false);
+        }, 500);
     };
 
     return (
-        <section className='text-[#0A0B11] w-full min-h-screen box-border relative overflow-hidden bg-[#F4F8F9]'>
-            <div className='px-[12%] py-[20px] w-full box-border flex gap-[60px]'>
+        <section className='text-[#0A0B11] w-full min-h-screen box-border relative overflow-hidden '>
+            {contextHolder}
+            <div className='px-[clamp(40px,13%,250px)] max-w-[1920px] mx-auto py-[60px] bg-[#F4F8F9] mb-[170px] w-full box-border flex gap-[60px]'>
                 <div className='w-[40%] flex flex-col gap-[20px] justify-between'>
                     <div>
                         <h1 className='text-[48px] font-bold mb-[20px]'>Let's Talk</h1>
@@ -81,7 +84,7 @@ const Contact = () => {
                             name="phoneNumber"
                             rules={[{ required: true, message: 'Please input your phone number!' }]}
                         >
-                            <Input 
+                            <Input
                                 addonBefore={
                                     <Select defaultValue="+852" className='w-[100px]'>
                                         <Select.Option value="+852">+852</Select.Option>
@@ -98,8 +101,8 @@ const Contact = () => {
                             name="message"
                             className='mb-[80px]'
                         >
-                            <TextArea 
-                                placeholder="How can we help you?" 
+                            <TextArea
+                                placeholder="How can we help you?"
                                 rows={4}
                                 maxLength={300}
                                 showCount
@@ -107,9 +110,9 @@ const Contact = () => {
                         </Form.Item>
 
                         <Form.Item className='mb-[0px] mt-[40px]'>
-                            <Button 
-                                type="primary" 
-                                htmlType="submit" 
+                            <Button
+                                type="primary"
+                                htmlType="submit"
                                 loading={loading}
                                 className='w-full h-[48px] bg-[#0A0B11] text-white rounded-[24px]'
                             >
@@ -124,4 +127,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

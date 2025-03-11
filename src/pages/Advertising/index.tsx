@@ -12,9 +12,9 @@ const Advertising = () => {
     <>
       {/* 第一页 */}
       <section className='text-[#0A0B11] w-full min-h-screen box-border relative overflow-hidden bg-[#FFF]'>
-        <div className='px-[12%] py-[60px] w-full box-border'>
+        <div className='px-[clamp(40px,13%,250px)] py-[100px] w-full box-border'>
           <div className='w-[70%]'>
-            <div className='font-sora font-[700] text-[40px] uppercase inline-block z-[9999999]'>
+            <div className='font-sora font-[800] font-bold text-[clamp(40px,5vw,50px)] leading-[1.2] uppercase inline-block z-[99999]'>
               Advertising placement and investment promotion
             </div>
             <div className='w-[600px] mt-[10px]'>
@@ -23,14 +23,13 @@ const Advertising = () => {
           </div>
         </div>
         <img className='w-full object-contain' src="/images/adver-banner.png" alt="" />
-
-        <div className='flex flex-col mt-[6%] justify-center items-center relative'>
+        <div className='flex flex-col mt-[170px] justify-center items-center relative'>
           <div className='text-[42px] font-[700] text-center space-y-[10px] leading-[1] relative'>
             <img className='w-[52px] h-auto object-contain absolute right-[-20%] top-[-80%]' src="/images/black-red-icon.png" alt="" />
             Business Scenario
           </div>
         </div>
-        <div className='w-[72%] pb-[10%] px-[12%] flex flex-wrap justify-center gap-y-[12px] gap-x-[20px] mt-[40px]'>{
+        <div className='w-[72%] pb-[170px] px-[clamp(40px,16%,310px)] flex flex-wrap justify-center gap-y-[12px] gap-x-[20px] mt-[6%]'>{
           logoUrlList.map(item => {
             return (
               <div className='pt-[32px] pb-[10px] px-[20px] box-border bg-[#FFF] rounded-[12px] border border-[#F5F7F9] flex justify-center shadow-[0px_10px_30px_0px_rgba(24,24,26,0.10)]'>

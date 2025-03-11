@@ -24,7 +24,6 @@ const config: Config = {
         ultra: '1rem',
         max: '2rem',
       },
-      filter: {},
       invert: {
         25: '.25',
         50: '.5',

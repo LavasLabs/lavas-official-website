@@ -26,7 +26,7 @@ const Home = () => {
       <section className='bg-[#0A0B11] text-[#FFFFFF] w-full min-h-[calc(100vh-100px)] pb-[170px] box-border relative overflow-hidden'>
         <div className='w-[25vw] h-[25vw] absolute top-[30%] right-[-14vw] rounded-full opacity-50 bg-gradient-to-b from-[#525252] to-[#1A1C1F] blur-[2px]'>
         </div>
-        <div className='px-[max(40px,min(11%,250px))] w-full box-border py-[60px]'>
+        <div className='px-[clamp(40px,13%,250px)] w-full box-border py-[60px]'>
           <div className='flex items-center max-w-[1600px] mx-auto justify-between' >
             <div className='max-w-[60%]'>
               <div className='font-sora font-[700] text-[clamp(60px,8vw,110px)] font-bold uppercase inline-block bg-gradient-to-r from-[#FFFFFF] to-[#CA2A0F] bg-clip-text text-transparent whitespace-nowrap z-[102] relative'>
@@ -91,7 +91,7 @@ const Home = () => {
       </section>
       {/* 第二页 */}
       <section className='text-[#0A0B11] w-full min-h-screen box-border bg-[#FFF] flex justify-center items-center flex-col py-[170px]'>
-        <div className='px-[max(40px,min(11%,310px))] box-border w-full max-w-[1920px] mx-auto flex flex-col items-center relative'>
+        <div className='px-[clamp(40px,16%,310px)] box-border w-full max-w-[1920px] mx-auto flex flex-col items-center relative'>
           <div className='text-[clamp(32px,3.5vw,42px)] font-[700] text-center max-w-[800px] leading-[1.2] relative'>
             <img className='w-[52px] h-auto object-contain absolute right-[-2%] top-[-40%]' src="/images/black-red-icon.png" alt="" />
             BUILD CONTROL INTO THE CARD, BEFORE SPEND EVEN HAPPENS.
@@ -99,7 +99,7 @@ const Home = () => {
           <div className='text-[clamp(16px,1.5vw,20px)] mt-[10px] text-center'>Don't compromise on growth or control</div>
         </div>
 
-        <div className='w-full px-[max(40px,min(11%,310px))] box-border mt-[150px] max-w-[1920px] mx-auto'>
+        <div className='w-full px-[clamp(40px,16%,310px)] box-border mt-[150px] max-w-[1920px] mx-auto'>
           <div className='flex gap-[clamp(20px,2vw,40px)] justify-between'>
             {/* 卡片1 */}
             <div className='w-[calc((100%-80px)/3)] min-h-[365px] rounded-[16px] shadow-[0px_20px_50px_0px_rgba(100,74,74,0.10)] p-[30px] pt-[140px] box-border relative'>
@@ -143,7 +143,7 @@ const Home = () => {
       {/* 第三页 */}
       <section className='bg-[#0A0B11] text-[#FFFFFF] w-full min-h-screen box-border relative overflow-hidden'>
         <img className='absolute top-[0px] left-[0px] w-[40%] object-cover' src="/images/third-logo.png" />
-        <div className='px-[max(40px,min(11%,310px))] w-full max-w-[1920px] mx-auto box-border pt-[170px] relative z-[2]'>
+        <div className='px-[clamp(40px,16%,310px)] w-full max-w-[1920px] mx-auto box-border pt-[170px] relative z-[2]'>
           <div className='max-w-[800px]'>
             <div className='text-[clamp(32px,3.5vw,40px)] font-[700] relative'>
               <img className='w-[52px] h-auto object-contain absolute right-[10px] top-[-20px]' src="/images/white-red-icon.png" alt="" />
@@ -166,9 +166,9 @@ const Home = () => {
 
         <div className='absolute bottom-0 left-0 w-full mt-[100px] relative'>
           <div className='relative max-w-[1920px] mx-auto h-[min(800px,65vh)]'>
-            <img className='absolute bottom-[0px] left-[10%] w-[clamp(200px,18vw,420px)] object-contain z-[999]' src="/images/card-person.png" />
-            <img className='absolute bottom-[0px] left-[40%] w-[clamp(220px,20vw,460px)] object-contain z-[999]' src="/images/card-media.png" />
-            <img className='absolute bottom-[100px] left-[70%] w-[clamp(200px,22vw,420px)] object-contain z-[999]' src="/images/card-detail.png" />
+            <img className='absolute bottom-[0px] left-[16%] w-[clamp(200px,18vw,360px)] object-contain z-[999]' src="/images/card-person.png" />
+            <img className='absolute bottom-[0px] left-[46%] w-[clamp(220px,20vw,380px)] object-contain z-[999]' src="/images/card-media.png" />
+            <img className='absolute bottom-[100px] left-[70%] w-[clamp(200px,22vw,400px)] object-contain z-[999]' src="/images/card-detail.png" />
           </div>
         </div>
 
@@ -176,8 +176,8 @@ const Home = () => {
         </div>
       </section>
       {/* 第四页 */}
-      <section className='text-[#0A0B11] px-[max(40px,min(11%,310px))] py-[170px] w-full box-border bg-[#FFF] flex justify-center items-center flex-col'>
-        <div className='px-[max(40px,min(11%,310px))] box-border w-full max-w-[1920px] mx-auto flex flex-col items-center relative'>
+      <section className='text-[#0A0B11] max-w-[1920px] mx-auto px-[clamp(40px,16%,310px)] py-[170px] w-full box-border bg-[#FFF] flex justify-center items-center flex-col'>
+        <div className='px-[clamp(40px,16%,310px)] box-border w-full max-w-[1920px] mx-auto flex flex-col items-center relative'>
           <div className='text-[clamp(32px,3.5vw,42px)] font-[700] text-center max-w-[800px] leading-[1.2] relative'>
             <img className='w-[52px] h-auto object-contain absolute right-[-2%] top-[-40%]' src="/images/black-red-icon.png" alt="" />
             EFFORTLESS EXPENSES FOR EMPLOYEES (AND MANAGERS)
@@ -194,7 +194,7 @@ const Home = () => {
         <div className='absolute top-[0px] right-[0px] w-1/2 h-full pt-[170px] pb-[120px] box-border'>
           <img className='w-full h-full object-cover' src="/images/card-bg-black.png" alt="" />
         </div>
-        <div className='px-[max(40px,min(11%,310px))] w-full max-w-[1920px] mx-auto box-border relative'>
+        <div className='px-[clamp(40px,16%,310px)] w-full max-w-[1920px] mx-auto box-border relative'>
           <div className='flex justify-between items-start gap-[5%]'>
             <div className='w-[45%] box-border leading-[1.2] relative z-[2]'>
               <div className='text-[clamp(32px,3.5vw,40px)] font-[700] relative'>
@@ -233,9 +233,9 @@ const Home = () => {
 
       </section >
       {/* 第六页 */}
-      <section className='text-[#0A0B11] px-[max(40px,min(11%,310px))] w-full min-h-screen box-border bg-[#FFF] flex justify-center items-center flex-col'>
+      <section className='text-[#0A0B11] px-[clamp(40px,16%,310px)] w-full min-h-screen box-border bg-[#FFF] flex justify-center items-center flex-col'>
         <div className='w-full max-w-[1920px] mx-auto flex flex-col items-center py-[170px] box-border'>
-          <div className='px-[max(40px,min(11%,310px))] box-border w-full max-w-[1920px] mx-auto flex flex-col items-center relative'>
+          <div className='px-[clamp(40px,16%,310px)] box-border w-full max-w-[1920px] mx-auto flex flex-col items-center relative'>
             <div className='text-[clamp(32px,3.5vw,42px)] font-[700] text-center max-w-[800px] leading-[1.2] relative'>
               <img className='w-[52px] h-auto object-contain absolute right-[-5%] top-[-40%]' src="/images/black-red-icon.png" alt="" />
               Access over $350k in offers from our partners
@@ -269,10 +269,10 @@ const Home = () => {
                 <span className='opacity-10 relative z-[999]'>02</span>
               </div>
               <Divider className='m-[0px] mb-[20px]'></Divider>
-              <div className='text-[30px] font-[500] whitespace-nowrap'>
+              <div className='text-[clamp(24px,2.5vw,28px)] font-[500] whitespace-normal'>
                 Easy, secure payment
               </div>
-              <div className='text-[16px] opacity-60 mt-[8px]'>
+              <div className='text-[clamp(14px,1.2vw,16px)] opacity-60 mt-[8px]'>
                 Unlimited physical and virtual cards.
                 Runs on the Visa network.
                 Apple and Google Pay compatible.
@@ -286,10 +286,10 @@ const Home = () => {
                 <span className='opacity-10 relative z-[999]'>03</span>
               </div>
               <Divider className='m-[0px] mb-[20px]'></Divider>
-              <div className='text-[30px] font-[500] whitespace-nowrap'>
+              <div className='text-[clamp(24px,2.5vw,28px)] font-[500] whitespace-normal'>
                 Works wherever you go
               </div>
-              <div className='text-[16px] opacity-60 mt-[8px]'>
+              <div className='text-[clamp(14px,1.2vw,16px)] opacity-60 mt-[8px]'>
                 Acceptance in 200+ countries through the Visa global network.
                 Local issuing and debiting in 33 countries.
                 Reimburse in 70 countries and 40 currencies.

@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
 
 
   return (
-    <footer className="bg-[#0A0B11] text-[#FFFFFF] py-[20px] box-border px-[max(40px,min(11%,210px))]">
+    <footer className="bg-[#0A0B11] text-[#FFFFFF] py-[20px] box-border px-[clamp(40px,13%,250px)]">
       <div className="w-full max-w-[1920px] mx-auto flex flex-col gap-[10px]">
         <div className="flex justify-between flex-wrap gap-[20px]">
           {/* Logo */}

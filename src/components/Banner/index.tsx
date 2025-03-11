@@ -91,7 +91,7 @@ const Banner: React.FC = () => {
             <nav className={`w-full absolute top-0 left-0 right-0 ${isWhiteBgUrl
                 ? 'text-[#0A0B11]'
                 : 'text-[#FFFFFF]'
-                }  ${isTUrl ? 'bg-[#FFFFFF]/40 backdrop-blur-sm' : ''} py-[20px] box-border px-[max(40px,min(11%,210px))] z-[100] text-[14px]`}>
+                }  ${isTUrl ? 'bg-[#FFFFFF]/40 backdrop-blur-sm' : ''} py-[20px] box-border px-[clamp(40px,13%,250px)] z-[100] text-[14px]`}>
 
                 <div className="max-w-[1920px] mx-auto flex items-center w-full relative">
                     {/* Logo */}

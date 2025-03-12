@@ -8,6 +8,7 @@ const Partner = () => {
 
 
     const onFinish = (values: any) => {
+        console.log(values);
         setLoading(true);
         setTimeout(() => {
             messageApi.info('This function is not enabled. Please contact the administrator');
@@ -15,8 +16,13 @@ const Partner = () => {
         }, 500);
     };
 
+    useEffect(() => {
+
+    }, []);
+
     return (
         <section className='w-full relative'>
+            {contextHolder}
             <div className='relative w-full h-auto pt-[100px] bg-[url("/images/partner-banner.png")] bg-contain bg-no-repeat'>
                 <div className='max-w-[1920px] mx-auto pt-[6%] pb-[10%] pr-[clamp(40px,13%,250px)] text-right text-white'>
                     <div className='text-[clamp(32px,5vw,60px)] text-[#FFF] font-bold font-roboto leading-[90%] uppercase text-right [text-shadow:0px_4px_10px_rgba(0,0,0,0.25)]'>Collaborate with Lavas</div>

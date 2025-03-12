@@ -1,5 +1,6 @@
 import React from 'react';
-import { Modal, Form, Input, Button } from 'antd';
+import { useState } from 'react';
+import { Modal, Form, Input, Button, message } from 'antd';
 
 interface PricingModalProps {
     open: boolean;
@@ -7,12 +8,20 @@ interface PricingModalProps {
 }
 
 const PricingModal: React.FC<PricingModalProps> = ({ open, onClose }) => {
+    const [loading, setLoading] = useState(false);
     const [form] = Form.useForm();
+    const [messageApi, contextHolder] = message.useMessage();
 
     const handleSubmit = (values: any) => {
         console.log('Form values:', values);
-        form.resetFields();
-        onClose();
+        setLoading(true);
+        setTimeout(() => {
+            messageApi.info('This function is not enabled. Please contact the administrator');
+            setLoading(false);
+            form.resetFields();
+            onClose();
+        }, 500);
+
     };
 
     return (
@@ -24,6 +33,7 @@ const PricingModal: React.FC<PricingModalProps> = ({ open, onClose }) => {
             className="pricing-modal"
             closable={false}
         >
+            {contextHolder}
             <div className='relative px-[20px] pt-[20px] box-border'>
                 <div className='absolute right-[-10%] top-[-10%]'>
                     <img src="/images/modal-red-square.png" alt="" className='w-[120px] h-[120px]' />
@@ -93,6 +103,7 @@ const PricingModal: React.FC<PricingModalProps> = ({ open, onClose }) => {
                             type="primary"
                             htmlType="submit"
                             className='min-w-[200px] h-[48px] rounded-[24px] bg-[#000000]'
+                            loading={loading}
                         >
                             <span className='font-[700]'>Contact Sales</span>
                         </Button>

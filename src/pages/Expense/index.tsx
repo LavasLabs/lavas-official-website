@@ -29,7 +29,7 @@ const Expense = () => {
             <div className='text-[20px] mt-[10px]'>Automated expense software built into your corporate card, reimbursements, and more</div>
           </div>
           <Button
-            className='font-[700] px-[25px] py-[17px] h-[46px] w-[160px]'
+            className='font-[700] px-[25px] py-[17px] h-[46px] w-[160px] !bg-[#D11616] hover:!bg-[#ff1818] hover:!border-none'
             color="danger"
             variant="solid"
             shape="round"
@@ -59,7 +59,7 @@ const Expense = () => {
         <div className='px-[clamp(40px,16%,310px)] box-border w-full max-w-[1920px] mx-auto flex flex-col items-center relative'>
           <div className='text-[clamp(32px,3.5vw,42px)] font-[700] text-center max-w-[800px] leading-[1.2] relative'>
             <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-40%]' src="/images/black-red-icon.png" alt="" />
-            Control spend before it happens
+            CONTROL SPEND BEFORE IT HAPPENS
           </div>
           <div className='text-[clamp(16px,1.5vw,20px)] mt-[10px] text-center'>Give employees cards with policies built in, so you can prevent unapproved spend</div>
         </div>
@@ -69,12 +69,12 @@ const Expense = () => {
             <img className='w-full' src="/images/expense-second.png" alt="" />
           </div>
           <div className='w-[28%] relative'>
-            <div className='absolute left-[-20px] top-[50%] translate-y-[-50%]'>
+            <div className='absolute left-[clamp(-170px,-12vw,-100px)] top-[50%] translate-y-[-50%]'>
               <Space direction='vertical'>
-                <div className='font-[700] text-[clamp(18px,1.8vw,20px)] whitespace-nowrap'>
+                <div className='font-[700] text-[clamp(12px,1.8vw,20px)] whitespace-nowrap'>
                   Pre-build budgets for responsible spend
                 </div>
-                <div className='opacity-60 text-[clamp(14px,1.1vw,16px)]'>
+                <div className='opacity-60 text-[clamp(8px,1.1vw,16px)]'>
                   Allow employees to request spend from pre-set budgets. Create custom workflows to make sure that the right stakeholders are looped in to approve.
                 </div>
               </Space>
@@ -92,8 +92,9 @@ const Expense = () => {
           <div className='text-[clamp(16px,1.5vw,20px)] mt-[10px] text-center'>Free employees to do their job without expenses getting in their way.</div>
         </div>
 
-        <div className='w-full flex max-w-[1920px] mx-auto flex-1 h-full mt-[30px] px-[clamp(40px,16%,310px)] box-border relative'>
-          <div className='w-[40%] pt-[4%] pb-[170px] box-border h-full relative'>
+        <div className='w-full flex max-w-[1920px] mx-auto flex-1 h-full mt-[100px] px-[clamp(40px,16%,310px)] box-border relative'>
+          <img className='absolute top-[clamp(-100px,-10vh,-60px)] left-[clamp(60px,8vw,120px)] w-[clamp(50px,6vw,80px)] h-auto object-contain' src="/images/expense-arrow.png" alt="" />
+          <div className='w-[35%] pt-[4%] pb-[170px] box-border h-full relative'>
             <img className='w-full' src="/images/expense-t-f.png" alt="" />
           </div>
           <img className='w-[50%] absolute bottom-[0px] right-[0px]' src="/images/expense-meteorite.png" alt="" />
@@ -104,7 +105,7 @@ const Expense = () => {
         <div className='flex flex-col justify-center items-center relative'>
           <div className='w-[70%] text-[42px] font-[700] text-center space-y-[10px] leading-[1] relative'>
             <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-22%]' src="/images/black-red-icon.png" alt="" />
-            Free your team from manual expense management
+            FREE YOUR TEAM FROM MANUAL EXPENSE MANAGEMENT
           </div>
           <div className='text-[20px] mt-[10px]'>Expenses that submit themselves.</div>
         </div>
@@ -132,7 +133,7 @@ const Expense = () => {
         <div className='box-border w-full max-w-[1920px] mx-auto flex flex-col items-center relative'>
           <div className='text-[clamp(32px,3.5vw,42px)] font-[700] text-center max-w-[800px] leading-[1.2] relative'>
             <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-40%]' src="/images/black-red-icon.png" alt="" />
-            Make strategic decisions with real-time expense reporting
+            MAKE STRATEGIC DECISIONS WITH REAL-TIME EXPENSE REPORTING
           </div>
           <div className='text-[clamp(16px,1.5vw,20px)] mt-[10px] text-center'>Instantly access spend data and insight to save money for your business</div>
         </div>
@@ -183,14 +184,14 @@ const Expense = () => {
         <div className='box-border w-full max-w-[1920px] mx-auto flex flex-col items-center relative'>
           <div className='text-[clamp(32px,3.5vw,42px)] font-[700] text-center max-w-[800px] leading-[1.2] relative'>
             <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-40%]' src="/images/black-red-icon.png" alt="" />
-            Access over $350k in offers from our partners
+            JOIN THE 30,000+ BUSINESSES ALREADY SIMPLIFYING THEIR FINANCES
           </div>
         </div>
 
         <div className='w-full max-w-[1920px] mx-auto mt-[8%] flex flex-wrap justify-between gap-y-[12px] gap-x-[15px]'>{
           logoUrlList.map((item, index) => {
             return (
-              <div key={index} className='w-[calc(100%/6-13px)] aspect-square min-w-[140px] p-[24px] box-border bg-[#F7F7F7] rounded-[12px] flex items-center justify-center'>
+              <div key={index} className='w-[calc(100%/6-13px)] aspect-square min-w-[140px] box-border bg-[#F7F7F7] rounded-[12px] flex items-center justify-center'>
                 <img className='w-full h-full object-contain' src={item} alt="" />
               </div>
             )

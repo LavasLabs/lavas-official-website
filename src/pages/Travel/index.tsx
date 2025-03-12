@@ -1,25 +1,28 @@
 // import { useTranslation } from 'react-i18next';
-import { Button } from 'antd';
+import { Button, message } from 'antd';
+import { RightOutlined } from '@ant-design/icons';
 
 const Travel = () => {
   // const { t } = useTranslation();
-
+  const [messageApi, contextHolder] = message.useMessage();
+  
   return (
     <>
+     {contextHolder}
       {/* 第一页 */}
-      <section className='text-[#0A0B11] w-full min-h-[calc(100vh-100px)] box-border relative overflow-hidden bg-[#FFF]'>
-        <img className='w-[clamp(300px,45%,800px)] h-auto object-contain absolute right-[20px] bottom-[0px]' src="/images/travel-air.png" alt="" />
-        <div className='px-[clamp(40px,13%,250px)] pt-[clamp(40px,5vh,80px)] max-w-[1920px] mx-auto box-border flex'>
-          <div className='w-full max-w-[800px]'>
-            <div className='font-sora font-[700] text-[clamp(28px,3.5vw,40px)] font-bold uppercase'>
+      <section className='text-[#0A0B11] w-full min-h-[calc(100vh-100px)] box-border max-w-[1920px] mx-auto pl-[clamp(40px,13%,250px)] relative overflow-hidden bg-[#FFF]'>
+
+        <div className='pt-[clamp(40px,5vh,80px)] box-border flex justify-between'>
+          <div className='w-full max-w-[55%]'>
+            <div className='font-sora font-[900] text-[clamp(28px,3.8vw,46px)] [text-shadow:0px_0px_1px_#000] leading-[1.3] font-bold uppercase'>
               Smarter business travel, from booking to book close
             </div>
-            <div className='mt-[10px] max-w-[600px] text-[clamp(14px,1.1vw,16px)] opacity-80'>
+            <div className='mt-[10px] max-w-[600px] text-[clamp(14px,1.1vw,16px)]'>
               Book flights and hotels at the lowest rates, automatically enforce customizable travel policies, and automate expenses throughout a trip—all from one platform.
             </div>
-            <div className='mt-[clamp(60px,13vh,130px)]'>
+            <div className='mt-[clamp(60px,18vh,400px)]'>
               <Button
-                className='font-[700] px-[25px] py-[17px] h-[46px] w-[160px]'
+                className='font-[700] px-[25px] py-[17px] h-[46px] w-[160px] !bg-[#D11616] hover:!bg-[#ff1818] hover:!border-none'
                 color="danger"
                 variant="solid"
                 shape="round"
@@ -30,6 +33,9 @@ const Travel = () => {
               </Button>
             </div>
           </div>
+          <div className='w-[100%] relative'>
+            <img className='w-full h-auto object-contain absolute right-[0px] top-[85px]' src="/images/travel-air.png" alt="" />
+          </div>
         </div>
       </section>
       {/* 第二页 */}
@@ -37,7 +43,7 @@ const Travel = () => {
         <div className='px-[clamp(40px,16%,310px)] box-border w-full max-w-[1920px] mx-auto flex flex-col items-center relative'>
           <div className='text-[clamp(32px,3.5vw,42px)] font-[700] text-center max-w-[800px] leading-[1.2] relative'>
             <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-40%]' src="/images/black-red-icon.png" alt="" />
-            Custom travel policies, built right in
+            CUSTOM TRAVEL POLICIES, BUILT RIGHT IN
           </div>
           <div className='text-[clamp(16px,1.5vw,20px)] mt-[10px] text-center'>Keep expenses in check as your business expands</div>
         </div>
@@ -115,20 +121,26 @@ const Travel = () => {
           <div className='w-[50%] h-full flex flex-col justify-between'>
             <div className='w-full'>
               <div className='text-[clamp(32px,3.5vw,42px)] font-[700] leading-[1.2] relative'>
-                <img className='w-[clamp(40px,3.5vw,52px)] h-auto object-contain absolute right-[0px] top-[-20px]' src="/images/white-red-icon.png" alt="" />
-                Effortless business travel that's always in policy
+                <img className='w-[clamp(40px,3.0vw,52px)] h-auto object-contain absolute right-[-30px] top-[-20px]' src="/images/white-red-icon.png" alt="" />
+                Focus on your trip, not expense reports
               </div>
               <div className='text-[clamp(14px,1.1vw,18px)] mt-[clamp(12px,2vh,16px)] opacity-80'>Lavas Labs collects and matches receipts across all transactions, and routes to the right budget and category. It instantly generates receipts for certain purchases, and saves recurring memos.</div>
             </div>
 
             <div className='mt-[clamp(30px,5vh,40px)]'>
-              <Button className='font-[700] px-[25px] py-[17px] h-[46px]' color="danger" variant="solid" size='large'>
-                Learn more
+              <Button 
+                className='font-[700] px-[25px] py-[17px] h-[46px]' 
+                color="danger" 
+                variant="solid" 
+                size='large'
+                onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
+              >
+                Learn more <RightOutlined />
               </Button>
             </div>
           </div>
-          <div className='w-[50%] pl-[10%] box-border'>
-            <img className='w-full max-w-[600px] mx-auto h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[30px]' src="/images/travel-reports.png" alt="" />
+          <div className='w-[50%] pl-[10%] box-border pt-[2%]'>
+            <img className='w-full max-w-[600px] mx-auto h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.25)] rounded-[30px]' src="/images/travel-reports.png" alt="" />
           </div>
         </div>
       </section>

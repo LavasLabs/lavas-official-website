@@ -6,7 +6,8 @@ interface TermContentProps {
     onRegionChange?: (region: '0' | '1') => void; 
 }
 
-const TermContent: FC<TermContentProps> = ({ region, type, onRegionChange }) => {
+// type, 
+const TermContent: FC<TermContentProps> = ({ region, onRegionChange }) => {
     const getContent = () => {
         if (region === '0') {
             return (

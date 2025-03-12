@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Button, Form, Input, Select, message } from 'antd';
 
 const { TextArea } = Input;
@@ -17,6 +17,7 @@ const Contact = () => {
     const [messageApi, contextHolder] = message.useMessage();
 
     const onFinish = (values: ContactFormValues) => {
+        console.log(values);
         setLoading(true);
         setTimeout(() => {
             messageApi.info('This function is not enabled. Please contact the administrator');

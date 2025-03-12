@@ -23,12 +23,12 @@ const Home = () => {
       </div>
       {/* 第一页 */}
 
-      <section className='bg-[#0A0B11] text-[#FFFFFF] w-full min-h-[calc(100vh-100px)] pb-[170px] box-border relative overflow-hidden'>
+      <section className='bg-[#0A0B11] text-[#FFFFFF] w-full min-h-[calc(100vh-100px)] pb-[40px] box-border relative overflow-hidden'>
         <div className='w-[25vw] h-[25vw] absolute top-[30%] right-[-14vw] rounded-full opacity-50 bg-gradient-to-b from-[#525252] to-[#1A1C1F] blur-[2px]'>
         </div>
         <div className='px-[clamp(40px,13%,250px)] w-full box-border'>
-          <div className='flex items-center max-w-[1600px] mx-auto justify-between' >
-            <div className='max-w-[60%]'>
+          <div className='flex  max-w-[1600px] mx-auto justify-between relative' >
+            <div className='max-w-[55%] pt-[4%] box-border'>
               <div className='font-sora font-[700] text-[clamp(60px,8vw,110px)] font-bold uppercase inline-block bg-gradient-to-r from-[#FFFFFF] to-[#CA2A0F] bg-clip-text text-transparent whitespace-nowrap z-[102] relative'>
                 Lavas Labs
               </div>
@@ -40,7 +40,7 @@ const Home = () => {
               </div>
               <div className='mt-[clamp(60px,10vh,130px)]'>
                 <Button 
-                  className='font-[700] px-[25px] py-[17px] h-[46px] w-[160px]' 
+                  className='font-[700] px-[25px] py-[17px] h-[46px] w-[160px] !bg-[#D11616] hover:!bg-[#ff1818] hover:!border-none' 
                   color="danger" 
                   variant="solid" 
                   shape="round" 
@@ -51,11 +51,13 @@ const Home = () => {
                 </Button>
               </div>
             </div>
-            <img className='z-[999] w-[40%] h-auto object-contain ml-[40px]' src="/images/card.png" alt="" />
+            <img className='z-[999] w-[45%] h-auto object-contain ml-[40px]' src="/images/card.png" alt="" />
+            <div className='w-[clamp(30px,4vw,59px)] h-[clamp(30px,4vw,59px)] absolute top-[72%] right-[40%] rounded-full opacity-50 bg-gradient-to-t from-[#1A1C1F] to-[#525252] blur-[2px]'>
+            </div>
           </div>
         </div>
 
-        <div className='px-[12%] box-border w-full'>
+        <div className='px-[clamp(40px,13%,250px)] box-border w-full mt-[2%]'>
           <div className='flex gap-[40px] flex-wrap max-w-[1600px] mx-auto'>
             <div className='w-[calc(25%-40px)]'>
               <div className='font-[700] relative'>
@@ -149,7 +151,7 @@ const Home = () => {
       </section>
       {/* 第三页 */}
       <section className='bg-[#0A0B11] text-[#FFFFFF] w-full min-h-screen box-border relative overflow-hidden'>
-        <img className='absolute top-[0px] left-[0px] w-[40%] object-cover' src="/images/third-logo.png" />
+        <img className='absolute top-[0px] left-[0px] w-[50%] object-cover' src="/images/third-logo.png" />
         <div className='px-[clamp(40px,16%,310px)] w-full max-w-[1920px] mx-auto box-border pt-[170px] relative z-[2]'>
           <div className='max-w-[800px]'>
             <div className='text-[clamp(32px,3.5vw,40px)] font-[700] relative'>
@@ -164,10 +166,11 @@ const Home = () => {
               <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[6px]' src="/images/text-front-icon.png" alt="" />
               <span className='z-[999999] relative'>Simplify approvals and share accountability</span>
             </div>
-            <div className='opacity-60 mt-[20px] text-[clamp(16px,1.2vw,18px)]'>
-              <div>Focus on your work, not follow ups.</div>
-              <div>Let Lavas Labs send reminders for missing items or request repayments for you. Spend less time chasing down receipts and more time closing your books.</div>
-            </div>
+            <div className='mt-[20px] text-[clamp(16px,1.2vw,18px)] relative'>
+              <div className='opacity-60 '>Focus on your work, not follow ups.</div>
+              <div className='opacity-60 '>Let Lavas Labs send reminders for missing items or request repayments for you. Spend less time chasing down receipts and more time closing your books.</div>
+              <img className='absolute top-[220px] left-[30%] w-[clamp(50px,6vw,80px)] h-auto object-contain' src="/images/card-square.png" alt="" />
+            </div>  
           </div>
         </div>
 
@@ -206,9 +209,9 @@ const Home = () => {
             <div className='w-[45%] box-border leading-[1.2] relative z-[2]'>
               <div className='text-[clamp(32px,3.5vw,40px)] font-[700] relative'>
                 <img className='w-[52px] h-auto object-contain absolute right-[-10%] top-[-10%]' src="/images/black-red-icon.png" alt="" />
-                <span>AUTOMATION, CONTROL, AND REWARDS. THE CORPORATE CARD YOU'VE BEEN LOOKING FOR</span>
+                <span>Automation, control, and rewards.The corporate card you've been looking for</span>
               </div>
-              <div className='text-[clamp(16px,1.5vw,20px)] mt-[20px] opacity-60'>
+              <div className='text-[clamp(16px,1.5vw,20px)] mt-[20px]'>
                 Spend to get cashback. Lavas Labs's corporate card puts money back in your pocket so you can invest even more in growth. Or, bring your cash back right into the platform
               </div>
             </div>

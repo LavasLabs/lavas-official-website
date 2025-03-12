@@ -1,9 +1,9 @@
-:where(.css-dev-only-do-not-override-1v613y0).ant-segmented .ant-segmented-item-selected {
-    background: #000000;
-    color: #FFFFFF;
-    border-radius: 16px;
+.ant-segmented .ant-segmented-item-selected {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border-radius: 16px !important;
 }
 
-:where(.css-dev-only-do-not-override-1v613y0).ant-segmented{
-    background: #F4F8F9;
+.ant-segmented {
+    background: #F4F8F9 !important;
 }

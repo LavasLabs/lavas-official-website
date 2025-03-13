@@ -91,7 +91,7 @@ const Banner: React.FC = () => {
             <nav className={`w-full absolute top-0 left-0 right-0 ${isWhiteBgUrl
                 ? 'text-[#0A0B11]'
                 : 'text-[#FFFFFF]'
-                }  ${(isTUrl && !location.includes('services-term'))  ? 'bg-[#FFFFFF]/40 backdrop-blur-sm' : ''} py-[20px] box-border px-[clamp(40px,13%,250px)] z-[100] text-[14px]`}>
+                }  ${(isTUrl && !location.includes('services-term'))  ? 'bg-[#FFFFFF]/40 backdrop-blur-sm' : ''} py-[20px] box-border px-[clamp(40px,13%,250px)] z-[100] text-[clamp(14px,1vw,20px)]`}>
 
                 <div className="max-w-[1920px] mx-auto flex items-center w-full relative">
                     {/* Logo */}
@@ -100,7 +100,7 @@ const Banner: React.FC = () => {
                     </div>
 
                     <div className="flex items-center justify-between w-full relative z-[102] pl-[40px]">
-                        <ul className="flex items-center list-none gap-[clamp(20px,2vw,36px)] whitespace-nowrap relative">
+                        <ul className="flex items-center list-none gap-[clamp(20px,2vw,36px)] whitespace-nowrap relative text-[clamp(14px,1vw,20px)]">
                             <li className='cursor-pointer'>
                                 <Popover content={content}>
                                     <Space className="relative z-[102]">
@@ -135,7 +135,7 @@ const Banner: React.FC = () => {
                         </ul>
 
 
-                        <ul className="flex items-center list-none gap-[34px]">
+                        <ul className="flex items-center list-none gap-[34px] text-[clamp(14px,1vw,20px)]">
                             <li>
                                 <Dropdown menu={{ items }}>
                                     <Space>
@@ -145,10 +145,10 @@ const Banner: React.FC = () => {
                                 </Dropdown>
                             </li>
                             <li>
-                                <Button className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} border border-[#FFFFFF]`} type="text">Sign Up</Button>
+                                <Button className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} border border-[#FFFFFF] text-[clamp(14px,1vw,20px)]`} type="text">Sign Up</Button>
                             </li>
                             <li>
-                                <Button className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'}`} type="text">Login</Button>
+                                <Button className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} text-[clamp(14px,1vw,20px)]`} type="text">Login</Button>
                             </li>
                         </ul>
                     </div>

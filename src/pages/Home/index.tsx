@@ -39,11 +39,11 @@ const Home = () => {
                 Save money and time. All with one corporate card.
               </div>
               <div className='mt-[clamp(60px,10vh,130px)]'>
-                <Button 
-                  className='font-[700] px-[25px] py-[17px] h-[46px] w-[160px] !bg-[#D11616] hover:!bg-[#ff1818] hover:!border-none' 
-                  color="danger" 
-                  variant="solid" 
-                  shape="round" 
+                <Button
+                  className='font-[700] px-[clamp(25px,2vw,35px)] py-[clamp(17px,1.5vw,25px)] h-[clamp(46px,4vw,60px)] w-[clamp(160px,12vw,200px)] !bg-[#D11616] hover:!bg-[#ff1818] hover:!border-none text-[clamp(14px,1.2vw,18px)]'
+                  color="danger"
+                  variant="solid"
+                  shape="round"
                   size='large'
                   onClick={() => window.location.href = '/contact'}
                 >
@@ -61,38 +61,38 @@ const Home = () => {
           <div className='flex gap-[40px] flex-wrap max-w-[1600px] mx-auto'>
             <div className='w-[calc(25%-40px)]'>
               <div className='font-[700] relative'>
-                <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[0px]' src="/images/text-front-icon.png" alt="" />
-                <span className='z-[999999] relative'>Save more by preventing out-of-policy spend</span>
+                <img className='w-[clamp(16px,1.2vw,20px)] h-auto object-contain absolute left-[0px] top-[0px]' src="/images/text-front-icon.png" alt="" />
+                <span className='z-[999999] relative text-[clamp(16px,1.2vw,20px)]'>Save more by preventing out-of-policy spend</span>
               </div>
-              <div className='text-[15px] opacity-60 mt-[8px]'>
+              <div className='text-[clamp(14px,1vw,16px)] opacity-60 mt-[8px]'>
                 Preset controls on corporate cards for specific vendors and categories.
               </div>
             </div>
             <div className='w-[calc(25%-40px)]'>
               <div className='font-[700] relative'>
-                <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[0px]' src="/images/text-front-icon.png" alt="" />
-                <span className='z-[100] relative'>Be free from expense reports.</span>
+                <img className='w-[clamp(16px,1.2vw,20px)] h-auto object-contain absolute left-[0px] top-[0px]' src="/images/text-front-icon.png" alt="" />
+                <span className='z-[100] relative text-[clamp(16px,1.2vw,20px)]'>Be free from expense reports.</span>
               </div>
-              <div className='text-[15px] opacity-60 mt-[8px]'>
+              <div className='text-[clamp(14px,1vw,16px)] opacity-60 mt-[8px]'>
                 Easily submit expenses through SMS, mobile app, and integrations.
               </div>
             </div>
             <div className='w-[calc(25%-40px)]'>
               <div className='font-[700] relative'>
-                <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[0px]' src="/images/text-front-icon.png" alt="" />
-                <span className='z-[100] relative'>Unlock savings in real time</span>
+                <img className='w-[clamp(16px,1.2vw,20px)] h-auto object-contain absolute left-[0px] top-[0px]' src="/images/text-front-icon.png" alt="" />
+                <span className='z-[100] relative text-[clamp(16px,1.2vw,20px)]'>Unlock savings in real time</span>
               </div>
-              <div className='text-[15px] opacity-60 mt-[8px]'>
+              <div className='text-[clamp(14px,1vw,16px)] opacity-60 mt-[8px]'>
                 Get insight into spend as it happens, with a platform that pays off immediately.
               </div>
             </div>
             <div className='w-[calc(25%-40px)]'>
               <div className='font-[700] relative'>
-                <img className='w-[16px] h-[48px] h-auto object-contain absolute left-[0px] top-[0px]' src="/images/text-front-icon.png" alt="" />
-                <span className='z-[100] relative'>Grow your business with the right terms</span>
+                <img className='w-[clamp(16px,1.2vw,20px)] h-auto object-contain absolute left-[0px] top-[0px]' src="/images/text-front-icon.png" alt="" />
+                <span className='z-[100] relative text-[clamp(16px,1.2vw,20px)]'>Grow your business with the right terms</span>
               </div>
-              <div className='text-[15px] opacity-60 mt-[8px]'>
-                Get rewards and perks, like 5% savings. There’s no personal credit checks or personal guarantee.
+              <div className='text-[clamp(14px,1vw,16px)] opacity-60 mt-[8px]'>
+                Get rewards and perks, like 5% savings. There's no personal credit checks or personal guarantee.
               </div>
             </div>
           </div>
@@ -170,7 +170,7 @@ const Home = () => {
               <div className='opacity-60 '>Focus on your work, not follow ups.</div>
               <div className='opacity-60 '>Let Lavas Labs send reminders for missing items or request repayments for you. Spend less time chasing down receipts and more time closing your books.</div>
               <img className='absolute top-[220px] left-[30%] w-[clamp(50px,6vw,80px)] h-auto object-contain' src="/images/card-square.png" alt="" />
-            </div>  
+            </div>
           </div>
         </div>
 

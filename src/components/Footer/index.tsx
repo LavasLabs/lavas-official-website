@@ -83,11 +83,11 @@ const Footer: React.FC = () => {
         <div className="flex justify-between flex-wrap gap-[20px]">
           {/* Logo */}
           <Link to="/" className="flex">
-            <img src="/logos/lavas-logo.png" alt="" className="w-auto h-[52px]" />
+            <img src="/logos/lavas-logo.png" alt="" className="w-auto h-[clamp(52px,4vw,64px)]" />
           </Link>
 
           <div className="flex gap-[clamp(40px,5vw,120px)] flex-wrap">
-            <ul className="list-none flex flex-col gap-[20px] min-w-[160px]">
+            <ul className="list-none flex flex-col gap-[20px] min-w-[160px] text-[clamp(14px,1.1vw,20px)]">
               <li className='cursor-pointer'>         
                 <Popover content={content}>
                   <Space>
@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
 
 
 
-          <ul className="list-none flex flex-col gap-[20px] min-w-[200px]">
+          <ul className="list-none flex flex-col gap-[20px] min-w-[200px] text-[clamp(14px,1.1vw,20px)]">
             <li>EN</li>
             <li>support@lavaslabs.com</li>
             <li>defpay skype support</li>
@@ -136,14 +136,14 @@ const Footer: React.FC = () => {
       </div>
 
         <div className="flex justify-between box-border flex-wrap gap-[20px] py-[20px]">
-          <div className="text-[14px] opacity-80">
+          <div className="text-[clamp(14px,1.1vw,20px)] opacity-80">
             Copyright ©2025 Lavas Labs Limited. All Rights Reserved
           </div>
-          <div className='flex gap-[20px] mr-[56px]'>
-            <i className='iconfont icon-facebook text-[20px] cursor-pointer hover:opacity-80'></i>
-            <i className='iconfont icon-twitter text-[20px] cursor-pointer hover:opacity-80'></i>
-            <i className='iconfont icon-instagram text-[20px] cursor-pointer hover:opacity-80'></i>
-            <i className='iconfont icon-ins text-[20px] cursor-pointer hover:opacity-80'></i>
+          <div className='flex gap-[20px] mr-[clamp(40px,1vw,80px)]'>
+            <i className='iconfont icon-facebook text-[clamp(20px,1.4vw,24px)] cursor-pointer hover:opacity-80'></i>
+            <i className='iconfont icon-twitter text-[clamp(20px,1.4vw,24px)] cursor-pointer hover:opacity-80'></i>
+            <i className='iconfont icon-instagram text-[clamp(20px,1.4vw,24px)] cursor-pointer hover:opacity-80'></i>
+            <i className='iconfont icon-ins text-[clamp(20px,1.4vw,24px)] cursor-pointer hover:opacity-80'></i>
           </div>
         </div>
       </div>

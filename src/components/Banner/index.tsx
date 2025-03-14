@@ -2,7 +2,7 @@ import React from 'react';
 // import { useNavigate } from 'react-router-dom';
 import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
-import { Button, Dropdown, Space, Popover } from 'antd';
+import { Button, Dropdown, Space, Popover, message } from 'antd';
 import { useState } from 'react';
 import PricingModal from '../PricingModal';
 
@@ -77,9 +77,10 @@ const Banner: React.FC = () => {
     const location = window.location.pathname;
     const whiteUrlList = ['travel', 'advertising', 'blog', 'contact', 'partner'];
     const isWhiteBgUrl = whiteUrlList.some(u => location.includes(u));
-    const tUrlList = ['partner','services-term'];
+    const tUrlList = ['partner', 'services-term'];
     const isTUrl = tUrlList.some(u => location.includes(u));
     const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
+    const [messageApi, contextHolder] = message.useMessage();
 
     const goRouter = (url: string) => {
         window.location.href = url;
@@ -87,11 +88,12 @@ const Banner: React.FC = () => {
 
     return (
         <>
+            {contextHolder}
             {/* 导航栏 */}
             <nav className={`w-full absolute top-0 left-0 right-0 ${isWhiteBgUrl
                 ? 'text-[#0A0B11]'
                 : 'text-[#FFFFFF]'
-                }  ${(isTUrl && !location.includes('services-term'))  ? 'bg-[#FFFFFF]/40 backdrop-blur-sm' : ''} py-[20px] box-border px-[clamp(40px,13%,250px)] z-[100] text-[clamp(14px,1vw,20px)]`}>
+                }  ${(isTUrl && !location.includes('services-term')) ? 'bg-[#FFFFFF]/40 backdrop-blur-sm' : ''} py-[20px] box-border px-[clamp(40px,13%,250px)] z-[100] text-[clamp(14px,1vw,20px)]`}>
 
                 <div className="max-w-[1920px] mx-auto flex items-center w-full relative">
                     {/* Logo */}
@@ -145,10 +147,22 @@ const Banner: React.FC = () => {
                                 </Dropdown>
                             </li>
                             <li>
-                                <Button className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} border border-[#FFFFFF] text-[clamp(14px,1vw,20px)]`} type="text">Sign Up</Button>
+                                <Button
+                                    className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} border border-[#FFFFFF] text-[clamp(14px,1vw,20px)]`}
+                                    type="text"
+                                    onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
+                                >
+                                    Sign Up
+                                </Button>
                             </li>
                             <li>
-                                <Button className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} text-[clamp(14px,1vw,20px)]`} type="text">Login</Button>
+                                <Button
+                                    className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} text-[clamp(14px,1vw,20px)]`}
+                                    type="text"
+                                    onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
+                                >
+                                    Login
+                                </Button>
                             </li>
                         </ul>
                     </div>

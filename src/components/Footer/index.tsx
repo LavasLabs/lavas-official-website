@@ -136,14 +136,14 @@ const Footer: React.FC = () => {
                 <i className='iconfont icon-skype text-[clamp(20px,1.4vw,24px)] mr-[10px]'></i>
                 <span>defpay skype support</span>
               </li>
-              {isMobile ? (
+              {isMobile && (
                 <li className='flex justify-center gap-[20px]'>
                   <i className='iconfont icon-facebook text-[clamp(20px,1.4vw,24px)] cursor-pointer hover:opacity-80'></i>
                   <i className='iconfont icon-twitter text-[clamp(20px,1.4vw,24px)] cursor-pointer hover:opacity-80'></i>
                   <i className='iconfont icon-instagram text-[clamp(20px,1.4vw,24px)] cursor-pointer hover:opacity-80'></i>
                   <i className='iconfont icon-ins text-[clamp(20px,1.4vw,24px)] cursor-pointer hover:opacity-80'></i>
                 </li>
-              ) : null}
+              )}
             </ul>
           </div>
         </div>

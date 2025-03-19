@@ -20,33 +20,37 @@ const items: MenuProps['items'] = [
     // },
 ];
 
+// 产品菜单配置
+const productItems = [
+    { icon: 'icon-a-CorporateCard', text: 'Corporate Card', route: '' },
+    { icon: 'icon-Travel', text: 'Travel', route: 'travel' },
+    { icon: 'icon-money', text: 'Expense Management', route: 'expense' },
+    { icon: 'icon-Advertising', text: 'Advertising', route: 'advertising' }
+] as const;
+
 const content = (() => {
     const goRouter = (url: string) => {
         window.location.href = `/${url}`;
     }
 
     return (
-        <div className='w-[420px] flex flex-wrap gap-[15px] gap-y-[10px] '>
-            <Space className='cursor-pointer' onClick={() => goRouter('')}>
-                <i className='iconfont icon-a-CorporateCard text-[24px]'></i>
-                <span>Corporate Card</span>
-            </Space>
-            <Space className='cursor-pointer' onClick={() => goRouter('travel')}>
-                <i className='iconfont icon-Travel text-[24px]'></i>
-                <span>Travel</span>
-            </Space>
-            <Space className='cursor-pointer' onClick={() => goRouter('expense')}>
-                <i className='iconfont icon-money text-[24px]'></i>
-                <span>Expense Management</span>
-            </Space>
-            <Space className='cursor-pointer' onClick={() => goRouter('advertising')}>
-                <i className='iconfont icon-Advertising text-[24px]'></i>
-                <span>Advertising</span>
-            </Space>
+        <div className='w-[420px] flex flex-wrap gap-[15px] gap-y-[10px]'>
+            {productItems.map(item => (
+                <Space key={item.text} className='cursor-pointer' onClick={() => goRouter(item.route)}>
+                    <i className={`iconfont ${item.icon} text-[24px]`}></i>
+                    <span>{item.text}</span>
+                </Space>
+            ))}
         </div>
     )
-}
-);
+});
+
+// 资源菜单配置
+const resourceItems = [
+    { icon: 'icon-blog', text: 'Blog', route: 'blog' },
+    { icon: 'icon-sales', text: 'Contact Sales', route: 'contact' },
+    { icon: 'icon-Partner', text: 'Become a Partner', route: 'partner' }
+] as const;
 
 const resourceContent = (() => {
     const goRouter = (url: string) => {
@@ -54,22 +58,16 @@ const resourceContent = (() => {
     }
 
     return (
-        <div className='w-[420px] flex flex-wrap gap-[20px] gap-y-[10px] '>
-            <Space className='cursor-pointer' onClick={() => goRouter('blog')}>
-                <i className='iconfont icon-blog text-[24px]'></i>
-                <span>Blog</span>
-            </Space>
-            <Space className='cursor-pointer' onClick={() => goRouter('contact')}>
-                <i className='iconfont icon-sales text-[24px]'></i>
-                <span>Contact Sales</span>
-            </Space>
-            <Space className='cursor-pointer' onClick={() => goRouter('partner')}>
-                <i className='iconfont icon-Partner text-[24px]'></i>
-                <span>Become a Partner</span>
-            </Space>
+        <div className='w-[420px] flex flex-wrap gap-[20px] gap-y-[10px]'>
+            {resourceItems.map(item => (
+                <Space key={item.text} className='cursor-pointer' onClick={() => goRouter(item.route)}>
+                    <i className={`iconfont ${item.icon} text-[24px]`}></i>
+                    <span>{item.text}</span>
+                </Space>
+            ))}
         </div>
     )
-})
+});
 
 
 const Banner: React.FC = () => {

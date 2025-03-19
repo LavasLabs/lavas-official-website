@@ -82,7 +82,7 @@ const Banner: React.FC = () => {
     const isTUrl = tUrlList.some(u => location.includes(u));
     const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
     const [messageApi, contextHolder] = message.useMessage();
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [drawerVisible, setDrawerVisible] = useState(false);
 
     useEffect(() => {

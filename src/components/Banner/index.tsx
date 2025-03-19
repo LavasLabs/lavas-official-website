@@ -5,6 +5,7 @@ import { Button, Dropdown, Space, Popover, message, Drawer } from 'antd';
 import { useState } from 'react';
 import PricingModal from '../PricingModal';
 import useGlobalStore from '../../store/useGlobalStore';
+import './index.css';
 
 
 
@@ -29,12 +30,13 @@ const productItems = [
 ] as const;
 
 const content = (() => {
+    const { isMobile } = useGlobalStore();
     const goRouter = (url: string) => {
         window.location.href = `/${url}`;
     }
 
     return (
-        <div className='w-[420px] flex flex-wrap gap-[15px] gap-y-[10px]'>
+        <div className={`${isMobile ? 'w-[280px]' : 'w-[420px]'} flex flex-wrap gap-[15px] gap-y-[10px]`}>
             {productItems.map(item => (
                 <Space key={item.text} className='cursor-pointer' onClick={() => goRouter(item.route)}>
                     <i className={`iconfont ${item.icon} text-[24px]`}></i>
@@ -53,12 +55,13 @@ const resourceItems = [
 ] as const;
 
 const resourceContent = (() => {
+    const { isMobile } = useGlobalStore();
     const goRouter = (url: string) => {
         window.location.href = `/${url}`;
     }
 
     return (
-        <div className='w-[420px] flex flex-wrap gap-[20px] gap-y-[10px]'>
+        <div className={`${isMobile ? 'w-[280px]' : 'w-[420px]'} flex flex-wrap gap-[20px] gap-y-[10px]`}>
             {resourceItems.map(item => (
                 <Space key={item.text} className='cursor-pointer' onClick={() => goRouter(item.route)}>
                     <i className={`iconfont ${item.icon} text-[24px]`}></i>
@@ -91,90 +94,67 @@ const Banner: React.FC = () => {
     };
 
     const mobileMenu = (
-        <ul className="space-y-[8px] list-none">
-            <li className="py-[12px] hover:bg-gray-50 transition-colors cursor-pointer">
-                <Popover
-                    content={content}
-                    placement="bottomLeft"
-                    open={isMenuOpen}
-                    onOpenChange={(visible) => setIsMenuOpen(visible)}
-                >
-                    <Space className="px-[16px] w-full flex items-center">
-                        <div className="flex items-center gap-[8px]">
-                            <i className="iconfont icon-apps text-lg"></i>
+        <div className="flex flex-col h-full">
+            <div className="flex items-center justify-between px-[20px] py-[20px]">
+                <img
+                    src='/logos/lavas-logo-black.png'
+                    alt="Lavas Logo"
+                    className="h-[40px] object-contain"
+                />
+                <i className="iconfont icon-menu text-[24px] cursor-pointer" onClick={() => setDrawerVisible(false)} />
+            </div>
+
+            <ul className="list-none flex-1 flex flex-col items-center pt-[0px] text-[20px] !pl-[0px] box-border">
+                <li className="cursor-pointer w-full text-center">
+                    <Popover
+                        content={content}
+                        placement="bottom"
+                        overlayStyle={isMobile ? { width: '280px' } : undefined}
+                        overlayInnerStyle={isMobile ? { padding: '12px' } : undefined}
+                    >
+                        <div className="flex items-center justify-center gap-1 px-[20px] py-[16px]">
                             <span>Products</span>
+                            <DownOutlined className="text-gray-400  ml-[8px]" />
                         </div>
-                        <DownOutlined className="text-gray-400" />
-                    </Space>
-                </Popover>
-            </li>
-            <li className="py-[12px] hover:bg-gray-50 transition-colors cursor-pointer"
-                onClick={() => {
+                    </Popover>
+                </li>
+                <li className="cursor-pointer w-full text-center" onClick={() => {
                     setIsPricingModalOpen(true);
                     setDrawerVisible(false);
-                }}
-            >
-                <div className="px-[16px] flex items-center gap-[8px]">
-                    <i className="iconfont icon-price text-lg"></i>
-                    <span>Pricing</span>
-                </div>
-            </li>
-            <li className="py-[12px] hover:bg-gray-50 transition-colors cursor-pointer">
-                <Space className="px-[16px] w-full flex items-center">
-                    <div className="flex items-center gap-[8px]">
-                        <i className="iconfont icon-solution text-lg"></i>
+                }}>
+                    <div className="px-[20px] py-[16px]">Pricing</div>
+                </li>
+                <li className="cursor-pointer w-full text-center">
+                    <div className="flex items-center justify-center gap-1 px-[20px] py-[16px]">
                         <span>Solutions</span>
+                        <DownOutlined className="text-gray-400 ml-[8px]" />
                     </div>
-                    <DownOutlined className="text-gray-400" />
-                </Space>
-            </li>
-            <li className="py-[12px] hover:bg-gray-50 transition-colors cursor-pointer">
-                <Popover
-                    content={resourceContent}
-                    placement="bottomLeft"
-                >
-                    <Space className="px-[16px] w-full flex items-center">
-                        <div className="flex items-center gap-[8px]">
-                            <i className="iconfont icon-resource text-lg"></i>
+                </li>
+                <li className="cursor-pointer w-full text-center">
+                    <Popover content={resourceContent} placement="bottom"
+                        overlayStyle={isMobile ? { width: '280px' } : undefined}
+                        overlayInnerStyle={isMobile ? { padding: '12px' } : undefined}>
+                        <div className="flex items-center justify-center gap-1 px-[20px] py-[16px]">
                             <span>Resource</span>
+                            <DownOutlined className="text-gray-400 ml-[8px]" />
                         </div>
-                        <DownOutlined className="text-gray-400" />
-                    </Space>
-                </Popover>
-            </li>
-            <li className="py-[12px] hover:bg-gray-50 transition-colors cursor-pointer"
-                onClick={() => {
+                    </Popover>
+                </li>
+                <li className="cursor-pointer w-full text-center" onClick={() => {
                     window.location.href = '/services-terms';
                     setDrawerVisible(false);
-                }}
-            >
-                <div className="px-[16px] flex items-center gap-[8px]">
-                    <i className="iconfont icon-terms text-lg"></i>
-                    <span>Terms & Conditions</span>
-                </div>
-            </li>
-            {/* <div className="border-t my-[8px]"></div> */}
-            <li className="py-[12px] cursor-pointer">
-                <Button
-                    className="w-full flex items-center justify-center gap-[8px] bg-primary hover:bg-primary/90 text-white h-[40px]"
-                    type="primary"
-                    onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
-                >
-                    <i className="iconfont icon-user text-lg"></i>
-                    Sign Up
-                </Button>
-            </li>
-            <li className="py-[12px] cursor-pointer">
-                <Button
-                    className="w-full flex items-center justify-center gap-[8px] border-primary text-primary hover:bg-primary/5 h-[40px]"
-                    type="default"
-                    onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
-                >
-                    <i className="iconfont icon-login text-lg"></i>
-                    Login
-                </Button>
-            </li>
-        </ul>
+                }}>
+                    <div className="px-[20px] py-[16px]">Terms & Conditions</div>
+                </li>
+                <li className="cursor-pointer w-full text-center" onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}>
+                    <div className="px-[20px] py-[16px]">Sign Up</div>
+                </li>
+                <li className="cursor-pointer w-full text-center" onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}>
+                    <div className="px-[20px] py-[16px]">Login</div>
+                </li>
+
+            </ul>
+        </div>
     );
 
     return (
@@ -205,14 +185,18 @@ const Banner: React.FC = () => {
 
                     {isMobile ? (
                         <div className="ml-auto">
-                            <i className='iconfont icon-menu text-[#FFF] text-[24px] cursor-pointer' onClick={() => setDrawerVisible(true)}></i>
+                            <i className={`iconfont icon-menu text-[24px] cursor-pointer ${isWhiteBgUrl ? 'text-[#000]' : 'text-[#FFF]'}`} onClick={() => setDrawerVisible(true)}></i>
                             <Drawer
-                                title="Menu"
-                                placement="right"
+                                title={null}
+                                placement="top"
                                 onClose={() => setDrawerVisible(false)}
                                 open={drawerVisible}
-                                width={280}
+                                height="64vh"
                                 className="mobile-menu-drawer"
+                                closable={false}
+                                maskClosable={true}
+                                rootClassName="mobile-menu-drawer"
+                                style={{ borderRadius: '0 0 30px 30px' }}
                             >
                                 {mobileMenu}
                             </Drawer>

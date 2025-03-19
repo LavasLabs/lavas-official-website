@@ -1,10 +1,11 @@
-import React from 'react';
-// import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
-import { Button, Dropdown, Space, Popover, message } from 'antd';
+import { Button, Dropdown, Space, Popover, message, Drawer } from 'antd';
 import { useState } from 'react';
 import PricingModal from '../PricingModal';
+import useGlobalStore from '../../store/useGlobalStore';
+import './index.css';
 
 
 
@@ -20,60 +21,60 @@ const items: MenuProps['items'] = [
     // },
 ];
 
+// 产品菜单配置
+const productItems = [
+    { icon: 'icon-a-CorporateCard', text: 'Corporate Card', route: '' },
+    { icon: 'icon-Travel', text: 'Travel', route: 'travel' },
+    { icon: 'icon-money', text: 'Expense Management', route: 'expense' },
+    { icon: 'icon-Advertising', text: 'Advertising', route: 'advertising' }
+] as const;
+
 const content = (() => {
+    const { isMobile } = useGlobalStore();
     const goRouter = (url: string) => {
         window.location.href = `/${url}`;
     }
 
     return (
-        <div className='w-[420px] flex flex-wrap gap-[15px] gap-y-[10px] '>
-            <Space className='cursor-pointer' onClick={() => goRouter('')}>
-                <i className='iconfont icon-a-CorporateCard text-[24px]'></i>
-                <span>Corporate Card</span>
-            </Space>
-            <Space className='cursor-pointer' onClick={() => goRouter('travel')}>
-                <i className='iconfont icon-Travel text-[24px]'></i>
-                <span>Travel</span>
-            </Space>
-            <Space className='cursor-pointer' onClick={() => goRouter('expense')}>
-                <i className='iconfont icon-money text-[24px]'></i>
-                <span>Expense Management</span>
-            </Space>
-            <Space className='cursor-pointer' onClick={() => goRouter('advertising')}>
-                <i className='iconfont icon-Advertising text-[24px]'></i>
-                <span>Advertising</span>
-            </Space>
+        <div className={`${isMobile ? 'w-[280px]' : 'w-[420px]'} flex flex-wrap gap-[15px] gap-y-[10px]`}>
+            {productItems.map(item => (
+                <Space key={item.text} className='cursor-pointer' onClick={() => goRouter(item.route)}>
+                    <i className={`iconfont ${item.icon} text-[24px]`}></i>
+                    <span>{item.text}</span>
+                </Space>
+            ))}
         </div>
     )
-}
-);
+});
+
+// 资源菜单配置
+const resourceItems = [
+    { icon: 'icon-blog', text: 'Blog', route: 'blog' },
+    { icon: 'icon-sales', text: 'Contact Sales', route: 'contact' },
+    { icon: 'icon-Partner', text: 'Become a Partner', route: 'partner' }
+] as const;
 
 const resourceContent = (() => {
+    const { isMobile } = useGlobalStore();
     const goRouter = (url: string) => {
         window.location.href = `/${url}`;
     }
 
     return (
-        <div className='w-[420px] flex flex-wrap gap-[20px] gap-y-[10px] '>
-            <Space className='cursor-pointer' onClick={() => goRouter('blog')}>
-                <i className='iconfont icon-blog text-[24px]'></i>
-                <span>Blog</span>
-            </Space>
-            <Space className='cursor-pointer' onClick={() => goRouter('contact')}>
-                <i className='iconfont icon-sales text-[24px]'></i>
-                <span>Contact Sales</span>
-            </Space>
-            <Space className='cursor-pointer' onClick={() => goRouter('partner')}>
-                <i className='iconfont icon-Partner text-[24px]'></i>
-                <span>Become a Partner</span>
-            </Space>
+        <div className={`${isMobile ? 'w-[280px]' : 'w-[420px]'} flex flex-wrap gap-[20px] gap-y-[10px]`}>
+            {resourceItems.map(item => (
+                <Space key={item.text} className='cursor-pointer' onClick={() => goRouter(item.route)}>
+                    <i className={`iconfont ${item.icon} text-[24px]`}></i>
+                    <span>{item.text}</span>
+                </Space>
+            ))}
         </div>
     )
-})
+});
 
 
 const Banner: React.FC = () => {
-    // const navigate = useNavigate();
+    const { isMobile } = useGlobalStore();
     const location = window.location.pathname;
     const whiteUrlList = ['travel', 'advertising', 'blog', 'contact', 'partner'];
     const isWhiteBgUrl = whiteUrlList.some(u => location.includes(u));
@@ -81,91 +82,197 @@ const Banner: React.FC = () => {
     const isTUrl = tUrlList.some(u => location.includes(u));
     const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
     const [messageApi, contextHolder] = message.useMessage();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [drawerVisible, setDrawerVisible] = useState(false);
+
+    useEffect(() => {
+
+    }, []);
 
     const goRouter = (url: string) => {
         window.location.href = url;
-    }
+    };
+
+    const mobileMenu = (
+        <div className="flex flex-col h-full">
+            <div className="flex items-center justify-between px-[20px] py-[20px]">
+                <img
+                    src='/logos/lavas-logo-black.png'
+                    alt="Lavas Logo"
+                    className="h-[40px] object-contain"
+                />
+                <i className="iconfont icon-menu text-[24px] cursor-pointer" onClick={() => setDrawerVisible(false)} />
+            </div>
+
+            <ul className="list-none flex-1 flex flex-col items-center pt-[0px] text-[20px] !pl-[0px] box-border">
+                <li className="cursor-pointer w-full text-center">
+                    <Popover
+                        content={content}
+                        placement="bottom"
+                        overlayStyle={isMobile ? { width: '280px' } : undefined}
+                        overlayInnerStyle={isMobile ? { padding: '12px' } : undefined}
+                    >
+                        <div className="flex items-center justify-center gap-1 px-[20px] py-[16px]">
+                            <span>Products</span>
+                            <DownOutlined className="text-gray-400  ml-[8px]" />
+                        </div>
+                    </Popover>
+                </li>
+                <li className="cursor-pointer w-full text-center" onClick={() => {
+                    setIsPricingModalOpen(true);
+                    setDrawerVisible(false);
+                }}>
+                    <div className="px-[20px] py-[16px]">Pricing</div>
+                </li>
+                <li className="cursor-pointer w-full text-center">
+                    <div className="flex items-center justify-center gap-1 px-[20px] py-[16px]">
+                        <span>Solutions</span>
+                        <DownOutlined className="text-gray-400 ml-[8px]" />
+                    </div>
+                </li>
+                <li className="cursor-pointer w-full text-center">
+                    <Popover content={resourceContent} placement="bottom"
+                        overlayStyle={isMobile ? { width: '280px' } : undefined}
+                        overlayInnerStyle={isMobile ? { padding: '12px' } : undefined}>
+                        <div className="flex items-center justify-center gap-1 px-[20px] py-[16px]">
+                            <span>Resource</span>
+                            <DownOutlined className="text-gray-400 ml-[8px]" />
+                        </div>
+                    </Popover>
+                </li>
+                <li className="cursor-pointer w-full text-center" onClick={() => {
+                    window.location.href = '/services-terms';
+                    setDrawerVisible(false);
+                }}>
+                    <div className="px-[20px] py-[16px]">Terms & Conditions</div>
+                </li>
+                <li className="cursor-pointer w-full text-center" onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}>
+                    <div className="px-[20px] py-[16px]">Sign Up</div>
+                </li>
+                <li className="cursor-pointer w-full text-center" onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}>
+                    <div className="px-[20px] py-[16px]">Login</div>
+                </li>
+
+            </ul>
+        </div>
+    );
 
     return (
         <>
             {contextHolder}
-            {/* 导航栏 */}
             <nav className={`w-full absolute top-0 left-0 right-0 ${isWhiteBgUrl
                 ? 'text-[#0A0B11]'
                 : 'text-[#FFFFFF]'
-                }  ${(isTUrl && !location.includes('services-term')) ? 'bg-[#FFFFFF]/40 backdrop-blur-sm' : ''} py-[20px] box-border px-[clamp(40px,13%,250px)] z-[100] text-[clamp(14px,1vw,20px)]`}>
+                }  ${(isTUrl && !location.includes('services-term')) ? 'bg-[#FFFFFF]/40 backdrop-blur-sm' : ''} 
+                py-[20px] box-border 
+                ${isMobile
+                    ? 'px-[20px]'
+                    : 'px-[clamp(40px,13%,250px)]'
+                } 
+                z-[100] text-[clamp(14px,1vw,20px)]`}>
 
                 <div className="max-w-[1920px] mx-auto flex items-center w-full relative">
-                    {/* Logo */}
-                    <div onClick={() => goRouter('/')} className="flex items-center min-w-[120px] max-w-[180px] cursor-pointer relative z-[102]">
-                        <img src={isWhiteBgUrl ? '/logos/lavas-logo-black.png' : '/logos/lavas-logo.png'} alt="" className="w-full h-auto" />
+                    <div onClick={() => goRouter('/')}
+                        className={`flex items-center cursor-pointer relative z-[102] ${isMobile ? 'min-w-[80px] max-w-[120px]' : 'min-w-[120px] max-w-[180px]'
+                            }`}
+                    >
+                        <img
+                            src={isWhiteBgUrl ? '/logos/lavas-logo-black.png' : '/logos/lavas-logo.png'}
+                            alt="Lavas Logo"
+                            className="w-full h-auto object-contain"
+                        />
                     </div>
 
-                    <div className="flex items-center justify-between w-full relative z-[102] pl-[40px]">
-                        <ul className="flex items-center list-none gap-[clamp(20px,2vw,36px)] whitespace-nowrap relative text-[clamp(14px,1vw,20px)]">
-                            <li className='cursor-pointer'>
-                                <Popover content={content}>
-                                    <Space className="relative z-[102]">
-                                        Products
-                                        <DownOutlined />
-                                    </Space>
-                                </Popover>
-                            </li>
+                    {isMobile ? (
+                        <div className="ml-auto">
+                            <i className={`iconfont icon-menu text-[24px] cursor-pointer ${isWhiteBgUrl ? 'text-[#000]' : 'text-[#FFF]'}`} onClick={() => setDrawerVisible(true)}></i>
+                            <Drawer
+                                title={null}
+                                placement="top"
+                                onClose={() => setDrawerVisible(false)}
+                                open={drawerVisible}
+                                height="64vh"
+                                className="mobile-menu-drawer"
+                                closable={false}
+                                maskClosable={true}
+                                rootClassName="mobile-menu-drawer"
+                                style={{ borderRadius: '0 0 30px 30px' }}
+                            >
+                                {mobileMenu}
+                            </Drawer>
+                        </div>
+                    ) : (
+                        <div className="flex items-center justify-between w-full relative z-[102] pl-[40px]">
+                            {/* PC内容 */}
+                            <div className="flex items-center justify-between w-full relative z-[102] pl-[40px]">
+                                <ul className="flex items-center list-none gap-[clamp(20px,2vw,36px)] whitespace-nowrap relative text-[clamp(14px,1vw,20px)]">
+                                    <li className='cursor-pointer'>
+                                        <Popover content={content}>
+                                            <Space className="relative z-[102]">
+                                                Products
+                                                <DownOutlined />
+                                            </Space>
+                                        </Popover>
+                                    </li>
 
-                            <li className='cursor-pointer' onClick={() => setIsPricingModalOpen(true)}>
-                                Pricing
-                            </li>
-                            <li className='cursor-pointer'>
-                                <Dropdown menu={{ items }}>
-                                    <Space>
-                                        Solutions
-                                        <DownOutlined />
-                                    </Space>
-                                </Dropdown>
-                            </li>
-                            <li className='cursor-pointer'>
-                                <Popover content={resourceContent}>
-                                    <Space className="relative z-[102]">
-                                        Resource
-                                        <DownOutlined />
-                                    </Space>
-                                </Popover>
-                            </li>
-                            <li className='cursor-pointer' onClick={() => { window.location.href = '/services-terms' }}>
-                                Terms & Conditions
-                            </li>
-                        </ul>
+                                    <li className='cursor-pointer' onClick={() => setIsPricingModalOpen(true)}>
+                                        Pricing
+                                    </li>
+                                    <li className='cursor-pointer'>
+                                        <Dropdown menu={{ items }}>
+                                            <Space>
+                                                Solutions
+                                                <DownOutlined />
+                                            </Space>
+                                        </Dropdown>
+                                    </li>
+                                    <li className='cursor-pointer'>
+                                        <Popover content={resourceContent}>
+                                            <Space className="relative z-[102]">
+                                                Resource
+                                                <DownOutlined />
+                                            </Space>
+                                        </Popover>
+                                    </li>
+                                    <li className='cursor-pointer' onClick={() => { window.location.href = '/services-terms' }}>
+                                        Terms & Conditions
+                                    </li>
+                                </ul>
 
 
-                        <ul className="flex items-center list-none gap-[34px] text-[clamp(14px,1vw,20px)]">
-                            <li>
-                                <Dropdown menu={{ items }}>
-                                    <Space>
-                                        EN
-                                        <DownOutlined />
-                                    </Space>
-                                </Dropdown>
-                            </li>
-                            <li>
-                                <Button
-                                    className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} border border-[#FFFFFF] text-[clamp(14px,1vw,20px)]`}
-                                    type="text"
-                                    onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
-                                >
-                                    Sign Up
-                                </Button>
-                            </li>
-                            <li>
-                                <Button
-                                    className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} text-[clamp(14px,1vw,20px)]`}
-                                    type="text"
-                                    onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
-                                >
-                                    Login
-                                </Button>
-                            </li>
-                        </ul>
-                    </div>
+                                <ul className="flex items-center list-none gap-[34px] text-[clamp(14px,1vw,20px)]">
+                                    <li>
+                                        <Dropdown menu={{ items }}>
+                                            <Space>
+                                                EN
+                                                <DownOutlined />
+                                            </Space>
+                                        </Dropdown>
+                                    </li>
+                                    <li>
+                                        <Button
+                                            className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} border border-[#FFFFFF] text-[clamp(14px,1vw,20px)]`}
+                                            type="text"
+                                            onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
+                                        >
+                                            Sign Up
+                                        </Button>
+                                    </li>
+                                    <li>
+                                        <Button
+                                            className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} text-[clamp(14px,1vw,20px)]`}
+                                            type="text"
+                                            onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
+                                        >
+                                            Login
+                                        </Button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    )}
+
+
 
                 </div>
             </nav>
@@ -182,10 +289,8 @@ const Banner: React.FC = () => {
                 open={isPricingModalOpen}
                 onClose={() => setIsPricingModalOpen(false)}
             />
-
         </>
-    )
+    );
 };
-
 
 export default Banner;

@@ -6,6 +6,7 @@ import type { MenuProps } from 'antd';
 import { Dropdown, Space, Popover } from 'antd';
 import { useState } from 'react';
 import PricingModal from '../PricingModal';
+import useGlobalStore from '../../store/useGlobalStore';
 
 const items: MenuProps['items'] = [
   // {
@@ -18,33 +19,37 @@ const items: MenuProps['items'] = [
   // },
 ];
 
+// 产品菜单配置
+const productItems = [
+  { icon: 'icon-a-CorporateCard', text: 'Corporate Card', route: '' },
+  { icon: 'icon-Travel', text: 'Travel', route: 'travel' },
+  { icon: 'icon-money', text: 'Expense Management', route: 'expense' },
+  { icon: 'icon-Advertising', text: 'Advertising', route: 'advertising' }
+] as const;
+
 const content = (() => {
   const goRouter = (url: string) => {
     window.location.href = `/${url}`;
   }
 
   return (
-    <div className='w-[420px] flex flex-wrap gap-[15px] gap-y-[10px] '>
-      <Space className='cursor-pointer' onClick={() => goRouter('')}>
-        <i className='iconfont icon-a-CorporateCard text-[24px]'></i>
-        <span>Corporate Card</span>
-      </Space>
-      <Space className='cursor-pointer' onClick={() => goRouter('travel')}>
-        <i className='iconfont icon-Travel text-[24px]'></i>
-        <span>Travel</span>
-      </Space>
-      <Space className='cursor-pointer' onClick={() => goRouter('expense')}>
-        <i className='iconfont icon-money text-[24px]'></i>
-        <span>Expense Management</span>
-      </Space>
-      <Space className='cursor-pointer' onClick={() => goRouter('advertising')}>
-        <i className='iconfont icon-Advertising text-[24px]'></i>
-        <span>Advertising</span>
-      </Space>
+    <div className='w-[420px] flex flex-wrap gap-[15px] gap-y-[10px]'>
+      {productItems.map(item => (
+        <Space key={item.text} className='cursor-pointer' onClick={() => goRouter(item.route)}>
+          <i className={`iconfont ${item.icon} text-[24px]`}></i>
+          <span>{item.text}</span>
+        </Space>
+      ))}
     </div>
   )
-}
-);
+});
+
+// 资源菜单配置
+const resourceItems = [
+  { icon: 'icon-blog', text: 'Blog', route: 'blog' },
+  { icon: 'icon-sales', text: 'Contact Sales', route: 'contact' },
+  { icon: 'icon-Partner', text: 'Become a Partner', route: 'partner' }
+] as const;
 
 const resourceContent = (() => {
   const goRouter = (url: string) => {
@@ -52,22 +57,24 @@ const resourceContent = (() => {
   }
 
   return (
-    <div className='w-[420px] flex flex-wrap gap-[20px] gap-y-[10px] '>
-      <Space className='cursor-pointer' onClick={() => goRouter('blog')}>
-        <i className='iconfont icon-blog text-[24px]'></i>
-        <span>Blog</span>
-      </Space>
-      <Space className='cursor-pointer' onClick={() => goRouter('contact')}>
-        <i className='iconfont icon-sales text-[24px]'></i>
-        <span>Contact Sales</span>
-      </Space>
-      <Space className='cursor-pointer' onClick={() => goRouter('partner')}>
-        <i className='iconfont icon-Partner text-[24px]'></i>
-        <span>Become a Partner</span>
-      </Space>
+    <div className='w-[420px] flex flex-wrap gap-[20px] gap-y-[10px]'>
+      {resourceItems.map(item => (
+        <Space key={item.text} className='cursor-pointer' onClick={() => goRouter(item.route)}>
+          <i className={`iconfont ${item.icon} text-[24px]`}></i>
+          <span>{item.text}</span>
+        </Space>
+      ))}
     </div>
   )
-})
+});
+
+// 图标配置
+const socialIcons = [
+  'icon-facebook',
+  'icon-twitter',
+  'icon-instagram',
+  'icon-ins'
+] as const;
 
 
 const Footer: React.FC = () => {
@@ -75,20 +82,28 @@ const Footer: React.FC = () => {
   // const location = window.location.pathname;
 
   const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
+  const { isMobile } = useGlobalStore();
 
+  const renderSocialIcons = () => (
+    <div className={`flex gap-[20px] ${!isMobile && 'mr-[clamp(20px,4vw,90px)]'}`}>
+      {socialIcons.map(icon => (
+        <i key={icon} className={`iconfont ${icon} text-[clamp(20px,1.4vw,24px)] cursor-pointer hover:opacity-80`} />
+      ))}
+    </div>
+  );
 
   return (
-    <footer className="bg-[#0A0B11] text-[#FFFFFF] py-[20px] box-border px-[clamp(40px,13%,250px)]">
-      <div className="w-full max-w-[1920px] mx-auto flex flex-col gap-[10px]">
-        <div className="flex justify-between flex-wrap gap-[20px]">
+    <footer className={`bg-[#0A0B11] text-[#FFFFFF] py-[20px] box-border ${isMobile ? 'px-[20px]' : 'px-[clamp(40px,13%,250px)]'}`}>
+      <div className={`w-full max-w-[1920px] mx-auto flex flex-col gap-[10px] ${isMobile && 'pt-[60px]'}`}>
+        <div className={`flex w-full gap-[20px] ${isMobile ? 'flex-col justify-center items-center' : 'justify-between flex-wrap'}`}>
           {/* Logo */}
           <Link to="/" className="flex">
             <img src="/logos/lavas-logo.png" alt="" className="w-auto h-[clamp(52px,4vw,64px)]" />
           </Link>
 
-          <div className="flex gap-[clamp(40px,5vw,120px)] flex-wrap">
-            <ul className="list-none flex flex-col gap-[20px] min-w-[160px] text-[clamp(14px,1.1vw,20px)]">
-              <li className='cursor-pointer'>         
+          <div className={`flex  flex-wrap ${isMobile ? 'justify-center gap-y-[26px]' : 'gap-[clamp(40px,5vw,120px)]'}`}>
+            <ul className={`list-none !pl-[0px] ${isMobile ? 'flex flex-row flex-wrap justify-center gap-y-[10px] w-full' : 'flex flex-col min-w-[160px]'} gap-[20px] text-[clamp(14px,1.1vw,20px)]`}>
+              <li className={`cursor-pointer ${isMobile ? 'mx-[10px]' : ''}`}>
                 <Popover content={content}>
                   <Space>
                     Products
@@ -96,55 +111,53 @@ const Footer: React.FC = () => {
                   </Space>
                 </Popover>
               </li>
+              <li className={`cursor-pointer ${isMobile ? 'mx-[10px]' : ''}`} onClick={() => setIsPricingModalOpen(true)}>
+                Pricing
+              </li>
+              <li className={`cursor-pointer ${isMobile ? 'mx-[10px]' : ''}`}>
+                <Dropdown menu={{ items }}>
+                  <Space>
+                    Solutions
+                    <DownOutlined />
+                  </Space>
+                </Dropdown>
+              </li>
+              <li className={`cursor-pointer ${isMobile ? 'mx-[10px]' : ''}`}>
+                <Popover content={resourceContent}>
+                  <Space className="relative z-[102]">
+                    Resource
+                    <DownOutlined />
+                  </Space>
+                </Popover>
+              </li>
+              <li className={`cursor-pointer ${isMobile ? 'mx-[10px]' : ''}`} onClick={() => {
+                window.location.href = '/services-terms';
+              }}>
+                Terms & Conditions
+              </li>
+            </ul>
 
-
-
-            <li className='cursor-pointer' onClick={() => setIsPricingModalOpen(true)}>
-              Pricing
-            </li>
-            <li className='cursor-pointer'>
-              <Dropdown menu={{ items }}>
-                <Space>
-                  Solutions
-                  <DownOutlined />
-                </Space>
-              </Dropdown>
-            </li>
-            <li className='cursor-pointer'>
-              <Popover content={resourceContent}>
-                <Space className="relative z-[102]">
-                  Resource
-                  <DownOutlined />
-                </Space>
-              </Popover>
-            </li>
-            <li className='cursor-pointer' onClick={() => {
-              window.location.href = '/services-terms';
-            }}>
-              Terms & Conditions
-            </li>
-          </ul>
-
-
-
-          <ul className="list-none flex flex-col gap-[20px] min-w-[200px] text-[clamp(14px,1.1vw,20px)]">
-            <li>EN</li>
-            <li>support@lavaslabs.com</li>
-            <li>defpay skype support</li>
-          </ul>
+            <ul className={`list-none !pl-[0px] flex flex-col gap-[20px] min-w-[200px] text-[clamp(14px,1.1vw,20px)] ${isMobile ? 'text-center gap-y-[10px]' : ''} `}>
+              <li className='text-[clamp(16px,1.4vw,24px)]'>Follow</li>
+              <li className='flex items-center'>
+                <i className='iconfont icon-email text-[clamp(20px,1.4vw,24px)] mr-[10px]'></i>
+                <span>support@lavaslabs.com</span>
+              </li>
+              <li className='flex items-center'>
+                <i className='iconfont icon-skype text-[clamp(20px,1.4vw,24px)] mr-[10px]'></i>
+                <span>defpay skype support</span>
+              </li>
+              {isMobile && <li className='flex justify-center'>{renderSocialIcons()}</li>}
+            </ul>
+          </div>
         </div>
-      </div>
 
-        <div className="flex justify-between box-border flex-wrap gap-[20px] py-[20px]">
+        <div className={`flex box-border flex-wrap gap-[20px] py-[20px] ${isMobile ? 'flex-col items-center text-center' : 'justify-between'}`}>
           <div className="text-[clamp(14px,1.1vw,20px)] opacity-80">
             Copyright ©2025 Lavas Labs Limited. All Rights Reserved
           </div>
-          <div className='flex gap-[20px] mr-[clamp(40px,1vw,80px)]'>
-            <i className='iconfont icon-facebook text-[clamp(20px,1.4vw,24px)] cursor-pointer hover:opacity-80'></i>
-            <i className='iconfont icon-twitter text-[clamp(20px,1.4vw,24px)] cursor-pointer hover:opacity-80'></i>
-            <i className='iconfont icon-instagram text-[clamp(20px,1.4vw,24px)] cursor-pointer hover:opacity-80'></i>
-            <i className='iconfont icon-ins text-[clamp(20px,1.4vw,24px)] cursor-pointer hover:opacity-80'></i>
-          </div>
+
+          {!isMobile && renderSocialIcons()}
         </div>
       </div>
 

@@ -14,7 +14,7 @@ const Advertising = () => {
       <section className='text-[#0A0B11] w-full min-h-screen box-border relative overflow-hidden bg-[#FFF]'>
         <div className='px-[clamp(40px,13%,250px)] py-[100px] w-full box-border'>
           <div className='w-[70%]'>
-            <div className='font-sora font-[800] font-bold text-[clamp(40px,5vw,50px)] leading-[1.2] uppercase inline-block z-[99999]'>
+            <div className='font-sora-bold font-[900] font-bold text-[clamp(40px,5vw,50px)] leading-[1.2] [-webkit-text-stroke:0.5px_#0A0B11] uppercase inline-block z-[99999]'>
               Advertising placement and investment promotion
             </div>
             <div className='w-[600px] mt-[10px]'>

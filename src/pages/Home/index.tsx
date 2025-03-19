@@ -5,8 +5,10 @@ import VisibilitySection from './sections/VisibilitySection';
 import ExpensesSection from './sections/ExpensesSection';
 import AutomationSection from './sections/AutomationSection';
 import PartnersSection from './sections/PartnersSection';
+import useGlobalStore from '../../store/useGlobalStore';
 
 const Home = () => {
+  const { isMobile } = useGlobalStore();
   // const { t } = useTranslation();
 
   const logoUrlList = [
@@ -24,7 +26,7 @@ const Home = () => {
 
   return (
     <>
-      <div className='w-[44vw] h-[44vw] absolute top-[-15vw] right-[12vw] rounded-full opacity-50 bg-gradient-to-b from-[#C31111] to-[#1A1C1F] blur-[2px] z-[10]'></div>
+      <div className={`${isMobile ? 'w-[80vw] h-[80vw]' : 'w-[44vw] h-[44vw]'} absolute ${isMobile ? 'top-[-10vw] right-[-20vw]' : 'top-[-15vw] right-[12vw]'} rounded-full opacity-50 bg-gradient-to-b from-[#C31111] to-[#1A1C1F] blur-[2px] z-[10]`}></div>
       <HeroSection />
       <ControlSection />
       <VisibilitySection />

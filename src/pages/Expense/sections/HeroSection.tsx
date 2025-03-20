@@ -5,7 +5,7 @@ const HeroSection = () => {
         <section className='bg-[#0A0B11] text-[#FFFFFF] px-[clamp(40px,13%,250px)] w-full min-h-[calc(100vh-100px)] box-border flex items-center flex-col relative overflow-hidden'>
             <div className='z-[999] h-full relative w-full flex flex-col justify-between items-center pt-[50px] box-border flex-1 gap-y-[50px]'>
                 <div className='w-full flex flex-col justify-center items-center max-w-[1000px]'>
-                    <div className='text-[clamp(32px,3.5vw,46px)] font-[700] text-center space-y-[10px]  leading-[1]'>EXPENSE MANAGEMENT SOFTWARE DESIGNED TO CLOSE YOUR BOOKS FASTER</div>
+                    <div className='text-[clamp(40px,5vw,50px)] [-webkit-text-stroke:0.5px_#FFFFFF] font-[700] text-center space-y-[10px]  leading-[1]'>EXPENSE MANAGEMENT SOFTWARE DESIGNED TO CLOSE YOUR BOOKS FASTER</div>
                     <div className='text-[20px] mt-[10px] max-w-[600px] text-center'>Automated expense software built into your corporate card, reimbursements, and more</div>
                 </div>
                 <Button

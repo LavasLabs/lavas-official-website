@@ -31,7 +31,7 @@ const Contact = () => {
             <div className='px-[clamp(40px,13%,250px)] max-w-[1920px] mx-auto py-[60px] bg-[#F4F8F9] mb-[170px] w-full box-border flex gap-[60px]'>
                 <div className='w-[40%] flex flex-col gap-[20px] justify-between'>
                     <div>
-                        <h1 className='text-[48px] font-bold mb-[20px]'>Let's Talk</h1>
+                        <h1 className='text-[clamp(40px,5vw,50px)] font-bold mb-[20px]'>Let's Talk</h1>
                         <p className='text-[16px] text-[#666]'>
                             Schedule a time to chat with our team. We are always ready to assist you.
                         </p>

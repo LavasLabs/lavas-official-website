@@ -85,6 +85,18 @@ const Banner: React.FC = () => {
     // const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [drawerVisible, setDrawerVisible] = useState(false);
 
+    const languageItems: MenuProps['items'] = [
+        {
+            key: 'en',
+            label: 'English',
+        },
+        {
+            key: 'zh',
+            label: 'CH',
+            onClick: () => messageApi.info('This function is not enabled. Please contact the administrator')
+        },
+    ];
+
     useEffect(() => {
 
     }, []);
@@ -208,7 +220,7 @@ const Banner: React.FC = () => {
                                 <ul className="flex items-center list-none gap-[clamp(20px,2vw,36px)] whitespace-nowrap relative text-[clamp(14px,1vw,20px)]">
                                     <li className='cursor-pointer'>
                                         <Popover content={content}>
-                                            <Space className="relative z-[102]">
+                                            <Space className="relative z-[102]" align="center">
                                                 Products
                                                 <DownOutlined />
                                             </Space>
@@ -220,7 +232,7 @@ const Banner: React.FC = () => {
                                     </li>
                                     <li className='cursor-pointer'>
                                         <Dropdown menu={{ items }}>
-                                            <Space>
+                                            <Space align="center">
                                                 Solutions
                                                 <DownOutlined />
                                             </Space>
@@ -228,7 +240,7 @@ const Banner: React.FC = () => {
                                     </li>
                                     <li className='cursor-pointer'>
                                         <Popover content={resourceContent}>
-                                            <Space className="relative z-[102]">
+                                            <Space className="relative z-[102]" align="center">
                                                 Resource
                                                 <DownOutlined />
                                             </Space>
@@ -242,8 +254,8 @@ const Banner: React.FC = () => {
 
                                 <ul className="flex items-center list-none gap-[34px] text-[clamp(14px,1vw,20px)]">
                                     <li>
-                                        <Dropdown menu={{ items }}>
-                                            <Space>
+                                        <Dropdown menu={{ items: languageItems }}>
+                                            <Space align="center">
                                                 EN
                                                 <DownOutlined />
                                             </Space>

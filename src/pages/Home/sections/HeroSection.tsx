@@ -31,8 +31,16 @@ const HeroSection = () => {
       <div className={`w-full box-border ${isMobile ? 'px-[20px]' : 'px-[clamp(40px,13%,250px)]'}`}>
         <div className={`flex max-w-[1600px] mx-auto relative ${isMobile ? 'flex-col items-center' : 'justify-between'}`}>
           <div className={`pt-[4%] box-border ${isMobile ? 'max-w-full text-center z-[1000]' : 'max-w-[55%]'}`}>
-            <div className='relative font-sora font-[700] font-bold uppercase inline-block text-[clamp(40px,8vw,110px)] bg-gradient-to-r from-[#FFFFFF] to-[#CA2A0F] bg-clip-text text-transparent whitespace-nowrap z-[102]'>
-              Lavas Labs
+            <div className='relative font-sora font-[700] font-bold uppercase inline-block text-[clamp(40px,8vw,110px)] z-[102] whitespace-nowrap'>
+              <span style={{
+                background: 'linear-gradient(to right, #FFFFFF, #CA2A0F)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                color: 'transparent'
+              }}>
+                Lavas Labs
+              </span>
             </div>
             <div className='text-[clamp(16px,2vw,24px)]'>
               A corporate card designed for modern finance.

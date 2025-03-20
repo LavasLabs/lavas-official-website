@@ -29,7 +29,7 @@ const PartnersSection: React.FC<PartnersSectionProps> = ({ logoUrlList }) => {
   return (
     <section className={`w-full min-h-screen box-border bg-[#FFF] flex justify-center items-center flex-col text-[#0A0B11] ${isMobile ? 'px-[40px]' : 'px-[clamp(40px,16%,310px)]'}`}>
       <div className={`w-full max-w-[1920px] mx-auto flex flex-col items-center box-border ${isMobile ? 'py-[40px]' : 'py-[170px]'}`}>
-        <div className={`w-full max-w-[1920px] mx-auto box-border flex flex-col items-center relative ${isMobile ? 'px-[0px]' : 'px-[clamp(40px,16%,310px)]'}`}>
+        <div className={`w-full max-w-[1920px] mx-auto box-border flex flex-col items-center relative ${isMobile ? 'px-[10px] py-[20px]' : 'px-[clamp(40px,16%,310px)]'}`}>
           <div className='relative text-center max-w-[800px] leading-[1.2] font-[700] text-[clamp(32px,3.5vw,42px)]'>
             <img className={`absolute h-auto object-contain top-[-40%] ${isMobile ? 'w-[30px] right-[-8%]' : 'w-[52px] right-[-5%]'}`} src="/images/black-red-icon.png" alt="" />
             <span className={isMobile ? 'text-[24px]' : ''}>Access over $350k in offers from our partners</span>

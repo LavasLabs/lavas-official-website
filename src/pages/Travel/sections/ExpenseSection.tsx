@@ -13,9 +13,9 @@ const ExpenseSection = () => {
         <div className={`absolute top-0 left-0 w-full ${isMobile ? 'h-[50%]' : 'h-[70%]'} bg-[#000]`}></div>
         <div className={`w-full ${isMobile ? 'h-auto flex-col items-center gap-[40px]' : 'h-[70%] flex justify-between gap-[clamp(20px,4vw,40px)]'} py-[clamp(40px,5vh,60px)] box-border z-[2]`}>
           <div className={`${isMobile ? 'w-full text-center' : 'w-[50%] h-full'} flex flex-col justify-between`}>
-            <div className='w-full'>
+            <div className={`w-full ${isMobile ? 'px-[40px] box-border' : ''}  `}>
               <div className={`${isMobile ? 'text-[24px]' : 'text-[clamp(32px,3.5vw,42px)]'} font-[700] leading-[1.2] relative`}>
-                <img className={`${isMobile ? 'w-[30px] right-[0px] top-[-15px]' : 'w-[clamp(40px,3.0vw,52px)] right-[-30px] top-[-20px]'} h-auto object-contain absolute`} src="/images/white-red-icon.png" alt="" />
+                <img className={`${isMobile ? 'w-[30px] right-[-20px] top-[-15px]' : 'w-[clamp(40px,3.0vw,52px)] right-[-30px] top-[-20px]'} h-auto object-contain absolute`} src="/images/white-red-icon.png" alt="" />
                 Focus on your trip, not expense reports
               </div>
               <div className={`${isMobile ? 'text-[14px]' : 'text-[clamp(14px,1.1vw,18px)]'} mt-[clamp(12px,2vh,16px)] opacity-80`}>Lavas Labs collects and matches receipts across all transactions, and routes to the right budget and category. It instantly generates receipts for certain purchases, and saves recurring memos.</div>

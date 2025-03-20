@@ -16,7 +16,7 @@ const HeroSection = () => {
           </div>
           <div className={isMobile ? 'mt-[40px]' : 'mt-[clamp(60px,18vh,400px)]'}>
             <Button
-              className='font-[700] text-[clamp(14px,1.2vw,18px)] h-[clamp(46px,4vw,60px)] w-[clamp(160px,12vw,200px)] px-[clamp(25px,2vw,35px)] py-[clamp(17px,1.5vw,25px)] !bg-[#D11616] hover:!bg-[#ff1818] hover:!border-none'
+              className='font-[700] text-[clamp(16px,1.2vw,18px)] h-[clamp(46px,4vw,60px)] w-[clamp(160px,12vw,200px)] px-[clamp(25px,2vw,35px)] py-[clamp(17px,1.5vw,25px)] !bg-[#D11616] hover:!bg-[#ff1818] hover:!border-none'
               color="danger"
               variant="solid"
               shape="round"

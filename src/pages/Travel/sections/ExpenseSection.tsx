@@ -33,8 +33,8 @@ const ExpenseSection = () => {
               </Button>
             </div>
           </div>
-          <div className={`${isMobile ? 'w-full px-[20px] pt-[60px]' : 'w-[50%] pl-[10%] pt-[2%]'} box-border`}>
-            <img className={`w-full ${isMobile ? 'max-w-full' : 'max-w-[600px] mx-auto'} h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.25)] rounded-[30px]`} src="/images/travel-reports.png" alt="" />
+          <div className={`${isMobile ? 'w-full px-[20px] pt-[60px] flex justify-center items-center' : 'w-[50%] pl-[10%] pt-[2%]'} box-border`}>
+            <img className={`${isMobile ? 'w-[90%]' : 'w-full max-w-[600px] mx-auto'} h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.25)] rounded-[30px]`} src="/images/travel-reports.png" alt="" />
           </div>
         </div>
       </section>

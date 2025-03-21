@@ -31,7 +31,7 @@ const HeroSection = () => {
       <div className={`w-full box-border ${isMobile ? 'px-[20px]' : 'px-[clamp(40px,13%,250px)]'}`}>
         <div className={`flex max-w-[1600px] mx-auto relative ${isMobile ? 'flex-col items-center' : 'justify-between'}`}>
           <div className={`pt-[4%] box-border ${isMobile ? 'max-w-full text-center z-[1000]' : 'max-w-[55%]'}`}>
-            <div className={`relative font-sora font-[900] uppercase inline-block ${isMobile ? 'text-[42px] [-webkit-text-stroke:0.3px] tracking-[0.02em]' : 'text-[clamp(40px,8vw,110px)]'} z-[102] whitespace-nowrap`}>
+            <div className={`relative font-sora font-[900] uppercase inline-block ${isMobile ? 'text-[42px] [-webkit-text-stroke:0.3px] tracking-[0.02em]' : 'text-[clamp(40px,7.6vw,110px)]'} z-[102] whitespace-nowrap`}>
               <span style={{
                 background: 'linear-gradient(to right, #FFFFFF, #CA2A0F)',
                 WebkitBackgroundClip: 'text',

@@ -231,8 +231,8 @@ const Banner: React.FC = () => {
                                         Pricing
                                     </li>
                                     <li className='cursor-pointer'>
-                                        <Dropdown menu={{ items }}>
-                                            <Space align="center">
+                                        <Dropdown menu={{ items }} >
+                                            <Space align="center" onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}>
                                                 Solutions
                                                 <DownOutlined />
                                             </Space>

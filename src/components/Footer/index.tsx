@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
-import { Dropdown, Space, Popover } from 'antd';
+import { Dropdown, Space, Popover, message } from 'antd';
 import { useState } from 'react';
 import PricingModal from '../PricingModal';
 import useGlobalStore from '../../store/useGlobalStore';
@@ -28,12 +28,13 @@ const productItems = [
 ] as const;
 
 const content = (() => {
+  const { isMobile } = useGlobalStore();
   const goRouter = (url: string) => {
     window.location.href = `/${url}`;
   }
 
   return (
-    <div className='w-[420px] flex flex-wrap gap-[15px] gap-y-[10px]'>
+    <div className={`${isMobile ? 'w-[280px]' : 'w-[420px]'} flex flex-wrap gap-[15px] gap-y-[10px]`}>
       {productItems.map(item => (
         <Space key={item.text} className='cursor-pointer' onClick={() => goRouter(item.route)}>
           <i className={`iconfont ${item.icon} text-[24px]`}></i>
@@ -52,12 +53,13 @@ const resourceItems = [
 ] as const;
 
 const resourceContent = (() => {
+  const { isMobile } = useGlobalStore();
   const goRouter = (url: string) => {
     window.location.href = `/${url}`;
   }
 
   return (
-    <div className='w-[420px] flex flex-wrap gap-[20px] gap-y-[10px]'>
+    <div className={`${isMobile ? 'w-[280px]' : 'w-[420px]'} flex flex-wrap gap-[20px] gap-y-[10px]`}>
       {resourceItems.map(item => (
         <Space key={item.text} className='cursor-pointer' onClick={() => goRouter(item.route)}>
           <i className={`iconfont ${item.icon} text-[24px]`}></i>
@@ -83,6 +85,7 @@ const Footer: React.FC = () => {
 
   const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
   const { isMobile } = useGlobalStore();
+  const [messageApi, contextHolder] = message.useMessage();
 
   const renderSocialIcons = () => (
     <div className={`flex gap-[20px] ${!isMobile && 'mr-[clamp(20px,4vw,90px)]'}`}>
@@ -94,6 +97,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className={`bg-[#0A0B11] text-[#FFFFFF] py-[20px] box-border ${isMobile ? 'px-[20px]' : 'px-[clamp(40px,13%,250px)]'}`}>
+      {contextHolder}
       <div className={`w-full max-w-[1920px] mx-auto flex flex-col gap-[10px] ${isMobile && 'pt-[60px]'}`}>
         <div className={`flex w-full gap-[20px] ${isMobile ? 'flex-col justify-center items-center' : 'justify-between flex-wrap'}`}>
           {/* Logo */}
@@ -116,7 +120,7 @@ const Footer: React.FC = () => {
               </li>
               <li className={`cursor-pointer ${isMobile ? 'mx-[10px]' : ''}`}>
                 <Dropdown menu={{ items }}>
-                  <Space>
+                  <Space onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}>
                     Solutions
                     <DownOutlined />
                   </Space>

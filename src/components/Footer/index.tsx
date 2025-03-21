@@ -108,7 +108,8 @@ const Footer: React.FC = () => {
           <div className={`flex  flex-wrap ${isMobile ? 'justify-center gap-y-[26px]' : 'gap-[clamp(40px,5vw,120px)]'}`}>
             <ul className={`list-none !pl-[0px] ${isMobile ? 'flex flex-row flex-wrap justify-center gap-y-[10px] w-full' : 'flex flex-col min-w-[160px]'} gap-[20px] text-[clamp(14px,1.1vw,20px)]`}>
               <li className={`cursor-pointer ${isMobile ? 'mx-[10px]' : ''}`}>
-                <Popover content={content}>
+                <Popover content={content} overlayStyle={isMobile ? { width: '280px' } : undefined}
+                  overlayInnerStyle={isMobile ? { padding: '12px' } : undefined}>
                   <Space>
                     Products
                     <DownOutlined />
@@ -127,7 +128,8 @@ const Footer: React.FC = () => {
                 </Dropdown>
               </li>
               <li className={`cursor-pointer ${isMobile ? 'mx-[10px]' : ''}`}>
-                <Popover content={resourceContent}>
+                <Popover content={resourceContent} overlayStyle={isMobile ? { width: '280px' } : undefined}
+                  overlayInnerStyle={isMobile ? { padding: '12px' } : undefined}>
                   <Space className="relative z-[102]">
                     Resource
                     <DownOutlined />

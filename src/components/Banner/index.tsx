@@ -75,6 +75,7 @@ const resourceContent = (() => {
 
 const Banner: React.FC = () => {
     const { isMobile } = useGlobalStore();
+    const [isTablet, setIsTablet] = useState(false);
     const location = window.location.pathname;
     const whiteUrlList = ['travel', 'advertising', 'blog', 'contact', 'partner'];
     const isWhiteBgUrl = whiteUrlList.some(u => location.includes(u));
@@ -97,8 +98,41 @@ const Banner: React.FC = () => {
         },
     ];
 
-    useEffect(() => {
+    const userMenuItems: MenuProps['items'] = [
+        {
+            key: 'language',
+            label: (
+                <Dropdown menu={{ items: languageItems }} trigger={['hover']}>
+                    <Space align="center">
+                        EN
+                        <DownOutlined />
+                    </Space>
+                </Dropdown>
+            ),
+        },
+        {
+            key: 'signup',
+            label: 'Sign Up',
+            onClick: () => messageApi.info('This function is not enabled. Please contact the administrator')
+        },
+        {
+            key: 'login',
+            label: 'Login',
+            onClick: () => messageApi.info('This function is not enabled. Please contact the administrator')
+        },
+    ];
 
+    useEffect(() => {
+        const handleResize = () => {
+            setIsTablet(window.innerWidth <= 1200);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     const goRouter = (url: string) => {
@@ -214,9 +248,9 @@ const Banner: React.FC = () => {
                             </Drawer>
                         </div>
                     ) : (
-                        <div className="flex items-center justify-between w-full relative z-[102] pl-[40px]">
+                        <div className="flex items-center justify-between w-full relative z-[102] pl-[50px]">
                             {/* PC内容 */}
-                            <div className="flex items-center justify-between w-full relative z-[102] pl-[40px]">
+                            <div className="flex items-center justify-between w-full relative z-[102]">
                                 <ul className="flex items-center list-none gap-[clamp(20px,2vw,36px)] whitespace-nowrap relative text-[clamp(14px,1vw,20px)]">
                                     <li className='cursor-pointer'>
                                         <Popover content={content}>
@@ -252,33 +286,46 @@ const Banner: React.FC = () => {
                                 </ul>
 
 
-                                <ul className="flex items-center list-none gap-[34px] text-[clamp(14px,1vw,20px)]">
-                                    <li>
-                                        <Dropdown menu={{ items: languageItems }}>
-                                            <Space align="center">
-                                                EN
-                                                <DownOutlined />
-                                            </Space>
-                                        </Dropdown>
-                                    </li>
-                                    <li>
-                                        <Button
-                                            className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} border border-[#FFFFFF] text-[clamp(14px,1vw,20px)]`}
-                                            type="text"
-                                            onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
-                                        >
-                                            Sign Up
-                                        </Button>
-                                    </li>
-                                    <li>
-                                        <Button
-                                            className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} text-[clamp(14px,1vw,20px)]`}
-                                            type="text"
-                                            onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
-                                        >
-                                            Login
-                                        </Button>
-                                    </li>
+                                <ul className="flex items-center list-none gap-[34px] text-[clamp(14px,1vw,20px)] ml-[20px]">
+                                    {isTablet ? (
+                                        <li>
+                                            <Dropdown menu={{ items: userMenuItems }} placement="bottomRight">
+                                                <Space align="center" className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} cursor-pointer`}>
+                                                    More
+                                                    <DownOutlined />
+                                                </Space>
+                                            </Dropdown>
+                                        </li>
+                                    ) : (
+                                        <>
+                                            <li>
+                                                <Dropdown menu={{ items: languageItems }}>
+                                                    <Space align="center">
+                                                        EN
+                                                        <DownOutlined />
+                                                    </Space>
+                                                </Dropdown>
+                                            </li>
+                                            <li>
+                                                <Button
+                                                    className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} border border-[#FFFFFF] text-[clamp(14px,1vw,20px)]`}
+                                                    type="text"
+                                                    onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
+                                                >
+                                                    Sign Up
+                                                </Button>
+                                            </li>
+                                            <li>
+                                                <Button
+                                                    className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} text-[clamp(14px,1vw,20px)]`}
+                                                    type="text"
+                                                    onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
+                                                >
+                                                    Login
+                                                </Button>
+                                            </li>
+                                        </>
+                                    )}
                                 </ul>
                             </div>
                         </div>

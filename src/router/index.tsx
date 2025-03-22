@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import Layout from '../components/Layout';
 
 const router = createBrowserRouter([
@@ -12,6 +12,11 @@ const router = createBrowserRouter([
           const { default: Component } = await import('../pages/Home');
           return { Component };
         },
+      },
+      // volcano-card 重定向到首页
+      {
+        path: '/volcano-card',
+        element: <Navigate to="/" replace />,
       },
       {
         path: '/corporate-card',
@@ -68,6 +73,11 @@ const router = createBrowserRouter([
           const { default: Component } = await import('../pages/Partner');
           return { Component };
         }
+      },
+      // 处理 404，将所有未匹配的路由重定向到首页
+      {
+        path: '*',
+        element: <Navigate to="/" replace />,
       },
     ],
   },

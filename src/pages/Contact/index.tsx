@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Button, Form, Input, Select, message } from 'antd';
+import useGlobalStore from '../../store/useGlobalStore';
 
 const { TextArea } = Input;
 
@@ -12,6 +13,7 @@ interface ContactFormValues {
 }
 
 const Contact = () => {
+    const { isMobile } = useGlobalStore();
     const [loading, setLoading] = useState(false);
     const [form] = Form.useForm();
     const [messageApi, contextHolder] = message.useMessage();
@@ -26,31 +28,33 @@ const Contact = () => {
     };
 
     return (
-        <section className='text-[#0A0B11] w-full min-h-screen box-border relative overflow-hidden '>
+        <section className={`text-[#0A0B11] w-full box-border relative overflow-hidden ${isMobile ? '' : 'min-h-screen'}`}>
             {contextHolder}
-            <div className='px-[clamp(40px,13%,250px)] max-w-[1920px] mx-auto py-[60px] bg-[#F4F8F9] mb-[170px] w-full box-border flex gap-[60px]'>
-                <div className='w-[40%] flex flex-col gap-[20px] justify-between'>
+            <div className={`max-w-[1920px] mx-auto bg-[#F4F8F9] w-full box-border ${isMobile ? 'px-[20px] pb-[40px] pt-[30px] mb-[60px] flex flex-col gap-[30px]' : 'px-[clamp(40px,13%,250px)] py-[60px] mb-[170px] flex gap-[60px]'}`}>
+                <div className={`flex flex-col gap-[20px] justify-between ${isMobile ? 'w-full text-center' : 'w-[40%]'}`}>
                     <div>
-                        <h1 className='text-[clamp(40px,5vw,50px)] font-bold mb-[20px]'>Let's Talk</h1>
+                        <h1 className={`font-bold mb-[20px] ${isMobile ? 'text-[32px]' : 'text-[clamp(40px,5vw,50px)]'}`}>Let's Talk</h1>
                         <p className='text-[16px] text-[#666]'>
                             Schedule a time to chat with our team. We are always ready to assist you.
                         </p>
                     </div>
-                    <div>
-                        <img src="/images/black-red-icon.png" alt="Contact" className='w-[40px]' />
-                        <p className='mt-[20px] text-[14px] text-[#666]'>
-                            Please provide us with some detailed information about you, and we
-                            will contact you as soon as possible!
-                        </p>
-                    </div>
+                    {!isMobile && (
+                        <div>
+                            <img src="/images/black-red-icon.png" alt="Contact" className='w-[40px]' />
+                            <p className='mt-[20px] text-[14px] text-[#666]'>
+                                Please provide us with some detailed information about you, and we
+                                will contact you as soon as possible!
+                            </p>
+                        </div>
+                    )}
                 </div>
 
-                <div className='w-[60%]'>
+                <div className={isMobile ? 'w-full' : 'w-[60%]'}>
                     <Form
                         form={form}
                         layout="vertical"
                         onFinish={onFinish}
-                        className='w-full rounded-[20px] bg-[#FFF] p-[32px]'
+                        className={`w-full rounded-[20px] bg-[#FFF] ${isMobile ? 'p-[20px]' : 'p-[32px]'}`}
                     >
                         <div className='flex gap-[20px]'>
                             <Form.Item
@@ -59,7 +63,7 @@ const Contact = () => {
                                 className='flex-1'
                                 rules={[{ required: true, message: 'Please input your first name!' }]}
                             >
-                                <Input placeholder="Enter your name" className='h-[48px]' />
+                                <Input placeholder="Enter your name" className={`${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
                             </Form.Item>
 
                             <Form.Item
@@ -68,7 +72,7 @@ const Contact = () => {
                                 className='flex-1'
                                 rules={[{ required: true, message: 'Please input your last name!' }]}
                             >
-                                <Input placeholder="Enter your name" className='h-[48px]' />
+                                <Input placeholder="Enter your name" className={`${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
                             </Form.Item>
                         </div>
 
@@ -115,12 +119,21 @@ const Contact = () => {
                                 type="primary"
                                 htmlType="submit"
                                 loading={loading}
-                                className='w-full h-[48px] bg-[#0A0B11] text-white rounded-[24px]'
+                                className={`w-full bg-[#0A0B11] text-white rounded-[24px] ${isMobile ? 'h-[40px]' : 'h-[48px]'}`}
                             >
                                 Submit
                             </Button>
                         </Form.Item>
                     </Form>
+                    {isMobile && (
+                        <div className='mt-[30px]'>
+                            <img src="/images/black-red-icon.png" alt="Contact" className='w-[30px]' />
+                            <p className='mt-[20px] text-[14px] text-[#666]'>
+                                Please provide us with some detailed information about you, and we
+                                will contact you as soon as possible!
+                            </p>
+                        </div>
+                    )}
                 </div>
             </div>
         </section>

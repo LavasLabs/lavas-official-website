@@ -15,10 +15,10 @@ const FreeTeamSection = () => {
 
             <div className={`w-full flex max-w-[1920px] mx-auto box-border ${isMobile ? 'flex-col mt-[40px]' : 'flex-1 h-full mt-[6%] pl-[clamp(40px,16%,310px)]'}`}>
                 <div className={`relative ${isMobile ? 'w-full mb-[30px] h-[300px] px-[20px] box-border' : 'w-[40%]'}`}>
-                    <div className='font-[700] relative'>
+                    {/* <div className='font-[700] relative'>
                         <img className={`h-auto object-contain absolute left-[0px] top-[0px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src="/images/text-front-icon.png" alt="" />
-                        <span className={`z-[999999] relative ${isMobile ? 'text-[16px] ml-[20px]' : 'text-[20px]'}`}>The old way</span>
-                    </div>
+                        <span className={`z-[999] relative ${isMobile ? 'text-[16px] ml-[20px]' : 'text-[20px]'}`}>The old way</span>
+                    </div> */}
                     <img className={`${isMobile ? 'w-full mt-[20px]' : 'w-full absolute right-[0px] top-[0px]'}`} src="/images/expense-oldway.png" alt="" />
                 </div>
                 <div className={`relative box-border ${isMobile ? 'w-full h-[400px] mt-[100px]' : 'w-[60%] pl-[10%] pt-[10%]'}`}>

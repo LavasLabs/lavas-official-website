@@ -17,6 +17,28 @@ const Partner = () => {
         }, 500);
     };
 
+    const securityCards = [
+        {
+            image: '/images/partner-b1.png',
+            alt: 'Legitimacy',
+            title: 'Legitimacy and Licensing',
+            description: 'Lavas Labs credit card is a legitimate financial product operated by a licensed and regulated entity established in Hong Kong'
+        },
+        {
+            image: '/images/partner-b2.png',
+            alt: 'eKYC',
+            title: 'Full eKYC execution',
+            description: 'Partnered with industry leading eKYC provider Sumsub, Lavas Labs is executing full eKYC with automated ID and biometric verification to protect our users'
+        },
+        {
+            image: '/images/partner-b3.png',
+            alt: 'Security',
+            title: 'Security First',
+            description: 'We prioritize the security of our users assets and data. Our platform is built with industry-leading security measures and protocols'
+        }
+    ];
+
+
     useEffect(() => {
 
     }, []);
@@ -24,10 +46,14 @@ const Partner = () => {
     return (
         <section className='w-full relative'>
             {contextHolder}
-            <div className={`relative w-full h-auto bg-[url("/images/partner-banner.png")] bg-contain bg-no-repeat ${isMobile ? 'pt-[60px]' : 'pt-[100px]'}`}>
-                <div className={`max-w-[1920px] mx-auto text-right text-white ${isMobile ? 'pt-[4%] pb-[6%] px-[30px]' : 'pt-[6%] pb-[10%] pr-[clamp(40px,13%,250px)]'}`}>
-                    <div className={`text-[#FFF] font-bold font-roboto leading-[90%] uppercase text-right [text-shadow:0px_4px_10px_rgba(0,0,0,0.25)] ${isMobile ? 'text-[28px]' : 'text-[clamp(32px,5vw,60px)]'}`}>Collaborate with Lavas</div>
-                    <div className={`text-[#FFF] font-bold font-roboto leading-[90%] uppercase text-right [text-shadow:0px_4px_10px_rgba(0,0,0,0.25)] ${isMobile ? 'text-[28px]' : 'text-[clamp(32px,5vw,60px)]'}`}>Labs to accelerate growth</div>
+            <div className={`relative w-full h-auto bg-contain bg-no-repeat ${
+                isMobile 
+                    ? 'bg-[url("/images/partner-banner-mobile.png")] pt-[54%]' 
+                    : 'bg-[url("/images/partner-banner.png")] pt-[100px]'
+            }`}>
+                <div className={`max-w-[1920px] mx-auto text-[#FFF] ${isMobile ? 'pt-[4%] pb-[6%] px-[30px]' : 'pt-[4%] pb-[10%] pr-[clamp(40px,13%,250px)] pl-[30%] text-right'}`}>
+                    <div className={`font-bold font-roboto leading-[90%] uppercase  [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] [-webkit-text-stroke:1px]  ${isMobile ? 'text-[28px] text-center' : 'text-[clamp(32px,5vw,60px)] text-right'}`}>Collaborate with Lavas Labs to accelerate growth</div>
+                    <div className={`text-[14px] mt-[24px] [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] [-webkit-text-stroke:0.2px]  ${isMobile ? 'hidden' : ''}`}>Join the global partner community to jointly build solutions, develop skills, and collaborate with Lavas Labs for sales</div>
                 </div>
 
                 <div className={`max-w-[1920px] mx-auto w-full flex flex-col justify-center box-border ${isMobile ? 'px-[30px] gap-y-[60px]' : 'px-[clamp(40px,16%,310px)] gap-y-[170px]'}`}>
@@ -140,10 +166,17 @@ const Partner = () => {
 
                     <div className='w-full flex flex-col text-[#0A0B11]'>
                         <Space direction='vertical'>
-                            <div className={`font-[700] ${isMobile ? 'text-[28px] text-center' : 'text-[clamp(32px,5vw,60px)]'}`}>Our Vision</div>
+                            <div className={`font-[700] ${isMobile ? 'text-[30px] text-center' : 'text-[clamp(32px,5vw,60px)]'}`}>Our Vision</div>
                             <div className={isMobile ? 'text-[14px] text-center' : ''}>We are dedicated to transforming the way people make payments. Through the blockchain technology and digital assets, we are building a digital asset payment infrastructure focusing on promoting greater financial inclusion and economic opportunities of cryptocurrencies.</div>
                         </Space>
-                        <img className={`${isMobile ? 'my-[20px]' : 'my-[40px]'}`} src='/images/partner-vision.png' alt='' />
+                        <img
+                            className={`w-full rounded-[20px] ${isMobile
+                                    ? 'my-[20px] h-[200px] object-cover object-[50%_50%]'
+                                    : 'my-[40px] object-contain'
+                                }`}
+                            src='/images/partner-vision.png'
+                            alt=''
+                        />
 
                         <div className={`w-full ${isMobile ? 'flex flex-col gap-[20px]' : 'flex justify-between'}`}>
                             <div className={isMobile ? 'w-full' : 'w-[50%]'}>
@@ -169,41 +202,33 @@ const Partner = () => {
                 </div>
 
                 <div className={`max-w-[1920px] mx-auto w-full flex flex-col justify-center box-border relative ${isMobile ? 'py-[60px]' : 'py-[170px]'}`}>
-                    <div className={`relative w-full box-border ${isMobile ? 'pr-[40px]' : 'pr-[clamp(40px,16%,310px)]'}`}>
+                    <div className={`relative w-full box-border ${isMobile ? 'pr-[60px]' : 'pr-[clamp(40px,16%,310px)]'}`}>
                         <div className='border-t-[3px] border-[#0A0B11] w-[40%] absolute top-[30px] left-[0px] relative'>
                             <img className={`h-auto object-contain absolute right-[-2px] top-[-10px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src="/images/text-front-icon.png" alt="" />
                         </div>
                         <div className={`font-[700] ml-[32px] text-right text-[clamp(32px,4vw,50px)] ${isMobile ? 'hidden' : ''}`}>Compliance & Security</div>
                     </div>
                     <div className={`w-full box-border flex flex-col text-[#0A0B11] ${isMobile ? 'px-[0px]' : 'px-[clamp(40px,16%,310px)]'}`}>
-                        <div className={`text-right font-[700] mt-[12px] ${isMobile ? 'text-[20px] mb-[30px] px-[30px] box-border w-[80%] ml-auto' : 'text-[clamp(24px,3vw,40px)] mb-[60px]'}`}>
+                        <div className={`text-right font-[700] mt-[12px] ${isMobile ? 'text-[22px] mb-[30px] px-[30px] box-border w-[80%] ml-auto' : 'text-[clamp(24px,3vw,40px)] mb-[60px]'}`}>
                             We are dedicated to upholding the highest compliance standards
                         </div>
 
-                        <div className={`w-full ${isMobile ? 'flex flex-col gap-[20px] px-[40px] box-border' : 'flex gap-[30px]'}`}>
-                            <div className={`flex flex-col ${isMobile ? 'w-full' : 'w-[calc(100%/3-30px)]'}`}>
-                                <img className={`object-cover rounded-[16px] ${isMobile ? 'w-full h-[160px] mb-[16px]' : 'w-full h-[200px] mb-[24px]'}`} src='/images/partner-b1.png' alt='Legitimacy' />
-                                <div className={`font-[700] mb-[16px] ${isMobile ? 'text-[18px]' : 'text-[24px]'}`}>Legitimacy and Licensing</div>
-                                <div className={`opacity-50 ${isMobile ? 'text-[14px]' : ''}`}>
-                                    Lavas Labs credit card is a legitimate financial product operated by a licensed and regulated entity established in Hong Kong
+                        <div className={`w-full ${isMobile ? 'flex flex-col gap-[20px] px-[40px] box-border justify-center items-center' : 'flex gap-[30px]'}`}>
+                            {securityCards.map((card, index) => (
+                                <div key={index} className={`flex flex-col ${isMobile ? 'w-[80%]' : 'w-[calc(100%/3-30px)]'}`}>
+                                    <img 
+                                        className={`object-cover rounded-[16px] ${isMobile ? 'w-full h-[160px] mb-[16px]' : 'w-full h-[200px] mb-[24px]'}`} 
+                                        src={card.image} 
+                                        alt={card.alt} 
+                                    />
+                                    <div className={`font-[700] mb-[16px] ${isMobile ? 'text-[18px]' : 'text-[24px]'}`}>
+                                        {card.title}
+                                    </div>
+                                    <div className={`opacity-50 ${isMobile ? 'text-[14px]' : ''}`}>
+                                        {card.description}
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div className={`flex flex-col ${isMobile ? 'w-full' : 'w-[calc(100%/3-30px)]'}`}>
-                                <img className={`object-cover rounded-[16px] ${isMobile ? 'w-full h-[160px] mb-[16px]' : 'w-full h-[200px] mb-[24px]'}`} src='/images/partner-b2.png' alt='eKYC' />
-                                <div className={`font-[700] mb-[16px] ${isMobile ? 'text-[18px]' : 'text-[24px]'}`}>Full eKYC execution</div>
-                                <div className={`opacity-50 ${isMobile ? 'text-[14px]' : ''}`}>
-                                    Partnered with industry leading eKYC provider Sumsub, Lavas Labs is executing full eKYC with automated ID and biometric verification to protect our users
-                                </div>
-                            </div>
-
-                            <div className={`flex flex-col ${isMobile ? 'w-full' : 'w-[calc(100%/3-30px)]'}`}>
-                                <img className={`object-cover rounded-[16px] ${isMobile ? 'w-full h-[160px] mb-[16px]' : 'w-full h-[200px] mb-[24px]'}`} src='/images/partner-b3.png' alt='Security' />
-                                <div className={`font-[700] mb-[16px] ${isMobile ? 'text-[18px]' : 'text-[24px]'}`}>Security First</div>
-                                <div className={`opacity-50 ${isMobile ? 'text-[14px]' : ''}`}>
-                                    We prioritize the security of our users' assets and data. Our platform is built with industry-leading security measures and protocols
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>

@@ -111,7 +111,7 @@ const Blog = () => {
                             Business Scenario
                         </div>
                         <Button 
-                            className={`font-[700] h-[46px] ${isMobile ? 'px-[20px] py-[12px] w-[140px]' : 'px-[25px] py-[17px] w-[160px]'}`}
+                            className={`font-[700] h-[46px] ${isMobile ? 'px-[20px] py-[12px] w-[140px]' : 'px-[25px] py-[17px] w-[160px] !bg-[#D11616] hover:!bg-[#ff1818] hover:!border-[#ff1818]'}`}
                             color="danger" 
                             variant="solid" 
                             shape="round" 

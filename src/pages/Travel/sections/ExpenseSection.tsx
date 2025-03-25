@@ -23,7 +23,7 @@ const ExpenseSection = () => {
 
             <div className={`${isMobile ? 'mt-[30px] flex justify-center' : 'mt-[clamp(30px,5vh,40px)]'}`}>
               <Button 
-                className='font-[700] px-[25px] py-[17px] h-[46px]' 
+                className='font-[700] px-[25px] py-[17px] h-[46px] !bg-[#D11616] hover:!bg-[#ff1818] hover:!border-[#ff1818]' 
                 color="danger" 
                 variant="solid" 
                 size='large'

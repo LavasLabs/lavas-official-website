@@ -7,3 +7,9 @@
 .ant-segmented {
     background: #F4F8F9 !important;
 }
+
+.ant-segmented-item{
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
+}

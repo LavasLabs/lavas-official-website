@@ -52,7 +52,7 @@ const Partner = () => {
                     : 'bg-[url("/images/partner-banner.png")] pt-[100px]'
             }`}>
                 <div className={`max-w-[1920px] mx-auto text-[#FFF] ${isMobile ? 'pt-[4%] pb-[6%] px-[30px]' : 'pt-[4%] pb-[10%] pr-[clamp(40px,13%,250px)] pl-[30%] text-right'}`}>
-                    <div className={`font-bold font-roboto leading-[90%] uppercase  [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] [-webkit-text-stroke:1px]  ${isMobile ? 'text-[28px] text-center' : 'text-[clamp(32px,5vw,60px)] text-right'}`}>Collaborate with Lavas Labs to accelerate growth</div>
+                    <div className={`font-bold tracking-[0.03em] font-roboto  uppercase [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] [-webkit-text-stroke:1px]  ${isMobile ? 'leading-[115%] text-[28px] text-center' : 'leading-[90%] text-[clamp(32px,5vw,60px)] text-right'}`}>Collaborate with Lavas Labs to accelerate growth</div>
                     <div className={`text-[14px] mt-[24px] [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] [-webkit-text-stroke:0.2px]  ${isMobile ? 'hidden' : ''}`}>Join the global partner community to jointly build solutions, develop skills, and collaborate with Lavas Labs for sales</div>
                 </div>
 

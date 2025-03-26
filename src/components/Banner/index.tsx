@@ -26,7 +26,8 @@ const productItems = [
     { icon: 'icon-a-CorporateCard', text: 'Corporate Card', route: '' },
     { icon: 'icon-Travel', text: 'Travel', route: 'travel' },
     { icon: 'icon-money', text: 'Expense Management', route: 'expense' },
-    { icon: 'icon-Advertising', text: 'Advertising', route: 'advertising' }
+    { icon: 'icon-Advertising', text: 'Advertising', route: 'advertising' },
+    { icon: 'icon-a-CreditLine', text: 'Credit Line', route: 'credit' }
 ] as const;
 
 const content = (() => {
@@ -77,7 +78,7 @@ const Banner: React.FC = () => {
     const { isMobile } = useGlobalStore();
     const [isTablet, setIsTablet] = useState(false);
     const location = window.location.pathname;
-    const whiteUrlList = ['travel', 'advertising', 'blog', 'contact', 'partner'];
+    const whiteUrlList = ['travel', 'advertising', 'blog', 'contact', 'partner','credit'];
     const isWhiteBgUrl = whiteUrlList.some(u => location.includes(u));
     const tUrlList = ['partner', 'services-term'];
     const isTUrl = tUrlList.some(u => location.includes(u));

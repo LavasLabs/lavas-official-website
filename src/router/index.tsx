@@ -74,6 +74,13 @@ const router = createBrowserRouter([
           return { Component };
         }
       },
+      {
+        path: '/credit',
+        lazy: async () => {
+          const { default: Component } = await import('../pages/Credit');
+          return { Component };
+        }
+      },
       // 处理 404，将所有未匹配的路由重定向到首页
       {
         path: '*',

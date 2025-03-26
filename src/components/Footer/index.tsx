@@ -24,7 +24,8 @@ const productItems = [
   { icon: 'icon-a-CorporateCard', text: 'Corporate Card', route: '' },
   { icon: 'icon-Travel', text: 'Travel', route: 'travel' },
   { icon: 'icon-money', text: 'Expense Management', route: 'expense' },
-  { icon: 'icon-Advertising', text: 'Advertising', route: 'advertising' }
+  { icon: 'icon-Advertising', text: 'Advertising', route: 'advertising' },
+  { icon: 'icon-a-CreditLine', text: 'Credit Line', route: 'credit' }
 ] as const;
 
 const content = (() => {

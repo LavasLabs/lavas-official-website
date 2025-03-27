@@ -16,7 +16,7 @@ const PartnersSection: React.FC<PartnersSectionProps> = ({ logoUrlList }) => {
         </div>
       </div>
 
-      <div className={`w-full max-w-[1920px] mx-auto flex flex-wrap box-border ${isMobile ? 'mt-[40px] px-[20px] gap-[10px] justify-center' : 'mt-[8%] justify-between gap-y-[12px] gap-x-[15px]'}`}>{
+      <div className={`w-full max-w-[1920px] mx-auto flex flex-wrap box-border ${isMobile ? 'mt-[40px] px-[30px] gap-[10px] justify-center' : 'mt-[8%] justify-between gap-y-[12px] gap-x-[15px]'}`}>{
         logoUrlList.map((item, index) => {
           return (
             <div key={index} className={`aspect-square box-border bg-[#F7F7F7] rounded-[12px] flex items-center justify-center ${isMobile ? 'w-[calc(100%/3-7px)]' : 'w-[calc(100%/6-13px)] min-w-[140px]'}`}>

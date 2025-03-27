@@ -34,7 +34,7 @@ const Advertising = () => {
             Business Scenario
           </div>
         </div>
-        <div className={`w-full flex flex-wrap justify-center mt-[6%] box-border ${isMobile ? 'px-[20px] pb-[60px] gap-[10px]' : 'w-[72%] pb-[170px] px-[clamp(40px,16%,310px)] gap-y-[12px] gap-x-[20px]'}`}>{
+        <div className={`w-full flex flex-wrap justify-center  box-border ${isMobile ? 'px-[20px] pb-[60px] gap-[10px] mt-[40px]' : 'w-[72%] pb-[170px] px-[clamp(40px,16%,310px)] gap-y-[12px] gap-x-[20px] mt-[6%]'}`}>{
           logoUrlList.map(item => {
             return (
               <div className={`pt-[32px] pb-[10px] px-[20px] box-border bg-[#FFF] rounded-[12px] border border-[#F5F7F9] flex justify-center shadow-[0px_10px_30px_0px_rgba(24,24,26,0.10)] ${isMobile ? 'w-[calc(50%-5px)]' : ''}`}>

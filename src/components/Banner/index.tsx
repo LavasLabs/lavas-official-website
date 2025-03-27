@@ -207,7 +207,7 @@ const Banner: React.FC = () => {
     return (
         <>
             {contextHolder}
-            <nav className={`w-full absolute top-0 left-0 right-0 ${isWhiteBgUrl
+            <nav className={`w-full absolute top-[0px] left-[0px] right-[0px] ${isWhiteBgUrl
                 ? 'text-[#0A0B11]'
                 : 'text-[#FFFFFF]'
                 }  ${(isTUrl && !location.includes('services-term')) ? 'bg-[#FFFFFF]/40 backdrop-blur-sm' : ''} 
@@ -337,7 +337,7 @@ const Banner: React.FC = () => {
                 </div>
             </nav>
 
-            {!isTUrl && (
+            {(!isTUrl && !(location.includes('credit') && isMobile)) && (
                 <div className={`h-[100px] w-full relative ${isWhiteBgUrl
                     ? 'bg-[#FFFFFF]'
                     : 'bg-[#0A0B11]'

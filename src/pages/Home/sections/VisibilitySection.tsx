@@ -30,7 +30,7 @@ const VisibilitySection = () => {
         </div>
       </div>
 
-      <div className={`absolute bottom-0 left-0 w-full relative ${isMobile ? 'mt-[60px]' : 'mt-[100px]'}`}>
+      <div className={`absolute bottom-[0px] left-[0px] w-full relative ${isMobile ? 'mt-[60px]' : 'mt-[100px]'}`}>
         <div className={`relative max-w-[1920px] mx-auto ${isMobile ? 'h-[80vh]' : 'h-[min(800px,65vh)]'}`}>
           <img className={`absolute object-contain z-[999] bottom-[0px] ${isMobile ? 'left-[5%] w-[55%]' : 'left-[16%] w-[clamp(200px,18vw,360px)]'}`} src="/images/card-person.png" />
           <img className={`absolute object-contain z-[999] ${isMobile ? 'left-[5%] w-[60%] top-[0px]' : 'left-[46%] w-[clamp(220px,20vw,380px)] bottom-[0px]'}`} src="/images/card-media.png" />

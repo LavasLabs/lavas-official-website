@@ -10,7 +10,7 @@ const ExpenseSection = () => {
     <>
       {contextHolder}
       <section className={`text-[#FFF] w-full max-w-[1920px] mx-auto ${isMobile ? 'h-auto px-[20px] my-[40px]' : 'min-h-screen px-[clamp(40px,16%,310px)] my-[170px]'}  box-border bg-[#FFF] flex items-center flex-col relative`}>
-        <div className={`absolute top-0 left-0 w-full ${isMobile ? 'h-[50%]' : 'h-[70%]'} bg-[#000]`}></div>
+        <div className={`absolute top-[0px] left-[0px] w-full ${isMobile ? 'h-[50%]' : 'h-[70%]'} bg-[#000]`}></div>
         <div className={`w-full ${isMobile ? 'h-auto flex-col items-center gap-[40px]' : 'h-[70%] flex justify-between gap-[clamp(20px,4vw,40px)]'} py-[clamp(40px,5vh,60px)] box-border z-[2]`}>
           <div className={`${isMobile ? 'w-full text-center' : 'w-[50%] h-full'} flex flex-col justify-between`}>
             <div className={`w-full ${isMobile ? 'px-[40px] box-border' : ''}  `}>

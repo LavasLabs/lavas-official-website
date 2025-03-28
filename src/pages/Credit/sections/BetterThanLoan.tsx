@@ -55,7 +55,7 @@ const BetterThanLoan = () => {
     <section className={`w-full max-w-[1920px] mx-auto box-border bg-[#FFF] flex flex-col text-[#0A0B11] ${isMobile ? 'px-[20px] py-[100px]' : 'px-[clamp(40px,16%,310px)] py-[170px] min-h-screen'}`}>
       <div className={`font-[700] leading-[1.2] relative ${isMobile ? 'text-[24px] mb-[40px] mx-auto text-center' : 'text-[clamp(32px,3.5vw,42px)] mb-[80px] w-fit'}`}>
         <img className={`h-auto object-contain absolute top-[-40px] ${isMobile ? 'w-[30px] right-[-20px]' : 'w-[52px] right-[-70px]'}`} src="/images/black-red-icon.png" alt="" />
-        BETTER THAN A LOAN.
+        BETTER THAN A LOAN. 
       </div>
       <div className='flex flex-wrap text-[#0A0B11] gap-[20px]'>
         {cardData.map((card, index) => (

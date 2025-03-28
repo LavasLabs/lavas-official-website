@@ -21,8 +21,8 @@ const ControlSection = () => {
           {isMobile && (
             <div className='w-full flex flex-col gap-[20px] mt-[40px] items-center'>
               <img className='w-[80%] h-auto object-contain' src="/images/travel-view-phone.png" alt="" />
-              <img className='w-[90%] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src="/images/travel-view-phone-first.png" alt="" />
-              <img className='w-[90%] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src="/images/travel-view-phone-second.png" alt="" />
+              <img className='w-[75%] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src="/images/travel-view-phone-first.png" alt="" />
+              <img className='w-[75%] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src="/images/travel-view-phone-second.png" alt="" />
             </div>
           )}
 

@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className={`w-full max-w-[1920px] mx-auto relative overflow-hidden bg-[#FFF] text-[#0A0B11] box-border ${isMobile ? 'px-[20px]  h-auto' : 'pl-[clamp(40px,13%,250px)] min-h-[calc(100vh-100px)]'}`}>
       <div className={`box-border ${isMobile ? 'pt-[20px] flex-col items-center' : 'pt-[clamp(40px,5vh,80px)] flex justify-between'}`}>
         <div className={`w-full ${isMobile ? 'text-center' : 'max-w-[55%]'}`}>
-          <div className={`font-sora font-[900] leading-[1.2] font-bold uppercase [text-shadow:0px_0px_1px_#000] ${isMobile ? 'text-[28px]' : 'text-[clamp(28px,3.8vw,46px)]'}`}>
+          <div className={`font-sora font-[900] leading-[1.2] font-bold uppercase [-webkit-text-stroke:0.5px_#0A0B11] ${isMobile ? 'text-[28px]' : 'text-[clamp(40px,5vw,50px)]'}`}>
             Smarter business travel, from booking to book close
           </div>
           <div className={`max-w-[600px] ${isMobile ? 'mt-[15px] text-[14px] mx-auto' : 'mt-[10px] text-[clamp(14px,1.1vw,16px)]'}`}>
@@ -16,7 +16,7 @@ const HeroSection = () => {
           </div>
           <div className={isMobile ? 'mt-[40px]' : 'mt-[clamp(60px,18vh,400px)]'}>
             <Button
-              className='w-[160px] h-[46px] px-[25px] py-[17px] font-[700] !bg-[#D11616] hover:!bg-[#ff1818] hover:!border-none'
+              className='font-[700] text-[clamp(16px,1.2vw,18px)] h-[clamp(46px,4vw,60px)] w-[clamp(160px,12vw,200px)] px-[clamp(25px,2vw,35px)] py-[clamp(17px,1.5vw,25px)] !bg-[#D11616] hover:!bg-[#ff1818] hover:!border-none'
               color="danger"
               variant="solid"
               shape="round"

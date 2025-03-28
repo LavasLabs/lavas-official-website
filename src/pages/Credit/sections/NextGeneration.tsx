@@ -7,23 +7,23 @@ const NextGeneration = () => {
     const [messageApi, contextHolder] = message.useMessage();
 
     return (
-        <section className={`text-[#FFF] w-full max-w-[1920px] mx-auto  ${isMobile ? 'h-auto px-[20px] my-[40px]' : 'min-h-screen px-[clamp(40px,16%,310px)] mb-[80px]'}  box-border bg-[#FFF] flex justify-center items-center flex-col relative`}>
+        <section className={`text-[#FFF] w-full max-w-[1920px] mx-auto box-border bg-[#FFF] flex justify-center flex-col relative ${isMobile ? 'px-[40px] py-[60px]' : 'min-h-screen px-[clamp(40px,16%,310px)] mb-[80px] items-center'}`}>
             {contextHolder}
-            <div className={`absolute top-0 left-0 w-full ${isMobile ? 'h-[50%]' : 'h-[70%]'} bg-[url('/images/credit-next.png')] bg-cover bg-center`}></div>
-            <div className={`w-full ${isMobile ? 'h-auto flex-col items-center gap-[40px]' : 'h-[70%] flex justify-between gap-[clamp(20px,4vw,40px)]'} py-[clamp(40px,5vh,60px)] box-border z-[2]`}>
-                <div className={`flex flex-col justify-between ${isMobile ? 'w-full text-center px-[40px]' : 'w-[50%] h-full'}`}>
+            <div className={`absolute left-[0px] w-full ${isMobile ? 'h-[70%]' : 'h-[70%]'} bg-[url('/images/credit-next.png')] bg-cover bg-center`}></div>
+            <div className={`w-full box-border z-[2] ${isMobile ? 'flex flex-col items-center' : 'h-[70%] flex justify-between gap-[clamp(20px,4vw,40px)]'} py-[clamp(40px,5vh,60px)]`}>
+                <div className={`flex flex-col justify-between ${isMobile ? 'w-full' : 'w-[50%] gap-[30px]  h-full'}`}>
                     <div>
-                        <div className={`font-[700] leading-[1.2] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] ${isMobile ? 'text-[24px]' : 'text-[clamp(32px,3.5vw,42px)]'}`}>
+                        <div className={`font-[700] leading-[1.2] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] ${isMobile ? 'text-[20px]' : 'text-[clamp(32px,3.5vw,42px)]'}`}>
                             DRIVING THE NEXT GENERATION OF WEALTH.
                         </div>
-                        <div className={`mt-[clamp(12px,2vh,16px)] ${isMobile ? 'text-[14px]' : 'text-[clamp(14px,1.1vw,18px)]'}`}>
+                        <div className={`mt-[clamp(12px,2vh,16px)] ${isMobile ? 'text-[12px]' : 'text-[clamp(14px,1.1vw,18px)]'}`}>
                             Volcano is built for pioneers ready to leverage blockchain technology for wealth generation. Create your account today and get started.
                         </div>
                     </div>
 
-                    <div className={`${isMobile ? 'mt-[30px] flex justify-center items-center gap-[20px]' : 'mt-[clamp(30px,5vh,40px)] flex items-center gap-[20px]'}`}>
+                    <div className={`flex items-center gap-[16px] ${isMobile ? 'mt-[30px]' : 'mt-[clamp(30px,5vh,40px)]'}`}>
                         <Button
-                            className='font-[700] px-[25px] py-[17px] h-[46px] !bg-[#D11616] hover:!bg-[#ff1818] hover:!border-[#ff1818]'
+                            className={`font-[700] !bg-[#D11616] hover:!bg-[#ff1818] hover:!border-[#ff1818] ${isMobile ? 'h-[40px] px-[20px] text-[14px]' : 'h-[46px] px-[25px] py-[17px]'}`}
                             color="danger"
                             variant="solid"
                             size='large'
@@ -31,7 +31,7 @@ const NextGeneration = () => {
                         >
                             Learn more <RightOutlined />
                         </Button>
-                        <img src="/images/credit-qrcode.png" className='h-[46px] w-[46px]' alt="QR Code" />
+                        <img src="/images/credit-qrcode.png" className={`${isMobile ? 'h-[40px] w-[40px]' : 'h-[46px] w-[46px]'}`} alt="QR Code" />
                     </div>
                 </div>
             </div>

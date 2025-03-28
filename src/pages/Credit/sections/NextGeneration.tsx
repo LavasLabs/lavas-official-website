@@ -16,7 +16,7 @@ const NextGeneration = () => {
                         <div className={`font-[700] leading-[1.2] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] ${isMobile ? 'text-[20px]' : 'text-[clamp(32px,3.5vw,42px)]'}`}>
                             DRIVING THE NEXT GENERATION OF WEALTH.
                         </div>
-                        <div className={`mt-[clamp(12px,2vh,16px)] ${isMobile ? 'text-[12px]' : 'text-[clamp(14px,1.1vw,18px)]'}`}>
+                        <div className={`mt-[clamp(12px,2vh,16px)] [text-shadow:0px_4px_4px_rgba(0,0,0,0.35)] ${isMobile ? 'text-[12px] w-[60%]' : 'text-[clamp(14px,1.1vw,18px)]'}`}>
                             Volcano is built for pioneers ready to leverage blockchain technology for wealth generation. Create your account today and get started.
                         </div>
                     </div>

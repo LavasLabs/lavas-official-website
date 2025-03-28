@@ -30,7 +30,7 @@ const Banner = () => {
                 />
                 {isMobile ? (
                     <>
-                        <div className={`text-[#FFF] z-[100] font-[900] box-border relative [text-shadow:0px_4px_10px_rgba(0,0,0,0.8)] w-full text-center text-[30px] leading-[120%] px-[10%] mt-[20%] ${isTablet && '!mt-[10px]'}`}>
+                        <div className={`text-[#FFF] z-[100] font-[900] box-border relative [text-shadow:0px_4px_10px_rgba(0,0,0,0.8)] w-full text-center text-[30px] leading-[120%] px-[10%] mt-[17%] ${isTablet && '!mt-[10px]'}`}>
                             Accelerate your ambitions with a crypto Credit Line.
                         </div>
                         <div className="text-[#FFF] z-[100] font-[700] box-border relative [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] w-full text-center text-[18px] leading-[120%] px-[15%] mt-[20px]">
@@ -48,8 +48,8 @@ const Banner = () => {
                     </>
                 )}
             </div>
-            <div className={`w-full box-border flex justify-between ${isMobile ? 'flex px-[20px] relative ' : 'min-h-[56vh]'}`}>
-                <div className={`box-border relative ${isMobile ? 'w-[50%]' : 'w-[30%]'}`}>
+            <div className={`w-full box-border flex justify-between ${isMobile ? 'flex px-[20px] mt-[10px] relative ' : 'min-h-[56vh]'}`}>
+                <div className={`box-border relative ${isMobile ? 'w-[45%]' : 'w-[30%]'}`}>
                     <img
                         src="/images/credit-phone.png"
                         className={`absolute ${isTablet && '!w-[60%]'} ${isMobile ? 'w-full left-[10px] top-[-10%]' : 'w-[75%] left-[40%] top-[-40%]'} z-[999]`}

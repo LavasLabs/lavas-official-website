@@ -24,13 +24,13 @@ const collateralData = [
     percentage: 50,
     color: '#9945FF'
   },
-  {
-    icon: '/images/credit-control4.png',
-    name: 'XRP',
-    symbol: 'XRP',
-    percentage: 30,
-    color: '#23292F'
-  },
+  // {
+  //   icon: '/images/credit-control4.png',
+  //   name: 'XRP',
+  //   symbol: 'XRP',
+  //   percentage: 30,
+  //   color: '#23292F'
+  // },
   // {
   //   icon: '/images/credit-control5.png',
   //   name: 'Volcano Token',
@@ -94,7 +94,7 @@ const Collateral = () => {
         </div>
 
         {/* 背景网格 */}
-        <div className={`absolute ${isMobile ? 'w-[calc(100%-180px)] right-[40px]' : 'w-[calc(100%-300px)] right-[80px]'} h-[400px] top-[90px] pointer-events-none`}>
+        <div className={`absolute ${isMobile ? 'w-[calc(100%-180px)] right-[40px]' : 'w-[calc(100%-300px)] right-[80px]'} h-[300px] top-[90px] pointer-events-none`}>
           {/* 竖线和数值 */}
           <div className='w-full h-full flex justify-between text-[14px] text-[rgba(10,11,17,0.4)] relative'>
             <div className='absolute w-full h-full'>

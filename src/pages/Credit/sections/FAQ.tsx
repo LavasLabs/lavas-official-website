@@ -5,7 +5,7 @@ import useGlobalStore from '../../../store/useGlobalStore';
 const faqData = [
   {
     key: '1',
-    question: 'How does the Nexo Credit Line work?',
+    question: 'How does the Lavas Credit Line work?',
     answer: (
       <>
         <div className='mb-[20px]'>

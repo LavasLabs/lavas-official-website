@@ -20,13 +20,13 @@ const Banner = () => {
                             Accelerate your ambitions with a crypto Credit Line.
                         </div>
                         <div className="text-[#FFF] z-[100] font-[700] box-border relative [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] w-full text-center text-[18px] leading-[120%] px-[15%] mt-[20px]">
-                            Borrow funds from 2.9% annual interest without selling your digital assets.
+                            Borrow funds from 8.9% annual interest without selling your digital assets.
                         </div>
                     </>
                 ) : (
                     <>
                         <div className="text-[#FFF] z-[100] font-[700] box-border relative [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] w-[50%] text-left text-[clamp(24px,2.5vw,32px)] leading-[90%]">
-                            Borrow funds from 2.9% annual interest without selling your digital assets.
+                            Borrow funds from 8.9% annual interest without selling your digital assets.
                         </div>
                         <div className="text-[#FFF] z-[100] font-[700] box-border relative [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] w-[50%] h-full text-right flex items-end text-[clamp(32px,4vw,50px)] leading-[95%]">
                             Accelerate your ambitions with a crypto Credit Line.

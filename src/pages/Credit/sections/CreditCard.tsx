@@ -27,7 +27,7 @@ const CreditCard = () => {
             <div className={`box-border w-full max-w-[1920px] mx-auto text-center ${isMobile ? 'px-[40px]' : ''}`}>
                 <div className={`relative font-[700] max-w-[800px] mx-auto ${isMobile ? 'text-[24px] w-full' : 'text-[42px] w-[70%]'}`}>
                     <img className={`absolute h-auto ${isMobile ? 'w-[30px] right-[-8%] top-[-36%]' : 'w-[52px] right-[-10%] top-[-22%]'}`} src="/images/black-red-icon.png" alt="" />
-                    MAKE THE MOST OF YOUR CREDIT LINE WITH THE NEXO CARD.
+                    MAKE THE MOST OF YOUR CREDIT LINE WITH THE LAVAS CARD.
                 </div>
             </div>
 

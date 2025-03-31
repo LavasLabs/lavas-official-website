@@ -7,37 +7,37 @@ const collateralData = [
     icon: '/images/credit-control1.png',
     name: 'Bitcoin',
     symbol: 'BTC',
-    percentage: 50,
+    percentage: 70,
     color: '#F7931A'
   },
   {
     icon: '/images/credit-control2.png',
     name: 'Ethereum',
     symbol: 'ETH',
-    percentage: 50,
+    percentage: 60,
     color: '#627EEA'
   },
   {
     icon: '/images/credit-control3.png',
     name: 'Solana',
     symbol: 'SOL',
-    percentage: 30,
+    percentage: 50,
     color: '#9945FF'
   },
-  {
-    icon: '/images/credit-control4.png',
-    name: 'XRP',
-    symbol: 'XRP',
-    percentage: 30,
-    color: '#23292F'
-  },
-  {
-    icon: '/images/credit-control5.png',
-    name: 'Volcano Token',
-    symbol: 'VOLCANO',
-    percentage: 13,
-    color: '#0A0B11'
-  }
+  // {
+  //   icon: '/images/credit-control4.png',
+  //   name: 'XRP',
+  //   symbol: 'XRP',
+  //   percentage: 30,
+  //   color: '#23292F'
+  // },
+  // {
+  //   icon: '/images/credit-control5.png',
+  //   name: 'Volcano Token',
+  //   symbol: 'VOLCANO',
+  //   percentage: 13,
+  //   color: '#0A0B11'
+  // }
 ];
 
 const Collateral = () => {
@@ -94,7 +94,7 @@ const Collateral = () => {
         </div>
 
         {/* 背景网格 */}
-        <div className={`absolute ${isMobile ? 'w-[calc(100%-180px)] right-[40px]' : 'w-[calc(100%-300px)] right-[80px]'} h-[400px] top-[90px] pointer-events-none`}>
+        <div className={`absolute ${isMobile ? 'w-[calc(100%-180px)] right-[40px]' : 'w-[calc(100%-300px)] right-[80px]'} h-[300px] top-[90px] pointer-events-none`}>
           {/* 竖线和数值 */}
           <div className='w-full h-full flex justify-between text-[14px] text-[rgba(10,11,17,0.4)] relative'>
             <div className='absolute w-full h-full'>

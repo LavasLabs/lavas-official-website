@@ -15,7 +15,7 @@ const Advertising = () => {
       <section className={`text-[#0A0B11] w-full box-border relative overflow-hidden bg-[#FFF] ${isMobile ? '' : 'min-h-screen'}`}>
         <div className={`w-full box-border ${isMobile ? 'px-[20px] pb-[60px] pt-[30px]' : 'px-[clamp(40px,13%,250px)] py-[100px]'}`}>
           <div className={`${isMobile ? 'w-full flex flex-col justify-center items-center text-center' : 'w-[70%]'}`}>
-            <div className={`font-sora-bold font-[900] font-bold leading-[1.2] [-webkit-text-stroke:0.5px_#0A0B11] uppercase inline-block z-[100] ${isMobile ? 'text-[32px]' : 'text-[clamp(40px,5vw,50px)]'}`}>
+            <div className={`font-sora-bold font-[900] font-bold leading-[1.2]  uppercase inline-block z-[100] ${isMobile ? 'text-[30px] [-webkit-text-stroke:0.2px_#0A0B11]' : 'text-[clamp(40px,5vw,50px)] [-webkit-text-stroke:0.5px_#0A0B11]'}`}>
               Advertising placement and investment promotion
             </div>
             <div className={`mt-[10px] ${isMobile ? 'w-full' : 'w-[600px]'}`}>

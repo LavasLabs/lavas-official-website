@@ -1,26 +1,30 @@
 import { create } from 'zustand';
 
-interface GlobalStore {
+interface GlobalState {
   isMobile: boolean;
+  isTablet: boolean;
   setIsMobile: (value: boolean) => void;
-  initMobileListener: () => void;
+  setIsTablet: (value: boolean) => void;
+  initScreenSize: () => void;
 }
 
-const useGlobalStore = create<GlobalStore>((set) => ({
-  isMobile: window.innerWidth <= 768,
+const useGlobalStore = create<GlobalState>((set) => ({
+  isMobile: false,
+  isTablet: false,
   setIsMobile: (value) => set({ isMobile: value }),
-  initMobileListener: () => {
+  setIsTablet: (value) => set({ isTablet: value }),
+  initScreenSize: () => {
     const handleResize = () => {
-      set({ isMobile: window.innerWidth <= 768 });
+      const width = window.innerWidth;
+      set({
+        isMobile: width <= 768,
+        isTablet: width > 768 && width <= 1024
+      });
     };
 
-    // 初始化时执行一次
+    // 初始化
     handleResize();
-    
-    // 添加监听
     window.addEventListener('resize', handleResize);
-    
-    // 返回清理函数
     return () => window.removeEventListener('resize', handleResize);
   }
 }));

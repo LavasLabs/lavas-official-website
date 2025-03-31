@@ -6,12 +6,12 @@ import { useEffect } from 'react';
 import useGlobalStore from './store/useGlobalStore';
 
 const App = () => {
-  const { initMobileListener } = useGlobalStore();
+  const { initScreenSize } = useGlobalStore();
 
   useEffect(() => {
-    const cleanup = initMobileListener();
+    const cleanup = initScreenSize();
     return cleanup;
-  }, [initMobileListener]);
+  }, [initScreenSize]);
 
   return <RouterProvider router={router} />
 }

@@ -1,24 +1,10 @@
-import { useEffect,useState } from 'react';
 import { Button, message } from 'antd';
 import useGlobalStore from '../../../store/useGlobalStore';
 
 const Banner = () => {
-    const { isMobile } = useGlobalStore();
+    const { isMobile,isTablet } = useGlobalStore();
     const [messageApi, contextHolder] = message.useMessage();
-    const [isTablet, setIsTablet] = useState(false);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setIsTablet(window.innerWidth <= 1200 && window.innerWidth >= 768);
-        };
-
-        handleResize();
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
 
     return (
         <section className={`w-full max-w-[1920px] mx-auto relative overflow-hidden text-[#0A0B11] box-border ${isMobile ? 'h-auto' : 'px-[clamp(40px,13%,250px)] pb-[20px] min-h-[calc(100vh-100px)] pt-[clamp(40px,5vh,80px)]'}`}>
@@ -52,7 +38,13 @@ const Banner = () => {
                 <div className={`box-border relative ${isMobile ? 'w-[45%]' : 'w-[30%]'}`}>
                     <img
                         src="/images/credit-phone.png"
-                        className={`absolute ${isTablet && '!w-[60%]'} ${isMobile ? 'w-full left-[10px] top-[-10%]' : 'w-[75%] left-[40%] top-[-40%]'} z-[999]`}
+                        className={`absolute z-[999] ${
+                            isMobile 
+                                ? 'w-full left-[10px] top-[-9%]' 
+                                : isTablet
+                                    ? 'w-[60%] left-[30%] top-[-20%]'
+                                    : 'w-[75%] left-[40%] top-[-40%]'
+                        }`}
                     />
                 </div>
                 <div className={`box-border ${isMobile ? 'w-[40%] pl-[20px] pt-[10px]' : 'w-[60%] py-[80px]'}`}>

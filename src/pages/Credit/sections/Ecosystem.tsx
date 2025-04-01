@@ -6,17 +6,17 @@ const Ecosystem = () => {
   const ecosystemData = [
     {
       icon: 'icon-a-Dualinvestment',
-      title: 'Up to $200 million',
+      title: 'Futures',
       desc: 'Capitalize on uptrends anddowntrends with perpetuals.'
     },
     {
       icon: 'icon-property',
-      title: 'Up to $200 million',
+      title: 'Dual investment',
       desc: 'Earn high yields while buying lowand selling high.'
     },
     {
       icon: 'icon-Exchange',
-      title: 'Up to $200 million',
+      title: 'Exchange',
       desc: 'Swap over 100 digital assetsseamlessly with a tap.'
     }
   ] as const;

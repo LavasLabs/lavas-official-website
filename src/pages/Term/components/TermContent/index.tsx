@@ -397,7 +397,7 @@ const TermContent: FC<TermContentProps> = ({ region, onRegionChange }) => {
                                             <div className="ace-line ace-line old-record-id-doxcnM56IEodKhwSHI7YRObaj0g">“Group/we/us/our”</div>
                                         </td>
                                         <td colSpan={1} rowSpan={1}>
-                                            <div className="ace-line ace-line old-record-id-doxcnoBHOUFBmN1X3VTvXfESt0c">means the Volcano group, including RFTL, RDTL and/or their affiliates. The rights and obligations of each member of the Group under these Terms are several and not joint. No member of the Group shall be liable for an act or omission by another member of the Group;</div>
+                                            <div className="ace-line ace-line old-record-id-doxcnoBHOUFBmN1X3VTvXfESt0c">means the Volcano group. The rights and obligations of each member of the Group under these Terms are several and not joint. No member of the Group shall be liable for an act or omission by another member of the Group;</div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -524,22 +524,6 @@ const TermContent: FC<TermContentProps> = ({ region, onRegionChange }) => {
                                             <div className="ace-line ace-line old-record-id-doxcn7iNyfKUpsUc4P8pebNI4Gb">(a) is in breach of any AML/CTF requirements and/or sanctions of any jurisdiction;</div>
                                             <div className="ace-line ace-line old-record-id-doxcnfGNl5dHXYqAiu0G3PUqC0g">(b) appears on a list of persons with whom dealings are proscribed by the United Nations or another government agency or a regulatory authority under Applicable Law; or</div>
                                             <div className="ace-line ace-line old-record-id-doxcnguP4FAUxwgT5m526CbflGf">(c) acts on behalf of, or for the benefit of, any person described in paragraph (a) or (b);</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colSpan={1} rowSpan={1}>
-                                            <div className="ace-line ace-line old-record-id-doxcnaiHT6WLP6UcHVVMg9yaDlh">“RDTL”</div>
-                                        </td>
-                                        <td colSpan={1} rowSpan={1}>
-                                            <div className="ace-line ace-line old-record-id-doxcnNYJUdiylrF3ypOKtcCrOab">means Red Dot Technology Limited;</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colSpan={1} rowSpan={1}>
-                                            <div className="ace-line ace-line old-record-id-doxcnZv8uuQvoHtNrU6zF9A5uOe">“RFTL”</div>
-                                        </td>
-                                        <td colSpan={1} rowSpan={1}>
-                                            <div className="ace-line ace-line old-record-id-doxcnxqEbQbn2Hq5LyjJEj6eXQc">means Red F. Technology Limited;</div>
                                         </td>
                                     </tr>
                                     <tr>

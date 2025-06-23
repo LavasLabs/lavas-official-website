@@ -1,0 +1,156 @@
+/* 地理位置限制弹窗样式 */
+.geo-restriction-modal .ant-modal-content {
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+/* 按钮弹跳动画 */
+@keyframes button-shake {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(44, 44, 44, 0.4);
+  }
+  15% {
+    transform: scale(1.05) translateX(-3px);
+    box-shadow: 0 0 0 8px rgba(44, 44, 44, 0.2);
+  }
+  30% {
+    transform: scale(1.08) translateX(3px);
+    box-shadow: 0 0 0 12px rgba(44, 44, 44, 0.15);
+  }
+  45% {
+    transform: scale(1.04) translateX(-2px);
+    box-shadow: 0 0 0 8px rgba(44, 44, 44, 0.1);
+  }
+  60% {
+    transform: scale(1.02) translateX(2px);
+    box-shadow: 0 0 0 4px rgba(44, 44, 44, 0.05);
+  }
+  75% {
+    transform: scale(1.01) translateX(-1px);
+    box-shadow: 0 0 0 2px rgba(44, 44, 44, 0.02);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+    box-shadow: 0 0 0 0 rgba(44, 44, 44, 0);
+  }
+}
+
+.animate-button-shake {
+  animation: button-shake 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+/* 确保动画期间box-shadow生效 */
+.animate-button-shake.ant-btn-primary {
+  box-shadow: 0 0 0 0 rgba(44, 44, 44, 0.4) !important;
+}
+
+.geo-restriction-modal .ant-modal-body {
+  padding: 0 !important;
+}
+
+/* 自定义复选框样式 */
+.geo-restriction-checkbox {
+  align-items: center !important;
+}
+
+.geo-restriction-checkbox .ant-checkbox {
+  transform: scale(1.15);
+  top: 0 !important;
+}
+
+.geo-restriction-checkbox .ant-checkbox-inner {
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 4px !important;
+  border: 2px solid #d1d5db !important;
+  background-color: transparent !important;
+}
+
+.geo-restriction-checkbox .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+
+.geo-restriction-checkbox .ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: #ffffff !important;
+  border-width: 0 2px 2px 0 !important;
+  width: 6px !important;
+  height: 10px !important;
+  left: 6px !important;
+  top: 2px !important;
+}
+
+.geo-restriction-checkbox .ant-checkbox:hover .ant-checkbox-inner,
+.geo-restriction-checkbox .ant-checkbox-input:focus + .ant-checkbox-inner {
+  border-color: #2c2c2c !important;
+}
+
+.geo-restriction-checkbox .ant-checkbox-wrapper {
+  align-items: center !important;
+}
+
+
+@media (max-width: 768px) {
+  .geo-restriction-modal .ant-modal {
+    width: 85% !important;
+    max-width: 420px !important;
+    margin: 0 auto;
+  }
+  
+  .geo-restriction-modal .flex.flex-col {
+    padding: 32px 28px !important;
+  }
+  
+  .geo-restriction-modal h2 {
+    font-size: 22px !important;
+    margin-bottom: 24px !important;
+    line-height: 1.3 !important;
+  }
+  
+  .geo-restriction-modal .ant-btn {
+    height: 52px !important;
+    font-size: 15px !important;
+  }
+  
+  .geo-restriction-modal div[class*="space-y"] {
+    margin-bottom: 32px !important;
+  }
+  
+  .geo-restriction-modal p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .geo-restriction-modal .ant-modal {
+    width: 90% !important;
+    max-width: 350px !important;
+  }
+  
+  .geo-restriction-modal .flex.flex-col {
+    padding: 28px 24px !important;
+  }
+  
+  .geo-restriction-modal h2 {
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+    line-height: 1.25 !important;
+  }
+  
+  .geo-restriction-modal p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+  
+  .geo-restriction-modal .ant-btn {
+    height: 48px !important;
+    font-size: 14px !important;
+  }
+  
+  .geo-restriction-modal div[class*="space-y"] {
+    margin-bottom: 28px !important;
+  }
+} 

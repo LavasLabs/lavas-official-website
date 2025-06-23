@@ -18,8 +18,10 @@ const featureList = [
   },
   {
     id: '03',
-    title: 'Works wherever you go',
-    description: 'Acceptance in 200+ countries through the Visa global network. Local issuing and debiting in 33 countries. Reimburse in 70 countries and 40 currencies.'
+    title: 'Visa-powered business freedom',
+    description: 'Corporate cards issued in Hong Kong with Visa network acceptance in supported regions.',
+    // title: 'Works wherever you go',
+    // description: 'Acceptance in 200+ countries through the Visa global network. Local issuing and debiting in 33 countries. Reimburse in 70 countries and 40 currencies.'
   }
 ];
 

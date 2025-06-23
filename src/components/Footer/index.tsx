@@ -71,12 +71,28 @@ const resourceContent = (() => {
   )
 });
 
-// 图标配置
+// 社交媒体图标配置
 const socialIcons = [
-  'icon-facebook',
-  'icon-twitter',
-  'icon-instagram',
-  'icon-ins'
+  // {
+  //   icon: 'icon-facebook',
+  //   name: 'Facebook',
+  //   url: 'https://facebook.com/LavasLabs'
+  // },
+  {
+    icon: 'icon-twitter', 
+    name: 'Twitter',
+    url: 'https://x.com/LavasLabs'
+  },
+  // {
+  //   icon: 'icon-instagram',
+  //   name: 'Instagram', 
+  //   url: 'https://instagram.com/LavasLabs'
+  // },
+  {
+    icon: 'icon-ins',
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/company/lavas-labs/'
+  }
 ] as const;
 
 
@@ -89,9 +105,18 @@ const Footer: React.FC = () => {
   const [messageApi, contextHolder] = message.useMessage();
 
   const renderSocialIcons = () => (
-    <div className={`flex gap-[20px] ${!isMobile && 'mr-[clamp(20px,4vw,90px)]'}`}>
-      {socialIcons.map(icon => (
-        <i key={icon} className={`iconfont ${icon} text-[clamp(20px,1.4vw,24px)] cursor-pointer hover:opacity-80`} />
+    <div className={`flex gap-[20px]`}>
+      {socialIcons.map(socialIcon => (
+        <a 
+          key={socialIcon.icon}
+          href={socialIcon.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-opacity hover:opacity-80 text-inherit no-underline hover:text-inherit"
+          title={`Follow us on ${socialIcon.name}`}
+        >
+          <i className={`iconfont ${socialIcon.icon} text-[clamp(20px,1.4vw,24px)] cursor-pointer`} />
+        </a>
       ))}
     </div>
   );

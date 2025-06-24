@@ -1,18 +1,20 @@
 import { Button } from 'antd';
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
 
 const HeroSection = () => {
     const { isMobile } = useGlobalStore();
+    const { t } = useTranslation('expense');
 
     return (
         <section className={`bg-[#0A0B11] text-[#FFFFFF] w-full box-border flex items-center flex-col relative overflow-hidden ${isMobile ? 'h-auto' : 'min-h-[calc(100vh-100px)] px-[clamp(40px,13%,250px)]'}`}>
             <div className={`z-[999] h-full relative w-full flex flex-col justify-between items-center box-border flex-1 ${isMobile ? 'pt-[20px] gap-y-[30px]' : 'pt-[50px] gap-y-[50px]'}`}>
                 <div className={`w-full flex flex-col justify-center items-center max-w-[1000px] ${isMobile ? 'px-[30px] box-border' : '' }`}>
                     <div className={`[-webkit-text-stroke:0.5px_#FFFFFF] font-[700] text-center leading-[1.2] ${isMobile ? 'text-[26px]' : 'text-[clamp(40px,5vw,50px)]'}`}>
-                        EXPENSE MANAGEMENT SOFTWARE DESIGNED TO CLOSE YOUR BOOKS FASTER
+                        {t('hero.title')}
                     </div>
                     <div className={`mt-[10px] max-w-[600px] text-center ${isMobile ? 'text-[14px] px-[20px] box-border' : 'text-[20px]'}`}>
-                        Automated expense software built into your corporate card, reimbursements, and more
+                        {t('hero.subtitle')}
                     </div>
                 </div>
                 <Button
@@ -23,7 +25,7 @@ const HeroSection = () => {
                     size='large'
                     onClick={() => window.location.href = '/contact'}
                 >
-                    Start for Free
+                    {t('hero.startForFree')}
                 </Button>
                 {isMobile ? (
                     <div className='w-full flex flex-col items-center mt-[10px] box-border relative pb-[300px]'>

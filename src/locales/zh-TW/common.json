@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "corporateCard": "企業卡",
+    "travel": "商旅服務",
+    "expense": "費用管理",
+    "advertising": "廣告投放"
+  },
+  "auth": {
+    "login": "登入",
+    "signup": "註冊"
+  },
+  "common": {
+    "startForFree": "免費開始"
+  },
+  "menu": {
+    "products": "產品",
+    "pricing": "定價",
+    "solutions": "解決方案",
+    "resource": "資源",
+    "termsAndConditions": "條款與條件",
+    "more": "更多"
+  },
+  "resources": {
+    "blog": " 博客",
+    "contactSales": "聯繫銷售",
+    "becomeAPartner": "成為合作夥伴"
+  },
+  "products": {
+    "creditLine": "信貸額度"
+  },
+  "messages": {
+    "functionNotEnabled": "此功能尚未啟用，請聯繫管理員"
+  },
+  "corporateCard": {
+    "cardPreviewAlt": "企業卡預覽"
+  },
+  "navigation": {
+    "login": "登入",
+    "signUp": "註冊"
+  }
+} 

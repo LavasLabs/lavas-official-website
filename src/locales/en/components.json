@@ -1,0 +1,85 @@
+{
+  "pricingModal": {
+    "title": "Customized billing",
+    "description": "Customized billing plan: suitable for merchants with large transaction volumes or special business models.",
+    "features": [
+      "C+pricing",
+      "Large transaction volume discount", 
+      "Multiple product discounts",
+      "Specific country/region rates"
+    ],
+    "form": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "firstNamePlaceholder": "Enter your name",
+      "lastNamePlaceholder": "Enter your name", 
+      "emailPlaceholder": "Enter your work email",
+      "contactSales": "Contact Sales",
+      "validation": {
+        "firstNameRequired": "Please input your first name!",
+        "lastNameRequired": "Please input your last name!",
+        "emailRequired": "Please input your email!",
+        "emailFormat": "Please enter a valid email!"
+      }
+    }
+  },
+  "geoRestriction": {
+    "title": "Cross-border Services Restrictions",
+    "paragraph1": "You are trying to access our website from an IP address located outside Hong Kong.",
+    "paragraph2": "Please note that the promotion and/or distribution of our products and/or services outside Hong Kong may require a licence. The content of our website is only addressed to Hong Kong residents, domiciled in Hong Kong.",
+    "paragraph3": "If you are a resident domiciled outside Hong Kong and do not wish to visit our website, please close this page. If you still want to visit our website, click Continue and in doing so, you confirm that you have read and understood the above and that you are accessing our website on your own initiative without active promotion or solicitation from Lavas.",
+    "continue": "Continue",
+    "dontShowAgain": "Don't show again"
+  },
+  "footer": {
+    "navigation": {
+      "products": "Products",
+      "pricing": "Pricing", 
+      "solutions": "Solutions",
+      "resource": "Resource",
+      "termsConditions": "Terms & Conditions"
+    },
+    "productItems": [
+      {
+        "text": "Corporate Card"
+      },
+      {
+        "text": "Travel"
+      },
+      {
+        "text": "Expense Management"
+      },
+      {
+        "text": "Advertising"
+      },
+      {
+        "text": "Credit Line"
+      }
+    ],
+    "resourceItems": [
+      {
+        "text": "Blog"
+      },
+      {
+        "text": "Contact Sales"
+      },
+      {
+        "text": "Become a Partner"
+      }
+    ],
+    "contact": {
+      "follow": "Follow",
+      "email": "support@lavaslabs.com",
+      "skype": "defpay skype support"
+    },
+    "copyright": "Copyright ©2025 Lavas Labs Limited. All Rights Reserved",
+    "socialMedia": {
+      "twitter": "Follow us on Twitter",
+      "linkedin": "Follow us on LinkedIn"
+    },
+    "messages": {
+      "functionNotEnabled": "This function is not enabled. Please contact the administrator"
+    }
+  }
+} 

@@ -1,0 +1,25 @@
+{
+  "title": "Let's Talk",
+  "subtitle": "Schedule a time to chat with our team. We are always ready to assist you.",
+  "description": "Please provide us with some detailed information about you, and we will contact you as soon as possible!",
+  "form": {
+    "firstName": "First name",
+    "lastName": "Last name", 
+    "email": "Email",
+    "phoneNumber": "Phone number",
+    "message": "Message",
+    "firstNamePlaceholder": "Enter your name",
+    "lastNamePlaceholder": "Enter your name",
+    "emailPlaceholder": "Enter your work email",
+    "phonePlaceholder": "Enter your phone number",
+    "messagePlaceholder": "How can we help you?",
+    "submit": "Submit",
+    "required": "*",
+    "validation": {
+      "firstNameRequired": "Please input your first name!",
+      "lastNameRequired": "Please input your last name!",
+      "emailRequired": "Please input a valid email!",
+      "phoneRequired": "Please input your phone number!"
+    }
+  }
+} 

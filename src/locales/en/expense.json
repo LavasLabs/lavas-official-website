@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "title": "EXPENSE MANAGEMENT SOFTWARE DESIGNED TO CLOSE YOUR BOOKS FASTER",
+    "subtitle": "Automated expense software built into your corporate card, reimbursements, and more",
+    "startForFree": "Start for Free"
+  },
+  "freeTeam": {
+    "title": "FREE YOUR TEAM FROM MANUAL EXPENSE MANAGEMENT",
+    "subtitle": "Expenses that submit themselves.",
+    "lavasWayTitle": "The Lavas Labs way"
+  },
+  "strategic": {
+    "title": "MAKE STRATEGIC DECISIONS WITH REAL-TIME EXPENSE REPORTING",
+    "subtitle": "Instantly access spend data and insight to save money for your business",
+    "cards": [
+      {
+        "title": "Get ahead of overspend",
+        "description": "Stop making business decisions on stale data. Get real-time insights to make timely adjustments before your teams exceed their budget"
+      },
+      {
+        "title": "Maximize visibility with centralized data", 
+        "description": "Lavas Labs's AI-powered assistance surfaces detailed financial answers with faster analysis across every business expense"
+      },
+      {
+        "title": "Uncover true costs",
+        "description": "Lavas Labs continuously surfaces savings insights like duplicate subscriptions and unused solutions."
+      }
+    ],
+    "commercialAffairs": "commercial affairs",
+    "yearToDate": "Year to date 2024"
+  },
+  "eliminate": {
+    "title": "Eliminate manual expense reporting",
+    "subtitle": "Free employees to do their job without expenses getting in their way."
+  },
+  "control": {
+    "title": "CONTROL SPEND BEFORE IT HAPPENS",
+    "subtitle": "Give employees cards with policies built in, so you can prevent unapproved spend",
+    "budgetTitle": "Pre-build budgets for responsible spend",
+    "budgetDescription": "Allow employees to request spend from pre-set budgets. Create custom workflows to make sure that the right stakeholders are looped in to approve."
+  },
+  "partners": {
+    "title": "JOIN THE 30,000+ BUSINESSES ALREADY SIMPLIFYING THEIR FINANCES"
+  },
+  "strategic": {
+    "title": "MAKE STRATEGIC DECISIONS WITH REAL-TIME EXPENSE REPORTING",
+    "subtitle": "Instantly access spend data and insight to save money for your business",
+    "cards": [
+      {
+        "title": "Get ahead of overspend",
+        "description": "Stop making business decisions on stale data. Get real-time insights to make timely adjustments before your teams exceed their budget",
+        "category": "commercial affairs",
+        "period": "Year to date 2024"
+      },
+      {
+        "title": "Maximize visibility with centralized data", 
+        "description": "Lavas Labs's AI-powered assistance surfaces detailed financial answers with faster analysis across every business expense"
+      },
+      {
+        "title": "Uncover true costs",
+        "description": "Lavas Labs continuously surfaces savings insights like duplicate subscriptions and unused solutions."
+      }
+    ]
+  }
+} 

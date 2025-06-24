@@ -1,38 +1,24 @@
 import { Divider } from 'antd';
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
 
 interface PartnersSectionProps {
   logoUrlList: string[];
 }
 
-const featureList = [
-  {
-    id: '01',
-    title: 'No personal credit checks',
-    description: 'No impact to your personal credit score. Credit limit based on financial factors such as revenue or dollars raised. Corporate charge card with 30-day payback.'
-  },
-  {
-    id: '02',
-    title: 'Easy, secure payment',
-    description: 'Unlimited physical and virtual cards. Runs on the Visa network. Apple and Google Pay compatible. Enhanced security with 3DS enrollment, SSO logins, and others.'
-  },
-  {
-    id: '03',
-    title: 'Works wherever you go',
-    description: 'Acceptance in 200+ countries through the Visa global network. Local issuing and debiting in 33 countries. Reimburse in 70 countries and 40 currencies.'
-  }
-];
-
 const PartnersSection: React.FC<PartnersSectionProps> = ({ logoUrlList }) => {
   const { isMobile } = useGlobalStore();
+  const { t } = useTranslation('home');
+
+  const featureList = t('partners.features', { returnObjects: true }) as Array<{id: string, title: string, description: string}>;
 
   return (
     <section className={`w-full min-h-screen box-border bg-[#FFF] flex justify-center items-center flex-col text-[#0A0B11] ${isMobile ? 'px-[40px]' : 'px-[clamp(40px,16%,310px)]'}`}>
       <div className={`w-full max-w-[1920px] mx-auto flex flex-col items-center box-border ${isMobile ? 'py-[40px]' : 'py-[170px]'}`}>
         <div className={`w-full max-w-[1920px] mx-auto box-border flex flex-col items-center relative ${isMobile ? 'px-[10px] py-[20px]' : 'px-[clamp(40px,16%,310px)]'}`}>
           <div className='relative text-center max-w-[800px] leading-[1.2] font-[700] text-[clamp(32px,3.5vw,42px)]'>
-            <img className={`absolute h-auto object-contain top-[-40%] ${isMobile ? 'w-[30px] right-[-8%]' : 'w-[52px] right-[-5%]'}`} src="/images/black-red-icon.png" alt="" />
-            <span className={isMobile ? 'text-[24px]' : ''}>Access over $350k in offers from our partners</span>
+            <img className={`absolute h-auto object-contain top-[-40%] ${isMobile ? 'w-[30px] right-[-8%]' : 'w-[52px] right-[-8%]'}`} src="/images/black-red-icon.png" alt="" />
+            <span className={isMobile ? 'text-[24px]' : ''}>{t('partners.title')}</span>
           </div>
         </div>
         <div className={`w-full max-w-[1600px] mx-auto grid gap-[clamp(20px,3vw,40px)] ${isMobile ? 'grid-cols-4 mt-[40px] mb-[40px]' : 'grid-cols-5 mt-[80px] mb-[clamp(40px,5vh,80px)]'}`}>

@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": "Lavas Labs BLOG",
+    "subtitle": "Legal and compliance updates, company news and media coverage."
+  },
+  "tags": {
+    "allPosts": "All Posts",
+    "announcement": "Announcement", 
+    "blog": "Blog",
+    "media": "Media"
+  },
+  "businessScenario": {
+    "title": "Business Scenario"
+  },
+  "actions": {
+    "tryNow": "Try now"
+  },
+  "messages": {
+    "functionNotEnabled": "This function is not enabled. Please contact the administrator"
+  },
+  "bannerAlt": "Blog Banner",
+  "samplePosts": [
+    {
+      "title": "Lavas Labs Announces Global Expansion",
+      "description": "Lavas Labs continues its global expansion with new office openings in key markets...",
+      "date": "2024-03-05"
+    },
+    {
+      "title": "New Features Release", 
+      "description": "Introducing our latest features designed to enhance your business operations...",
+      "date": "2024-03-04"
+    }
+  ]
+} 

@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": "Lavas Labs Blog",
+    "subtitle": "法律合規更新、公司新聞和媒體報導。"
+  },
+  "tags": {
+    "allPosts": "全部文章",
+    "announcement": "公告", 
+    "blog": "博客",
+    "media": "媒體"
+  },
+  "businessScenario": {
+    "title": "業務場景"
+  },
+  "actions": {
+    "tryNow": "立即試用"
+  },
+  "messages": {
+    "functionNotEnabled": "此功能尚未啟用，請聯繫管理員"
+  },
+  "bannerAlt": "博客橫幅",
+  "samplePosts": [
+    {
+      "title": "Lavas Labs 宣布全球擴張",
+      "description": "Lavas Labs 持續全球擴張，在關鍵市場開設新辦公室...",
+      "date": "2024-03-05"
+    },
+    {
+      "title": "新功能發布", 
+      "description": "推出最新功能，旨在增強您的業務運營...",
+      "date": "2024-03-04"
+    }
+  ]
+} 

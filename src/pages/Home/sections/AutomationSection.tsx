@@ -1,25 +1,26 @@
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
-
-const cardList = [
-  {
-    icon: 'icon-U',
-    title: 'Statement credit',
-    isDark: true
-  },
-  {
-    icon: 'icon-flexible',
-    title: 'Gift cards & loyalty program points',
-    isDark: false
-  },
-  {
-    icon: 'icon-Return',
-    title: 'Ramp fees',
-    isDark: false
-  }
-];
 
 const AutomationSection = () => {
   const { isMobile } = useGlobalStore();
+  const { t } = useTranslation('home');
+
+  const cardList = [
+    {
+      icon: 'icon-U',
+      isDark: true
+    },
+    {
+      icon: 'icon-flexible',
+      isDark: false
+    },
+    {
+      icon: 'icon-Return',
+      isDark: false
+    }
+  ];
+
+  const rewards = t('automation.rewards', { returnObjects: true }) as Array<{title: string}>;
 
   return (
     <section className={`text-[#0A0B11] w-full min-h-screen box-border relative overflow-hidden bg-[#FFF] ${isMobile ? 'py-[40px]' : 'py-[170px]'}`}>
@@ -31,10 +32,10 @@ const AutomationSection = () => {
           <div className={`box-border leading-[1.2] relative z-[2] ${isMobile ? 'w-full' : 'w-[45%]'}`}>
             <div className={`font-[700] relative ${isMobile ? 'text-[24px]' : 'text-[clamp(32px,3.5vw,40px)]'}`}>
               <img className={`h-auto object-contain absolute ${isMobile ? 'w-[30px] right-[-8%] top-[-20%]' : 'w-[52px] right-[-10%] top-[-10%]'}`} src="/images/black-red-icon.png" alt="" />
-              <span>Automation, control, and rewards.The corporate card you've been looking for</span>
+              <span>{t('automation.title')}</span>
             </div>
             <div className={`${isMobile ? 'text-[14px] mt-[10px]' : 'text-[clamp(16px,1.5vw,20px)] mt-[20px]'}`}>
-              Spend to get cashback. Lavas Labs's corporate card puts money back in your pocket so you can invest even more in growth. Or, bring your cash back right into the platform
+              {t('automation.subtitle')}
             </div>
           </div>
         </div>
@@ -44,7 +45,7 @@ const AutomationSection = () => {
             <div key={index} className={`flex-1 rounded-[12px] p-[30px] box-border flex flex-col justify-between shadow-[0px_20px_50px_0px_rgba(185,185,185,0.40)] ${item.isDark ? 'text-[#FFFFFF] bg-[#0A0B11]' : 'text-[#0A0B11] bg-[#FFF]'} ${isMobile ? 'min-h-[160px] mb-[20px]' : 'min-h-[200px]'}`}>
               <i className={`iconfont ${item.icon} ${isMobile ? 'text-[28px]' : 'text-[32px]'}`}></i>
               <div className={`font-[500] ${isMobile ? 'text-[16px]' : 'text-[clamp(16px,1.2vw,18px)]'}`}>
-                {item.title}
+                {rewards[index]?.title}
               </div>
             </div>
           ))}

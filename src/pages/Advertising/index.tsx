@@ -1,13 +1,15 @@
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../store/useGlobalStore';
 
 const Advertising = () => {
   const { isMobile } = useGlobalStore();
+  const { t } = useTranslation('advertising');
 
   const logoUrlList = [
-    { url: '/logos/adver-logo1.svg', name: 'Facebook', desc: 'Familiar with Facebook advertising rules' },
-    { url: '/logos/adver-logo2.svg', name: 'Youtube', desc: 'Familiar with YouTube advertising rules and unique operational techniques' },
-    { url: '/logos/adver-logo3.svg', name: 'Twitter', desc: 'Independently operate Twitter Visa card agent' },
-    { url: '/logos/adver-logo4.svg', name: 'Google', desc: 'Professional Google advertising placement method' },
+    { url: '/logos/adver-logo1.svg', name: 'Facebook', desc: t('platforms.0.desc') },
+    { url: '/logos/adver-logo2.svg', name: 'Youtube', desc: t('platforms.1.desc') },
+    { url: '/logos/adver-logo3.svg', name: 'Twitter', desc: t('platforms.2.desc') },
+    { url: '/logos/adver-logo4.svg', name: 'Google', desc: t('platforms.3.desc') },
   ];
 
   return (
@@ -16,10 +18,10 @@ const Advertising = () => {
         <div className={`w-full box-border ${isMobile ? 'px-[20px] pb-[60px] pt-[30px]' : 'px-[clamp(40px,13%,250px)] py-[100px]'}`}>
           <div className={`${isMobile ? 'w-full flex flex-col justify-center items-center text-center' : 'w-[70%]'}`}>
             <div className={`font-sora-bold font-[900] font-bold leading-[1.2]  uppercase inline-block z-[100] ${isMobile ? 'text-[30px] [-webkit-text-stroke:0.2px_#0A0B11]' : 'text-[clamp(40px,5vw,50px)] [-webkit-text-stroke:0.5px_#0A0B11]'}`}>
-              Advertising placement and investment promotion
+              {t('hero.title')}
             </div>
             <div className={`mt-[10px] ${isMobile ? 'w-full' : 'w-[600px]'}`}>
-              Global investment agency is open, welcome to join
+              {t('hero.subtitle')}
             </div>
           </div>
         </div>
@@ -30,8 +32,8 @@ const Advertising = () => {
             />
         <div className={`flex flex-col justify-center items-center relative ${isMobile ? 'mt-[60px]' : 'mt-[170px]'}`}>
           <div className={`font-[700] text-center leading-[1] relative ${isMobile ? 'text-[24px]' : 'text-[42px] space-y-[10px]'}`}>
-            <img className={`h-auto object-contain absolute ${isMobile ? 'w-[30px] right-[-40px] top-[-24px]' : 'w-[52px] right-[-20%] top-[-80%]'}`} src="/images/black-red-icon.png" alt="" />
-            Business Scenario
+            <img className={`h-auto object-contain absolute ${isMobile ? 'w-[30px] right-[-40px] top-[-24px]' : 'w-[52px] right-[-40%] top-[-80%]'}`} src="/images/black-red-icon.png" alt="" />
+            {t('businessScenario.title')}
           </div>
         </div>
         <div className={`w-full flex flex-wrap justify-center  box-border ${isMobile ? 'px-[20px] pb-[60px] gap-[10px] mt-[40px]' : 'w-[72%] pb-[170px] px-[clamp(40px,16%,310px)] gap-y-[12px] gap-x-[20px] mt-[6%]'}`}>{

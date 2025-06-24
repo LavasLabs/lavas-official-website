@@ -3,6 +3,7 @@ import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Button, Dropdown, Space, Popover, message, Drawer } from 'antd';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import PricingModal from '../PricingModal';
 import useGlobalStore from '../../store/useGlobalStore';
 import './index.css';
@@ -23,59 +24,24 @@ const items: MenuProps['items'] = [
 
 // 产品菜单配置
 const productItems = [
-    { icon: 'icon-a-CorporateCard', text: 'Corporate Card', route: '' },
-    { icon: 'icon-Travel', text: 'Travel', route: 'travel' },
-    { icon: 'icon-money', text: 'Expense Management', route: 'expense' },
-    { icon: 'icon-Advertising', text: 'Advertising', route: 'advertising' },
-    { icon: 'icon-a-CreditLine', text: 'Credit Line', route: 'credit' }
+    { icon: 'icon-a-CorporateCard', text: 'Corporate Card', route: '', translationKey: 'nav.corporateCard' },
+    { icon: 'icon-Travel', text: 'Travel', route: 'travel', translationKey: 'nav.travel' },
+    { icon: 'icon-money', text: 'Expense Management', route: 'expense', translationKey: 'nav.expense' },
+    { icon: 'icon-Advertising', text: 'Advertising', route: 'advertising', translationKey: 'nav.advertising' },
+    { icon: 'icon-a-CreditLine', text: 'Credit Line', route: 'credit', translationKey: 'products.creditLine' }
 ] as const;
-
-const content = (() => {
-    const { isMobile } = useGlobalStore();
-    const goRouter = (url: string) => {
-        window.location.href = `/${url}`;
-    }
-
-    return (
-        <div className={`${isMobile ? 'w-[280px]' : 'w-[420px]'} flex flex-wrap gap-[15px] gap-y-[10px]`}>
-            {productItems.map(item => (
-                <Space key={item.text} className='cursor-pointer' onClick={() => goRouter(item.route)}>
-                    <i className={`iconfont ${item.icon} text-[24px]`}></i>
-                    <span>{item.text}</span>
-                </Space>
-            ))}
-        </div>
-    )
-});
 
 // 资源菜单配置
 const resourceItems = [
-    { icon: 'icon-blog', text: 'Blog', route: 'blog' },
-    { icon: 'icon-sales', text: 'Contact Sales', route: 'contact' },
-    { icon: 'icon-Partner', text: 'Become a Partner', route: 'partner' }
+    { icon: 'icon-blog', text: 'Blog', route: 'blog', translationKey: 'resources.blog' },
+    { icon: 'icon-sales', text: 'Contact Sales', route: 'contact', translationKey: 'resources.contactSales' },
+    { icon: 'icon-Partner', text: 'Become a Partner', route: 'partner', translationKey: 'resources.becomeAPartner' }
 ] as const;
-
-const resourceContent = (() => {
-    const { isMobile } = useGlobalStore();
-    const goRouter = (url: string) => {
-        window.location.href = `/${url}`;
-    }
-
-    return (
-        <div className={`${isMobile ? 'w-[280px]' : 'w-[420px]'} flex flex-wrap gap-[20px] gap-y-[10px]`}>
-            {resourceItems.map(item => (
-                <Space key={item.text} className='cursor-pointer' onClick={() => goRouter(item.route)}>
-                    <i className={`iconfont ${item.icon} text-[24px]`}></i>
-                    <span>{item.text}</span>
-                </Space>
-            ))}
-        </div>
-    )
-});
 
 
 const Banner: React.FC = () => {
-    const { isMobile } = useGlobalStore();
+    const { isMobile, language, setLanguage } = useGlobalStore();
+    const { t } = useTranslation('common');
     const [isTablet, setIsTablet] = useState(false);
     const location = window.location.pathname;
     const whiteUrlList = ['travel', 'advertising', 'blog', 'contact', 'partner','credit'];
@@ -87,15 +53,57 @@ const Banner: React.FC = () => {
     // const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [drawerVisible, setDrawerVisible] = useState(false);
 
+    const goRouter = (url: string) => {
+        window.location.href = `/${url}`;
+    }
+
+    const content = (
+        <div className={`${isMobile ? 'w-[280px]' : 'w-[420px]'} flex flex-wrap gap-[15px] gap-y-[10px]`}>
+            {productItems.map(item => (
+                <Space key={item.text} className='cursor-pointer' onClick={() => goRouter(item.route)}>
+                    <i className={`iconfont ${item.icon} text-[24px]`}></i>
+                    <span>{t(item.translationKey)}</span>
+                </Space>
+            ))}
+        </div>
+    );
+
+    const resourceContent = (
+        <div className={`${isMobile ? 'w-[280px]' : 'w-[420px]'} flex flex-wrap gap-[20px] gap-y-[10px]`}>
+            {resourceItems.map(item => (
+                <Space key={item.text} className='cursor-pointer' onClick={() => goRouter(item.route)}>
+                    <i className={`iconfont ${item.icon} text-[24px]`}></i>
+                    <span>{t(item.translationKey)}</span>
+                </Space>
+            ))}
+        </div>
+    );
+
+    const handleLanguageChange = (lang: string) => {
+        setLanguage(lang);
+    };
+
+    const getCurrentLanguageLabel = () => {
+        switch (language) {
+            case 'en':
+                return 'EN';
+            case 'zh-TW':
+                return '繁';
+            default:
+                return 'EN';
+        }
+    };
+
     const languageItems: MenuProps['items'] = [
         {
             key: 'en',
             label: 'English',
+            onClick: () => handleLanguageChange('en')
         },
         {
-            key: 'zh',
-            label: 'CH',
-            onClick: () => messageApi.info('This function is not enabled. Please contact the administrator')
+            key: 'zh-TW',
+            label: '繁體中文',
+            onClick: () => handleLanguageChange('zh-TW')
         },
     ];
 
@@ -105,7 +113,7 @@ const Banner: React.FC = () => {
             label: (
                 <Dropdown menu={{ items: languageItems }} trigger={['hover']}>
                     <Space align="center">
-                        EN
+                        {getCurrentLanguageLabel()}
                         <DownOutlined />
                     </Space>
                 </Dropdown>
@@ -113,13 +121,13 @@ const Banner: React.FC = () => {
         },
         {
             key: 'signup',
-            label: 'Sign Up',
-            onClick: () => messageApi.info('This function is not enabled. Please contact the administrator')
+            label: t('auth.signup'),
+            onClick: () => messageApi.info(t('messages.functionNotEnabled'))
         },
         {
             key: 'login',
-            label: 'Login',
-            onClick: () => messageApi.info('This function is not enabled. Please contact the administrator')
+            label: t('auth.login'),
+            onClick: () => messageApi.info(t('messages.functionNotEnabled'))
         },
     ];
 
@@ -135,10 +143,6 @@ const Banner: React.FC = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-
-    const goRouter = (url: string) => {
-        window.location.href = url;
-    };
 
     const mobileMenu = (
         <div className="flex flex-col h-full">
@@ -160,7 +164,7 @@ const Banner: React.FC = () => {
                         overlayInnerStyle={isMobile ? { padding: '12px' } : undefined}
                     >
                         <div className="flex items-center justify-center gap-1 px-[20px] py-[16px]">
-                            <span>Products</span>
+                            <span>{t('menu.products')}</span>
                             <DownOutlined className="text-gray-400  ml-[8px]" />
                         </div>
                     </Popover>
@@ -169,11 +173,11 @@ const Banner: React.FC = () => {
                     setIsPricingModalOpen(true);
                     setDrawerVisible(false);
                 }}>
-                    <div className="px-[20px] py-[16px]">Pricing</div>
+                    <div className="px-[20px] py-[16px]">{t('menu.pricing')}</div>
                 </li>
                 <li className="cursor-pointer w-full text-center">
                     <div className="flex items-center justify-center gap-1 px-[20px] py-[16px]">
-                        <span>Solutions</span>
+                        <span>{t('menu.solutions')}</span>
                         <DownOutlined className="text-gray-400 ml-[8px]" />
                     </div>
                 </li>
@@ -182,7 +186,7 @@ const Banner: React.FC = () => {
                         overlayStyle={isMobile ? { width: '280px' } : undefined}
                         overlayInnerStyle={isMobile ? { padding: '12px' } : undefined}>
                         <div className="flex items-center justify-center gap-1 px-[20px] py-[16px]">
-                            <span>Resource</span>
+                            <span>{t('menu.resource')}</span>
                             <DownOutlined className="text-gray-400 ml-[8px]" />
                         </div>
                     </Popover>
@@ -191,13 +195,21 @@ const Banner: React.FC = () => {
                     window.location.href = '/services-terms';
                     setDrawerVisible(false);
                 }}>
-                    <div className="px-[20px] py-[16px]">Terms & Conditions</div>
+                    <div className="px-[20px] py-[16px]">{t('menu.termsAndConditions')}</div>
                 </li>
-                <li className="cursor-pointer w-full text-center" onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}>
-                    <div className="px-[20px] py-[16px]">Sign Up</div>
+                <li className="cursor-pointer w-full text-center" onClick={() => messageApi.info(t('messages.functionNotEnabled'))}>
+                    <div className="px-[20px] py-[16px]">{t('navigation.login')}</div>
                 </li>
-                <li className="cursor-pointer w-full text-center" onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}>
-                    <div className="px-[20px] py-[16px]">Login</div>
+                <li className="cursor-pointer w-full text-center" onClick={() => messageApi.info(t('messages.functionNotEnabled'))}>
+                    <div className="px-[20px] py-[16px]">{t('navigation.signUp')}</div>
+                </li>
+                <li>
+                    <Dropdown menu={{ items: languageItems }}>
+                        <Space align="center" className="px-[20px] py-[16px] cursor-pointer">
+                            {getCurrentLanguageLabel()}
+                            <DownOutlined />
+                        </Space>
+                    </Dropdown>
                 </li>
 
             </ul>
@@ -219,7 +231,7 @@ const Banner: React.FC = () => {
                 z-[100] text-[clamp(14px,1vw,20px)]`}>
 
                 <div className="max-w-[1920px] mx-auto flex items-center w-full relative">
-                    <div onClick={() => goRouter('/')}
+                    <div onClick={() => window.location.href = '/'}
                         className={`flex items-center cursor-pointer relative z-[102] ${isMobile ? 'min-w-[80px] max-w-[120px]' : 'min-w-[120px] max-w-[180px]'
                             }`}
                     >
@@ -256,19 +268,19 @@ const Banner: React.FC = () => {
                                     <li className='cursor-pointer'>
                                         <Popover content={content}>
                                             <Space className="relative z-[102]" align="center">
-                                                Products
+                                                {t('menu.products')}
                                                 <DownOutlined />
                                             </Space>
                                         </Popover>
                                     </li>
 
                                     <li className='cursor-pointer' onClick={() => setIsPricingModalOpen(true)}>
-                                        Pricing
+                                        {t('menu.pricing')}
                                     </li>
                                     <li className='cursor-pointer'>
                                         <Dropdown menu={{ items }} >
-                                            <Space align="center" onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}>
-                                                Solutions
+                                            <Space align="center" onClick={() => messageApi.info(t('messages.functionNotEnabled'))}>
+                                                {t('menu.solutions')}
                                                 <DownOutlined />
                                             </Space>
                                         </Dropdown>
@@ -276,13 +288,13 @@ const Banner: React.FC = () => {
                                     <li className='cursor-pointer'>
                                         <Popover content={resourceContent}>
                                             <Space className="relative z-[102]" align="center">
-                                                Resource
+                                                {t('menu.resource')}
                                                 <DownOutlined />
                                             </Space>
                                         </Popover>
                                     </li>
                                     <li className='cursor-pointer' onClick={() => { window.location.href = '/services-terms' }}>
-                                        Terms & Conditions
+                                        {t('menu.termsAndConditions')}
                                     </li>
                                 </ul>
 
@@ -292,7 +304,7 @@ const Banner: React.FC = () => {
                                         <li>
                                             <Dropdown menu={{ items: userMenuItems }} placement="bottomRight">
                                                 <Space align="center" className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} cursor-pointer`}>
-                                                    More
+                                                    {t('menu.more')}
                                                     <DownOutlined />
                                                 </Space>
                                             </Dropdown>
@@ -301,8 +313,8 @@ const Banner: React.FC = () => {
                                         <>
                                             <li>
                                                 <Dropdown menu={{ items: languageItems }}>
-                                                    <Space align="center">
-                                                        EN
+                                                    <Space align="center" className="cursor-pointer">
+                                                        {getCurrentLanguageLabel()}
                                                         <DownOutlined />
                                                     </Space>
                                                 </Dropdown>
@@ -311,18 +323,18 @@ const Banner: React.FC = () => {
                                                 <Button
                                                     className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} border border-[#FFFFFF] text-[clamp(14px,1vw,20px)]`}
                                                     type="text"
-                                                    onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
+                                                    onClick={() => messageApi.info(t('messages.functionNotEnabled'))}
                                                 >
-                                                    Sign Up
+                                                    {t('navigation.login')}
                                                 </Button>
                                             </li>
                                             <li>
                                                 <Button
                                                     className={`${isWhiteBgUrl ? 'text-[#0A0B11]' : 'text-[#FFFFFF]'} text-[clamp(14px,1vw,20px)]`}
                                                     type="text"
-                                                    onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
+                                                    onClick={() => messageApi.info(t('messages.functionNotEnabled'))}
                                                 >
-                                                    Login
+                                                    {t('navigation.signUp')}
                                                 </Button>
                                             </li>
                                         </>

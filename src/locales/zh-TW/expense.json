@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "title": "旨在更快結賬的費用管理軟件",
+    "subtitle": "內建於您的企業卡、報銷等的自動化費用軟件",
+    "startForFree": "免費開始"
+  },
+  "freeTeam": {
+    "title": "讓您的團隊擺脫手動費用管理",
+    "subtitle": "自動提交的費用。",
+    "lavasWayTitle": "Lavas Labs 方式"
+  },
+  "strategic": {
+    "title": "透過即時費用報告做出策略決策",
+    "subtitle": "即時獲取支出數據和洞察，為您的企業節省資金",
+    "cards": [
+      {
+        "title": "領先於超支",
+        "description": "停止基於過時數據做業務決策。獲取即時洞察，在團隊超出預算前及時調整",
+        "category": "商業事務",
+        "period": "2024 年至今"
+      },
+      {
+        "title": "透過集中數據最大化可視性",
+        "description": "Lavas Labs 的 AI 動力協助能夠快速分析每筆業務費用，提供詳細的財務答案"
+      },
+      {
+        "title": "揭示真實成本",
+        "description": "Lavas Labs 持續發現節省洞察，如重複訂閱和未使用的解決方案。"
+      }
+    ]
+  },
+  "eliminate": {
+    "title": "消除手動費用報告",
+    "subtitle": "讓員工專注於工作，而不被費用阻礙。"
+  },
+  "control": {
+    "title": "在支出發生之前控制支出",
+    "subtitle": "為員工提供內建政策的卡片，這樣您就可以防止未經批准的支出",
+    "budgetTitle": "為負責任的支出預建預算",
+    "budgetDescription": "允許員工從預設預算中請求支出。創建自定義工作流程，確保將正確的利益相關者納入批准流程。"
+  },
+  "partners": {
+    "title": "加入已經在簡化財務的30,000多家企業"
+  }
+} 

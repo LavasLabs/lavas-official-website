@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button, Checkbox } from 'antd';
+import { useTranslation } from 'react-i18next';
 import type { CheckboxChangeEvent } from 'antd/es/checkbox';
 import './index.css';
 
@@ -16,6 +17,7 @@ const GeoRestrictionModal: React.FC<GeoRestrictionModalProps> = ({
   onDontShowAgain,
   isLoading = false
 }) => {
+  const { t } = useTranslation('components');
   const [dontShowAgain, setDontShowAgain] = useState(false);
   const [isButtonShaking, setIsButtonShaking] = useState(false);
 
@@ -65,21 +67,21 @@ const GeoRestrictionModal: React.FC<GeoRestrictionModalProps> = ({
     >
       <div className="flex flex-col px-[40px] py-[24px]">
         <h2 className="text-[26px] font-bold text-[#2c2c2c] mb-[32px] text-center leading-[1.2] tracking-[-0.5px]">
-          Cross-border Services Restrictions
+          {t('geoRestriction.title')}
         </h2>
 
         {/* 文本 */}
         <div className="text-[16px] text-[#000000] leading-[1.6] space-y-[24px] mb-[40px]">
           <p className="mb-0">
-            You are trying to access our website from an IP address located outside Hong Kong.
+            {t('geoRestriction.paragraph1')}
           </p>
           
           <p className="mb-0">
-            Please note that the promotion and/or distribution of our products and/or services outside Hong Kong may require a licence. The content of our website is only addressed to Hong Kong residents, domiciled in Hong Kong.
+            {t('geoRestriction.paragraph2')}
           </p>
           
           <p className="mb-0">
-            If you are a resident domiciled outside Hong Kong and do not wish to visit our website, please close this page. If you still want to visit our website, click Continue and in doing so, you confirm that you have read and understood the above and that you are accessing our website on your own initiative without active promotion or solicitation from Lavas.
+            {t('geoRestriction.paragraph3')}
           </p>
         </div>
         <Button
@@ -95,7 +97,7 @@ const GeoRestrictionModal: React.FC<GeoRestrictionModalProps> = ({
             boxShadow: 'none',
           }}
         >
-          Continue
+          {t('geoRestriction.continue')}
         </Button>
 
         {/* Don't show again */}
@@ -106,7 +108,7 @@ const GeoRestrictionModal: React.FC<GeoRestrictionModalProps> = ({
             className="geo-restriction-checkbox mr-[12px]"
           />
           <span className="text-[16px] text-[#5a5a5a] font-normal select-none cursor-pointer" onClick={() => setDontShowAgain(!dontShowAgain)}>
-            Don't show again
+            {t('geoRestriction.dontShowAgain')}
           </span>
         </div>
       </div>

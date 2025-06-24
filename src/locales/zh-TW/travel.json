@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "更智能的商務差旅，從預訂到結賬",
+    "subtitle": "以最低價格預訂航班和酒店，自動執行可定制的差旅政策，並在整個行程中自動化費用管理——全部在一個平台上。",
+    "startForFree": "免費開始"
+  },
+  "policy": {
+    "title": "內建的自定義差旅政策",
+    "subtitle": "隨著業務擴展保持費用控制",
+    "flightPolicy": "航班政策",
+    "travelExpenseControl": "差旅費用控制",
+    "bookUpTo": "預訂最高",
+    "above": "高於",
+    "avgPrice": "平均價格",
+    "economyOnly": "僅經濟艙",
+    "setPreciseControls": "起飛前設置精確控制",
+    "controlsDescription": "定制護欄以防止違規支出，從每日津貼到酒店費率。Lavas Labs還可以根據市場費率創建靈活的控制"
+  },
+  "oversee": {
+    "title": "實時監督差旅支出",
+    "subtitle": "無延遲結賬"
+  },
+  "business": {
+    "title": "始終符合政策的輕鬆商務差旅",
+    "subtitle": "旨在讓節省變得更容易。"
+  },
+  "control": {
+    "title1": "起飛前設置精確控制",
+    "description1": "定制護欄以防止違規支出，從每日津貼到酒店費率。Lavas Labs還可以根據市場費率創建靈活的控制",
+    "title2": "激勵員工減少支出",
+    "description2": "選擇與預訂更具成本效益選項的員工分享節省。"
+  },
+  "expense": {
+    "title": "專注於您的旅程，而不是費用報告",
+    "description": "Lavas Labs收集並匹配所有交易的收據，並路由到正確的預算和類別。它立即為某些購買生成收據，並保存重複備忘錄。",
+    "automatedTitle": "自動化費用管理",
+    "automatedDescription": "自動捕獲和分類差旅費用，具備智能收據匹配和審批工作流程。",
+    "trackingTitle": "即時費用追蹤",
+    "trackingDescription": "即時監控和追蹤所有差旅費用，提供詳細的報告和分析功能。",
+    "learnMore": "了解更多"
+  }
+} 

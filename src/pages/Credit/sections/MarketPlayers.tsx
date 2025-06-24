@@ -1,28 +1,25 @@
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
-
-const cardData = [
-  {
-    icon: 'Booster',
-    description: 'Mirror the investment strategies of large corporations with the Volcano Booster.'
-  },
-  {
-    icon: 'property2',
-    description: 'Use your holdings as collateral to acquire up to 3x more digital assets.'
-  },
-  {
-    icon: 'limit',
-    description: 'Use your holdings as collateral to acquire up to 3x more digital assets.'
-  }
-];
 
 const MarketPlayers = () => {
     const { isMobile } = useGlobalStore();
+    const { t } = useTranslation('credit');
 
-    const Card = ({ icon, description }: { icon: string; description: string }) => (
+    const cardData = t('marketPlayers.features', { returnObjects: true }) as Array<{
+        description: string;
+    }>;
+
+    const iconMap = [
+        'Booster',
+        'property2',
+        'limit'
+    ];
+
+    const Card = ({ description, index }: { description: string; index: number }) => (
       <div className={`box-border [box-shadow:0px_10px_80px_0px_rgba(0,0,0,0.25)] rounded-[20px] px-[20px] py-[20px] bg-[#FFF] flex flex-col justify-between ${
         isMobile ? 'w-full min-h-[180px]' : 'w-[calc(100%/3-50px)] min-h-[240px]'
       }`}>
-        <i className={`iconfont icon-${icon} ${isMobile ? 'text-[32px]' : 'text-[38px]'}`}></i>
+        <i className={`iconfont icon-${iconMap[index]} ${isMobile ? 'text-[32px]' : 'text-[38px]'}`}></i>
         <div className={`font-[400] ${isMobile ? 'text-[14px]' : 'text-[16px]'}`}>{description}</div>
       </div>
     );
@@ -48,14 +45,14 @@ const MarketPlayers = () => {
                 <div className={`font-[700] leading-[1.2] ${
                   isMobile ? 'text-[22px]' : 'text-[clamp(32px,3.5vw,42px)]'
                 }`}>
-                  PLAY THE MOVES OF MAJOR MARKET PLAYERS.
+                  {t('marketPlayers.title')}
                 </div>
             </div>
             <div className={`flex flex-wrap justify-center text-[#0A0B11] z-[100] box-border ${
               isMobile ? 'mt-[40px] px-[20px] gap-[24px]' : 'mt-[80px] px-[100px] gap-[50px]'
             }`}>
                 {cardData.map((card, index) => (
-                  <Card key={index} {...card} />
+                  <Card key={index} description={card.description} index={index} />
                 ))}
             </div>
         </section>

@@ -1,0 +1,167 @@
+{
+  "banner": {
+    "title": "Accelerate your ambitions with a crypto Credit Line.",
+    "subtitle": "Borrow funds from 8.9% annual interest without selling your digital assets.",
+    "operating": "Operating",
+    "since2018": "since 2018",
+    "personalized": "Personalized",
+    "clientCare": "client care 24/7",
+    "assetsUnderManagement": "Assets under management",
+    "billion": "$11+ billion",
+    "signUp": "sign up"
+  },
+  "faq": {
+    "title": "FREQUENTLY ASKED QUESTIONS.",
+    "questions": [
+      {
+        "question": "How does the Lavas Credit Line work?",
+        "answer": [
+          "Unlike traditional loans that consider your credit score, Volcano offers a crypto-backed Credit Line that uses your digital assets as collateral. Once you top up, you can immediately utilize your Credit Line. You have two options for your loan.",
+          "• Choose from multiple currencies and receive the funds straight to your bank account.",
+          "• Receive USDT or USDC to your Volcano account.",
+          "To start utilizing your Credit Line, follow the steps detailed in our dedicated Help Center article."
+        ]
+      },
+      {
+        "question": "How quickly do I get my funds?",
+        "answer": [
+          "With the Volcano crypto-backed loans you will receive your funds on the same or the next day. The processing time is as follows:",
+          "Local transfers: 1 business day",
+          "International transfer: 3 to 5 business days",
+          "USDT and USDC: usually no longer than 30 minutes"
+        ]
+      },
+      {
+        "question": "What is the interest rate?",
+        "answer": [
+          "Your interest rate depends on your Loyalty Tier, which is determined by the ratio between the value of your Volcano Tokens against the rest of your portfolio, given your account balance is above $5,000 worth of digital assets:",
+          "Base: No Volcano Tokens are needed; interest on your outstanding Credit Line balance is 18.9%.",
+          "Silver: The ratio of the Volcano Tokens in your account against the rest of your portfolio must be at least 1%; interest on your outstanding Credit Line balance is 17.9%.",
+          "Gold: The ratio of the Volcano Tokens in your account against the rest of your portfolio must be at least 5%; interest on your outstanding Credit Line balance is 13.9% if your LTV is above 20% and 5.9% if your LTV is below or equal to 20%.",
+          "Platinum: The ratio of the Volcano Tokens in your account against the rest of your portfolio must be at least 10%; interest on your outstanding Credit Line balance is 10.9% if your LTV is above 20% and 2.9% if your LTV is below or equal to 20%.",
+          "If your account balance is below $5,000 worth of digital assets, your Credit Line interest rate is 18.9%.",
+          "To learn more about how our Loyalty Program works, visit our Help Center.",
+          "The Credit Line's loan-to-value (LTV) ratio determines the amount of crypto collateral you need in order to take out a crypto credit. For the exact LTV of each digital asset, visit our Help Center."
+        ]
+      },
+      {
+        "question": "What if the value of my collateral changes before I repay my Credit Line?",
+        "answer": [
+          "If your collateral's value increases, your Credit Line limit also goes up. You're free to borrow more or leave your current Credit Line as is. You can also use the extra value of your crypto to pay off part of your credit.",
+          "If your collateralized assets decrease in value, your loan-to-value ratio (LTV) will rise. If your LTV ratio is above 70% and continues to increase further, you may receive a margin call (via email or push notification).",
+          "If your LTV reaches a critical threshold, partial automatic repayments may occur to rebalance the loan-to-value ratio. To make sure you retain as much of your digital assets as possible, only the minimally required amount of crypto will be sold.",
+          "To learn more about loan repayments, visit our dedicated Help Center article."
+        ]
+      }
+    ]
+  },
+  "ecosystem": {
+    "title": "UTILIZE THE ENTIRE VOLCANO ECOSYSTEM TO GROW YOUR WEALTH.",
+    "features": [
+      {
+        "title": "Futures",
+        "description": "Capitalize on uptrends and downtrends with perpetuals."
+      },
+      {
+        "title": "Dual investment",
+        "description": "Earn high yields while buying low and selling high."
+      },
+      {
+        "title": "Exchange",
+        "description": "Swap over 100 digital assets seamlessly with a tap."
+      }
+    ]
+  },
+  "creditCard": {
+    "title": "MAKE THE MOST OF YOUR CREDIT LINE WITH THE LAVAS CARD.",
+    "features": [
+      {
+        "text": "Get up to 2% crypto cashback on any purchase."
+      },
+      {
+        "text": "Spend without selling your digital assets."
+      },
+      {
+        "text": "The more you top up your Volcano account, the more you can borrow and spend."
+      }
+    ],
+    "learnMore": "Learn more"
+  },
+  "collateral": {
+    "title": "See which assets you can use as collateral.",
+    "subtitle": "Choose from over 100 supported digital assets and use multiple at once, with each asset having its own loan-to-value (LTV) ratio",
+    "seeAll": "See all",
+    "ltv": "LTV",
+    "assets": [
+      {
+        "name": "Bitcoin",
+        "symbol": "BTC"
+      },
+      {
+        "name": "Ethereum",
+        "symbol": "ETH"
+      },
+      {
+        "name": "Solana",
+        "symbol": "SOL"
+      }
+    ]
+  },
+  "betterThanLoan": {
+    "title": "BETTER THAN A LOAN.",
+    "features": [
+      {
+        "title": "Up to $200 million",
+        "description": "Access borrowing power of up to $2 million daily for individuals and up to $200 million for private clients."
+      },
+      {
+        "title": "Receive funds in less than 24 hours",
+        "description": "Open a Credit Line with an automatic approval process — get funds within 24 hours with no credit history required."
+      },
+      {
+        "title": "Tax-efficient borrowing",
+        "description": "Hold onto your assets while accessing liquidity without triggering taxable events that come with selling."
+      },
+      {
+        "title": "Borrow stablecoins & other crypto currencies",
+        "description": "Choose to receive your loan in your bank account or as stablecoins in your Volcano account."
+      },
+      {
+        "title": "Flexible schedule",
+        "description": "Repay your Credit Line at your own pace without worrying about rigid schedules."
+      },
+      {
+        "title": "Multi-asset collateral",
+        "description": "Stay flexible and borrow as much as you need by combining multiple assets as collateral."
+      },
+      {
+        "title": "Multiple repayment options",
+        "description": "Choose to repay with fiat or crypto – including the digital assets you used as collateral for your Credit Line."
+      }
+    ]
+  },
+  "wealthSolutions": {
+    "title": "WEALTH SOLUTIONS FOR FAMILY OFFICES, CORPORATES, AND PRIVATE CLIENTS.",
+    "subtitle": "Accounts above $100,000 unlock access to a dedicated relationship manager, exclusive OTC services, custom terms, and rates.",
+    "learnMore": "Learn more"
+  },
+  "marketPlayers": {
+    "title": "PLAY THE MOVES OF MAJOR MARKET PLAYERS.",
+    "features": [
+      {
+        "description": "Mirror the investment strategies of large corporations with the Volcano Booster."
+      },
+      {
+        "description": "Use your holdings as collateral to acquire up to 3x more digital assets."
+      },
+      {
+        "description": "Use your holdings as collateral to acquire up to 3x more digital assets."
+      }
+    ]
+  },
+  "nextGeneration": {
+    "title": "DRIVING THE NEXT GENERATION OF WEALTH.",
+    "subtitle": "Volcano is built for pioneers ready to leverage blockchain technology for wealth generation. Create your account today and get started.",
+    "learnMore": "Learn more"
+  }
+} 

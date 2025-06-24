@@ -1,9 +1,11 @@
 import { Button, message } from 'antd';
 import { RightOutlined } from '@ant-design/icons';
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
 
 const WealthSolutions = () => {
     const { isMobile } = useGlobalStore();
+    const { t } = useTranslation('credit');
     const [messageApi, contextHolder] = message.useMessage();
 
     return (
@@ -14,10 +16,10 @@ const WealthSolutions = () => {
                 <div className={`flex flex-col justify-between box-border ${isMobile ? 'w-full px-[20px]' : 'w-[50%] h-full'}`}>
                     <div>
                         <div className={`font-[700] leading-[1.2] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] ${isMobile ? 'text-[24px] mb-[16px]' : 'text-[clamp(32px,3.5vw,42px)]'}`}>
-                            WEALTH SOLUTIONS FOR FAMILY OFFICES, CORPORATES, AND PRIVATE CLIENTS.
+                            {t('wealthSolutions.title')}
                         </div>
                         <div className={`${isMobile ? 'text-[14px] leading-[1.5]' : 'text-[clamp(14px,1.1vw,18px)] mt-[clamp(12px,2vh,16px)]'}`}>
-                            Accounts above $100,000 unlock access to a dedicated relationship manager, exclusive OTC services, custom terms, and rates.
+                            {t('wealthSolutions.subtitle')}
                         </div>
                     </div>
 
@@ -29,9 +31,9 @@ const WealthSolutions = () => {
                                                 color="danger"
                                                 variant="solid"
                                                 size="large"
-                                                onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
+                                                onClick={() => messageApi.info(t('messages.functionNotEnabled', { ns: 'components' }))}
                                             >
-                                                Learn more <RightOutlined />
+                                                {t('wealthSolutions.learnMore')} <RightOutlined />
                                             </Button>
                                         </div>
                                     ) : (
@@ -41,9 +43,9 @@ const WealthSolutions = () => {
                                                 color="danger"
                                                 variant="solid"
                                                 size="middle"
-                                                onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
+                                                onClick={() => messageApi.info(t('messages.functionNotEnabled', { ns: 'components' }))}
                                             >
-                                                Learn more <RightOutlined />
+                                                {t('wealthSolutions.learnMore')} <RightOutlined />
                                             </Button>
                                         </div>
                                     )}

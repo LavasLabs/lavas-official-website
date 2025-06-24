@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "Smarter business travel, from booking to book close",
+    "subtitle": "Book flights and hotels at the lowest rates, automatically enforce customizable travel policies, and automate expenses throughout a trip—all from one platform.",
+    "startForFree": "Start for Free"
+  },
+  "policy": {
+    "title": "CUSTOM TRAVEL POLICIES, BUILT RIGHT IN",
+    "subtitle": "Keep expenses in check as your business expands",
+    "flightPolicy": "Flight Policy",
+    "travelExpenseControl": "Travel expense control",
+    "bookUpTo": "Book up to",
+    "above": "above",
+    "avgPrice": "avg.price",
+    "economyOnly": "Economy only",
+    "setPreciseControls": "Set precise controls before takeoff",
+    "controlsDescription": "Customize guardrails to prevent out-of-policy spend, from per-diems to hotel rates. Lavas Labs can also create flexible controls based on market rate"
+  },
+  "oversee": {
+    "title": "OVERSEE TRAVEL SPEND AS IT HAPPENS",
+    "subtitle": "Close the books without delays"
+  },
+  "business": {
+    "title": "EFFORTLESS BUSINESS TRAVEL THAT'S ALWAYS IN POLICY",
+    "subtitle": "Designed to make saving easier."
+  },
+  "control": {
+    "title1": "Set precise controls before takeoff",
+    "description1": "Customize guardrails to prevent out-of-policy spend, from per-diems to hotel rates. Lavas Labs can also create flexible controls based on market rate",
+    "title2": "Incentivize employees to spend less",
+    "description2": "Opt to split savings with employees that book more cost-effective options."
+  },
+  "expense": {
+    "title": "Focus on your trip, not expense reports",
+    "description": "Lavas Labs collects and matches receipts across all transactions, and routes to the right budget and category. It instantly generates receipts for certain purchases, and saves recurring memos.",
+    "automatedTitle": "Automated Expense Management",
+    "automatedDescription": "Automatically capture and categorize travel expenses with smart receipt matching and approval workflows.",
+    "trackingTitle": "Real-time Expense Tracking",
+    "trackingDescription": "Monitor and track all travel expenses in real-time with detailed reporting and analytics capabilities.",
+    "learnMore": "Learn more"
+  }
+} 

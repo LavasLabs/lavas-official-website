@@ -20,7 +20,7 @@ const Contact = () => {
     const [form] = Form.useForm();
     const [messageApi, contextHolder] = message.useMessage();
 
-    const onFinish = (values: any) => {
+    const onFinish = (values: ContactFormValues) => {
         console.log(values);
         setLoading(true);
         setTimeout(() => {

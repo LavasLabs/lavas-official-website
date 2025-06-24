@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
 const CorporateCard = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   return (
     <div className="min-h-screen">
@@ -43,7 +43,7 @@ const CorporateCard = () => {
               </ul>
             </div>
             <div className="relative order-1 md:order-2 mb-8 md:mb-0">
-              <img src="/card-preview.png" alt="Corporate Card Preview" className="w-full rounded-lg shadow-xl" />
+                              <img src="/card-preview.png" alt={t('corporateCard.cardPreviewAlt')} className="w-full rounded-lg shadow-xl" />
             </div>
           </div>
         </div>

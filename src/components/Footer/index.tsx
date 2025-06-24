@@ -5,6 +5,7 @@ import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Dropdown, Space, Popover, message } from 'antd';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import PricingModal from '../PricingModal';
 import useGlobalStore from '../../store/useGlobalStore';
 
@@ -102,6 +103,7 @@ const Footer: React.FC = () => {
 
   const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
   const { isMobile } = useGlobalStore();
+  const { t } = useTranslation('components');
   const [messageApi, contextHolder] = message.useMessage();
 
   const renderSocialIcons = () => (
@@ -113,7 +115,7 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="transition-opacity hover:opacity-80 text-inherit no-underline hover:text-inherit"
-          title={`Follow us on ${socialIcon.name}`}
+          title={t(`footer.socialMedia.${socialIcon.name.toLowerCase()}` as any)}
         >
           <i className={`iconfont ${socialIcon.icon} text-[clamp(20px,1.4vw,24px)] cursor-pointer`} />
         </a>
@@ -137,18 +139,18 @@ const Footer: React.FC = () => {
                 <Popover content={content} overlayStyle={isMobile ? { width: '280px' } : undefined}
                   overlayInnerStyle={isMobile ? { padding: '12px' } : undefined}>
                   <Space>
-                    Products
+                    {t('footer.navigation.products')}
                     <DownOutlined />
                   </Space>
                 </Popover>
               </li>
               <li className={`cursor-pointer ${isMobile ? 'mx-[10px]' : ''}`} onClick={() => setIsPricingModalOpen(true)}>
-                Pricing
+                {t('footer.navigation.pricing')}
               </li>
               <li className={`cursor-pointer ${isMobile ? 'mx-[10px]' : ''}`}>
                 <Dropdown menu={{ items }}>
-                  <Space onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}>
-                    Solutions
+                  <Space onClick={() => messageApi.info(t('footer.messages.functionNotEnabled'))}>
+                    {t('footer.navigation.solutions')}
                     <DownOutlined />
                   </Space>
                 </Dropdown>
@@ -157,7 +159,7 @@ const Footer: React.FC = () => {
                 <Popover content={resourceContent} overlayStyle={isMobile ? { width: '280px' } : undefined}
                   overlayInnerStyle={isMobile ? { padding: '12px' } : undefined}>
                   <Space className="relative z-[102]">
-                    Resource
+                    {t('footer.navigation.resource')}
                     <DownOutlined />
                   </Space>
                 </Popover>
@@ -165,19 +167,19 @@ const Footer: React.FC = () => {
               <li className={`cursor-pointer ${isMobile ? 'mx-[10px]' : ''}`} onClick={() => {
                 window.location.href = '/services-terms';
               }}>
-                Terms & Conditions
+                {t('footer.navigation.termsConditions')}
               </li>
             </ul>
 
             <ul className={`list-none !pl-[0px] flex flex-col gap-[20px] min-w-[200px] text-[clamp(14px,1.1vw,20px)] ${isMobile ? 'text-center gap-y-[10px]' : ''} `}>
-              <li className='text-[clamp(16px,1.4vw,24px)]'>Follow</li>
+              <li className='text-[clamp(16px,1.4vw,24px)]'>{t('footer.contact.follow')}</li>
               <li className='flex items-center'>
                 <i className='iconfont icon-email text-[clamp(20px,1.4vw,24px)] mr-[10px]'></i>
-                <span>support@lavaslabs.com</span>
+                <span>{t('footer.contact.email')}</span>
               </li>
               <li className='flex items-center'>
                 <i className='iconfont icon-skype text-[clamp(20px,1.4vw,24px)] mr-[10px]'></i>
-                <span>defpay skype support</span>
+                <span>{t('footer.contact.skype')}</span>
               </li>
               {isMobile && <li className='flex justify-center'>{renderSocialIcons()}</li>}
             </ul>
@@ -186,7 +188,7 @@ const Footer: React.FC = () => {
 
         <div className={`flex box-border flex-wrap gap-[20px] py-[20px] ${isMobile ? 'flex-col items-center text-center' : 'justify-between'}`}>
           <div className="text-[clamp(14px,1.1vw,20px)] opacity-80">
-            Copyright ©2025 Lavas Labs Limited. All Rights Reserved
+            {t('footer.copyright')}
           </div>
 
           {!isMobile && renderSocialIcons()}

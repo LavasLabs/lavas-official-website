@@ -11,5 +11,31 @@
   },
   "common": {
     "startForFree": "Start for Free"
+  },
+  "menu": {
+    "products": "Products",
+    "pricing": "Pricing",
+    "solutions": "Solutions",
+    "resource": "Resource",
+    "termsAndConditions": "Terms & Conditions",
+    "more": "More"
+  },
+  "resources": {
+    "blog": "Blog",
+    "contactSales": "Contact Sales",
+    "becomeAPartner": "Become a Partner"
+  },
+  "products": {
+    "creditLine": "Credit Line"
+  },
+  "messages": {
+    "functionNotEnabled": "This function is not enabled. Please contact the administrator"
+  },
+  "corporateCard": {
+    "cardPreviewAlt": "Corporate Card Preview"
+  },
+  "navigation": {
+    "login": "Login",
+    "signUp": "Sign Up"
   }
 }

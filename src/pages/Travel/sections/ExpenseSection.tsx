@@ -1,9 +1,11 @@
 import { Button, message } from 'antd';
 import { RightOutlined } from '@ant-design/icons';
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
 
 const ExpenseSection = () => {
   const { isMobile } = useGlobalStore();
+  const { t } = useTranslation('travel');
   const [messageApi, contextHolder] = message.useMessage();
 
   return (
@@ -16,9 +18,9 @@ const ExpenseSection = () => {
             <div className={`w-full ${isMobile ? 'px-[40px] box-border' : ''}  `}>
               <div className={`${isMobile ? 'text-[24px]' : 'text-[clamp(32px,3.5vw,42px)]'} font-[700] leading-[1.2] relative`}>
                 <img className={`${isMobile ? 'w-[30px] right-[-20px] top-[-15px]' : 'w-[clamp(40px,3.0vw,52px)] right-[-30px] top-[-20px]'} h-auto object-contain absolute`} src="/images/white-red-icon.png" alt="" />
-                Focus on your trip, not expense reports
+                {t('expense.title')}
               </div>
-              <div className={`${isMobile ? 'text-[14px]' : 'text-[clamp(14px,1.1vw,18px)]'} mt-[clamp(12px,2vh,16px)] opacity-80`}>Lavas Labs collects and matches receipts across all transactions, and routes to the right budget and category. It instantly generates receipts for certain purchases, and saves recurring memos.</div>
+              <div className={`${isMobile ? 'text-[14px]' : 'text-[clamp(14px,1.1vw,18px)]'} mt-[clamp(12px,2vh,16px)] opacity-80`}>{t('expense.description')}</div>
             </div>
 
             <div className={`${isMobile ? 'mt-[30px] flex justify-center' : 'mt-[clamp(30px,5vh,40px)]'}`}>
@@ -27,9 +29,9 @@ const ExpenseSection = () => {
                 color="danger" 
                 variant="solid" 
                 size='large'
-                onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
+                onClick={() => messageApi.info(t('messages.functionNotEnabled', { ns: 'components' }))}
               >
-                Learn more <RightOutlined />
+                {t('expense.learnMore')} <RightOutlined />
               </Button>
             </div>
           </div>

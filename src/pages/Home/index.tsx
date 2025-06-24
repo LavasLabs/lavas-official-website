@@ -1,4 +1,3 @@
-// import { useTranslation } from 'react-i18next';
 import HeroSection from './sections/HeroSection';
 import ControlSection from './sections/ControlSection';
 import VisibilitySection from './sections/VisibilitySection';
@@ -9,7 +8,6 @@ import useGlobalStore from '../../store/useGlobalStore';
 
 const Home = () => {
   const { isMobile } = useGlobalStore();
-  // const { t } = useTranslation();
 
   const logoUrlList = [
     '/logos/card-logo1.svg',

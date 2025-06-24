@@ -1,44 +1,36 @@
 import { useEffect, useState } from 'react';
 import { Button, message } from 'antd';
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../store/useGlobalStore';
 
 const Blog = () => {
     const { isMobile } = useGlobalStore();
-    const [selectedTag, setSelectedTag] = useState('All Posts');
+    const { t } = useTranslation('blog');
+    const [selectedTag, setSelectedTag] = useState('');
     const [blogData] = useState({
         title: 'Lavas Labs BLOG',
         subtitle: 'Legal and compliance updates, company news and media coverage.',
         bannerImage: '/images/blog-banner.png'
     });
 
-
-    useEffect(() => {
-
-    }, []);
-
+    // 在组件内定义 blogTags，这样可以正确响应语言变化
     const blogTags = [
-        'All Posts',
-        'Announcement',
-        'Blog',
-        'Media',
+        t('tags.allPosts'),
+        t('tags.announcement'),
+        t('tags.blog'),
+        t('tags.media'),
     ];
 
-    const blogList = [
-        {
-            image: '/images/blog-banner.png',
-            title: 'Lavas Labs Announces Global Expansion',
-            description: 'Lavas Labs continues its global expansion with new office openings in key markets...',
-            date: '2024-03-05'
-        },
-        {
-            image: '/images/blog-banner.png',
-            title: 'New Features Release',
-            description: 'Introducing our latest features designed to enhance your business operations...',
-            date: '2024-03-04'
-        },
-    ];
+    // 初始化选中的标签
+    useEffect(() => {
+        setSelectedTag(t('tags.allPosts'));
+    }, [t]);
 
-
+    const blogList = t('samplePosts', { returnObjects: true }) as Array<{
+        title: string;
+        description: string;
+        date: string;
+    }>;
 
     // if (loading) {
     //     return <div className="w-full min-h-screen flex items-center justify-center">Loading...</div>;
@@ -54,14 +46,14 @@ const Blog = () => {
                     <div className={`w-full ${isMobile ? 'flex flex-col gap-[30px]' : 'flex'}`}>
                         <div className={isMobile ? 'w-full text-center' : 'w-[45%]'}>
                             <div className={`font-sora font-[900] uppercase inline-block z-[9999999] ${isMobile ? 'text-[32px]' : 'text-[clamp(40px,5vw,50px)]'}`}>
-                                {blogData.title}
+                                {t('hero.title')}
                             </div>
                             <div className={`mt-[10px] ${isMobile ? 'text-[14px] px-[20px] box-border' : ''}`}>
-                                {blogData.subtitle}
+                                {t('hero.subtitle')}
                             </div>
                         </div>
                         <div className={isMobile ? 'w-full' : 'w-[60%]'}>
-                            <img className='w-full' src={blogData.bannerImage} alt="Blog Banner" />
+                            <img className='w-full' src={blogData.bannerImage} alt={t('blog.bannerAlt')} />
                         </div>
                     </div>
                 </div>
@@ -107,8 +99,8 @@ const Blog = () => {
 
                     <div className={`flex flex-col justify-center items-center relative gap-y-[60px] ${isMobile ? 'my-[60px]' : 'my-[170px]'}`}>
                         <div className={`font-[700] text-center leading-[1] relative ${isMobile ? 'text-[24px]' : 'text-[42px] space-y-[10px]'}`}>
-                            <img className={`h-auto object-contain absolute ${isMobile ? 'w-[30px] right-[-40px] top-[-30px]' : 'w-[52px] right-[-20%] top-[-80%]'}`} src="/images/black-red-icon.png" alt="" />
-                            Business Scenario
+                            <img className={`h-auto object-contain absolute ${isMobile ? 'w-[30px] right-[-40px] top-[-30px]' : 'w-[52px] right-[-40%] top-[-80%]'}`} src="/images/black-red-icon.png" alt="" />
+                            {t('businessScenario.title')}
                         </div>
                         <Button 
                             className={`font-[700] h-[46px] ${isMobile ? 'px-[20px] py-[12px] w-[140px]' : 'px-[25px] py-[17px] w-[160px] !bg-[#D11616] hover:!bg-[#ff1818] hover:!border-[#ff1818]'}`}
@@ -116,9 +108,9 @@ const Blog = () => {
                             variant="solid" 
                             shape="round" 
                             size='large'
-                            onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
+                            onClick={() => messageApi.info(t('messages.functionNotEnabled'))}
                         >
-                            Try now
+                            {t('actions.tryNow')}
                         </Button>
                     </div>
                 </div>

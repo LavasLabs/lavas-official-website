@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Button, Form, Input, Select, message } from 'antd';
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../store/useGlobalStore';
 
 const { TextArea } = Input;
@@ -14,15 +15,16 @@ interface ContactFormValues {
 
 const Contact = () => {
     const { isMobile } = useGlobalStore();
+    const { t } = useTranslation('contact');
     const [loading, setLoading] = useState(false);
     const [form] = Form.useForm();
     const [messageApi, contextHolder] = message.useMessage();
 
-    const onFinish = (values: ContactFormValues) => {
+    const onFinish = (values: any) => {
         console.log(values);
         setLoading(true);
         setTimeout(() => {
-            messageApi.info('This function is not enabled. Please contact the administrator');
+            messageApi.info(t('messages.functionNotEnabled', { ns: 'components' }));
             setLoading(false);
         }, 500);
     };
@@ -33,17 +35,16 @@ const Contact = () => {
             <div className={`max-w-[1920px] mx-auto bg-[#F4F8F9] w-full box-border ${isMobile ? 'px-[20px] pb-[40px] pt-[30px] mb-[60px] flex flex-col gap-[30px]' : 'px-[clamp(40px,13%,250px)] py-[60px] mb-[170px] flex gap-[60px]'}`}>
                 <div className={`flex flex-col gap-[20px] justify-between ${isMobile ? 'w-full text-center' : 'w-[40%]'}`}>
                     <div>
-                        <h1 className={`font-bold mb-[20px] ${isMobile ? 'text-[32px]' : 'text-[clamp(40px,5vw,50px)]'}`}>Let's Talk</h1>
+                        <h1 className={`font-bold mb-[20px] ${isMobile ? 'text-[32px]' : 'text-[clamp(40px,5vw,50px)]'}`}>{t('title')}</h1>
                         <p className='text-[16px] text-[#666]'>
-                            Schedule a time to chat with our team. We are always ready to assist you.
+                            {t('subtitle')}
                         </p>
                     </div>
                     {!isMobile && (
                         <div>
                             <img src="/images/black-red-icon.png" alt="Contact" className='w-[40px]' />
                             <p className='mt-[20px] text-[14px] text-[#666]'>
-                                Please provide us with some detailed information about you, and we
-                                will contact you as soon as possible!
+                                {t('description')}
                             </p>
                         </div>
                     )}
@@ -58,36 +59,36 @@ const Contact = () => {
                     >
                         <div className='flex gap-[20px]'>
                             <Form.Item
-                                label={<span>First name<span className='text-[#FF0000]'>*</span></span>}
+                                label={<span>{t('form.firstName')}<span className='text-[#FF0000]'>{t('form.required')}</span></span>}
                                 name="firstName"
                                 className='flex-1'
-                                rules={[{ required: true, message: 'Please input your first name!' }]}
+                                rules={[{ required: true, message: t('form.validation.firstNameRequired') }]}
                             >
-                                <Input placeholder="Enter your name" className={`${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
+                                <Input placeholder={t('form.firstNamePlaceholder')} className={`${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
                             </Form.Item>
 
                             <Form.Item
-                                label={<span>Last name<span className='text-[#FF0000]'>*</span></span>}
+                                label={<span>{t('form.lastName')}<span className='text-[#FF0000]'>{t('form.required')}</span></span>}
                                 name="lastName"
                                 className='flex-1'
-                                rules={[{ required: true, message: 'Please input your last name!' }]}
+                                rules={[{ required: true, message: t('form.validation.lastNameRequired') }]}
                             >
-                                <Input placeholder="Enter your name" className={`${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
+                                <Input placeholder={t('form.lastNamePlaceholder')} className={`${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
                             </Form.Item>
                         </div>
 
                         <Form.Item
-                            label={<span>Email<span className='text-[#FF0000]'>*</span></span>}
+                            label={<span>{t('form.email')}<span className='text-[#FF0000]'>{t('form.required')}</span></span>}
                             name="email"
-                            rules={[{ required: true, type: 'email', message: 'Please input a valid email!' }]}
+                            rules={[{ required: true, type: 'email', message: t('form.validation.emailRequired') }]}
                         >
-                            <Input placeholder="Enter your work email" className='h-[48px]' />
+                            <Input placeholder={t('form.emailPlaceholder')} className='h-[48px]' />
                         </Form.Item>
 
                         <Form.Item
-                            label={<span>Phone number<span className='text-[#FF0000]'>*</span></span>}
+                            label={<span>{t('form.phoneNumber')}<span className='text-[#FF0000]'>{t('form.required')}</span></span>}
                             name="phoneNumber"
-                            rules={[{ required: true, message: 'Please input your phone number!' }]}
+                            rules={[{ required: true, message: t('form.validation.phoneRequired') }]}
                         >
                             <Input
                                 addonBefore={
@@ -96,18 +97,18 @@ const Contact = () => {
                                         <Select.Option value="+86">+86</Select.Option>
                                     </Select>
                                 }
-                                placeholder="Enter your phone number"
+                                placeholder={t('form.phonePlaceholder')}
                                 className='h-[48px]'
                             />
                         </Form.Item>
 
                         <Form.Item
-                            label="Message"
+                            label={t('form.message')}
                             name="message"
                             className='mb-[80px]'
                         >
                             <TextArea
-                                placeholder="How can we help you?"
+                                placeholder={t('form.messagePlaceholder')}
                                 rows={4}
                                 maxLength={300}
                                 showCount
@@ -121,7 +122,7 @@ const Contact = () => {
                                 loading={loading}
                                 className={`w-full bg-[#0A0B11] text-white rounded-[24px] ${isMobile ? 'h-[40px]' : 'h-[48px]'}`}
                             >
-                                Submit
+                                {t('form.submit')}
                             </Button>
                         </Form.Item>
                     </Form>
@@ -129,8 +130,7 @@ const Contact = () => {
                         <div className='mt-[30px]'>
                             <img src="/images/black-red-icon.png" alt="Contact" className='w-[30px]' />
                             <p className='mt-[20px] text-[14px] text-[#666]'>
-                                Please provide us with some detailed information about you, and we
-                                will contact you as soon as possible!
+                                {t('description')}
                             </p>
                         </div>
                     )}

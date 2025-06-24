@@ -1,27 +1,12 @@
 import { Button } from 'antd';
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
-
-const features = [
-  {
-    title: 'Save more by preventing out-of-policy spend',
-    desc: 'Preset controls on corporate cards for specific vendors and categories.'
-  },
-  {
-    title: 'Be free from expense reports',
-    desc: 'Easily submit expenses through SMS, mobile app, and integrations.'
-  },
-  {
-    title: 'Unlock savings in real time',
-    desc: 'Get insight into spend as it happens, with a platform that pays off immediately.'
-  },
-  {
-    title: 'Grow your business with the right terms',
-    desc: "Get rewards and perks, like 5% savings. There's no personal credit checks or personal guarantee."
-  }
-];
 
 const HeroSection = () => {
   const { isMobile } = useGlobalStore();
+  const { t } = useTranslation('home');
+
+  const features = t('features', { returnObjects: true }) as Array<{title: string, description: string}>;
 
   return (
     <section className='bg-[#0A0B11] text-[#FFFFFF] w-full min-h-[calc(100vh-100px)] pb-[40px] box-border relative overflow-hidden'>
@@ -39,14 +24,14 @@ const HeroSection = () => {
                 WebkitTextFillColor: 'transparent',
                 color: 'transparent'
               }}>
-                Lavas Labs
+                {t('hero.title')}
               </span>
             </div>
             <div className='text-[clamp(16px,2vw,24px)]'>
-              A corporate card designed for modern finance.
+              {t('hero.subtitle1')}
             </div>
             <div className='text-[clamp(16px,2vw,24px)]'>
-              Save money and time. All with one corporate card.
+              {t('hero.subtitle2')}
             </div>
             {!isMobile && (
               <div className='mt-[clamp(40px,10vh,130px)]'>
@@ -58,7 +43,7 @@ const HeroSection = () => {
                   size='large'
                   onClick={() => window.location.href = '/contact'}
                 >
-                  Start for Free
+                  {t('hero.startForFree')}
                 </Button>
               </div>
             )}
@@ -75,7 +60,7 @@ const HeroSection = () => {
                 size='large'
                 onClick={() => window.location.href = '/contact'}
               >
-                Start for Free
+                {t('hero.startForFree')}
               </Button>
             </div>
           )}
@@ -95,7 +80,7 @@ const HeroSection = () => {
                 <span className='relative z-[100] text-[clamp(16px,1.2vw,20px)] font-[900]'>{item.title}</span>
               </div>
               <div className='text-[clamp(14px,1vw,16px)] opacity-60 mt-[8px]'>
-                {item.desc}
+                {item.description}
               </div>
             </div>
           ))}

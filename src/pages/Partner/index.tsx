@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Button, Form, Input, Select, Space, message } from 'antd';
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../store/useGlobalStore';
 
 const Partner = () => {
     const { isMobile } = useGlobalStore();
+    const { t } = useTranslation('partner');
     const [loading, setLoading] = useState(false);
     const [form] = Form.useForm();
     const [messageApi, contextHolder] = message.useMessage();
@@ -12,32 +14,21 @@ const Partner = () => {
         console.log(values);
         setLoading(true);
         setTimeout(() => {
-            messageApi.info('This function is not enabled. Please contact the administrator');
+            messageApi.info(t('messages.functionNotEnabled', { ns: 'components' }));
             setLoading(false);
         }, 500);
     };
 
-    const securityCards = [
-        {
-            image: '/images/partner-b1.png',
-            alt: 'Legitimacy',
-            title: 'Legitimacy and Licensing',
-            description: 'Lavas Labs credit card is a legitimate financial product operated by a licensed and regulated entity established in Hong Kong'
-        },
-        {
-            image: '/images/partner-b2.png',
-            alt: 'eKYC',
-            title: 'Full eKYC execution',
-            description: 'Partnered with industry leading eKYC provider Sumsub, Lavas Labs is executing full eKYC with automated ID and biometric verification to protect our users'
-        },
-        {
-            image: '/images/partner-b3.png',
-            alt: 'Security',
-            title: 'Security First',
-            description: 'We prioritize the security of our users assets and data. Our platform is built with industry-leading security measures and protocols'
-        }
-    ];
+    const securityCards = t('compliance.cards', { returnObjects: true }) as Array<{
+        title: string;
+        description: string;
+    }>;
 
+    const collaborationTypes = [
+        { value: 'business', label: t('form.collaborationTypes.business') },
+        { value: 'technology', label: t('form.collaborationTypes.technology') },
+        { value: 'marketing', label: t('form.collaborationTypes.marketing') }
+    ];
 
     useEffect(() => {
 
@@ -52,15 +43,15 @@ const Partner = () => {
                     : 'bg-[url("/images/partner-banner.png")] pt-[100px]'
             }`}>
                 <div className={`max-w-[1920px] mx-auto text-[#FFF] ${isMobile ? 'pt-[4%] pb-[6%] px-[30px]' : 'pt-[4%] pb-[10%] pr-[clamp(40px,13%,250px)] pl-[30%] text-right'}`}>
-                    <div className={`font-bold tracking-[0.03em] font-roboto  uppercase [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] [-webkit-text-stroke:1px]  ${isMobile ? 'leading-[115%] text-[28px] text-center' : 'leading-[90%] text-[clamp(32px,5vw,60px)] text-right'}`}>Collaborate with Lavas Labs to accelerate growth</div>
-                    <div className={`text-[14px] mt-[24px] [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] [-webkit-text-stroke:0.2px]  ${isMobile ? 'hidden' : ''}`}>Join the global partner community to jointly build solutions, develop skills, and collaborate with Lavas Labs for sales</div>
+                    <div className={`font-bold tracking-[0.03em] font-roboto  uppercase [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] [-webkit-text-stroke:1px]  ${isMobile ? 'leading-[115%] text-[28px] text-center' : 'leading-[90%] text-[clamp(32px,5vw,60px)] text-right'}`}>{t('hero.title')}</div>
+                    <div className={`text-[14px] mt-[24px] [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] [-webkit-text-stroke:0.2px]  ${isMobile ? 'hidden' : ''}`}>{t('hero.subtitle')}</div>
                 </div>
 
                 <div className={`max-w-[1920px] mx-auto w-full flex flex-col justify-center box-border ${isMobile ? 'px-[30px] gap-y-[60px]' : 'px-[clamp(40px,16%,310px)] gap-y-[170px]'}`}>
                     <div className={`w-full mx-auto bg-[#FFF] rounded-[24px] bg-white shadow-[0px_10px_80px_0px_rgba(0,0,0,0.10)] box-border ${isMobile ? 'p-[20px]' : 'p-[40px]'}`}>
-                        <h2 className={`font-bold text-center mb-4 ${isMobile ? 'text-[24px]' : 'text-[32px]'}`}>Our Partners</h2>
+                        <h2 className={`font-bold text-center mb-4 ${isMobile ? 'text-[24px]' : 'text-[32px]'}`}>{t('form.title')}</h2>
                         <p className={`text-center text-gray-600 ${isMobile ? 'mb-[20px] text-[14px]' : 'mb-[40px]'}`}>
-                            Lavas Labs works with Tier-1 companies in the industry for our business operation and business growth.
+                            {t('form.subtitle')}
                         </p>
                         <Form
                             form={form}
@@ -70,79 +61,75 @@ const Partner = () => {
                             <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-[10px]' : 'grid-cols-2 gap-x-[20px] gap-y-[12px]'}`}>
                                 <Form.Item
                                     name="firstName"
-                                    label={<span>First name<span className='text-red-500'>*</span></span>}
-                                    rules={[{ required: true, message: 'Please input your first name!' }]}
+                                    label={<span>{t('form.fields.firstName')}<span className='text-red-500'>*</span></span>}
+                                    rules={[{ required: true, message: t('form.validation.firstName') }]}
                                 >
-                                    <Input placeholder="Enter your name" className={`rounded-[8px] ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
+                                    <Input placeholder={t('form.placeholders.firstName')} className={`rounded-[8px] ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
                                 </Form.Item>
 
                                 <Form.Item
                                     name="lastName"
-                                    label={<span>Last name<span className='text-red-500'>*</span></span>}
-                                    rules={[{ required: true, message: 'Please input your last name!' }]}
+                                    label={<span>{t('form.fields.lastName')}<span className='text-red-500'>*</span></span>}
+                                    rules={[{ required: true, message: t('form.validation.lastName') }]}
                                 >
-                                    <Input placeholder="Enter your name" className={`rounded-[8px] ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
+                                    <Input placeholder={t('form.placeholders.lastName')} className={`rounded-[8px] ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
                                 </Form.Item>
 
                                 <Form.Item
                                     name="email"
-                                    label={<span>Email<span className='text-red-500'>*</span></span>}
+                                    label={<span>{t('form.fields.email')}<span className='text-red-500'>*</span></span>}
                                     rules={[
-                                        { required: true, message: 'Please input your email!' },
-                                        { type: 'email', message: 'Please enter a valid email!' }
+                                        { required: true, message: t('form.validation.email') },
+                                        { type: 'email', message: t('form.validation.emailInvalid') }
                                     ]}
                                 >
-                                    <Input placeholder="Enter your work email" className={`rounded-[8px] ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
+                                    <Input placeholder={t('form.placeholders.email')} className={`rounded-[8px] ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
                                 </Form.Item>
 
                                 <Form.Item
                                     name="phone"
-                                    label={<span>Phone number<span className='text-red-500'>*</span></span>}
-                                    rules={[{ required: true, message: 'Please input your phone number!' }]}
+                                    label={<span>{t('form.fields.phone')}<span className='text-red-500'>*</span></span>}
+                                    rules={[{ required: true, message: t('form.validation.phone') }]}
                                 >
                                     <Input
                                         addonBefore={"+852"}
-                                        placeholder="Enter your phone number"
+                                        placeholder={t('form.placeholders.phone')}
                                         className={`${isMobile ? 'h-[40px]' : 'h-[48px]'}`}
                                     />
                                 </Form.Item>
 
                                 <Form.Item
                                     name="companyName"
-                                    label="Company name"
+                                    label={t('form.fields.companyName')}
                                 >
-                                    <Input placeholder="Enter company name" className={`rounded-[8px] ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
+                                    <Input placeholder={t('form.placeholders.companyName')} className={`rounded-[8px] ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
                                 </Form.Item>
 
                                 <Form.Item
                                     name="companyWebsite"
-                                    label="Company website"
+                                    label={t('form.fields.companyWebsite')}
                                 >
-                                    <Input placeholder="Enter company website" className={`rounded-[8px] ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
+                                    <Input placeholder={t('form.placeholders.companyWebsite')} className={`rounded-[8px] ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
                                 </Form.Item>
 
                                 <Form.Item
                                     name="collaborationType"
-                                    label={<span>Collaboration Type<span className='text-red-500'>*</span></span>}
-                                    rules={[{ required: true, message: 'Please select collaboration type!' }]}
+                                    label={<span>{t('form.fields.collaborationType')}<span className='text-red-500'>*</span></span>}
+                                    rules={[{ required: true, message: t('form.validation.collaborationType') }]}
                                 >
                                     <Select
-                                        placeholder="What are you interested in?"
+                                        placeholder={t('form.placeholders.collaborationType')}
                                         className={`${isMobile ? 'h-[40px]' : 'h-[48px]'}`}
-                                        options={[
-                                            { value: 'business', label: 'Business Partnership' },
-                                            { value: 'technology', label: 'Technology Partnership' },
-                                            { value: 'marketing', label: 'Marketing Partnership' }
-                                        ]}
+                                        options={collaborationTypes}
                                     />
                                 </Form.Item>
 
                                 <Form.Item
                                     name="message"
-                                    label="Message"
+                                    label={t('form.fields.message')}
                                 >
                                     <Input.TextArea
-                                        placeholder="How can we help you?"
+                                        placeholder={t('form.placeholders.message')}
                                         className='rounded-[8px]'
                                         rows={4}
                                         maxLength={300}
@@ -158,7 +145,7 @@ const Partner = () => {
                                     loading={loading}
                                     className={`bg-[#000000] rounded-[24px] ${isMobile ? 'w-full h-[40px]' : 'min-w-[200px] h-[48px]'}`}
                                 >
-                                    Submit
+                                    {t('form.submit')}
                                 </Button>
                             </Form.Item>
                         </Form>
@@ -166,8 +153,8 @@ const Partner = () => {
 
                     <div className='w-full flex flex-col text-[#0A0B11]'>
                         <Space direction='vertical'>
-                            <div className={`font-[700] ${isMobile ? 'text-[30px] text-center' : 'text-[clamp(32px,5vw,60px)]'}`}>Our Vision</div>
-                            <div className={isMobile ? 'text-[14px] text-center' : ''}>We are dedicated to transforming the way people make payments. Through the blockchain technology and digital assets, we are building a digital asset payment infrastructure focusing on promoting greater financial inclusion and economic opportunities of cryptocurrencies.</div>
+                            <div className={`font-[700] ${isMobile ? 'text-[30px] text-center' : 'text-[clamp(32px,5vw,60px)]'}`}>{t('vision.title')}</div>
+                            <div className={isMobile ? 'text-[14px] text-center' : ''}>{t('vision.description')}</div>
                         </Space>
                         <img
                             className={`w-full rounded-[20px] ${isMobile
@@ -182,19 +169,19 @@ const Partner = () => {
                             <div className={isMobile ? 'w-full' : 'w-[50%]'}>
                                 <div className='font-[700] relative'>
                                     <img className={`h-auto object-contain absolute left-[0px] top-[0px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src="/images/text-front-icon.png" alt="" />
-                                    <span className={`z-[999999] relative ${isMobile ? 'text-[16px]' : 'text-[20px]'}`}>Crypto Pioneers</span>
+                                    <span className={`z-[999999] relative ${isMobile ? 'text-[16px]' : 'text-[20px]'}`}>{t('vision.cryptoPioneers.title')}</span>
                                 </div>
                                 <div className={`opacity-50 mt-[8px] ${isMobile ? 'text-[14px]' : ''}`}>
-                                    Our vision is to be at the forefront of the future by pioneering cryptocurrency as a secure and seamless payment method
+                                    {t('vision.cryptoPioneers.description')}
                                 </div>
                             </div>
                             <div className={isMobile ? 'w-full' : 'w-[50%]'}>
                                 <div className='font-[700] relative'>
                                     <img className={`h-auto object-contain absolute left-[0px] top-[0px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src="/images/text-front-icon.png" alt="" />
-                                    <span className={`z-[999999] relative ${isMobile ? 'text-[16px]' : 'text-[20px]'}`}>Digital Payment Revolution</span>
+                                    <span className={`z-[999999] relative ${isMobile ? 'text-[16px]' : 'text-[20px]'}`}>{t('vision.digitalPayment.title')}</span>
                                 </div>
                                 <div className={`opacity-50 mt-[8px] ${isMobile ? 'text-[14px]' : ''}`}>
-                                    We aim to spread the utility of cryptocurrency to everyone as we believe that the future of payment lies in digitalization, and we are proud to make this future a reality
+                                    {t('vision.digitalPayment.description')}
                                 </div>
                             </div>
                         </div>
@@ -206,11 +193,11 @@ const Partner = () => {
                         <div className='border-t-[3px] border-[#0A0B11] w-[40%] absolute top-[30px] left-[0px] relative'>
                             <img className={`h-auto object-contain absolute right-[-2px] top-[-10px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src="/images/text-front-icon.png" alt="" />
                         </div>
-                        <div className={`font-[700] ml-[32px] text-right text-[clamp(32px,4vw,50px)] ${isMobile ? 'hidden' : ''}`}>Compliance & Security</div>
+                        <div className={`font-[700] ml-[32px] text-right text-[clamp(32px,4vw,50px)] ${isMobile ? 'hidden' : ''}`}>{t('compliance.title')}</div>
                     </div>
                     <div className={`w-full box-border flex flex-col text-[#0A0B11] ${isMobile ? 'px-[0px]' : 'px-[clamp(40px,16%,310px)]'}`}>
                         <div className={`text-right font-[700] mt-[12px] ${isMobile ? 'text-[22px] mb-[30px] px-[30px] box-border w-[80%] ml-auto' : 'text-[clamp(24px,3vw,40px)] mb-[60px]'}`}>
-                            We are dedicated to upholding the highest compliance standards
+                            {t('compliance.subtitle')}
                         </div>
 
                         <div className={`w-full ${isMobile ? 'flex flex-col gap-[20px] px-[40px] box-border justify-center items-center' : 'flex gap-[30px]'}`}>
@@ -218,8 +205,8 @@ const Partner = () => {
                                 <div key={index} className={`flex flex-col ${isMobile ? 'w-[80%]' : 'w-[calc(100%/3-30px)]'}`}>
                                     <img 
                                         className={`object-cover rounded-[16px] ${isMobile ? 'w-full h-[160px] mb-[16px]' : 'w-full h-[200px] mb-[24px]'}`} 
-                                        src={card.image} 
-                                        alt={card.alt} 
+                                        src={`/images/partner-b${index + 1}.png`} 
+                                        alt={card.title} 
                                     />
                                     <div className={`font-[700] mb-[16px] ${isMobile ? 'text-[18px]' : 'text-[24px]'}`}>
                                         {card.title}

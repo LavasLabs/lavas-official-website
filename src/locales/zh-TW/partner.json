@@ -1,0 +1,74 @@
+{
+  "hero": {
+    "title": "與 Lavas Labs 合作加速成長",
+    "subtitle": "加入全球合作夥伴社群，共同構建解決方案、發展技能，並與 Lavas Labs 協作銷售"
+  },
+  "form": {
+    "title": "我們的合作夥伴",
+    "subtitle": "Lavas Labs 與業界一流公司合作進行業務運營和業務增長。",
+    "fields": {
+      "firstName": "名字",
+      "lastName": "姓氏", 
+      "email": "電子郵件",
+      "phone": "電話號碼",
+      "companyName": "公司名稱",
+      "companyWebsite": "公司網站",
+      "collaborationType": "合作類型",
+      "message": "訊息"
+    },
+    "placeholders": {
+      "firstName": "請輸入您的名字",
+      "lastName": "請輸入您的姓氏",
+      "email": "請輸入您的工作電子郵件", 
+      "phone": "請輸入您的電話號碼",
+      "companyName": "請輸入公司名稱",
+      "companyWebsite": "請輸入公司網站",
+      "collaborationType": "您對什麼感興趣？",
+      "message": "我們如何幫助您？"
+    },
+    "validation": {
+      "firstName": "請輸入您的名字！",
+      "lastName": "請輸入您的姓氏！",
+      "email": "請輸入您的電子郵件！",
+      "emailInvalid": "請輸入有效的電子郵件！",
+      "phone": "請輸入您的電話號碼！",
+      "collaborationType": "請選擇合作類型！"
+    },
+    "collaborationTypes": {
+      "business": "業務合作夥伴關係",
+      "technology": "技術合作夥伴關係", 
+      "marketing": "行銷合作夥伴關係"
+    },
+    "submit": "提交"
+  },
+  "vision": {
+    "title": "我們的願景",
+    "description": "我們致力於改變人們支付的方式。透過區塊鏈技術和數位資產，我們正在構建數位資產支付基礎設施，專注於促進加密貨幣更大的金融包容性和經濟機會。",
+    "cryptoPioneers": {
+      "title": "加密貨幣先驅",
+      "description": "我們的願景是透過開創加密貨幣作為安全無縫支付方式走在未來前沿"
+    },
+    "digitalPayment": {
+      "title": "數位支付革命", 
+      "description": "我們旨在將加密貨幣的實用性推廣給每個人，因為我們相信支付的未來在於數位化，我們為實現這一未來感到自豪"
+    }
+  },
+  "compliance": {
+    "title": "合規與安全",
+    "subtitle": "我們致力於維護最高的合規標準",
+    "cards": [
+      {
+        "title": "合法性和許可",
+        "description": "Lavas Labs 信用卡是由在香港成立的持牌受規管實體運營的合法金融產品"
+      },
+      {
+        "title": "完整 eKYC 執行",
+        "description": "與業界領先的 eKYC 提供商 Sumsub 合作，Lavas Labs 正在執行完整的 eKYC，包括自動化身份和生物識別驗證以保護我們的用戶"
+      },
+      {
+        "title": "安全第一",
+        "description": "我們優先考慮用戶資產和數據的安全。我們的平台採用業界領先的安全措施和協議構建"
+      }
+    ]
+  }
+} 

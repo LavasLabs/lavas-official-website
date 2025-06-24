@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "title": "Advertising placement and investment promotion",
+    "subtitle": "Global investment agency is open, welcome to join"
+  },
+  "businessScenario": {
+    "title": "Business Scenario"
+  },
+  "platforms": [
+    {
+      "name": "Facebook", 
+      "desc": "Familiar with Facebook advertising rules"
+    },
+    {
+      "name": "Youtube",
+      "desc": "Familiar with YouTube advertising rules and unique operational techniques"
+    },
+    {
+      "name": "Twitter",
+      "desc": "Independently operate Twitter Visa card agent"
+    },
+    {
+      "name": "Google",
+      "desc": "Professional Google advertising placement method"
+    }
+  ]
+} 

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
 
 interface PartnersSectionProps {
@@ -6,13 +7,14 @@ interface PartnersSectionProps {
 
 const PartnersSection: React.FC<PartnersSectionProps> = ({ logoUrlList }) => {
   const { isMobile } = useGlobalStore();
+  const { t } = useTranslation('expense');
 
   return (
     <section className={`text-[#0A0B11] w-full box-border bg-[#FFF] flex justify-center items-center flex-col ${isMobile ? 'py-[70px] px-[0px]' : 'min-h-screen py-[170px] px-[clamp(40px,16%,310px)]'}`}>
       <div className={`box-border w-full max-w-[1920px] mx-auto flex flex-col items-center relative ${isMobile ? 'px-[40px]' : ''}`}>
         <div className={`font-[700] text-center max-w-[800px] leading-[1.2] relative ${isMobile ? 'text-[24px]' : 'text-[clamp(32px,3.5vw,42px)]'}`}>
           <img className={`h-auto object-contain absolute ${isMobile ? 'w-[30px] right-[-8%] top-[-36%]' : 'w-[52px] right-[-10%] top-[-40%]'}`} src="/images/black-red-icon.png" alt="" />
-          JOIN THE 30,000+ BUSINESSES ALREADY SIMPLIFYING THEIR FINANCES
+          {t('partners.title')}
         </div>
       </div>
 

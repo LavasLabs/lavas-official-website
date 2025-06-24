@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Modal, Form, Input, Button, message } from 'antd';
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../store/useGlobalStore';
 
 interface PricingModalProps {
@@ -10,18 +11,19 @@ interface PricingModalProps {
 
 const PricingModal: React.FC<PricingModalProps> = ({ open, onClose }) => {
     const { isMobile } = useGlobalStore();
+    const { t } = useTranslation('components');
     const [loading, setLoading] = useState(false);
     const [form] = Form.useForm();
     const [messageApi, contextHolder] = message.useMessage();
 
-    const handleSubmit = (values: any) => {
-        console.log('Form values:', values);
+    const features = t('pricingModal.features', { returnObjects: true }) as string[];
+
+    const onFinish = (values: any) => {
+        console.log(values);
         setLoading(true);
         setTimeout(() => {
-            messageApi.info('This function is not enabled. Please contact the administrator');
+            messageApi.info(t('messages.functionNotEnabled'));
             setLoading(false);
-            form.resetFields();
-            onClose();
         }, 500);
     };
 
@@ -40,63 +42,53 @@ const PricingModal: React.FC<PricingModalProps> = ({ open, onClose }) => {
                     <img src="/images/modal-red-square.png" alt="" className={`${isMobile ? 'w-[80px] h-[80px]' : 'w-[120px] h-[120px]'}`} />
                 </div>
 
-                <div className={`font-[700] mb-4 ${isMobile ? 'text-[24px]' : 'text-[32px]'}`}>Customized billing</div>
+                <div className={`font-[700] mb-4 ${isMobile ? 'text-[24px]' : 'text-[32px]'}`}>{t('pricingModal.title')}</div>
                 <p className={`mb-8 ${isMobile ? 'text-[14px]' : ''}`}>
-                    Customized billing plan: suitable for merchants with large transaction volumes or special business models.
+                    {t('pricingModal.description')}
                 </p>
 
                 <div className={`grid font-[600] ${isMobile ? 'grid-cols-2 gap-[10px] text-[14px]' : 'grid-cols-4 gap-x-[20px] text-[16px]'}`}>
-                    <div className='flex items-start relative'>
-                        <img className={`h-auto object-contain absolute left-[-2px] top-[0px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src="/images/text-front-icon.png" alt="" />
-                        <span className='z-[100] relative'>C+pricing</span>
-                    </div>
-                    <div className='flex items-start relative'>
-                        <img className={`h-auto object-contain absolute left-[-2px] top-[0px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src="/images/text-front-icon.png" alt="" />
-                        <span className='z-[100] relative'>Large transaction volume discount</span>
-                    </div>
-                    <div className='flex items-start relative'>
-                        <img className={`h-auto object-contain absolute left-[-2px] top-[0px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src="/images/text-front-icon.png" alt="" />
-                        <span className='z-[100] relative'>Multiple product discounts</span>
-                    </div>
-                    <div className='flex items-start relative'>
-                        <img className={`h-auto object-contain absolute left-[-2px] top-[0px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src="/images/text-front-icon.png" alt="" />
-                        <span className='z-[100] relative'>Specific country/region rates</span>
-                    </div>
+                    {features.map((feature, index) => (
+                        <div key={index} className='flex items-start relative'>
+                            <img className={`h-auto object-contain absolute left-[-2px] top-[0px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src="/images/text-front-icon.png" alt="" />
+                            <span className='z-[100] relative'>{feature}</span>
+                        </div>
+                    ))}
                 </div>
 
                 <Form
                     form={form}
                     layout="vertical"
-                    onFinish={handleSubmit}
+                    onFinish={onFinish}
                     className={`${isMobile ? 'mt-[20px]' : 'mt-[40px]'}`}
                 >
                     <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-[10px]' : 'grid-cols-2 gap-[30px] gap-y-[6px]'}`}>
                         <Form.Item
                             name="firstName"
-                            label="First name"
-                            rules={[{ required: true, message: 'Please input your first name!' }]}
+                            label={t('pricingModal.form.firstName')}
+                            rules={[{ required: true, message: t('pricingModal.form.validation.firstNameRequired') }]}
                         >
-                            <Input placeholder="Enter your name" className={`rounded-lg ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
+                            <Input placeholder={t('pricingModal.form.firstNamePlaceholder')} className={`rounded-lg ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
                         </Form.Item>
 
                         <Form.Item
                             name="lastName"
-                            label="Last name"
-                            rules={[{ required: true, message: 'Please input your last name!' }]}
+                            label={t('pricingModal.form.lastName')}
+                            rules={[{ required: true, message: t('pricingModal.form.validation.lastNameRequired') }]}
                         >
-                            <Input placeholder="Enter your name" className={`rounded-lg ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
+                            <Input placeholder={t('pricingModal.form.lastNamePlaceholder')} className={`rounded-lg ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
                         </Form.Item>
 
                         <Form.Item
                             name="email"
-                            label="Email"
+                            label={t('pricingModal.form.email')}
                             className={isMobile ? '' : 'col-span-2'}
                             rules={[
-                                { required: true, message: 'Please input your email!' },
-                                { type: 'email', message: 'Please enter a valid email!' }
+                                { required: true, message: t('pricingModal.form.validation.emailRequired') },
+                                { type: 'email', message: t('pricingModal.form.validation.emailFormat') }
                             ]}
                         >
-                            <Input placeholder="Enter your work email" className={`rounded-lg ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
+                            <Input placeholder={t('pricingModal.form.emailPlaceholder')} className={`rounded-lg ${isMobile ? 'h-[40px]' : 'h-[48px]'}`} />
                         </Form.Item>
                     </div>
 
@@ -107,7 +99,7 @@ const PricingModal: React.FC<PricingModalProps> = ({ open, onClose }) => {
                             className={`bg-[#000000] rounded-[24px] ${isMobile ? 'w-full h-[40px]' : 'min-w-[200px] h-[48px]'}`}
                             loading={loading}
                         >
-                            <span className='font-[700]'>Contact Sales</span>
+                            <span className='font-[700]'>{t('pricingModal.form.contactSales')}</span>
                         </Button>
                     </Form.Item>
                 </Form>

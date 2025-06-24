@@ -1,16 +1,18 @@
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
 
 const OverseeSection = () => {
   const { isMobile } = useGlobalStore();
+  const { t } = useTranslation('travel');
 
   return (
     <section className={`w-full bg-[#FFF] flex items-center flex-col text-[#0A0B11] box-border ${isMobile ? 'mb-[40px] h-auto' : 'mb-[170px] min-h-screen '}`}>
       <div className={`w-full max-w-[1920px] mx-auto flex flex-col items-center relative box-border ${isMobile ? 'px-[50px]' : ''}`}>
         <div className={`font-[700] text-center max-w-[800px] leading-[1.2] relative ${isMobile ? 'text-[24px]' : 'text-[clamp(32px,3.5vw,42px)]'}`}>
-          <img className={`h-auto object-contain absolute top-[-40%] ${isMobile ? 'w-[30px] right-[-8%]' : 'w-[52px] right-[-10%]'}`} src="/images/black-red-icon.png" alt="" />
-          OVERSEE TRAVEL SPEND AS IT HAPPENS
+          <img className={`h-auto object-contain absolute top-[-40%] ${isMobile ? 'w-[30px] right-[-8%]' : 'w-[52px] right-[-20%]'}`} src="/images/black-red-icon.png" alt="" />
+          {t('oversee.title')}
         </div>
-        <div className={`mt-[10px] text-center ${isMobile ? 'text-[14px]' : 'text-[clamp(16px,1.5vw,20px)]'}`}>Close the books without delays</div>
+        <div className={`mt-[10px] text-center ${isMobile ? 'text-[14px]' : 'text-[clamp(16px,1.5vw,20px)]'}`}>{t('oversee.subtitle')}</div>
       </div>
 
 

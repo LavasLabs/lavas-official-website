@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "title": "廣告投放與招商",
+    "subtitle": "全球招商代理已開放，歡迎加入"
+  },
+  "businessScenario": {
+    "title": "業務場景"
+  },
+  "platforms": [
+    {
+      "name": "Facebook", 
+      "desc": "熟悉 Facebook 廣告規則"
+    },
+    {
+      "name": "Youtube",
+      "desc": "熟悉 YouTube 廣告規則和獨特運營技巧"
+    },
+    {
+      "name": "Twitter",
+      "desc": "獨立運營 Twitter Visa 卡代理"
+    },
+    {
+      "name": "Google",
+      "desc": "專業的 Google 廣告投放方法"
+    }
+  ]
+} 

@@ -1,0 +1,85 @@
+{
+  "pricingModal": {
+    "title": "定制計費",
+    "description": "定制計費方案：適合交易量大或特殊商業模式的商戶。",
+    "features": [
+      "C+定價",
+      "大交易量折扣", 
+      "多產品折扣",
+      "特定國家/地區費率"
+    ],
+    "form": {
+      "firstName": "名字",
+      "lastName": "姓氏",
+      "email": "電子郵件",
+      "firstNamePlaceholder": "請輸入您的名字",
+      "lastNamePlaceholder": "請輸入您的姓氏", 
+      "emailPlaceholder": "請輸入您的工作電子郵件",
+      "contactSales": "聯繫銷售",
+      "validation": {
+        "firstNameRequired": "請輸入您的名字！",
+        "lastNameRequired": "請輸入您的姓氏！",
+        "emailRequired": "請輸入您的電子郵件！",
+        "emailFormat": "請輸入有效的電子郵件！"
+      }
+    }
+  },
+  "geoRestriction": {
+    "title": "跨境服務限制",
+    "paragraph1": "您正嘗試從香港以外的 IP 地址訪問我們的網站。",
+    "paragraph2": "請注意，在香港以外推廣和/或分發我們的產品和/或服務可能需要許可證。我們網站的內容僅針對居住在香港的香港居民。",
+    "paragraph3": "如果您是居住在香港以外的居民且不希望訪問我們的網站，請關閉此頁面。如果您仍想訪問我們的網站，請點擊繼續，這樣做表示您確認已閱讀並理解上述內容，並且您是在沒有 Lavas 主動推廣或招攬的情況下主動訪問我們的網站。",
+    "continue": "繼續",
+    "dontShowAgain": "不再顯示"
+  },
+  "footer": {
+    "navigation": {
+      "products": "產品",
+      "pricing": "定價", 
+      "solutions": "解決方案",
+      "resource": "資源",
+      "termsConditions": "條款與條件"
+    },
+    "productItems": [
+      {
+        "text": "企業卡"
+      },
+      {
+        "text": "差旅"
+      },
+      {
+        "text": "費用管理"
+      },
+      {
+        "text": "廣告投放"
+      },
+      {
+        "text": "信用額度"
+      }
+    ],
+    "resourceItems": [
+      {
+        "text": "博客"
+      },
+      {
+        "text": "聯繫銷售"
+      },
+      {
+        "text": "成為合作夥伴"
+      }
+    ],
+    "contact": {
+      "follow": "關注我們",
+      "email": "support@lavaslabs.com",
+      "skype": "defpay skype 客服"
+    },
+    "copyright": "版權所有 ©2025 Lavas Labs Limited. 保留所有權利",
+    "socialMedia": {
+      "twitter": "在 Twitter 上關注我們",
+      "linkedin": "在 LinkedIn 上關注我們"
+    },
+    "messages": {
+      "functionNotEnabled": "此功能尚未啟用，請聯繫管理員"
+    }
+  }
+} 

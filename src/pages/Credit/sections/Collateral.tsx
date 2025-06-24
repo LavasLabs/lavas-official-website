@@ -1,5 +1,6 @@
 import { Button,message } from 'antd';
 import { RightOutlined } from '@ant-design/icons';
+import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
 
 const collateralData = [
@@ -42,21 +43,28 @@ const collateralData = [
 
 const Collateral = () => {
   const { isMobile } = useGlobalStore();
+  const { t } = useTranslation('credit');
   const [messageApi, contextHolder] = message.useMessage();
 
-  const ProgressBar = ({ icon, name, symbol, percentage, color }: {
+  const assets = t('collateral.assets', { returnObjects: true }) as Array<{
+    name: string;
+    symbol: string;
+  }>;
+
+  const ProgressBar = ({ icon, name, symbol, percentage, color, index }: {
     icon: string;
     name: string;
     symbol: string;
     percentage: number;
     color: string;
+    index: number;
   }) => (
     <div className={`flex items-center ${isMobile ? 'gap-[10px]' : 'gap-[20px]'}`}>
       <div className={`flex items-center gap-[10px] ${isMobile ? 'w-[120px]' : 'w-[200px]'}`}>
         <img src={icon} className={`${isMobile ? 'w-[32px] h-[32px]' : 'w-[40px] h-[40px]'}`} />
         <div className='flex flex-col'>
-          <div className={`font-[600] ${isMobile ? 'text-[14px]' : ''}`}>{name}</div>
-          <div className={`opacity-60 ${isMobile ? 'text-[12px]' : 'text-[14px]'}`}>{symbol}</div>
+          <div className={`font-[600] ${isMobile ? 'text-[14px]' : ''}`}>{assets[index]?.name || name}</div>
+          <div className={`opacity-60 ${isMobile ? 'text-[12px]' : 'text-[14px]'}`}>{assets[index]?.symbol || symbol}</div>
         </div>
       </div>
       {/* bg-[rgba(10,11,17,0.05)] */}
@@ -64,7 +72,7 @@ const Collateral = () => {
         <div className={`h-full rounded-[4px]`} style={{ width: `${percentage}%`, backgroundColor: color }}></div>
         <div className={`absolute right-0 -top-[25px] font-[600] whitespace-nowrap ${isMobile ? 'text-[12px]' : ''}`} 
           style={{ right: `${100 - percentage}%`, transform: 'translateX(50%)' }}>
-          {percentage}% LTV
+          {percentage}% {t('collateral.ltv')}
         </div>
       </div>
       <div className={`${isMobile ? 'w-[20px]' : 'w-[60px]'}`}></div>
@@ -77,8 +85,8 @@ const Collateral = () => {
       <div className={`w-full max-w-[1920px] mx-auto flex flex-col items-center relative box-border ${isMobile ? 'px-[20px]' : ''}`}>
         <div className={`font-[700] text-center max-w-[800px] leading-[1.2] relative flex flex-col items-center ${isMobile ? 'text-[24px]' : 'text-[clamp(32px,3.5vw,42px)]'}`}>
           <img className={`h-auto object-contain absolute top-[-40%] ${isMobile ? 'w-[30px] right-[-8%]' : 'w-[52px] right-[-10%]'}`} src="/images/black-red-icon.png" alt="" />
-          <div>See which assets you can use as collateral.</div>
-          <div className={`font-[400] mt-[10px] max-w-[500px] ${isMobile ? 'text-[14px]' : 'text-[clamp(16px,1.5vw,20px)]'}`}>Choose from over 100 supported digital assets and use multiple at once, with each asset having its own loan-to-value (LTV) ratio</div>
+          <div>{t('collateral.title')}</div>
+          <div className={`font-[400] mt-[10px] max-w-[500px] ${isMobile ? 'text-[14px]' : 'text-[clamp(16px,1.5vw,20px)]'}`}>{t('collateral.subtitle')}</div>
         </div>
       </div>
       <div className={`w-full max-w-[1200px] mt-[40px] flex flex-col relative mx-auto ${isMobile ? 'px-[10px]' : ''}`}>
@@ -87,9 +95,9 @@ const Collateral = () => {
             className={`border-[#0A0B11] ${isMobile ? 'h-[32px]' : 'h-[40px]'}`}
             type="default"
             size={isMobile ? 'middle' : 'large'}
-            onClick={() => messageApi.info('This function is not enabled. Please contact the administrator')}
+            onClick={() => messageApi.info(t('messages.functionNotEnabled', { ns: 'components' }))}
           >
-            See all <RightOutlined className='text-[10px]' />
+            {t('collateral.seeAll')} <RightOutlined className='text-[10px]' />
           </Button>
         </div>
 
@@ -120,7 +128,7 @@ const Collateral = () => {
         {/* 进度条列表 */}
         <div className={`mt-[40px] flex flex-col ${isMobile ? 'gap-[25px]' : 'gap-[40px]'} relative z-[1] mb-[40px]`}>
           {collateralData.map((item, index) => (
-            <ProgressBar key={index} {...item} />
+            <ProgressBar key={index} {...item} index={index} />
           ))}
         </div>
       </div>

@@ -1,0 +1,74 @@
+{
+  "hero": {
+    "title": "Collaborate with Lavas Labs to accelerate growth",
+    "subtitle": "Join the global partner community to jointly build solutions, develop skills, and collaborate with Lavas Labs for sales"
+  },
+  "form": {
+    "title": "Our Partners",
+    "subtitle": "Lavas Labs works with Tier-1 companies in the industry for our business operation and business growth.",
+    "fields": {
+      "firstName": "First name",
+      "lastName": "Last name", 
+      "email": "Email",
+      "phone": "Phone number",
+      "companyName": "Company name",
+      "companyWebsite": "Company website",
+      "collaborationType": "Collaboration Type",
+      "message": "Message"
+    },
+    "placeholders": {
+      "firstName": "Enter your name",
+      "lastName": "Enter your name",
+      "email": "Enter your work email", 
+      "phone": "Enter your phone number",
+      "companyName": "Enter company name",
+      "companyWebsite": "Enter company website",
+      "collaborationType": "What are you interested in?",
+      "message": "How can we help you?"
+    },
+    "validation": {
+      "firstName": "Please input your first name!",
+      "lastName": "Please input your last name!",
+      "email": "Please input your email!",
+      "emailInvalid": "Please enter a valid email!",
+      "phone": "Please input your phone number!",
+      "collaborationType": "Please select collaboration type!"
+    },
+    "collaborationTypes": {
+      "business": "Business Partnership",
+      "technology": "Technology Partnership", 
+      "marketing": "Marketing Partnership"
+    },
+    "submit": "Submit"
+  },
+  "vision": {
+    "title": "Our Vision",
+    "description": "We are dedicated to transforming the way people make payments. Through the blockchain technology and digital assets, we are building a digital asset payment infrastructure focusing on promoting greater financial inclusion and economic opportunities of cryptocurrencies.",
+    "cryptoPioneers": {
+      "title": "Crypto Pioneers",
+      "description": "Our vision is to be at the forefront of the future by pioneering cryptocurrency as a secure and seamless payment method"
+    },
+    "digitalPayment": {
+      "title": "Digital Payment Revolution", 
+      "description": "We aim to spread the utility of cryptocurrency to everyone as we believe that the future of payment lies in digitalization, and we are proud to make this future a reality"
+    }
+  },
+  "compliance": {
+    "title": "Compliance & Security",
+    "subtitle": "We are dedicated to upholding the highest compliance standards",
+    "cards": [
+      {
+        "title": "Legitimacy and Licensing",
+        "description": "Lavas Labs credit card is a legitimate financial product operated by a licensed and regulated entity established in Hong Kong"
+      },
+      {
+        "title": "Full eKYC execution",
+        "description": "Partnered with industry leading eKYC provider Sumsub, Lavas Labs is executing full eKYC with automated ID and biometric verification to protect our users"
+      },
+      {
+        "title": "Security First",
+        "description": "We prioritize the security of our users assets and data. Our platform is built with industry-leading security measures and protocols"
+      }
+    ]
+  }
+} 

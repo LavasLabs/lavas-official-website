@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "title": "Lavas Labs",
+    "subtitle1": "A corporate card designed for modern finance.",
+    "subtitle2": "Save money and time. All with one corporate card.",
+    "startForFree": "Start for Free"
+  },
+  "features": [
+    {
+      "title": "Save more by preventing out-of-policy spend",
+      "description": "Preset controls on corporate cards for specific vendors and categories."
+    },
+    {
+      "title": "Be free from expense reports",
+      "description": "Easily submit expenses through SMS, mobile app, and integrations."
+    },
+    {
+      "title": "Unlock savings in real time",
+      "description": "Get insight into spend as it happens, with a platform that pays off immediately."
+    },
+    {
+      "title": "Grow your business with the right terms",
+      "description": "Get rewards and perks, like 5% savings. There's no personal credit checks or personal guarantee."
+    }
+  ],
+  "control": {
+    "title": "BUILD CONTROL INTO THE CARD, BEFORE SPEND EVEN HAPPENS.",
+    "subtitle": "Don't compromise on growth or control",
+    "cards": [
+      {
+        "title": "Marketing virtual cards",
+        "description": "Get unlimited virtual cards for yourself or the employees, we make your money more safe."
+      },
+      {
+        "title": "Travel and expenses virtual card",
+        "description": "Create custom virtual cards and set permissions for everything from ad marketplace spend to remote work stipends, for individual teams or your whole company."
+      },
+      {
+        "title": "Conference virtual card",
+        "description": "Set spend limits or cancel cards any time you want."
+      }
+    ]
+  },
+  "partners": {
+    "title": "Access over $350k in offers from our partners",
+    "features": [
+      {
+        "id": "01",
+        "title": "No personal credit checks",
+        "description": "No impact to your personal credit score. Credit limit based on financial factors such as revenue or dollars raised. Corporate charge card with 30-day payback."
+      },
+      {
+        "id": "02",
+        "title": "Easy, secure payment",
+        "description": "Unlimited physical and virtual cards. Runs on the Visa network. Apple and Google Pay compatible. Enhanced security with 3DS enrollment, SSO logins, and others."
+      },
+      {
+        "id": "03",
+        "title": "Visa-powered business freedom",
+        "description": "Corporate cards issued in Hong Kong with Visa network acceptance in supported regions."
+      }
+    ]
+  },
+  "visibility": {
+    "title": "MORE VISIBILITY, MORE TIME BACK",
+    "subtitle1": "Focus on your work, not follow ups.",
+    "subtitle2": "Let Lavas Labs send reminders for missing items or request repayments for you. Spend less time chasing down receipts and more time closing your books.",
+    "accountability": "Simplify approvals and share accountability"
+  },
+  "expenses": {
+    "title": "EFFORTLESS EXPENSES FOR EMPLOYEES (AND MANAGERS)",
+    "subtitle": "Centralize your spend on one intuitive platform"
+  },
+  "automation": {
+    "title": "Automation, control, and rewards.The corporate card you've been looking for",
+    "subtitle": "Spend to get cashback. Lavas Labs's corporate card puts money back in your pocket so you can invest even more in growth. Or, bring your cash back right into the platform",
+    "rewards": [
+      {
+        "title": "Statement credit"
+      },
+      {
+        "title": "Gift cards & loyalty program points"
+      },
+      {
+        "title": "Ramp fees"
+      }
+    ]
+  }
+} 

@@ -8,13 +8,17 @@ import GeoRestrictionModal from './components/GeoRestrictionModal';
 import useGeoRestriction from './hooks/useGeoRestriction';
 
 const App = () => {
-  const { initScreenSize } = useGlobalStore();
+  const { initScreenSize, initLanguage } = useGlobalStore();
   const { shouldShowModal, isLoading, hideModal, dontShowAgain } = useGeoRestriction();
 
   useEffect(() => {
+    // 初始化语言设置
+    initLanguage();
+    
+    // 初始化屏幕尺寸
     const cleanup = initScreenSize();
     return cleanup;
-  }, [initScreenSize]);
+  }, [initScreenSize, initLanguage]);
 
   return (
     <>

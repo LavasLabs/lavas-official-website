@@ -67,7 +67,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: localStorage.getItem('language') || 'en', // 默认语言
+    lng: 'en', // 默认语言，将通过 initLanguage 设置
     fallbackLng: 'en',
     
     ns: ['common', 'home', 'contact', 'components', 'travel', 'expense', 'credit', 'advertising', 'blog', 'partner'],

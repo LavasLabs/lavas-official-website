@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import i18n from '../i18n';
+import { detectUserLanguage } from '../utils/languageDetector';
 
 interface GlobalState {
   isMobile: boolean;
@@ -9,18 +10,29 @@ interface GlobalState {
   setIsTablet: (value: boolean) => void;
   setLanguage: (lang: string) => void;
   initScreenSize: () => void;
+  initLanguage: () => void;
 }
 
 const useGlobalStore = create<GlobalState>((set) => ({
   isMobile: false,
   isTablet: false,
-  language: localStorage.getItem('language') || 'en',
+  language: 'en', // 默认值，将在初始化时设置
   setIsMobile: (value) => set({ isMobile: value }),
   setIsTablet: (value) => set({ isTablet: value }),
   setLanguage: (lang) => {
     localStorage.setItem('language', lang);
     i18n.changeLanguage(lang);
     set({ language: lang });
+  },
+  initLanguage: () => {
+    try {
+      const detectedLanguage = detectUserLanguage();
+      i18n.changeLanguage(detectedLanguage);
+      set({ language: detectedLanguage });
+    } catch (error) {
+      i18n.changeLanguage('en');
+      set({ language: 'en' });
+    }
   },
   initScreenSize: () => {
     const handleResize = () => {

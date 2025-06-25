@@ -197,12 +197,6 @@ const Banner: React.FC = () => {
                 }}>
                     <div className="px-[20px] py-[16px]">{t('menu.termsAndConditions')}</div>
                 </li>
-                <li className="cursor-pointer w-full text-center" onClick={() => messageApi.info(t('messages.functionNotEnabled'))}>
-                    <div className="px-[20px] py-[16px]">{t('navigation.login')}</div>
-                </li>
-                <li className="cursor-pointer w-full text-center" onClick={() => messageApi.info(t('messages.functionNotEnabled'))}>
-                    <div className="px-[20px] py-[16px]">{t('navigation.signUp')}</div>
-                </li>
                 <li>
                     <Dropdown menu={{ items: languageItems }}>
                         <Space align="center" className="px-[20px] py-[16px] cursor-pointer">
@@ -211,7 +205,12 @@ const Banner: React.FC = () => {
                         </Space>
                     </Dropdown>
                 </li>
-
+                <li className="cursor-pointer w-full text-center" onClick={() => messageApi.info(t('messages.functionNotEnabled'))}>
+                    <div className="px-[20px] py-[16px]">{t('navigation.login')}</div>
+                </li>
+                <li className="cursor-pointer w-full text-center" onClick={() => messageApi.info(t('messages.functionNotEnabled'))}>
+                    <div className="px-[20px] py-[16px]">{t('navigation.signUp')}</div>
+                </li>
             </ul>
         </div>
     );

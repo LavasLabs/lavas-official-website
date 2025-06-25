@@ -52,12 +52,14 @@
 
 /* 自定义复选框样式 */
 .geo-restriction-checkbox {
-  align-items: center !important;
+  align-items: flex-start !important;
+  margin-top: 2px;
 }
 
 .geo-restriction-checkbox .ant-checkbox {
   transform: scale(1.15);
   top: 0 !important;
+  line-height: 1;
 }
 
 .geo-restriction-checkbox .ant-checkbox-inner {
@@ -66,6 +68,7 @@
   border-radius: 4px !important;
   border: 2px solid #d1d5db !important;
   background-color: transparent !important;
+  position: relative;
 }
 
 .geo-restriction-checkbox .ant-checkbox-checked .ant-checkbox-inner {
@@ -74,12 +77,18 @@
 }
 
 .geo-restriction-checkbox .ant-checkbox-checked .ant-checkbox-inner::after {
-  border-color: #ffffff !important;
-  border-width: 0 2px 2px 0 !important;
-  width: 6px !important;
-  height: 10px !important;
-  left: 6px !important;
-  top: 2px !important;
+  position: absolute;
+  display: block;
+  border: 2px solid #ffffff;
+  border-top: 0;
+  border-left: 0;
+  width: 5.5px !important;
+  height: 9px !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -60%) rotate(45deg) !important;
+  content: "";
+  transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6);
 }
 
 .geo-restriction-checkbox .ant-checkbox:hover .ant-checkbox-inner,
@@ -88,7 +97,8 @@
 }
 
 .geo-restriction-checkbox .ant-checkbox-wrapper {
-  align-items: center !important;
+  align-items: flex-start !important;
+  line-height: 1.6;
 }
 
 

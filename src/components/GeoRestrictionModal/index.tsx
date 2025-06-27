@@ -90,7 +90,7 @@ const GeoRestrictionModal: React.FC<GeoRestrictionModalProps> = ({
           onClick={handleContinue}
           loading={isLoading}
           disabled={isLoading}
-          className={`w-full h-[60px] text-[16px] font-semibold rounded-[30px] bg-[#2c2c2c] hover:bg-[#404040] active:bg-[#1a1a1a] border-none mb-[24px] shadow-none transition-all duration-200 ${
+          className={`w-full h-[60px] text-[16px] font-semibold rounded-[30px] !bg-[#D11616] hover:!bg-[#ff1818] hover:bg-[#404040] active:bg-[#1a1a1a] border-none mb-[24px] shadow-none transition-all duration-200 ${
             isButtonShaking ? 'animate-button-shake' : ''
           }`}
           style={{

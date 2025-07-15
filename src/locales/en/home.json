@@ -46,18 +46,18 @@
     "features": [
       {
         "id": "01",
-        "title": "No personal credit checks",
-        "description": "No impact to your personal credit score. Credit limit based on financial factors such as revenue or dollars raised. Corporate charge card with 30-day payback."
+        "title": "No impact to your personal credit score",
+        "description": "Business underwriting based on company financials. Credit limits determined by factors such as revenue or funds raised. Corporate charge card with 30-day payback terms."
       },
       {
         "id": "02",
-        "title": "Easy, secure payment",
-        "description": "Unlimited physical and virtual cards. Runs on the Visa network. Apple and Google Pay compatible. Enhanced security with 3DS enrollment, SSO logins, and others."
+        "title": "Flexible, secure payment",
+        "description": "Issue physical and virtual cards as needed. Runs on the Visa network. Apple Pay and Google Pay compatible. Enhanced security with 3DS enrollment, SSO logins, and more."
       },
       {
         "id": "03",
         "title": "Visa-powered business freedom",
-        "description": "Corporate cards issued in Hong Kong with Visa network acceptance in supported regions."
+        "description": "Corporate cards issued in Hong Kong with Visa network acceptance across supported regions."
       }
     ]
   },

@@ -46,18 +46,18 @@
     "features": [
       {
         "id": "01",
-        "title": "無需個人信用檢查",
-        "description": "不影響您的個人信用評分。信用額度基於收入或籌集資金等財務因素。30天回款的企業信用卡。"
+        "title": "不影響個人信用評分",
+        "description": "基於公司財務狀況進行商業承保。信用額度由收入或籌集資金等因素決定。30天還款期的企業簽帳卡。"
       },
       {
         "id": "02",
-        "title": "簡單、安全的支付",
-        "description": "無限制的實體和虛擬卡。在Visa網絡上運行。兼容Apple Pay和Google Pay。通過3DS註冊、SSO登錄等增強安全性。"
+        "title": "靈活、安全的支付",
+        "description": "根據需要發行實體卡和虛擬卡。運行於Visa網絡。相容Apple Pay和Google Pay。通過3DS註冊、SSO登錄等提升安全性。"
       },
       {
         "id": "03",
         "title": "Visa驅動的商業自由",
-        "description": "在香港發行的企業卡，在支持地區具有Visa網絡受理。"
+        "description": "在香港發行的企業卡，在支援地區享有Visa網絡受理服務。"
       }
     ]
   },

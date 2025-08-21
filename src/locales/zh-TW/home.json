@@ -52,7 +52,7 @@
       {
         "id": "02",
         "title": "靈活、安全的支付",
-        "description": "根據需要發行實體卡和虛擬卡。運行於Visa網絡。相容Apple Pay和Google Pay。通過3DS註冊、SSO登錄等提升安全性。"
+        "description": "根據需要發行實體卡和虛擬卡。運行於Visa網絡。相容Google Pay。通過3DS註冊、SSO登錄等提升安全性。"
       },
       {
         "id": "03",
@@ -86,4 +86,4 @@
       }
     ]
   }
-} 
+}

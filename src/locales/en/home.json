@@ -52,7 +52,7 @@
       {
         "id": "02",
         "title": "Flexible, secure payment",
-        "description": "Issue physical and virtual cards as needed. Runs on the Visa network. Apple Pay and Google Pay compatible. Enhanced security with 3DS enrollment, SSO logins, and more."
+        "description": "Issue physical and virtual cards as needed. Runs on the Visa network. Google Pay compatible. Enhanced security with 3DS enrollment, SSO logins, and more."
       },
       {
         "id": "03",
@@ -86,4 +86,4 @@
       }
     ]
   }
-} 
+}

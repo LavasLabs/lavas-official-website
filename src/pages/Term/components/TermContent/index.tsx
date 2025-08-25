@@ -237,7 +237,7 @@ const TermContent: FC<TermContentProps> = ({ region, onRegionChange }) => {
                                             <div className="ace-line ace-line old-record-id-doxcn6hAtGKq5bAGYMbeCWgsyNe">“App”</div>
                                         </td>
                                         <td colSpan={1} rowSpan={1}>
-                                            <div className="ace-line ace-line old-record-id-doxcncRAFNdpNrkBhaxLY6BUDye">means the mobile application software owned and released by the Group, and available for download for Android or Apple iOS, including all content and services made available on or through the same, and any and all updates, upgrades, supplements, releases and versions thereof;</div>
+                                            <div className="ace-line ace-line old-record-id-doxcncRAFNdpNrkBhaxLY6BUDye">means the mobile application software owned and released by the Group, and available for download for Android , including all content and services made available on or through the same, and any and all updates, upgrades, supplements, releases and versions thereof;</div>
                                         </td>
                                     </tr>
                                     <tr>

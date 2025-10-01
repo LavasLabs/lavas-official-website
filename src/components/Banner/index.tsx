@@ -28,7 +28,7 @@ const productItems = [
     { icon: 'icon-Travel', text: 'Travel', route: 'travel', translationKey: 'nav.travel' },
     { icon: 'icon-money', text: 'Expense Management', route: 'expense', translationKey: 'nav.expense' },
     { icon: 'icon-Advertising', text: 'Advertising', route: 'advertising', translationKey: 'nav.advertising' },
-    { icon: 'icon-a-CreditLine', text: 'Credit Line', route: 'credit', translationKey: 'products.creditLine' }
+    // { icon: 'icon-a-CreditLine', text: 'Credit Line', route: 'credit', translationKey: 'products.creditLine' }
 ] as const;
 
 // 资源菜单配置

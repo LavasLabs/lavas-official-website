@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "Viajes de negocios más inteligentes, desde la reserva hasta el cierre de libros",
+    "subtitle": "Reserva vuelos y hoteles a las tarifas más bajas, aplica automáticamente políticas de viaje personalizables, y automatiza gastos durante todo el viaje—todo desde una plataforma.",
+    "startForFree": "Comenzar Gratis"
+  },
+  "policy": {
+    "title": "POLÍTICAS DE VIAJE PERSONALIZADAS, INTEGRADAS DIRECTAMENTE",
+    "subtitle": "Mantén los gastos bajo control mientras tu negocio se expande",
+    "flightPolicy": "Política de Vuelos",
+    "travelExpenseControl": "Control de gastos de viaje",
+    "bookUpTo": "Reservar hasta",
+    "above": "por encima de",
+    "avgPrice": "precio promedio",
+    "economyOnly": "Solo económica",
+    "setPreciseControls": "Establece controles precisos antes del despegue",
+    "controlsDescription": "Personaliza barreras de protección para prevenir gastos fuera de política, desde dietas hasta tarifas de hotel. Lavas Labs también puede crear controles flexibles basados en tarifas de mercado"
+  },
+  "oversee": {
+    "title": "SUPERVISA LOS GASTOS DE VIAJE MIENTRAS SUCEDEN",
+    "subtitle": "Cierra los libros sin retrasos"
+  },
+  "business": {
+    "title": "VIAJES DE NEGOCIOS SIN ESFUERZO QUE SIEMPRE ESTÁN EN POLÍTICA",
+    "subtitle": "Diseñado para hacer el ahorro más fácil."
+  },
+  "control": {
+    "title1": "Establece controles precisos antes del despegue",
+    "description1": "Personaliza barreras de protección para prevenir gastos fuera de política, desde dietas hasta tarifas de hotel. Lavas Labs también puede crear controles flexibles basados en tarifas de mercado",
+    "title2": "Incentiva a los empleados a gastar menos",
+    "description2": "Opta por dividir ahorros con empleados que reservan opciones más rentables."
+  },
+  "expense": {
+    "title": "Enfócate en tu viaje, no en informes de gastos",
+    "description": "Lavas Labs recopila y empareja recibos en todas las transacciones, y los dirige al presupuesto y categoría correctos. Genera instantáneamente recibos para ciertas compras, y guarda memorandos recurrentes.",
+    "automatedTitle": "Gestión Automatizada de Gastos",
+    "automatedDescription": "Captura y categoriza automáticamente gastos de viaje con emparejamiento inteligente de recibos y flujos de trabajo de aprobación.",
+    "trackingTitle": "Seguimiento de Gastos en Tiempo Real",
+    "trackingDescription": "Monitorea y rastrea todos los gastos de viaje en tiempo real con capacidades de informes detallados y análisis.",
+    "learnMore": "Aprende más"
+  }
+}

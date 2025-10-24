@@ -1,0 +1,93 @@
+{
+  "pricingModal": {
+    "title": "定制化计费",
+    "description": "定制化计费方案：适用于交易量大或特殊商业模式的商户。",
+    "features": [
+      "C+定价",
+      "大交易量折扣", 
+      "多产品折扣",
+      "特定国家/地区费率"
+    ],
+    "form": {
+      "firstName": "名字",
+      "lastName": "姓氏",
+      "email": "邮箱",
+      "firstNamePlaceholder": "请输入您的名字",
+      "lastNamePlaceholder": "请输入您的姓氏", 
+      "emailPlaceholder": "请输入您的工作邮箱",
+      "contactSales": "联系销售",
+      "validation": {
+        "firstNameRequired": "请输入您的名字！",
+        "lastNameRequired": "请输入您的姓氏！",
+        "emailRequired": "请输入您的邮箱！",
+        "emailFormat": "请输入有效的邮箱地址！"
+      }
+    }
+  },
+  "geoRestriction": {
+    "title": "跨境服务限制",
+    "paragraph1": "您正在尝试从香港以外的IP地址访问我们的网站。",
+    "paragraph2": "请注意，在香港以外推广和/或分发我们的产品和/或服务可能需要许可证。我们网站的内容仅针对居住在香港的香港居民。",
+    "paragraph3": "如果您是居住在香港以外的居民且不希望访问我们的网站，请关闭此页面。如果您仍想访问我们的网站，请点击继续，这样做即表示您确认已阅读并理解上述内容，并且您是在没有Lavas主动推广或招揽的情况下主动访问我们的网站。",
+    "continue": "继续",
+    "dontShowAgain": "不再显示"
+  },
+  "footer": {
+    "navigation": {
+      "products": "产品",
+      "pricing": "定价", 
+      "solutions": "解决方案",
+      "resource": "资源",
+      "termsConditions": "条款与条件"
+    },
+    "productItems": [
+      {
+        "text": "企业卡"
+      },
+      {
+        "text": "商旅服务"
+      },
+      {
+        "text": "费用管理"
+      },
+      {
+        "text": "广告投放"
+      },
+      {
+        "text": "信贷额度"
+      }
+    ],
+    "resourceItems": [
+      {
+        "text": "博客"
+      },
+      {
+        "text": "联系销售"
+      },
+      {
+        "text": "成为合作伙伴"
+      }
+    ],
+    "contact": {
+      "follow": "关注我们",
+      "email": "support@lavaslabs.com",
+      "skype": "defpay skype 支持"
+    },
+    "copyright": "版权所有 ©2025 Lavas Labs Limited。保留所有权利",
+    "socialMedia": {
+      "twitter": "在Twitter上关注我们",
+      "linkedin": "在LinkedIn上关注我们"
+    },
+    "messages": {
+      "functionNotEnabled": "此功能未启用。请联系管理员"
+    },
+    "disclosures": {
+      "companyRegistration": "Lavas Labs Limited是香港注册公司，负责全球业务运营（除美国外）。",
+      "usBusiness": "LAVAS LABS, INC. NMLS ID: 2777990 负责美国业务运营。",
+      "visaCards": "美国的Visa卡由Sutton Bank发行，FDIC成员。香港的Visa卡由Reap Technology发行。",
+      "vaAccount": "美国VA账户由Lead Bank提供，FDIC成员，资金在此托管。",
+      "visaAgent": "Lavas Labs Limited是Visa注册的第三方代理。",
+      "visaTrademark": "Visa是Visa International Service Association的注册商标。所有其他商标和服务标记均属于其各自所有者。"
+    }
+  }
+}

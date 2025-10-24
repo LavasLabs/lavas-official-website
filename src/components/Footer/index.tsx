@@ -187,8 +187,32 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={`flex box-border flex-wrap gap-[20px] py-[20px] ${isMobile ? 'flex-col items-center text-center' : 'justify-between'}`}>
-          <div className="text-[clamp(14px,1.1vw,20px)] opacity-80">
-            {t('footer.copyright')}
+          <div className={`text-[clamp(14px,1.1vw,20px)] opacity-80 ${isMobile ? 'w-full' : 'flex-1'}`}>
+            <div className="mb-[12px]">
+              {t('footer.copyright')}
+            </div>
+            
+            {/* Company Registration and Business Disclosures */}
+            <div className="text-[clamp(12px,0.9vw,16px)] opacity-70 leading-relaxed space-y-[6px]">
+              <div>
+                {t('footer.disclosures.companyRegistration')}
+              </div>
+              <div>
+                {t('footer.disclosures.usBusiness')}
+              </div>
+              <div>
+                {t('footer.disclosures.visaCards')}
+              </div>
+              <div>
+                {t('footer.disclosures.vaAccount')}
+              </div>
+              <div>
+                {t('footer.disclosures.visaAgent')}
+              </div>
+              <div className="mt-[8px] text-[clamp(10px,0.8vw,14px)] opacity-60">
+                {t('footer.disclosures.visaTrademark')}
+              </div>
+            </div>
           </div>
 
           {!isMobile && renderSocialIcons()}

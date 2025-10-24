@@ -1,0 +1,25 @@
+{
+  "title": "Hablemos",
+  "subtitle": "Programa un tiempo para charlar con nuestro equipo. Siempre estamos listos para asistirte.",
+  "description": "¡Por favor proporciónanos información detallada sobre ti, y te contactaremos lo antes posible!",
+  "form": {
+    "firstName": "Nombre",
+    "lastName": "Apellido", 
+    "email": "Correo electrónico",
+    "phoneNumber": "Número de teléfono",
+    "message": "Mensaje",
+    "firstNamePlaceholder": "Ingresa tu nombre",
+    "lastNamePlaceholder": "Ingresa tu apellido",
+    "emailPlaceholder": "Ingresa tu correo electrónico de trabajo",
+    "phonePlaceholder": "Ingresa tu número de teléfono",
+    "messagePlaceholder": "¿Cómo podemos ayudarte?",
+    "submit": "Enviar",
+    "required": "*",
+    "validation": {
+      "firstNameRequired": "¡Por favor ingresa tu nombre!",
+      "lastNameRequired": "¡Por favor ingresa tu apellido!",
+      "emailRequired": "¡Por favor ingresa un correo electrónico válido!",
+      "phoneRequired": "¡Por favor ingresa tu número de teléfono!"
+    }
+  }
+}

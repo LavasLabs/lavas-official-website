@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "corporateCard": "Tarjeta Corporativa",
+    "travel": "Viajes",
+    "expense": "Gestión de Gastos",
+    "advertising": "Publicidad"
+  },
+  "auth": {
+    "login": "Iniciar Sesión",
+    "signup": "Registrarse"
+  },
+  "common": {
+    "startForFree": "Comenzar Gratis"
+  },
+  "menu": {
+    "products": "Productos",
+    "pricing": "Precios",
+    "solutions": "Soluciones",
+    "resource": "Recursos",
+    "termsAndConditions": "Términos y Condiciones",
+    "more": "Más"
+  },
+  "resources": {
+    "blog": "Blog",
+    "contactSales": "Contactar Ventas",
+    "becomeAPartner": "Convertirse en Socio"
+  },
+  "products": {
+    "creditLine": "Línea de Crédito"
+  },
+  "messages": {
+    "functionNotEnabled": "Esta función no está habilitada. Por favor contacte al administrador"
+  },
+  "corporateCard": {
+    "cardPreviewAlt": "Vista Previa de Tarjeta Corporativa"
+  },
+  "navigation": {
+    "login": "Iniciar Sesión",
+    "signUp": "Registrarse"
+  }
+}

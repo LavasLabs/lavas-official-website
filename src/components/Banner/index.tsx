@@ -89,6 +89,12 @@ const Banner: React.FC = () => {
                 return 'EN';
             case 'zh-TW':
                 return '繁';
+            case 'zh-CN':
+                return '简';
+            case 'es':
+                return 'ES';
+            case 'ko':
+                return '한';
             default:
                 return 'EN';
         }
@@ -104,6 +110,21 @@ const Banner: React.FC = () => {
             key: 'zh-TW',
             label: '繁體中文',
             onClick: () => handleLanguageChange('zh-TW')
+        },
+        {
+            key: 'zh-CN',
+            label: '简体中文',
+            onClick: () => handleLanguageChange('zh-CN')
+        },
+        {
+            key: 'es',
+            label: 'Español',
+            onClick: () => handleLanguageChange('es')
+        },
+        {
+            key: 'ko',
+            label: '한국어',
+            onClick: () => handleLanguageChange('ko')
         },
     ];
 

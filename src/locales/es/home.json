@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "title": "Lavas Labs",
+    "subtitle1": "Una tarjeta corporativa diseñada para las finanzas modernas.",
+    "subtitle2": "Ahorra dinero y tiempo. Todo con una tarjeta corporativa.",
+    "startForFree": "Comenzar Gratis"
+  },
+  "features": [
+    {
+      "title": "Ahorra más previniendo gastos fuera de política",
+      "description": "Controles preestablecidos en tarjetas corporativas para proveedores y categorías específicas."
+    },
+    {
+      "title": "Libérate de los informes de gastos",
+      "description": "Envía gastos fácilmente a través de SMS, aplicación móvil e integraciones."
+    },
+    {
+      "title": "Desbloquea ahorros en tiempo real",
+      "description": "Obtén información sobre gastos mientras suceden, con una plataforma que se paga inmediatamente."
+    },
+    {
+      "title": "Haz crecer tu negocio con los términos correctos",
+      "description": "Obtén recompensas y beneficios, como 5% de ahorro. No hay verificaciones de crédito personal ni garantía personal."
+    }
+  ],
+  "control": {
+    "title": "CONSTRUYE CONTROL EN LA TARJETA, ANTES DE QUE OCURRA EL GASTO.",
+    "subtitle": "No comprometas el crecimiento ni el control",
+    "cards": [
+      {
+        "title": "Tarjetas virtuales de marketing",
+        "description": "Obtén tarjetas virtuales ilimitadas para ti o los empleados, hacemos tu dinero más seguro."
+      },
+      {
+        "title": "Tarjeta virtual de viajes y gastos",
+        "description": "Crea tarjetas virtuales personalizadas y establece permisos para todo, desde gastos en mercados publicitarios hasta subsidios de trabajo remoto, para equipos individuales o toda tu empresa."
+      },
+      {
+        "title": "Tarjeta virtual de conferencias",
+        "description": "Establece límites de gasto o cancela tarjetas cuando quieras."
+      }
+    ]
+  },
+  "partners": {
+    "title": "Accede a más de $350k en ofertas de nuestros socios",
+    "features": [
+      {
+        "id": "01",
+        "title": "Sin impacto en tu puntaje de crédito personal",
+        "description": "Suscripción comercial basada en las finanzas de la empresa. Límites de crédito determinados por factores como ingresos o fondos recaudados. Tarjeta de cargo corporativa con términos de pago de 30 días."
+      },
+      {
+        "id": "02",
+        "title": "Pago flexible y seguro",
+        "description": "Emite tarjetas físicas y virtuales según sea necesario. Funciona en la red Visa. Compatible con Google Pay. Seguridad mejorada con inscripción 3DS, inicios de sesión SSO y más."
+      },
+      {
+        "id": "03",
+        "title": "Libertad empresarial impulsada por Visa",
+        "description": "Tarjetas corporativas emitidas en Hong Kong con aceptación de red Visa en regiones compatibles."
+      }
+    ]
+  },
+  "visibility": {
+    "title": "MÁS VISIBILIDAD, MÁS TIEMPO DE VUELTA",
+    "subtitle1": "Enfócate en tu trabajo, no en seguimientos.",
+    "subtitle2": "Deja que Lavas Labs envíe recordatorios para elementos faltantes o solicite reembolsos por ti. Pasa menos tiempo persiguiendo recibos y más tiempo cerrando tus libros.",
+    "accountability": "Simplifica aprobaciones y comparte responsabilidad"
+  },
+  "expenses": {
+    "title": "GASTOS SIN ESFUERZO PARA EMPLEADOS (Y GERENTES)",
+    "subtitle": "Centraliza tus gastos en una plataforma intuitiva"
+  },
+  "automation": {
+    "title": "Automatización, control y recompensas. La tarjeta corporativa que has estado buscando",
+    "subtitle": "Gasta para obtener reembolso en efectivo. La tarjeta corporativa de Lavas Labs pone dinero de vuelta en tu bolsillo para que puedas invertir aún más en crecimiento. O, trae tu efectivo de vuelta directamente a la plataforma",
+    "rewards": [
+      {
+        "title": "Crédito de estado de cuenta"
+      },
+      {
+        "title": "Tarjetas de regalo y puntos de programa de lealtad"
+      },
+      {
+        "title": "Tarifas de Ramp"
+      }
+    ]
+  }
+}

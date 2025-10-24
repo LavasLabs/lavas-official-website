@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "title": "SOFTWARE DE GESTIÓN DE GASTOS DISEÑADO PARA CERRAR TUS LIBROS MÁS RÁPIDO",
+    "subtitle": "Software de gastos automatizado integrado en tu tarjeta corporativa, reembolsos y más",
+    "startForFree": "Comenzar Gratis"
+  },
+  "freeTeam": {
+    "title": "LIBERA A TU EQUIPO DE LA GESTIÓN MANUAL DE GASTOS",
+    "subtitle": "Gastos que se envían solos.",
+    "lavasWayTitle": "La forma Lavas Labs"
+  },
+  "strategic": {
+    "title": "TOMA DECISIONES ESTRATÉGICAS CON INFORMES DE GASTOS EN TIEMPO REAL",
+    "subtitle": "Accede instantáneamente a datos e información de gastos para ahorrar dinero para tu negocio",
+    "cards": [
+      {
+        "title": "Adelántate al gasto excesivo",
+        "description": "Deja de tomar decisiones comerciales con datos obsoletos. Obtén información en tiempo real para hacer ajustes oportunos antes de que tus equipos excedan su presupuesto"
+      },
+      {
+        "title": "Maximiza la visibilidad con datos centralizados", 
+        "description": "La asistencia impulsada por IA de Lavas Labs presenta respuestas financieras detalladas con análisis más rápido en cada gasto comercial"
+      },
+      {
+        "title": "Descubre costos reales",
+        "description": "Lavas Labs continuamente presenta información de ahorros como suscripciones duplicadas y soluciones no utilizadas."
+      }
+    ],
+    "commercialAffairs": "asuntos comerciales",
+    "yearToDate": "Año hasta la fecha 2024"
+  },
+  "eliminate": {
+    "title": "Elimina informes manuales de gastos",
+    "subtitle": "Libera a los empleados para hacer su trabajo sin que los gastos se interpongan en su camino."
+  },
+  "control": {
+    "title": "CONTROLA LOS GASTOS ANTES DE QUE SUCEDAN",
+    "subtitle": "Da a los empleados tarjetas con políticas integradas, para que puedas prevenir gastos no aprobados",
+    "budgetTitle": "Pre-construye presupuestos para gastos responsables",
+    "budgetDescription": "Permite a los empleados solicitar gastos de presupuestos preestablecidos. Crea flujos de trabajo personalizados para asegurar que las partes interesadas correctas estén involucradas para aprobar."
+  },
+  "partners": {
+    "title": "ÚNETE A LAS MÁS DE 30,000 EMPRESAS QUE YA SIMPLIFICAN SUS FINANZAS"
+  }
+}

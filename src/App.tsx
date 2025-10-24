@@ -13,7 +13,10 @@ const App = () => {
 
   useEffect(() => {
     // 初始化语言设置
-    initLanguage();
+    const initLang = async () => {
+      await initLanguage();
+    };
+    initLang();
     
     // 初始化屏幕尺寸
     const cleanup = initScreenSize();

@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "corporateCard": "기업 카드",
+    "travel": "출장",
+    "expense": "비용 관리",
+    "advertising": "광고"
+  },
+  "auth": {
+    "login": "로그인",
+    "signup": "회원가입"
+  },
+  "common": {
+    "startForFree": "무료로 시작하기"
+  },
+  "menu": {
+    "products": "제품",
+    "pricing": "가격",
+    "solutions": "솔루션",
+    "resource": "리소스",
+    "termsAndConditions": "이용약관",
+    "more": "더보기"
+  },
+  "resources": {
+    "blog": "블로그",
+    "contactSales": "영업팀 문의",
+    "becomeAPartner": "파트너 되기"
+  },
+  "products": {
+    "creditLine": "신용 한도"
+  },
+  "messages": {
+    "functionNotEnabled": "이 기능이 활성화되지 않았습니다. 관리자에게 문의하세요"
+  },
+  "corporateCard": {
+    "cardPreviewAlt": "기업 카드 미리보기"
+  },
+  "navigation": {
+    "login": "로그인",
+    "signUp": "회원가입"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "pricingModal": {
+    "title": "맞춤형 청구",
+    "description": "맞춤형 청구 계획: 대량 거래량이나 특별한 비즈니스 모델을 가진 상인에게 적합합니다.",
+    "features": [
+      "C+ 가격",
+      "대량 거래 할인", 
+      "다중 제품 할인",
+      "특정 국가/지역 요금"
+    ],
+    "form": {
+      "firstName": "이름",
+      "lastName": "성",
+      "email": "이메일",
+      "firstNamePlaceholder": "이름을 입력하세요",
+      "lastNamePlaceholder": "성을 입력하세요", 
+      "emailPlaceholder": "직장 이메일을 입력하세요",
+      "contactSales": "영업팀 문의",
+      "validation": {
+        "firstNameRequired": "이름을 입력해주세요!",
+        "lastNameRequired": "성을 입력해주세요!",
+        "emailRequired": "이메일을 입력해주세요!",
+        "emailFormat": "유효한 이메일을 입력해주세요!"
+      }
+    }
+  },
+  "geoRestriction": {
+    "title": "국경 간 서비스 제한",
+    "paragraph1": "홍콩 외부에 위치한 IP 주소에서 저희 웹사이트에 접근하려고 시도하고 있습니다.",
+    "paragraph2": "홍콩 외부에서 저희 제품 및/또는 서비스의 홍보 및/또는 배포에는 라이선스가 필요할 수 있습니다. 저희 웹사이트의 내용은 홍콩에 거주하는 홍콩 거주자에게만 제공됩니다.",
+    "paragraph3": "홍콩 외부에 거주하는 거주자이고 저희 웹사이트를 방문하고 싶지 않다면 이 페이지를 닫아주세요. 여전히 저희 웹사이트를 방문하고 싶다면 계속을 클릭하시면 위의 내용을 읽고 이해했으며 Lavas의 적극적인 홍보나 권유 없이 본인의 주도로 저희 웹사이트에 접근하고 있음을 확인하는 것입니다.",
+    "continue": "계속",
+    "dontShowAgain": "다시 표시하지 않기"
+  },
+  "footer": {
+    "navigation": {
+      "products": "제품",
+      "pricing": "가격", 
+      "solutions": "솔루션",
+      "resource": "리소스",
+      "termsConditions": "이용약관"
+    },
+    "productItems": [
+      {
+        "text": "기업 카드"
+      },
+      {
+        "text": "출장"
+      },
+      {
+        "text": "비용 관리"
+      },
+      {
+        "text": "광고"
+      },
+      {
+        "text": "신용 한도"
+      }
+    ],
+    "resourceItems": [
+      {
+        "text": "블로그"
+      },
+      {
+        "text": "영업팀 문의"
+      },
+      {
+        "text": "파트너 되기"
+      }
+    ],
+    "contact": {
+      "follow": "팔로우",
+      "email": "support@lavaslabs.com",
+      "skype": "defpay skype 지원"
+    },
+    "copyright": "Copyright ©2025 Lavas Labs Limited. 모든 권리 보유",
+    "socialMedia": {
+      "twitter": "트위터에서 팔로우",
+      "linkedin": "링크드인에서 팔로우"
+    },
+    "messages": {
+      "functionNotEnabled": "이 기능이 활성화되지 않았습니다. 관리자에게 문의하세요"
+    },
+    "disclosures": {
+      "companyRegistration": "Lavas Labs Limited는 글로벌 비즈니스 운영을 담당하는 홍콩 등록 회사입니다(미국 제외).",
+      "usBusiness": "LAVAS LABS, INC. NMLS ID: 2777990은 미국 비즈니스 운영을 담당합니다.",
+      "visaCards": "미국의 Visa 카드는 FDIC 회원인 Sutton Bank에서 발행합니다. 홍콩의 Visa 카드는 Reap Technology에서 발행합니다.",
+      "vaAccount": "미국 VA 계좌는 FDIC 회원인 Lead Bank에서 제공하며, 자금이 여기서 보관됩니다.",
+      "visaAgent": "Lavas Labs Limited는 Visa의 등록된 제3자 에이전트입니다.",
+      "visaTrademark": "Visa는 Visa International Service Association의 등록 상표입니다. 기타 모든 상표 및 서비스 마크는 각각의 소유자에게 속합니다."
+    }
+  }
+}

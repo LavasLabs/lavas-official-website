@@ -1,0 +1,93 @@
+{
+  "pricingModal": {
+    "title": "Facturación personalizada",
+    "description": "Plan de facturación personalizado: adecuado para comerciantes con grandes volúmenes de transacciones o modelos de negocio especiales.",
+    "features": [
+      "Precios C+",
+      "Descuento por gran volumen de transacciones", 
+      "Descuentos múltiples de productos",
+      "Tarifas específicas por país/región"
+    ],
+    "form": {
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo electrónico",
+      "firstNamePlaceholder": "Ingresa tu nombre",
+      "lastNamePlaceholder": "Ingresa tu apellido", 
+      "emailPlaceholder": "Ingresa tu correo electrónico de trabajo",
+      "contactSales": "Contactar Ventas",
+      "validation": {
+        "firstNameRequired": "¡Por favor ingresa tu nombre!",
+        "lastNameRequired": "¡Por favor ingresa tu apellido!",
+        "emailRequired": "¡Por favor ingresa tu correo electrónico!",
+        "emailFormat": "¡Por favor ingresa un correo electrónico válido!"
+      }
+    }
+  },
+  "geoRestriction": {
+    "title": "Restricciones de Servicios Transfronterizos",
+    "paragraph1": "Estás intentando acceder a nuestro sitio web desde una dirección IP ubicada fuera de Hong Kong.",
+    "paragraph2": "Ten en cuenta que la promoción y/o distribución de nuestros productos y/o servicios fuera de Hong Kong puede requerir una licencia. El contenido de nuestro sitio web está dirigido únicamente a residentes de Hong Kong, domiciliados en Hong Kong.",
+    "paragraph3": "Si eres un residente domiciliado fuera de Hong Kong y no deseas visitar nuestro sitio web, por favor cierra esta página. Si aún quieres visitar nuestro sitio web, haz clic en Continuar y al hacerlo, confirmas que has leído y entendido lo anterior y que estás accediendo a nuestro sitio web por tu propia iniciativa sin promoción activa o solicitud de Lavas.",
+    "continue": "Continuar",
+    "dontShowAgain": "No mostrar de nuevo"
+  },
+  "footer": {
+    "navigation": {
+      "products": "Productos",
+      "pricing": "Precios", 
+      "solutions": "Soluciones",
+      "resource": "Recursos",
+      "termsConditions": "Términos y Condiciones"
+    },
+    "productItems": [
+      {
+        "text": "Tarjeta Corporativa"
+      },
+      {
+        "text": "Viajes"
+      },
+      {
+        "text": "Gestión de Gastos"
+      },
+      {
+        "text": "Publicidad"
+      },
+      {
+        "text": "Línea de Crédito"
+      }
+    ],
+    "resourceItems": [
+      {
+        "text": "Blog"
+      },
+      {
+        "text": "Contactar Ventas"
+      },
+      {
+        "text": "Convertirse en Socio"
+      }
+    ],
+    "contact": {
+      "follow": "Seguir",
+      "email": "support@lavaslabs.com",
+      "skype": "soporte skype defpay"
+    },
+    "copyright": "Copyright ©2025 Lavas Labs Limited. Todos los derechos reservados",
+    "socialMedia": {
+      "twitter": "Síguenos en Twitter",
+      "linkedin": "Síguenos en LinkedIn"
+    },
+    "messages": {
+      "functionNotEnabled": "Esta función no está habilitada. Por favor contacta al administrador"
+    },
+    "disclosures": {
+      "companyRegistration": "Lavas Labs Limited es una empresa registrada en Hong Kong responsable de las operaciones comerciales globales (excluyendo Estados Unidos).",
+      "usBusiness": "LAVAS LABS, INC. NMLS ID: 2777990 es responsable de las operaciones comerciales de Estados Unidos.",
+      "visaCards": "Las tarjetas Visa en Estados Unidos son emitidas por Sutton Bank, Miembro FDIC. Las tarjetas Visa en Hong Kong son emitidas por Reap Technology.",
+      "vaAccount": "Las cuentas VA de Estados Unidos son proporcionadas por Lead Bank, Miembro FDIC, donde los fondos se mantienen en custodia.",
+      "visaAgent": "Lavas Labs Limited es un Agente Tercero registrado de Visa.",
+      "visaTrademark": "Visa es una marca registrada de Visa International Service Association. Todas las demás marcas comerciales y marcas de servicio pertenecen a sus respectivos propietarios."
+    }
+  }
+}

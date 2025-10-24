@@ -16,7 +16,7 @@ interface GlobalState {
 const useGlobalStore = create<GlobalState>((set) => ({
   isMobile: false,
   isTablet: false,
-  language: 'en', // 默认值，将在初始化时设置
+  language: 'zh-TW', // 默认值，将在初始化时设置
   setIsMobile: (value) => set({ isMobile: value }),
   setIsTablet: (value) => set({ isTablet: value }),
   setLanguage: (lang) => {
@@ -24,14 +24,14 @@ const useGlobalStore = create<GlobalState>((set) => ({
     i18n.changeLanguage(lang);
     set({ language: lang });
   },
-  initLanguage: () => {
+  initLanguage: async () => {
     try {
-      const detectedLanguage = detectUserLanguage();
+      const detectedLanguage = await detectUserLanguage();
       i18n.changeLanguage(detectedLanguage);
       set({ language: detectedLanguage });
     } catch (error) {
-      i18n.changeLanguage('en');
-      set({ language: 'en' });
+      i18n.changeLanguage('zh-TW');
+      set({ language: 'zh-TW' });
     }
   },
   initScreenSize: () => {

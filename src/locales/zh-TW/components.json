@@ -73,13 +73,21 @@
       "email": "support@lavaslabs.com",
       "skype": "defpay skype 客服"
     },
-    "copyright": "版權所有 ©2025 Lavas Labs Limited. 保留所有權利",
+    "copyright": "版權所有 ©2025 Lavas Labs 保留所有權利",
     "socialMedia": {
       "twitter": "在 Twitter 上關注我們",
       "linkedin": "在 LinkedIn 上關注我們"
     },
     "messages": {
       "functionNotEnabled": "此功能尚未啟用，請聯繫管理員"
+    },
+    "disclosures": {
+      "companyRegistration": "Lavas Labs Limited是香港註冊公司，負責全球業務運營（除美國外）。",
+      "usBusiness": "LAVAS LABS, INC. NMLS ID: 2777990 負責美國業務運營。",
+      "visaCards": "美國的Visa®️卡由Sutton Bank發行，FDIC成員。",
+      "vaAccount": "美國VA賬戶由Lead Bank提供，FDIC成員，資金在此託管。",
+      "visaAgent": "Lavas Labs Limited是Visa®️的註冊第三方代理。",
+      "visaTrademark": "Visa®️是Visa International Service Association的註冊商標。所有其他商標和服務標記均屬於其各自所有者。"
     }
   }
 } 

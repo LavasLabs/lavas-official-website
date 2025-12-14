@@ -1,9 +1,5 @@
 import { useState, useEffect } from 'react';
 
-interface GeoLocation {
-  country: string;
-  countryCode: string;
-}
 
 const US_CODES = ['US', 'USA', 'United States'];
 

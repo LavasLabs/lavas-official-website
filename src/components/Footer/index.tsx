@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import PricingModal from '../PricingModal';
 import useGlobalStore from '../../store/useGlobalStore';
+import useUserCountry from '../../hooks/useUserCountry';
 
 const items: MenuProps['items'] = [
   // {
@@ -105,6 +106,7 @@ const Footer: React.FC = () => {
   const { isMobile } = useGlobalStore();
   const { t } = useTranslation('components');
   const [messageApi, contextHolder] = message.useMessage();
+  const isUS = useUserCountry();
 
   const renderSocialIcons = () => (
     <div className={`flex gap-[20px]`}>
@@ -187,8 +189,30 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={`flex box-border flex-wrap gap-[20px] py-[20px] ${isMobile ? 'flex-col items-center text-center' : 'justify-between'}`}>
-          <div className="text-[clamp(14px,1.1vw,20px)] opacity-80">
-            {t('footer.copyright')}
+          <div className={`flex flex-col gap-[8px] ${isMobile ? 'items-center' : ''}`}>
+            <div className="text-[clamp(14px,1.1vw,20px)] opacity-80">
+              {t('footer.copyright')}
+            </div>
+            <div className="text-[clamp(12px,0.9vw,16px)] opacity-70">
+              {t('footer.brandNotice')}
+            </div>
+            <div className="text-[clamp(12px,0.9vw,16px)] opacity-70">
+              {t('footer.cardIssuerHK')}
+            </div>
+            <div className="text-[clamp(12px,0.9vw,16px)] opacity-70">
+              {t('footer.cardIssuerUS')}
+            </div>
+            <div className="text-[clamp(12px,0.9vw,16px)] opacity-70">
+              {t('footer.thirdPartyAgent')}
+            </div>
+            {isUS === true && (
+              <div className="text-[clamp(12px,0.9vw,16px)] opacity-70">
+                {t('footer.disclaimerUS')}
+              </div>
+            )}
+            <div className="text-[clamp(12px,0.9vw,16px)] opacity-70">
+              {t('footer.trademarkNotice')}
+            </div>
           </div>
 
           {!isMobile && renderSocialIcons()}

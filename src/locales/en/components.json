@@ -73,7 +73,13 @@
       "email": "support@lavaslabs.com",
       "skype": "defpay skype support"
     },
-    "copyright": "Copyright ©2025 Lavas Labs Limited. All Rights Reserved",
+    "copyright": "Copyright ©2025 Lavas Labs",
+    "brandNotice": "Lavas Labs and the Lavas Labs logo are registered trademarks of Lavas Labs.",
+    "cardIssuerHK": "Lavas Labs Visa corporate cards issued in Hong Kong are issued by Reap Technology Limited, a Visa card issuer.",
+    "cardIssuerUS": "Lavas Labs corporate cards issued in the United States are issued by Sutton Bank, Member FDIC.",
+    "thirdPartyAgent": "Lavas Labs Limited is a registered Third Party Agent of Visa.",
+    "disclaimerUS": "Lavas Labs is a financial technology company and is not a bank. All financial account services are provided by trusted financial institutions.",
+    "trademarkNotice": "Visa is a registered trademark of Visa International Service Association. All other trademarks and service marks belong to their respective owners.",
     "socialMedia": {
       "twitter": "Follow us on Twitter",
       "linkedin": "Follow us on LinkedIn"

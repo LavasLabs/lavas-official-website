@@ -99,6 +99,15 @@ const useGeoRestriction = (): UseGeoRestrictionReturn => {
     );
   };
 
+  // 检查是否为美国IP
+  const isUSIP = (geoData: GeoLocation): boolean => {
+    const US_CODES = ['US', 'USA', 'United States'];
+    return US_CODES.some(code => 
+      geoData.countryCode?.toUpperCase() === code.toUpperCase() ||
+      geoData.country?.toLowerCase().includes('united states')
+    );
+  };
+
   // 隐藏弹窗
   const hideModal = () => {
     setShouldShowModal(false);
@@ -139,9 +148,12 @@ const useGeoRestriction = (): UseGeoRestrictionReturn => {
         const geoData = await fetchGeoLocation();
         
         if (geoData) {
-          // 如果不是香港IP，显示弹窗
+          // 如果是香港IP，不显示弹窗
           const isHK = isHongKongIP(geoData);
-          setShouldShowModal(!isHK);
+          // 如果是美国IP，也不显示弹窗
+          const isUS = isUSIP(geoData);
+          // 只有既不是香港也不是美国时，才显示弹窗
+          setShouldShowModal(!isHK && !isUS);
         } else {
           // 无法获取地理位置信息，默认显示弹窗（保守策略）
           setShouldShowModal(true);

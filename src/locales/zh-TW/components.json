@@ -73,7 +73,13 @@
       "email": "support@lavaslabs.com",
       "skype": "defpay skype 客服"
     },
-    "copyright": "版權所有 ©2025 Lavas Labs Limited. 保留所有權利",
+    "copyright": "版權所有 ©2025 Lavas Labs",
+    "brandNotice": "Lavas Labs 和 Lavas Labs 標誌是 Lavas Labs 的註冊商標。",
+    "cardIssuerHK": "Lavas Labs 在香港發行的 Visa 企業卡由 Reap Technology Limited 發行，是 Visa 的發卡行。",
+    "cardIssuerUS": "Lavas Labs 在美國發行的企業卡由 Sutton Bank 發行，是 FDIC 成員。",
+    "thirdPartyAgent": "Lavas Labs Limited 是 Visa 註冊的第三方代理（Third Party Agent）。",
+    "disclaimerUS": "Lavas Labs, Inc. 是一家金融科技公司，不是銀行。所有金融賬戶服務由受信任的金融機構提供。",
+    "trademarkNotice": "Visa 是 Visa International Service Association 的註冊商標。所有其他商標和服務標記均屬於其各自所有者。",
     "socialMedia": {
       "twitter": "在 Twitter 上關注我們",
       "linkedin": "在 LinkedIn 上關注我們"

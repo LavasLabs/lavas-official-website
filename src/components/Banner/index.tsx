@@ -40,7 +40,7 @@ const resourceItems = [
 
 
 const Banner: React.FC = () => {
-    const { isMobile, language, setLanguage } = useGlobalStore();
+    const { isMobile, language, setLanguage, isUS } = useGlobalStore();
     const { t } = useTranslation('common');
     const [isTablet, setIsTablet] = useState(false);
     const location = window.location.pathname;
@@ -80,6 +80,10 @@ const Banner: React.FC = () => {
     );
 
     const handleLanguageChange = (lang: string) => {
+        // 如果是美国用户，不允许切换到繁体中文
+        if (isUS === true && lang === 'zh-TW') {
+            return;
+        }
         setLanguage(lang);
     };
 
@@ -100,11 +104,12 @@ const Banner: React.FC = () => {
             label: 'English',
             onClick: () => handleLanguageChange('en')
         },
-        {
+        // 如果是美国用户，不显示繁体中文选项
+        ...(isUS !== true ? [{
             key: 'zh-TW',
             label: '繁體中文',
             onClick: () => handleLanguageChange('zh-TW')
-        },
+        }] : []),
     ];
 
     const userMenuItems: MenuProps['items'] = [

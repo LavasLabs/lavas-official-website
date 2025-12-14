@@ -179,10 +179,6 @@ const Footer: React.FC = () => {
                 <i className='iconfont icon-email text-[clamp(20px,1.4vw,24px)] mr-[10px]'></i>
                 <span>{t('footer.contact.email')}</span>
               </li>
-              <li className='flex items-center'>
-                <i className='iconfont icon-skype text-[clamp(20px,1.4vw,24px)] mr-[10px]'></i>
-                <span>{t('footer.contact.skype')}</span>
-              </li>
               {isMobile && <li className='flex justify-center'>{renderSocialIcons()}</li>}
             </ul>
           </div>

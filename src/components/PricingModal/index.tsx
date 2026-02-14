@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Modal, Form, Input, Button, message } from 'antd';
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../store/useGlobalStore';
+import { assetPath } from '../../utils/assetPath';
 
 interface PricingModalProps {
     open: boolean;
@@ -39,7 +40,7 @@ const PricingModal: React.FC<PricingModalProps> = ({ open, onClose }) => {
             {contextHolder}
             <div className='relative px-[20px] pt-[20px] box-border'>
                 <div className='absolute right-[-10%] top-[-10%]'>
-                    <img src="/images/modal-red-square.png" alt="" className={`${isMobile ? 'w-[80px] h-[80px]' : 'w-[120px] h-[120px]'}`} />
+                    <img src={assetPath('/images/modal-red-square.png')} alt="" className={`${isMobile ? 'w-[80px] h-[80px]' : 'w-[120px] h-[120px]'}`} />
                 </div>
 
                 <div className={`font-[700] mb-4 ${isMobile ? 'text-[24px]' : 'text-[32px]'}`}>{t('pricingModal.title')}</div>
@@ -50,7 +51,7 @@ const PricingModal: React.FC<PricingModalProps> = ({ open, onClose }) => {
                 <div className={`grid font-[600] ${isMobile ? 'grid-cols-2 gap-[10px] text-[14px]' : 'grid-cols-4 gap-x-[20px] text-[16px]'}`}>
                     {features.map((feature, index) => (
                         <div key={index} className='flex items-start relative'>
-                            <img className={`h-auto object-contain absolute left-[-2px] top-[0px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src="/images/text-front-icon.png" alt="" />
+                            <img className={`h-auto object-contain absolute left-[-2px] top-[0px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src={assetPath('/images/text-front-icon.png')} alt="" />
                             <span className='z-[100] relative'>{feature}</span>
                         </div>
                     ))}

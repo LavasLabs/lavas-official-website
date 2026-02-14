@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import PricingModal from '../PricingModal';
 import useGlobalStore from '../../store/useGlobalStore';
+import { assetPath } from '../../utils/assetPath';
 import './index.css';
 
 
@@ -153,7 +154,7 @@ const Banner: React.FC = () => {
         <div className="flex flex-col h-full">
             <div className="flex items-center justify-between px-[20px] py-[20px]">
                 <img
-                    src='/logos/lavas-logo-black.png'
+                    src={assetPath('/logos/lavas-logo-black.png')}
                     alt="Lavas Logo"
                     className="h-[40px] object-contain"
                 />
@@ -240,7 +241,7 @@ const Banner: React.FC = () => {
                             }`}
                     >
                         <img
-                            src={isWhiteBgUrl ? '/logos/lavas-logo-black.png' : '/logos/lavas-logo.png'}
+                            src={isWhiteBgUrl ? assetPath('/logos/lavas-logo-black.png') : assetPath('/logos/lavas-logo.png')}
                             alt="Lavas Logo"
                             className="w-full h-auto object-contain"
                         />

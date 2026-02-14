@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button, Form, Input, Select, Space, message } from 'antd';
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../store/useGlobalStore';
+import { assetPath } from '../../utils/assetPath';
 
 const Partner = () => {
     const { isMobile } = useGlobalStore();
@@ -37,11 +38,10 @@ const Partner = () => {
     return (
         <section className='w-full relative'>
             {contextHolder}
-            <div className={`relative w-full h-auto bg-contain bg-no-repeat ${
-                isMobile 
-                    ? 'bg-[url("/images/partner-banner-mobile.png")] pt-[54%]' 
-                    : 'bg-[url("/images/partner-banner.png")] pt-[100px]'
-            }`}>
+            <div
+                className={`relative w-full h-auto bg-contain bg-no-repeat ${isMobile ? 'pt-[54%]' : 'pt-[100px]'}`}
+                style={{ backgroundImage: `url(${isMobile ? assetPath('/images/partner-banner-mobile.png') : assetPath('/images/partner-banner.png')})` }}
+            >
                 <div className={`max-w-[1920px] mx-auto text-[#FFF] ${isMobile ? 'pt-[4%] pb-[6%] px-[30px]' : 'pt-[4%] pb-[10%] pr-[clamp(40px,13%,250px)] pl-[30%] text-right'}`}>
                     <div className={`font-bold tracking-[0.03em] font-roboto  uppercase [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] [-webkit-text-stroke:1px]  ${isMobile ? 'leading-[115%] text-[28px] text-center' : 'leading-[90%] text-[clamp(32px,5vw,60px)] text-right'}`}>{t('hero.title')}</div>
                     <div className={`text-[14px] mt-[24px] [text-shadow:0px_4px_10px_rgba(0,0,0,0.5)] [-webkit-text-stroke:0.2px]  ${isMobile ? 'hidden' : ''}`}>{t('hero.subtitle')}</div>
@@ -161,14 +161,14 @@ const Partner = () => {
                                     ? 'my-[20px] h-[200px] object-cover object-[50%_50%]'
                                     : 'my-[40px] object-contain'
                                 }`}
-                            src='/images/partner-vision.png'
+                            src={assetPath('/images/partner-vision.png')}
                             alt=''
                         />
 
                         <div className={`w-full ${isMobile ? 'flex flex-col gap-[20px]' : 'flex justify-between'}`}>
                             <div className={isMobile ? 'w-full' : 'w-[50%]'}>
                                 <div className='font-[700] relative'>
-                                    <img className={`h-auto object-contain absolute left-[0px] top-[0px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src="/images/text-front-icon.png" alt="" />
+                                    <img className={`h-auto object-contain absolute left-[0px] top-[0px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src={assetPath('/images/text-front-icon.png')} alt="" />
                                     <span className={`z-[999999] relative ${isMobile ? 'text-[16px]' : 'text-[20px]'}`}>{t('vision.cryptoPioneers.title')}</span>
                                 </div>
                                 <div className={`opacity-50 mt-[8px] ${isMobile ? 'text-[14px]' : ''}`}>
@@ -177,7 +177,7 @@ const Partner = () => {
                             </div>
                             <div className={isMobile ? 'w-full' : 'w-[50%]'}>
                                 <div className='font-[700] relative'>
-                                    <img className={`h-auto object-contain absolute left-[0px] top-[0px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src="/images/text-front-icon.png" alt="" />
+                                    <img className={`h-auto object-contain absolute left-[0px] top-[0px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src={assetPath('/images/text-front-icon.png')} alt="" />
                                     <span className={`z-[999999] relative ${isMobile ? 'text-[16px]' : 'text-[20px]'}`}>{t('vision.digitalPayment.title')}</span>
                                 </div>
                                 <div className={`opacity-50 mt-[8px] ${isMobile ? 'text-[14px]' : ''}`}>
@@ -191,7 +191,7 @@ const Partner = () => {
                 <div className={`max-w-[1920px] mx-auto w-full flex flex-col justify-center box-border relative ${isMobile ? 'py-[60px]' : 'py-[170px]'}`}>
                     <div className={`relative w-full box-border ${isMobile ? 'pr-[60px]' : 'pr-[clamp(40px,16%,310px)]'}`}>
                         <div className='border-t-[3px] border-[#0A0B11] w-[40%] absolute top-[30px] left-[0px] relative'>
-                            <img className={`h-auto object-contain absolute right-[-2px] top-[-10px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src="/images/text-front-icon.png" alt="" />
+                            <img className={`h-auto object-contain absolute right-[-2px] top-[-10px] ${isMobile ? 'w-[12px]' : 'w-[16px]'}`} src={assetPath('/images/text-front-icon.png')} alt="" />
                         </div>
                         <div className={`font-[700] ml-[32px] text-right text-[clamp(32px,4vw,50px)] ${isMobile ? 'hidden' : ''}`}>{t('compliance.title')}</div>
                     </div>
@@ -205,7 +205,7 @@ const Partner = () => {
                                 <div key={index} className={`flex flex-col ${isMobile ? 'w-[80%]' : 'w-[calc(100%/3-30px)]'}`}>
                                     <img 
                                         className={`object-cover rounded-[16px] ${isMobile ? 'w-full h-[160px] mb-[16px]' : 'w-full h-[200px] mb-[24px]'}`} 
-                                        src={`/images/partner-b${index + 1}.png`} 
+                                        src={assetPath(`/images/partner-b${index + 1}.png`)} 
                                         alt={card.title} 
                                     />
                                     <div className={`font-[700] mb-[16px] ${isMobile ? 'text-[18px]' : 'text-[24px]'}`}>

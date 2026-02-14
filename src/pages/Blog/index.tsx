@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button, message } from 'antd';
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../store/useGlobalStore';
+import { assetPath } from '../../utils/assetPath';
 
 const Blog = () => {
     const { isMobile } = useGlobalStore();
@@ -99,7 +100,7 @@ const Blog = () => {
 
                     <div className={`flex flex-col justify-center items-center relative gap-y-[60px] ${isMobile ? 'my-[60px]' : 'my-[170px]'}`}>
                         <div className={`font-[700] text-center leading-[1] relative ${isMobile ? 'text-[24px]' : 'text-[42px] space-y-[10px]'}`}>
-                            <img className={`h-auto object-contain absolute ${isMobile ? 'w-[30px] right-[-40px] top-[-30px]' : 'w-[52px] right-[-40%] top-[-80%]'}`} src="/images/black-red-icon.png" alt="" />
+                            <img className={`h-auto object-contain absolute ${isMobile ? 'w-[30px] right-[-40px] top-[-30px]' : 'w-[52px] right-[-40%] top-[-80%]'}`} src={assetPath('/images/black-red-icon.png')} alt="" />
                             {t('businessScenario.title')}
                         </div>
                         <Button 

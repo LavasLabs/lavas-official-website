@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
+import { assetPath } from '../../../utils/assetPath';
 
 const MarketPlayers = () => {
     const { isMobile } = useGlobalStore();
@@ -27,7 +28,7 @@ const MarketPlayers = () => {
     return (
         <section className={`w-full max-w-[1920px] relative mx-auto box-border bg-[#FFF] flex flex-col ${isMobile ? 'px-[20px] py-[80px] h-auto' : 'px-[clamp(40px,16%,310px)] min-h-screen'}`}>
             <img 
-              src={isMobile ? "/images/credit-play-mobile.png" : "/images/credit-play.png"}
+              src={isMobile ? assetPath("/images/credit-play-mobile.png") : assetPath("/images/credit-play.png")}
               className={`w-full h-full box-border absolute top-[0px] left-[0px] object-contain object-top ${
                 isMobile ? 'px-[0px]' : 'px-[clamp(40px,16%,310px)] rounded-[20px]'
               }`} 
@@ -39,7 +40,7 @@ const MarketPlayers = () => {
                   className={`h-auto object-contain absolute top-[-40%] ${
                     isMobile ? 'w-[30px] right-[10px]' : 'w-[52px] right-[-10%]'
                   }`} 
-                  src="/images/white-red-icon.png" 
+                  src={assetPath('/images/white-red-icon.png')} 
                   alt="" 
                 />
                 <div className={`font-[700] leading-[1.2] ${

@@ -2,6 +2,7 @@ import { Button, message } from 'antd';
 import { RightOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
+import { assetPath } from '../../../utils/assetPath';
 
 const CreditCard = () => {
     const { isMobile } = useGlobalStore();
@@ -23,7 +24,7 @@ const CreditCard = () => {
             {contextHolder}
             <div className={`box-border w-full max-w-[1920px] mx-auto text-center ${isMobile ? 'px-[40px]' : ''}`}>
                 <div className={`relative font-[700] max-w-[800px] mx-auto ${isMobile ? 'text-[24px] w-full' : 'text-[42px] w-[70%]'}`}>
-                    <img className={`absolute h-auto ${isMobile ? 'w-[30px] right-[-8%] top-[-36%]' : 'w-[52px] right-[-10%] top-[-22%]'}`} src="/images/black-red-icon.png" alt="" />
+                    <img className={`absolute h-auto ${isMobile ? 'w-[30px] right-[-8%] top-[-36%]' : 'w-[52px] right-[-10%] top-[-22%]'}`} src={assetPath('/images/black-red-icon.png')} alt="" />
                     {t('creditCard.title')}
                 </div>
             </div>
@@ -32,7 +33,7 @@ const CreditCard = () => {
                 {/* 移动端先显示图片 */}
                 {isMobile && (
                     <div className='w-full h-[300px] mt-[40px] mb-[40px] box-border'>
-                        <img className='w-full h-full object-contain' src="/images/credit-line.png" alt="" />
+                        <img className='w-full h-full object-contain' src={assetPath('/images/credit-line.png')} alt="" />
                     </div>
                 )}
                 
@@ -61,7 +62,7 @@ const CreditCard = () => {
                 {/* PC端显示图片 */}
                 {!isMobile && (
                     <div className='relative w-[60%] pl-[10%] pt-[10%] box-border'>
-                        <img className='w-full absolute right-[0px] top-[0px]' src="/images/credit-line.png" alt="" />
+                        <img className='w-full absolute right-[0px] top-[0px]' src={assetPath('/images/credit-line.png')} alt="" />
                     </div>
                 )}
             </div>

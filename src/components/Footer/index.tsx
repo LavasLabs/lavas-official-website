@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import PricingModal from '../PricingModal';
 import useGlobalStore from '../../store/useGlobalStore';
 import useUserCountry from '../../hooks/useUserCountry';
+import { assetPath } from '../../utils/assetPath';
 
 const items: MenuProps['items'] = [
   // {
@@ -132,7 +133,7 @@ const Footer: React.FC = () => {
         <div className={`flex w-full gap-[20px] ${isMobile ? 'flex-col justify-center items-center' : 'justify-between flex-wrap'}`}>
           {/* Logo */}
           <Link to="/" className="flex">
-            <img src="/logos/lavas-logo.png" alt="" className="w-auto h-[clamp(52px,4vw,64px)]" />
+            <img src={assetPath('/logos/lavas-logo.png')} alt="" className="w-auto h-[clamp(52px,4vw,64px)]" />
           </Link>
 
           <div className={`flex  flex-wrap ${isMobile ? 'justify-center gap-y-[26px]' : 'gap-[clamp(40px,5vw,120px)]'}`}>

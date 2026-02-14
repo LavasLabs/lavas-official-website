@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../store/useGlobalStore';
+import { assetPath } from '../../utils/assetPath';
 
 const Advertising = () => {
   const { isMobile } = useGlobalStore();
@@ -27,12 +28,12 @@ const Advertising = () => {
         </div>
         <img 
               className='w-full object-contain' 
-              src={isMobile ? "/images/adver-banner-mobile.png" : "/images/adver-banner.png"} 
+              src={isMobile ? assetPath("/images/adver-banner-mobile.png") : assetPath("/images/adver-banner.png")} 
               alt="" 
             />
         <div className={`flex flex-col justify-center items-center relative ${isMobile ? 'mt-[60px]' : 'mt-[170px]'}`}>
           <div className={`font-[700] text-center leading-[1] relative ${isMobile ? 'text-[24px]' : 'text-[42px] space-y-[10px]'}`}>
-            <img className={`h-auto object-contain absolute ${isMobile ? 'w-[30px] right-[-40px] top-[-24px]' : 'w-[52px] right-[-40%] top-[-80%]'}`} src="/images/black-red-icon.png" alt="" />
+            <img className={`h-auto object-contain absolute ${isMobile ? 'w-[30px] right-[-40px] top-[-24px]' : 'w-[52px] right-[-40%] top-[-80%]'}`} src={assetPath('/images/black-red-icon.png')} alt="" />
             {t('businessScenario.title')}
           </div>
         </div>

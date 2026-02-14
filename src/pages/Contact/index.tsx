@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button, Form, Input, Select, message } from 'antd';
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../store/useGlobalStore';
+import { assetPath } from '../../utils/assetPath';
 
 const { TextArea } = Input;
 
@@ -42,7 +43,7 @@ const Contact = () => {
                     </div>
                     {!isMobile && (
                         <div>
-                            <img src="/images/black-red-icon.png" alt="Contact" className='w-[40px]' />
+                            <img src={assetPath('/images/black-red-icon.png')} alt="Contact" className='w-[40px]' />
                             <p className='mt-[20px] text-[14px] text-[#666]'>
                                 {t('description')}
                             </p>
@@ -128,7 +129,7 @@ const Contact = () => {
                     </Form>
                     {isMobile && (
                         <div className='mt-[30px]'>
-                            <img src="/images/black-red-icon.png" alt="Contact" className='w-[30px]' />
+                            <img src={assetPath('/images/black-red-icon.png')} alt="Contact" className='w-[30px]' />
                             <p className='mt-[20px] text-[14px] text-[#666]'>
                                 {t('description')}
                             </p>

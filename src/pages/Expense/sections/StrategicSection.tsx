@@ -1,6 +1,7 @@
 import { Space, Divider } from 'antd';
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
+import { assetPath } from '../../../utils/assetPath';
 
 const StrategicSection = () => {
   const { isMobile } = useGlobalStore();
@@ -17,7 +18,7 @@ const StrategicSection = () => {
     <section className={`text-[#0A0B11] w-full box-border bg-[#FFF] flex justify-center items-center flex-col ${isMobile ? 'py-[70px]' : 'min-h-screen py-[170px]'}`}>
       <div className={`box-border w-full max-w-[1920px] mx-auto flex flex-col items-center relative ${isMobile ? 'px-[40px]' : ''}`}>
         <div className={`font-[700] text-center max-w-[800px] leading-[1.2] relative ${isMobile ? 'text-[24px]' : 'text-[clamp(32px,3.5vw,42px)]'}`}>
-          <img className={`h-auto object-contain absolute ${isMobile ? 'w-[30px] right-[-8%] top-[-36%]' : 'w-[52px] right-[-10%] top-[-40%]'}`} src="/images/black-red-icon.png" alt="" />
+          <img className={`h-auto object-contain absolute ${isMobile ? 'w-[30px] right-[-8%] top-[-36%]' : 'w-[52px] right-[-10%] top-[-40%]'}`} src={assetPath('/images/black-red-icon.png')} alt="" />
           {t('strategic.title')}
         </div>
         <div className={`mt-[10px] text-center ${isMobile ? 'text-[14px] px-[20px]' : 'text-[clamp(16px,1.5vw,20px)]'}`}>{t('strategic.subtitle')}</div>
@@ -38,7 +39,7 @@ const StrategicSection = () => {
             </Space>
           </div>
           <Divider className={`${isMobile ? 'my-[16px]' : 'my-[clamp(16px,2vw,24px)]'}`}></Divider>
-          <img className='w-full' src="/images/expense-shape-t.png" alt="" />
+          <img className='w-full' src={assetPath('/images/expense-shape-t.png')} alt="" />
         </div>
 
         <div className={`box-border rounded-[22px] bg-[#FFF] shadow-[0px_30px_70px_0px_rgba(0,0,0,0.10)] flex flex-col justify-between ${isMobile ? 'w-full p-[20px]' : 'w-[calc(100%/3-14px)] p-[clamp(16px,2vw,24px)]'}`}>
@@ -47,7 +48,7 @@ const StrategicSection = () => {
             <div className={`opacity-60 ${isMobile ? 'text-[14px]' : 'text-[clamp(14px,1.5vw,16px)]'}`}>{cards[1]?.description}</div>
           </div>
           <Divider className={`${isMobile ? 'my-[16px]' : 'my-[clamp(16px,2vw,24px)]'}`}></Divider>
-          <img className='w-full' src="/images/expense-statistics.png" alt="" />
+          <img className='w-full' src={assetPath('/images/expense-statistics.png')} alt="" />
         </div>
 
         <div className={`box-border rounded-[22px] bg-[#FFF] shadow-[0px_30px_70px_0px_rgba(0,0,0,0.10)] flex flex-col justify-between ${isMobile ? 'w-full p-[20px]' : 'w-[calc(100%/3-14px)] p-[clamp(16px,2vw,24px)]'}`}>
@@ -57,8 +58,8 @@ const StrategicSection = () => {
             <Divider className={`${isMobile ? 'my-[16px]' : 'my-[clamp(16px,2vw,24px)]'}`}></Divider>
           </div>
           <Space direction='vertical' className='w-full'>
-            <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="/images/expense-coffee.png" alt="" />
-            <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src="/images/expense-perk.png" alt="" />
+            <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src={assetPath('/images/expense-coffee.png')} alt="" />
+            <img className='w-full rounded-[12px] bg-[#FFF] shadow-[0px_2px_40px_0px_rgba(0,0,0,0.10)]' src={assetPath('/images/expense-perk.png')} alt="" />
           </Space>
         </div>
       </div>

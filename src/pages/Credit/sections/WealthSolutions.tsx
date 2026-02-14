@@ -2,6 +2,7 @@ import { Button, message } from 'antd';
 import { RightOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
+import { assetPath } from '../../../utils/assetPath';
 
 const WealthSolutions = () => {
     const { isMobile } = useGlobalStore();
@@ -11,7 +12,7 @@ const WealthSolutions = () => {
     return (
         <section className={`text-[#FFF] w-full flex justify-center items-center max-w-[1920px] mx-auto ${isMobile ? 'h-auto px-[20px] py-[70px]' : 'min-h-screen px-[clamp(40px,16%,310px)] mb-[120px]'} box-border bg-[#FFF] flex items-center flex-col relative`}>
             {contextHolder}
-            <div className={`absolute w-full ${isMobile ? 'h-[60%]' : 'h-[70%]'} bg-[url('/images/credit-client.png')] bg-cover bg-center`}></div>
+            <div className={`absolute w-full ${isMobile ? 'h-[60%]' : 'h-[70%]'} bg-cover bg-center`} style={{ backgroundImage: `url(${assetPath('/images/credit-client.png')})` }}></div>
             <div className={`w-full ${isMobile ? 'h-auto flex-col items-center' : 'h-[70%] flex justify-between gap-[clamp(20px,4vw,40px)]'} py-[clamp(40px,5vh,60px)] box-border z-[2]`}>
                 <div className={`flex flex-col justify-between box-border ${isMobile ? 'w-full px-[20px]' : 'w-[50%] h-full'}`}>
                     <div>

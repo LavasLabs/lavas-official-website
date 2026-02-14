@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
+import { assetPath } from '../../../utils/assetPath';
 
 const Ecosystem = () => {
   const { isMobile } = useGlobalStore();
@@ -20,7 +21,7 @@ const Ecosystem = () => {
     <section className={`w-full max-w-[1920px] mx-auto box-border bg-[#FFF] flex flex-col text-[#0A0B11] ${isMobile ? 'px-[40px] py-[80px]' : 'px-[clamp(40px,16%,310px)] pb-[170px] min-h-screen'}`}>
       <div className={`box-border w-full max-w-[1920px] mx-auto text-center`}>
         <div className={`relative font-[700] max-w-[800px] mx-auto ${isMobile ? 'text-[20px] w-full' : 'text-[42px] w-[70%]'}`}>
-          <img className={`absolute h-auto ${isMobile ? 'w-[24px] right-[-5%] top-[-30%]' : 'w-[52px] right-[-10%] top-[-22%]'}`} src="/images/black-red-icon.png" alt="" />
+          <img className={`absolute h-auto ${isMobile ? 'w-[24px] right-[-5%] top-[-30%]' : 'w-[52px] right-[-10%] top-[-22%]'}`} src={assetPath('/images/black-red-icon.png')} alt="" />
           {t('ecosystem.title')}
         </div>
       </div>

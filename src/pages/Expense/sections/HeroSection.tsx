@@ -1,6 +1,7 @@
 import { Button } from 'antd';
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
+import { assetPath } from '../../../utils/assetPath';
 
 const HeroSection = () => {
     const { isMobile } = useGlobalStore();
@@ -31,28 +32,28 @@ const HeroSection = () => {
                     <div className='w-full flex flex-col items-center mt-[10px] box-border relative pb-[300px]'>
                         <div className='w-full absolute top-[-80px] flex justify-between px-[20px]'>
                             <div className='w-[30%] flex flex-col gap-[20px]'>
-                                <img className='w-full h-auto' src="/images/expense-c-f.png" alt="" />
-                                <img className='w-full h-auto' src="/images/expense-c-s.png" alt="" />
+                                <img className='w-full h-auto' src={assetPath('/images/expense-c-f.png')} alt="" />
+                                <img className='w-full h-auto' src={assetPath('/images/expense-c-s.png')} alt="" />
                             </div>
                             <div className='w-[30%] mr-[10px]'>
-                                <img className='w-full h-auto' src="/images/expense-shape.png" alt="" />
+                                <img className='w-full h-auto' src={assetPath('/images/expense-shape.png')} alt="" />
                             </div>
                         </div>
                         <div className='w-full'>
-                            <img className='w-[80%] h-auto absolute bottom-[0px] left-[50%] -translate-x-1/2' src="/images/expense-card.png" alt="" />
+                            <img className='w-[80%] h-auto absolute bottom-[0px] left-[50%] -translate-x-1/2' src={assetPath('/images/expense-card.png')} alt="" />
                         </div>
                     </div>
                 ) : (
                     <div className='w-full flex justify-between items-center mt-[10px] max-w-[1920px] mx-auto'>
                         <div className='flex-1 h-full relative pb-[6%] box-border'>
-                            <img className='absolute w-full h-auto bottom-[clamp(200px,26vh,500px)] left-[-20%]' src="/images/expense-c-f.png" alt="" />
-                            <img className='absolute w-full h-auto bottom-[0px]' src="/images/expense-c-s.png" alt="" />
+                            <img className='absolute w-full h-auto bottom-[clamp(200px,26vh,500px)] left-[-20%]' src={assetPath('/images/expense-c-f.png')} alt="" />
+                            <img className='absolute w-full h-auto bottom-[0px]' src={assetPath('/images/expense-c-s.png')} alt="" />
                         </div>
                         <div className='w-[40%] mx-[40px] flex items-end'>
-                            <img className='w-full' src="/images/expense-card.png" alt="" />
+                            <img className='w-full' src={assetPath('/images/expense-card.png')} alt="" />
                         </div>
                         <div className='flex-1 h-full relative'>
-                            <img className='absolute w-full h-auto bottom-[40%] left-[4%]' src="/images/expense-shape.png" alt="" />
+                            <img className='absolute w-full h-auto bottom-[40%] left-[4%]' src={assetPath('/images/expense-shape.png')} alt="" />
                         </div>
                     </div>
                 )}

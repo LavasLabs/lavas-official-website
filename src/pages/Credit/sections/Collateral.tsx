@@ -2,6 +2,7 @@ import { Button,message } from 'antd';
 import { RightOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
+import { assetPath } from '../../../utils/assetPath';
 
 const collateralData = [
   {
@@ -61,7 +62,7 @@ const Collateral = () => {
   }) => (
     <div className={`flex items-center ${isMobile ? 'gap-[10px]' : 'gap-[20px]'}`}>
       <div className={`flex items-center gap-[10px] ${isMobile ? 'w-[120px]' : 'w-[200px]'}`}>
-        <img src={icon} className={`${isMobile ? 'w-[32px] h-[32px]' : 'w-[40px] h-[40px]'}`} />
+        <img src={assetPath(icon)} className={`${isMobile ? 'w-[32px] h-[32px]' : 'w-[40px] h-[40px]'}`} />
         <div className='flex flex-col'>
           <div className={`font-[600] ${isMobile ? 'text-[14px]' : ''}`}>{assets[index]?.name || name}</div>
           <div className={`opacity-60 ${isMobile ? 'text-[12px]' : 'text-[14px]'}`}>{assets[index]?.symbol || symbol}</div>
@@ -84,7 +85,7 @@ const Collateral = () => {
       {contextHolder}
       <div className={`w-full max-w-[1920px] mx-auto flex flex-col items-center relative box-border ${isMobile ? 'px-[20px]' : ''}`}>
         <div className={`font-[700] text-center max-w-[800px] leading-[1.2] relative flex flex-col items-center ${isMobile ? 'text-[24px]' : 'text-[clamp(32px,3.5vw,42px)]'}`}>
-          <img className={`h-auto object-contain absolute top-[-40%] ${isMobile ? 'w-[30px] right-[-8%]' : 'w-[52px] right-[-10%]'}`} src="/images/black-red-icon.png" alt="" />
+          <img className={`h-auto object-contain absolute top-[-40%] ${isMobile ? 'w-[30px] right-[-8%]' : 'w-[52px] right-[-10%]'}`} src={assetPath('/images/black-red-icon.png')} alt="" />
           <div>{t('collateral.title')}</div>
           <div className={`font-[400] mt-[10px] max-w-[500px] ${isMobile ? 'text-[14px]' : 'text-[clamp(16px,1.5vw,20px)]'}`}>{t('collateral.subtitle')}</div>
         </div>

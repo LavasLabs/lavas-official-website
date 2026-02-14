@@ -2,6 +2,7 @@ import { Button, message } from 'antd';
 import { RightOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
+import { assetPath } from '../../../utils/assetPath';
 
 const ExpenseSection = () => {
   const { isMobile } = useGlobalStore();
@@ -17,7 +18,7 @@ const ExpenseSection = () => {
           <div className={`${isMobile ? 'w-full text-center' : 'w-[50%] h-full'} flex flex-col justify-between`}>
             <div className={`w-full ${isMobile ? 'px-[40px] box-border' : ''}  `}>
               <div className={`${isMobile ? 'text-[24px]' : 'text-[clamp(32px,3.5vw,42px)]'} font-[700] leading-[1.2] relative`}>
-                <img className={`${isMobile ? 'w-[30px] right-[-20px] top-[-15px]' : 'w-[clamp(40px,3.0vw,52px)] right-[-30px] top-[-20px]'} h-auto object-contain absolute`} src="/images/white-red-icon.png" alt="" />
+                <img className={`${isMobile ? 'w-[30px] right-[-20px] top-[-15px]' : 'w-[clamp(40px,3.0vw,52px)] right-[-30px] top-[-20px]'} h-auto object-contain absolute`} src={assetPath('/images/white-red-icon.png')} alt="" />
                 {t('expense.title')}
               </div>
               <div className={`${isMobile ? 'text-[14px]' : 'text-[clamp(14px,1.1vw,18px)]'} mt-[clamp(12px,2vh,16px)] opacity-80`}>{t('expense.description')}</div>
@@ -36,7 +37,7 @@ const ExpenseSection = () => {
             </div>
           </div>
           <div className={`${isMobile ? 'w-full px-[20px] pt-[60px] flex justify-center items-center' : 'w-[50%] pl-[10%] pt-[2%]'} box-border`}>
-            <img className={`${isMobile ? 'w-[90%]' : 'w-full max-w-[600px] mx-auto'} h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.25)] rounded-[30px]`} src="/images/travel-reports.png" alt="" />
+            <img className={`${isMobile ? 'w-[90%]' : 'w-full max-w-[600px] mx-auto'} h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.25)] rounded-[30px]`} src={assetPath('/images/travel-reports.png')} alt="" />
           </div>
         </div>
       </section>

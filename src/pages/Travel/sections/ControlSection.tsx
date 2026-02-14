@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
+import { assetPath } from '../../../utils/assetPath';
 
 const ControlSection = () => {
   const { isMobile } = useGlobalStore();
@@ -11,7 +12,7 @@ const ControlSection = () => {
       <div className={`w-full h-full box-border ${isMobile ? 'flex-col gap-[30px]' : 'flex gap-[40px]'} flex justify-center items-center`}>
         {!isMobile && (
           <div className='w-[50%] z-[999]'>
-            <img className='w-full h-auto object-contain' src="/images/travel-view-phone.png" alt="" />
+            <img className='w-full h-auto object-contain' src={assetPath('/images/travel-view-phone.png')} alt="" />
           </div>
         )}
         <div className={`${isMobile ? 'w-full px-[20px]' : 'w-[50%]'} z-[999]`}>
@@ -22,16 +23,16 @@ const ControlSection = () => {
 
           {isMobile && (
             <div className='w-full flex flex-col gap-[20px] mt-[40px] items-center'>
-              <img className='w-[80%] h-auto object-contain' src="/images/travel-view-phone.png" alt="" />
-              <img className='w-[75%] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src="/images/travel-view-phone-first.png" alt="" />
-              <img className='w-[75%] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src="/images/travel-view-phone-second.png" alt="" />
+              <img className='w-[80%] h-auto object-contain' src={assetPath('/images/travel-view-phone.png')} alt="" />
+              <img className='w-[75%] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src={assetPath('/images/travel-view-phone-first.png')} alt="" />
+              <img className='w-[75%] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src={assetPath('/images/travel-view-phone-second.png')} alt="" />
             </div>
           )}
 
           {!isMobile && (
             <div className='w-full flex flex-col gap-[20px] mt-[100px]'>
-              <img className='w-[400px] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src="/images/travel-view-phone-first.png" alt="" />
-              <img className='w-[400px] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src="/images/travel-view-phone-second.png" alt="" />
+              <img className='w-[400px] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src={assetPath('/images/travel-view-phone-first.png')} alt="" />
+              <img className='w-[400px] h-auto object-contain shadow-[0px_2px_50px_0px_rgba(0,0,0,0.10)] rounded-[12px]' src={assetPath('/images/travel-view-phone-second.png')} alt="" />
             </div>
           )}
         </div>

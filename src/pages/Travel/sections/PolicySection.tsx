@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
 import { ArrowRightOutlined } from '@ant-design/icons';
+import { assetPath } from '../../../utils/assetPath';
 
 const PolicySection = () => {
   const { isMobile, isTablet } = useGlobalStore();
@@ -10,17 +11,17 @@ const PolicySection = () => {
     <section className={`w-full max-w-[1920px] mx-auto box-border bg-[#FFF] flex justify-center items-center flex-col text-[#0A0B11] ${isMobile ? 'px-[0px] py-[70px] h-auto' : 'px-[clamp(40px,16%,310px)] py-[170px] min-h-screen '}`}>
       <div className={`w-full max-w-[1920px] mx-auto flex flex-col items-center relative box-border ${isMobile ? 'px-[50px]' : 'px-[clamp(40px,16%,310px)]'}`}>
         <div className={`font-[700] text-center max-w-[800px] leading-[1.2] relative ${isMobile ? 'text-[24px]' : 'text-[clamp(32px,3.5vw,42px)]'}`}>
-          <img className={`h-auto object-contain absolute top-[-40%] ${isMobile ? 'w-[30px] right-[-8%]' : 'w-[52px] right-[-16%]'}`} src="/images/black-red-icon.png" alt="" />
+          <img className={`h-auto object-contain absolute top-[-40%] ${isMobile ? 'w-[30px] right-[-8%]' : 'w-[52px] right-[-16%]'}`} src={assetPath('/images/black-red-icon.png')} alt="" />
           {t('policy.title')}
         </div>
         <div className={`mt-[10px] text-center ${isMobile ? 'text-[14px]' : 'text-[clamp(16px,1.5vw,20px)]'}`}>{t('policy.subtitle')}</div>
       </div>
 
       <div className='w-full h-auto mt-[clamp(20px,3vh,30px)] box-border text-[#FFF]'>
-        <div className={`w-full flex flex-wrap justify-between bg-[url("/images/travel-pricing-bg.png")] bg-cover bg-no-repeat box-border ${isMobile ? 'min-h-[200px] px-[40px] py-[30px]' : 'min-h-[350px] px-[clamp(40px,5%,80px)] py-[clamp(20px,3vh,30px)]'}`}>
+        <div className={`w-full flex flex-wrap justify-between bg-cover bg-no-repeat box-border ${isMobile ? 'min-h-[200px] px-[40px] py-[30px]' : 'min-h-[350px] px-[clamp(40px,5%,80px)] py-[clamp(20px,3vh,30px)]'}`} style={{ backgroundImage: `url(${assetPath('/images/travel-pricing-bg.png')})` }}>
           <div className={isMobile ? 'flex items-center justify-between w-full mb-[20px]' : ''}>
             <div className={`whitespace-nowrap ${isMobile ? 'text-[28px]' : 'text-[clamp(36px,4vw,50px)] mb-[20px]'}`}>
-              <img className={`${isMobile ? 'w-[30px] h-[30px]' : 'w-[clamp(40px,3.5vw,52px)] h-[clamp(40px,3.5vw,52px)]'}`} src="/images/white-red-icon.png" alt="" />
+              <img className={`${isMobile ? 'w-[30px] h-[30px]' : 'w-[clamp(40px,3.5vw,52px)] h-[clamp(40px,3.5vw,52px)]'}`} src={assetPath('/images/white-red-icon.png')} alt="" />
               <div className='font-[700]'>{t('policy.flightPolicy')}</div>
             </div>
             {isMobile && (
@@ -58,7 +59,7 @@ const PolicySection = () => {
                     ? 'w-[25%] left-[30px] top-[-20%]'
                     : 'w-[30%] left-[clamp(40px,5%,80px)] top-[-36%]'
               }`} 
-              src="/images/travel-view.png" 
+              src={assetPath('/images/travel-view.png')} 
             />
           </div>
           <div className={`text-[#0A0B11] ${isMobile ? 'w-[40%]' : 'w-[60%]'}`}>

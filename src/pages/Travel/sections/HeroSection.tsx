@@ -1,6 +1,7 @@
 import { Button } from 'antd';
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
+import { assetPath } from '../../../utils/assetPath';
 
 const HeroSection = () => {
   const { isMobile } = useGlobalStore();
@@ -30,7 +31,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className={`relative ${isMobile ? 'w-full mt-[40px]' : 'w-[100%]'}`}>
-          <img className={`w-full h-auto object-contain ${isMobile ? 'relative' : 'absolute right-[0px] top-[85px]'}`} src="/images/travel-air.png" alt="" />
+          <img className={`w-full h-auto object-contain ${isMobile ? 'relative' : 'absolute right-[0px] top-[85px]'}`} src={assetPath('/images/travel-air.png')} alt="" />
         </div>
       </div>
     </section>

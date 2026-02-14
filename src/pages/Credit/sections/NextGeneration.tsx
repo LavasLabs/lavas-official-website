@@ -2,6 +2,7 @@ import { Button, message } from 'antd';
 import { RightOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
+import { assetPath } from '../../../utils/assetPath';
 
 const NextGeneration = () => {
     const { isMobile } = useGlobalStore();
@@ -11,7 +12,7 @@ const NextGeneration = () => {
     return (
         <section className={`text-[#FFF] w-full max-w-[1920px] mx-auto box-border bg-[#FFF] flex justify-center flex-col relative ${isMobile ? 'px-[40px] py-[60px]' : 'min-h-screen px-[clamp(40px,16%,310px)] mb-[80px] items-center'}`}>
             {contextHolder}
-            <div className={`absolute left-[0px] w-full ${isMobile ? 'h-[70%]' : 'h-[70%]'} bg-[url('/images/credit-next.png')] bg-cover bg-center`}></div>
+            <div className={`absolute left-[0px] w-full ${isMobile ? 'h-[70%]' : 'h-[70%]'} bg-cover bg-center`} style={{ backgroundImage: `url(${assetPath('/images/credit-next.png')})` }}></div>
             <div className={`w-full box-border z-[2] ${isMobile ? 'flex flex-col items-center' : 'h-[70%] flex justify-between gap-[clamp(20px,4vw,40px)]'} py-[clamp(40px,5vh,60px)]`}>
                 <div className={`flex flex-col justify-between ${isMobile ? 'w-full' : 'w-[50%] gap-[30px]  h-full'}`}>
                     <div>
@@ -33,7 +34,7 @@ const NextGeneration = () => {
                         >
                             {t('nextGeneration.learnMore')} <RightOutlined />
                         </Button>
-                        <img src="/images/credit-qrcode.png" className={`${isMobile ? 'h-[40px] w-[40px]' : 'h-[46px] w-[46px]'}`} alt="QR Code" />
+                        <img src={assetPath('/images/credit-qrcode.png')} className={`${isMobile ? 'h-[40px] w-[40px]' : 'h-[46px] w-[46px]'}`} alt="QR Code" />
                     </div>
                 </div>
             </div>

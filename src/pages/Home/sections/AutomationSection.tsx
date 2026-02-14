@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
+import { assetPath } from '../../../utils/assetPath';
 
 const AutomationSection = () => {
   const { isMobile } = useGlobalStore();
@@ -25,13 +26,13 @@ const AutomationSection = () => {
   return (
     <section className={`text-[#0A0B11] w-full min-h-screen box-border relative overflow-hidden bg-[#FFF] ${isMobile ? 'py-[40px]' : 'py-[170px]'}`}>
       <div className={`absolute right-[0px] w-1/2 box-border ${isMobile ? 'top-[28%] h-[700px] pt-[0px] pb-[0px]' : 'top-[0px] h-full pt-[170px] pb-[120px]'}`}>
-        <img className='w-full h-full object-cover' src="/images/card-bg-black.png" alt="" />
+        <img className='w-full h-full object-cover' src={assetPath('/images/card-bg-black.png')} alt="" />
       </div>
       <div className={`w-full max-w-[1920px] mx-auto box-border relative ${isMobile ? 'px-[40px]' : 'px-[clamp(40px,16%,310px)]'}`}>
         <div className={`justify-between items-start gap-[5%] ${isMobile ? 'flex-col text-center' : 'flex'}`}>
           <div className={`box-border leading-[1.2] relative z-[2] ${isMobile ? 'w-full' : 'w-[45%]'}`}>
             <div className={`font-[700] relative ${isMobile ? 'text-[24px]' : 'text-[clamp(32px,3.5vw,40px)]'}`}>
-              <img className={`h-auto object-contain absolute ${isMobile ? 'w-[30px] right-[-8%] top-[-20%]' : 'w-[52px] right-[-10%] top-[-10%]'}`} src="/images/black-red-icon.png" alt="" />
+              <img className={`h-auto object-contain absolute ${isMobile ? 'w-[30px] right-[-8%] top-[-20%]' : 'w-[52px] right-[-10%] top-[-10%]'}`} src={assetPath('/images/black-red-icon.png')} alt="" />
               <span>{t('automation.title')}</span>
             </div>
             <div className={`${isMobile ? 'text-[14px] mt-[10px]' : 'text-[clamp(16px,1.5vw,20px)] mt-[20px]'}`}>

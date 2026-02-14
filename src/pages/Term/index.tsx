@@ -5,6 +5,7 @@ import { useState } from 'react';
 import TermContent from './components/TermContent';
 import './index.css';
 import useGlobalStore from '../../store/useGlobalStore';
+import { assetPath } from '../../utils/assetPath';
 
 const Term = () => {
     const { isMobile } = useGlobalStore();
@@ -48,11 +49,10 @@ const Term = () => {
 
     return (
         <section className='text-[#0A0B11] w-full min-h-screen box-border bg-[#FFF] flex items-center flex-col'>
-            <div className={`relative w-full aspect-[16/9] bg-contain bg-no-repeat ${
-                isMobile 
-                    ? 'bg-[url("/images/term-banner-mobile.png")]' 
-                    : 'bg-[url("/images/term-banner.png")]'
-            }`}>
+            <div
+                className="relative w-full aspect-[16/9] bg-contain bg-no-repeat"
+                style={{ backgroundImage: `url(${isMobile ? assetPath('/images/term-banner-mobile.png') : assetPath('/images/term-banner.png')})` }}
+            >
                 {/* <div className='max-w-[1920px] mx-auto mt-[clamp(10px,30%,30%)]  pr-[clamp(40px,13%,250px)] text-right text-white'>
                     <div className='text-[clamp(22px,5vw,60px)] text-[#FFF] font-bold font-roboto leading-[90%] uppercase text-right [text-shadow:0px_4px_10px_rgba(0,0,0,0.25)]'>SERVICES TERMS &</div>
                     <div className='text-[clamp(22px,5vw,60px)] text-[#FFF] font-bold font-roboto leading-[90%] uppercase text-right [text-shadow:0px_4px_10px_rgba(0,0,0,0.25)]'>CONDITIONS</div>

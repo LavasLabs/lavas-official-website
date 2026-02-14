@@ -1,6 +1,7 @@
 import { Button } from 'antd';
 import { useTranslation } from 'react-i18next';
 import useGlobalStore from '../../../store/useGlobalStore';
+import { assetPath } from '../../../utils/assetPath';
 
 const HeroSection = () => {
   const { isMobile } = useGlobalStore();
@@ -49,7 +50,7 @@ const HeroSection = () => {
             )}
           </div>
 
-          <img className={`z-[999] h-auto object-contain ${isMobile ? 'w-[80%] mt-[40px]' : 'w-[45%] ml-[40px]'}`} src="/images/card.png" alt="" />
+          <img className={`z-[999] h-auto object-contain ${isMobile ? 'w-[80%] mt-[40px]' : 'w-[45%] ml-[40px]'}`} src={assetPath('/images/card.png')} alt="" />
           {isMobile && (
             <div className='relative'>
               <Button
@@ -76,7 +77,7 @@ const HeroSection = () => {
           {features.map((item, index) => (
             <div key={index} className={`${isMobile ? 'w-[calc(50%-10px)] mb-[20px]' : 'w-[calc(25%-16px)]'}`}>
               <div className='font-[700] relative'>
-                <img className='absolute w-[clamp(16px,1.2vw,20px)] h-auto object-contain left-[0px] top-[2px]' src="/images/text-front-icon.png" alt="" />
+                <img className='absolute w-[clamp(16px,1.2vw,20px)] h-auto object-contain left-[0px] top-[2px]' src={assetPath('/images/text-front-icon.png')} alt="" />
                 <span className='relative z-[100] text-[clamp(16px,1.2vw,20px)] font-[900]'>{item.title}</span>
               </div>
               <div className='text-[clamp(14px,1vw,16px)] opacity-60 mt-[8px]'>

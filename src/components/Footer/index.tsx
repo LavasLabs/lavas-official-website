@@ -196,9 +196,6 @@ const Footer: React.FC = () => {
               {t('footer.cardIssuerHK')}
             </div>
             <div className="text-[clamp(12px,0.9vw,16px)] opacity-70">
-              {t('footer.cardIssuerUS')}
-            </div>
-            <div className="text-[clamp(12px,0.9vw,16px)] opacity-70">
               {t('footer.thirdPartyAgent')}
             </div>
             {isUS === true && (

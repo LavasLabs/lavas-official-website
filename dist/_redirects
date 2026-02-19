@@ -1,0 +1,2 @@
+# SPA 路由：所有未匹配的路径都返回 index.html，由 React Router 处理
+/*    /index.html   200
